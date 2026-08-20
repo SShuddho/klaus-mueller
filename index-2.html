@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Klaus Mueller — Concept C v2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style-2.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#">Klaus Mueller</a>
+      <nav><a href="#">Research</a><a href="#">Publications</a><a href="#">People</a><a href="#">Teaching</a><a
+          href="#">About</a></nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="grid">
+        <div class="portrait-frame">
+          <div class="portrait-photo">
+            <img src="./assets/img/hs1.png" alt="Klaus Mueller, Professor, CS, SBU">
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow kicker">Department of Computer Science, Stony Brook University</p>
+          <h1>Klaus Mueller</h1>
+          <p class="role">
+            <strong>Professor</strong>, Computer Science, Stony Brook University<br>
+            <strong>Senior Scientist</strong>, Brookhaven National Laboratory<br>
+            <strong>Director</strong>, Visual Analytics and Imaging (VAI) Lab
+          </p>
+          <p class="intro"><strong>Research Interests:</strong> Visualization, Explainable AI, Visual Analytics, Data Science, Big Data, Virtual & Augmented Reality, Medical Imaging, High Performance Computing</p>
+          <div class="cta">
+            <a class="btn primary" href="#">Explore my research →</a>
+            <a class="btn" href="#">View CV</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-band">
+        <div class="wrap">
+          <div class="ledger">
+            <div class="ledger-row"><span class="lbl">Publications</span><span class="val">300+</span></div>
+            <div class="ledger-row"><span class="lbl">Citations, Google Scholar</span><span class="val">15,000+</span>
+            </div>
+            <div class="ledger-row"><span class="lbl">PhD students advised</span><span class="val">28</span></div>
+            <div class="ledger-row"><span class="lbl">h-index</span><span class="val">63</span></div>
+            <div class="ledger-row" style="border-bottom:none;"><span class="lbl">IEEE Fellow</span><span
+                class="val">2024</span></div>
+          </div>
+          <div class="spark-block">
+            <div class="spark" aria-hidden="true">
+              <div style="height:18%"></div>
+              <div style="height:22%"></div>
+              <div style="height:28%"></div>
+              <div style="height:32%"></div>
+              <div style="height:40%"></div>
+              <div style="height:48%"></div>
+              <div style="height:56%"></div>
+              <div style="height:64%"></div>
+              <div style="height:70%"></div>
+              <div style="height:78%"></div>
+              <div style="height:90%"></div>
+              <div style="height:100%"></div>
+            </div>
+            <p class="spark-cap">Publications per year, 1993 → 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">Research Areas</span></div>
+      </div>
+
+      <div class="fig-frame">
+        <!-- The viewBox has been updated to tightly wrap the artwork -->
+        <svg id="orbit" viewBox="100 90 800 480" role="img"
+          aria-label="Radial diagram of nine research areas surrounding a central theme of human-centered visualization and AI">
+          <defs>
+            <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#2F7D6B" stop-opacity="0.18"></stop>
+              <stop offset="100%" stop-color="#2F7D6B" stop-opacity="0"></stop>
+            </radialGradient>
+          </defs>
+          <circle cx="500" cy="330" r="140" fill="url(#hubGlow)"></circle>
+
+          <!-- boundary ring: r 230 → 185 -->
+          <g fill="none" stroke="#D9DCD0" stroke-width="1">
+            <circle cx="500" cy="330" r="185"></circle>
+          </g>
+
+          <!-- spokes: endpoints pulled in to match new node positions -->
+          <g stroke="#D9DCD0" stroke-width="1">
+            <line x1="500" y1="330" x2="500" y2="146"></line>
+            <line x1="500" y1="330" x2="644" y2="178"></line>
+            <line x1="500" y1="330" x2="692" y2="330"></line>
+            <line x1="500" y1="330" x2="644" y2="482"></line>
+            <line x1="500" y1="330" x2="500" y2="514"></line>
+            <line x1="500" y1="330" x2="356" y2="482"></line>
+            <line x1="500" y1="330" x2="308" y2="330"></line>
+            <line x1="500" y1="330" x2="356" y2="178"></line>
+          </g>
+
+          <circle cx="500" cy="330" r="70" fill="#F4F5F1" stroke="#181A16" stroke-width="2"></circle>
+          <text x="500" y="323" text-anchor="middle" class="orbit-center">Human-Centered</text>
+          <text x="500" y="343" text-anchor="middle" class="orbit-center">Visualization &amp; AI</text>
+
+          <!-- nodes: cx/cy pulled in, label x/y offsets tightened to match -->
+          <g class="orbit-node">
+            <circle cx="500" cy="146" r="6" fill="var(--c1)"></circle>
+            <text x="500" y="120" text-anchor="middle" class="orbit-label">Visual Analytics</text>
+            <text x="500" y="134" text-anchor="middle" class="orbit-sub">infovis · XAI · HCI</text>
+          </g>
+          <g class="orbit-node">
+            <circle cx="644" cy="178" r="6" fill="var(--c2)"></circle>
+            <text x="658" y="168" class="orbit-label">Responsible AI</text>
+            <text x="658" y="182" class="orbit-sub">fairness · belief modeling</text>
+          </g>
+          <g class="orbit-node">
+            <circle cx="692" cy="330" r="6" fill="var(--c3)"></circle>
+            <text x="706" y="325" class="orbit-label">Computational Imaging</text>
+            <text x="706" y="339" class="orbit-sub">CT · GPU acceleration</text>
+          </g>
+          <g class="orbit-node">
+            <circle cx="644" cy="482" r="6" fill="var(--c3)"></circle>
+            <text x="658" y="478" class="orbit-label">Volume Visualization</text>
+            <text x="658" y="492" class="orbit-sub">medical · scientific</text>
+          </g>
+          <g class="orbit-node">
+            <circle cx="500" cy="514" r="6" fill="var(--c4)"></circle>
+            <text x="500" y="538" text-anchor="middle" class="orbit-label">Virtual Reality</text>
+            <text x="500" y="552" text-anchor="middle" class="orbit-sub">VR/AR · display walls</text>
+          </g>
+          <g class="orbit-node">
+            <circle cx="356" cy="482" r="6" fill="var(--c5)"></circle>
+            <text x="342" y="478" text-anchor="end" class="orbit-label">Cognitive Graphics</text>
+            <text x="342" y="492" text-anchor="end" class="orbit-sub">color · perception</text>
+          </g>
+          <g class="orbit-node">
+            <circle cx="308" cy="330" r="6" fill="var(--c6)"></circle>
+            <text x="294" y="325" text-anchor="end" class="orbit-label">Filters &amp; Grids</text>
+            <text x="294" y="339" text-anchor="end" class="orbit-sub">sampling · lattices</text>
+          </g>
+          <g class="orbit-node">
+            <circle cx="356" cy="178" r="6" fill="var(--c5)"></circle>
+            <text x="342" y="168" text-anchor="end" class="orbit-label">Eyetracking</text>
+            <text x="342" y="182" text-anchor="end" class="orbit-sub">gaze visualization</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">Career</span>
+          <h3>Two decades, at a glance</h3>
+        </div>
+      </div>
+      <div class="tl-strip">
+        <div class="tl-card">
+          <div class="yr">1998</div>
+          <div class="desc">PhD, Ohio State University</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">1999</div>
+          <div class="desc">Joined Stony Brook as Assistant Professor</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">2001</div>
+          <div class="desc">NSF CAREER Award</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">2009</div>
+          <div class="desc">Conference Chair, IEEE Visualization</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">2011</div>
+          <div class="desc">SUNY Chancellor Award</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">2012</div>
+          <div class="desc">Founding Chair, CS, SUNY Korea</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">2018</div>
+          <div class="desc">Nat'l Academy of Inventors</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">'19&ndash;22</div>
+          <div class="desc">Editor-in-Chief, IEEE TVCG</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">2024</div>
+          <div class="desc">Elevated to IEEE Fellow</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote-block">
+    <div class="wrap">
+      <blockquote>"[A short personal statement in your own words.]"</blockquote>
+      <cite>— Klaus Mueller</cite>
+    </div>
+  </div>
+
+  <section data-reveal>
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">Recent developments</span>
+          <h3>From the lab</h3>
+        </div>
+      </div>
+      <div class="news-grid">
+        <div class="news-card"><span class="date">2025 · IEEE VIS</span>
+          <h4>Five papers accepted at IEEE VIS 2025</h4>
+        </div>
+        <div class="news-card"><span class="date">2025 · TVCG</span>
+          <h4>MisVisFix: an interactive dashboard for detecting, explaining, and correcting misleading visualizations
+            using LLMs</h4>
+        </div>
+        <div class="news-card"><span class="date">2025 · TVCG</span>
+          <h4>What is the Color of Serendipity? Semantically resonant color generation with language models</h4>
+        </div>
+        <div class="news-card"><span class="date">2025 · Teaching</span>
+          <h4>CSE 564 Spring 2025 — student project showcase playlist</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal style="border-bottom:none;">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">Explore</span>
+          <h3>The rest of the site</h3>
+        </div>
+      </div>
+      <div class="explore-grid">
+        <a class="explore-card" href="#">
+          <div class="top"><span>Archive</span><span>→</span></div>
+          <div>
+            <h3>Publications</h3>
+            <p>300+ papers, 1993–present, plus the full archive on Google Scholar.</p>
+          </div>
+        </a>
+        <a class="explore-card" href="#">
+          <div class="top"><span>Lab</span><span>→</span></div>
+          <div>
+            <h3>People</h3>
+            <p>Current students and 60+ alumni now at Meta, Google, Amazon, and academia.</p>
+          </div>
+        </a>
+        <a class="explore-card" href="#">
+          <div class="top"><span>Courses</span><span>→</span></div>
+          <div>
+            <h3>Teaching</h3>
+            <p>Visualization, medical imaging, HCI, GPU programming, data science.</p>
+          </div>
+        </a>
+        <a class="explore-card" href="#">
+          <div class="top"><span>CV</span><span>→</span></div>
+          <div>
+            <h3>About</h3>
+            <p>Full academic biography, appointments, awards, and service.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <h4>Klaus Mueller</h4>
+          <p style="color:rgba(238,239,233,.75); font-size:14px; max-width:34ch;">Professor, Department of Computer
+            Science, Stony Brook University.<br>Director, VAI Lab.<br>Senior Scientist, Brookhaven National Laboratory.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Publications</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Teaching</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">CV / Bio</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Play</a></li>
+            <li><a href="mailto:mueller@cs.stonybrook.edu">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Affiliations</h4>
+          <ul>
+            <li><a href="#">CS Department, SBU</a></li>
+            <li><a href="#">VAI Lab</a></li>
+            <li><a href="#">Brookhaven National Lab</a></li>
+            <li><a href="#">Google Scholar</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom"><span>© <span id="year"></span> Klaus Mueller, Stony Brook University</span><span>Concept 2 — draft for review</span></div>
+    </div>
+  </footer>
+  <script src="assets/js/main-2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Klaus Mueller, Professor of Computer Science, Stony Brook University</title>
+  <meta name="description"
+    content="Klaus Mueller is a Professor of Computer Science at Stony Brook University working on visualization, visual analytics, explainable AI, and computational imaging.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+</head>
+
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        Klaus Mueller
+        <small>Stony Brook University</small>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="people.html">People</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="about.html">About / CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-portrait">
+          <img src="assets/img/hs1.png" alt="Portrait of Klaus Mueller">
+        </div>
+
+        <div class="hero-body">
+          <p class="eyebrow">Dept. of Computer Science,<br>Stony Brook University</p>
+          <h1>Klaus&nbsp;Mueller</h1>
+          <p class="role">
+            <strong>Professor</strong>, Computer Science, Stony Brook University<br>
+            <strong>Senior Scientist</strong>, Computational Science Initiative, Brookhaven National Laboratory<br>
+            <strong>Interim Chair</strong>, Department of Technology and Society<br>
+            <strong>Director</strong>, Visual Analytics and Imaging (VAI) Lab
+          </p>
+          <div class="cta-row">
+            <p class="intro">
+              My research sits at the intersection of visualization, visual analytics, and
+              human-centered AI — building interactive systems that help people reason with
+              complex data, understand what machine-learning models are doing, and make
+              better decisions because of it.
+            </p>
+            <a class="btn primary" href="research.html">Explore my research →</a>
+            <a class="btn" href="about.html">View CV</a>
+          </div>
+        </div>
+
+        <div class="hero-facts">
+          <div class="fact">
+            <div class="num">IEEE</div>
+            <div class="lbl">Fellow, class of 2024</div>
+          </div>
+          <div class="fact">
+            <div class="num">NAI</div>
+            <div class="lbl">Nat'l Academy of Inventors, inducted 2018</div>
+          </div>
+          <div class="fact">
+            <div class="num">EIC</div>
+            <div class="lbl">IEEE TVCG, 2019&ndash;2022</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STAT STRIP ===================== -->
+    <div class="stat-strip">
+      <div class="axis-rule">
+        <div><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+      <div class="wrap">
+        <div class="strip-inner">
+          <div class="stat-cell">
+            <div class="num">300+</div>
+            <div class="lbl">Peer-reviewed publications</div>
+          </div>
+          <div class="stat-cell">
+            <div class="num">15,000+</div>
+            <div class="lbl">Citations, Google Scholar</div>
+          </div>
+          <div class="stat-cell">
+            <div class="num">28</div>
+            <div class="lbl">PhD students advised to completion</div>
+          </div>
+          <div class="stat-cell">
+            <div class="num">63</div>
+            <div class="lbl">h-index</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== RESEARCH CONSTELLATION ===================== -->
+    <section id="research-overview" data-reveal>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Research Areas</p>
+          </div>
+        </div>
+
+        <div class="constellation-wrap">
+          <svg id="constellation" viewBox="0 0 1160 560" role="img"
+            aria-labelledby="constellation-title constellation-desc">
+            <title id="constellation-title">Diagram of Klaus Mueller's research areas</title>
+            <desc id="constellation-desc">Six research areas connected to a central theme of human-centered
+              visualization and AI: Visual Analytics and Explainable AI, Human-Centered Responsible AI, Computational
+              and Medical Imaging, Virtual and Augmented Reality, Perception and Cognitive Graphics, and Filters, Grids
+              and Simulation.</desc>
+
+            <!-- connecting curves -->
+            <g fill="none" class="link-line">
+              <path d="M580,280 Q 400,190 210,120"></path>
+              <path d="M580,280 Q 580,190 580,120"></path>
+              <path d="M580,280 Q 760,190 950,120"></path>
+              <path d="M580,280 Q 400,370 210,440"></path>
+              <path d="M580,280 Q 580,370 580,440"></path>
+              <path d="M580,280 Q 760,370 950,440"></path>
+            </g>
+
+            <!-- hub -->
+            <g>
+              <circle cx="580" cy="280" r="75" fill="#F5F6F2" stroke="#1B1F27" stroke-width="3"></circle>
+              <text x="580" y="273" text-anchor="middle" class="spine-label">Human-Centered</text>
+              <text x="580" y="292" text-anchor="middle" class="spine-label">Visualization &amp; AI</text>
+            </g>
+
+            <!-- node template repeated: dot + card -->
+            <!-- 1: Visual Analytics & XAI -->
+            <g class="node-group">
+              <circle cx="210" cy="120" r="5.5" fill="#2C6E8E" class="node-dot"></circle>
+              <rect x="70" y="72" width="280" height="66" rx="3" class="node-card" stroke="#2C6E8E" stroke-width="1">
+              </rect>
+              <text x="88" y="98" class="node-title">Visual Analytics &amp; XAI</text>
+              <text x="88" y="116" class="node-sub">Visual data science, storytelling,</text>
+              <text x="88" y="128" class="node-sub">infovis, human-computer interaction</text>
+            </g>
+
+            <!-- 2: Human-Centered Responsible AI -->
+            <g class="node-group">
+              <circle cx="580" cy="120" r="5.5" fill="#B6542C" class="node-dot"></circle>
+              <rect x="440" y="72" width="280" height="66" rx="3" class="node-card" stroke="#B6542C" stroke-width="1">
+              </rect>
+              <text x="458" y="98" class="node-title">Human-Centered Responsible AI</text>
+              <text x="458" y="116" class="node-sub">Fairness, bias, belief modeling,</text>
+              <text x="458" y="128" class="node-sub">personalized communication</text>
+            </g>
+
+            <!-- 3: Computational & Medical Imaging -->
+            <g class="node-group">
+              <circle cx="950" cy="120" r="5.5" fill="#5B7A4F" class="node-dot"></circle>
+              <rect x="810" y="72" width="280" height="66" rx="3" class="node-card" stroke="#5B7A4F" stroke-width="1">
+              </rect>
+              <text x="828" y="98" class="node-title">Computational &amp; Medical Imaging</text>
+              <text x="828" y="116" class="node-sub">CT reconstruction, low-dose imaging,</text>
+              <text x="828" y="128" class="node-sub">volume visualization</text>
+            </g>
+
+            <!-- 4: Virtual & Augmented Reality -->
+            <g class="node-group">
+              <circle cx="210" cy="440" r="5.5" fill="#7C5A91" class="node-dot"></circle>
+              <rect x="70" y="422" width="280" height="66" rx="3" class="node-card" stroke="#7C5A91" stroke-width="1">
+              </rect>
+              <text x="88" y="448" class="node-title">Virtual &amp; Augmented Reality</text>
+              <text x="88" y="466" class="node-sub">Immersive visualization, display</text>
+              <text x="88" y="478" class="node-sub">walls, mixed reality</text>
+            </g>
+
+            <!-- 5: Perception & Cognitive Graphics -->
+            <g class="node-group">
+              <circle cx="580" cy="440" r="5.5" fill="#A8842E" class="node-dot"></circle>
+              <rect x="440" y="422" width="280" height="66" rx="3" class="node-card" stroke="#A8842E" stroke-width="1">
+              </rect>
+              <text x="458" y="448" class="node-title">Perception &amp; Cognitive Graphics</text>
+              <text x="458" y="466" class="node-sub">Color, texture, semiotics,</text>
+              <text x="458" y="478" class="node-sub">eye-tracking</text>
+            </g>
+
+            <!-- 6: Filters, Grids & Simulation -->
+            <g class="node-group">
+              <circle cx="950" cy="440" r="5.5" fill="#6B6F78" class="node-dot"></circle>
+              <rect x="810" y="422" width="280" height="66" rx="3" class="node-card" stroke="#6B6F78" stroke-width="1">
+              </rect>
+              <text x="828" y="448" class="node-title">Filters, Grids &amp; Simulation</text>
+              <text x="828" y="466" class="node-sub">Sampling lattices, natural-</text>
+              <text x="828" y="478" class="node-sub">phenomena simulation</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TIMELINE ===================== -->
+    <section data-reveal>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Career Milestones</p>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-legend">
+              <span><i class="legend-dot edu"></i>Education</span>
+              <span><i class="legend-dot pos"></i>Positions &amp; Leadership</span>
+              <span><i class="legend-dot award"></i>Awards &amp; Honors</span>
+              <span><i class="legend-dot svc"></i>Service</span>
+            </div>
+          <div class="timeline-items">
+            
+            <div class="t-item edu">
+              <div class="t-card">
+                <div class="t-year">1998</div>
+                <div class="t-label">PhD, Computer &amp; Information Science, The Ohio State University</div>
+              </div>
+            </div>
+
+            <div class="t-item pos">
+              <div class="t-card">
+                <div class="t-year">1999</div>
+                <div class="t-label">Joined Stony Brook University as Assistant Professor</div>
+              </div>
+            </div>
+
+            <div class="t-item award">
+              <div class="t-card">
+                <div class="t-year">2001</div>
+                <div class="t-label">NSF CAREER Award</div>
+              </div>
+            </div>
+
+            <div class="t-item svc">
+              <div class="t-card">
+                <div class="t-year">2009</div>
+                <div class="t-label">Conference Chair, IEEE Visualization</div>
+              </div>
+            </div>
+
+            <div class="t-item award">
+              <div class="t-card">
+                <div class="t-year">2011</div>
+                <div class="t-label">SUNY Chancellor Award for Excellence in Scholarship</div>
+              </div>
+            </div>
+
+            <div class="t-item pos">
+              <div class="t-card">
+                <div class="t-year">2012</div>
+                <div class="t-label">Founding Chair, Computer Science, SUNY Korea</div>
+              </div>
+            </div>
+
+            <div class="t-item award">
+              <div class="t-card">
+                <div class="t-year">2018</div>
+                <div class="t-label">Inducted, National Academy of Inventors</div>
+              </div>
+            </div>
+
+            <div class="t-item svc">
+              <div class="t-card">
+                <div class="t-year">'19&ndash;'22</div>
+                <div class="t-label">Editor-in-Chief, IEEE Trans. on Visualization &amp; Computer Graphics</div>
+              </div>
+            </div>
+
+            <div class="t-item award">
+              <div class="t-card">
+                <div class="t-year">2024</div>
+                <div class="t-label">Elevated to IEEE Fellow</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="timeline-track"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== NEWS ===================== -->
+    <section data-reveal>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Recent Developments</p>
+          </div>
+          <a class="text-link" href="news.html">All news →</a>
+        </div>
+
+        <ul class="news-list">
+          <li class="news-item">
+            <span class="date">2025</span>
+            <span class="headline">Five papers accepted at IEEE VIS 2025</span>
+            <span class="tag">IEEE VIS</span>
+          </li>
+          <li class="news-item">
+            <span class="date">2025</span>
+            <span class="headline"><a class="text-link" href="#">MisVisFix: an interactive dashboard for detecting,
+                explaining, and correcting misleading visualizations using LLMs</a> — with Amit Kumar Das</span>
+            <span class="tag">TVCG</span>
+          </li>
+          <li class="news-item">
+            <span class="date">2025</span>
+            <span class="headline"><a class="text-link" href="#">What is the Color of Serendipity? Semantically resonant
+                color generation with language models</a> — with Shahreen Salim &amp; Tanzir Pial</span>
+            <span class="tag">TVCG</span>
+          </li>
+          <li class="news-item">
+            <span class="date">2025</span>
+            <span class="headline"><a class="text-link" href="#">Charts-of-Thought: enhancing LLM visualization literacy
+                through structured data extraction</a> — with Amit Kumar Das &amp; Mohammad Tarun</span>
+            <span class="tag">TVCG</span>
+          </li>
+          <li class="news-item">
+            <span class="date">2025</span>
+            <span class="headline"><a class="text-link" href="#">CSE 564 — Spring 2025 graduate visualization course,
+                student project showcase</a></span>
+            <span class="tag">Teaching</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== PERSONAL NOTE (placeholder) ===================== -->
+    <div class="quote-block">
+      <div class="wrap">
+        <blockquote>
+          “[Placeholder — a short personal statement in your own words. For example:
+          what drew you to visualization, or what you hope your research changes.]”
+        </blockquote>
+        <cite>— Klaus Mueller</cite>
+      </div>
+    </div>
+
+    <!-- ===================== EXPLORE GRID ===================== -->
+    <section data-reveal>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Explore</p>
+            <h2>The rest of the site</h2>
+          </div>
+        </div>
+
+        <div class="explore-grid">
+          <a class="explore-card" href="publications.html">
+            <div class="card-top"><span class="card-num">Archive</span><span class="card-arrow">→</span></div>
+            <div>
+              <h3>Publications</h3>
+              <p>300+ journal and conference papers, 1993–present, with the full archive on Google Scholar.</p>
+            </div>
+          </a>
+          <a class="explore-card" href="people.html">
+            <div class="card-top"><span class="card-num">Lab</span><span class="card-arrow">→</span></div>
+            <div>
+              <h3>People</h3>
+              <p>Current PhD students, and 60+ PhD/MS alumni now at Meta, Google, Amazon, academia, and beyond.</p>
+            </div>
+          </a>
+          <a class="explore-card" href="teaching.html">
+            <div class="card-top"><span class="card-num">Courses</span><span class="card-arrow">→</span></div>
+            <div>
+              <h3>Teaching</h3>
+              <p>Visualization, medical imaging, HCI, GPU programming, and data science — undergrad through PhD.</p>
+            </div>
+          </a>
+          <a class="explore-card" href="about.html">
+            <div class="card-top"><span class="card-num">CV</span><span class="card-arrow">→</span></div>
+            <div>
+              <h3>About</h3>
+              <p>Full academic biography, appointments, awards, and service history.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <h4>Klaus Mueller</h4>
+          <p style="color:rgba(245,246,242,0.75); font-size:14px; max-width:34ch;">
+            Professor, Department of Computer Science, Stony Brook University.
+            Director, Visual Analytics and Imaging (VAI) Lab. Senior Scientist,
+            Brookhaven National Laboratory.
+          </p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>About</h4>
+          <ul>
+            <li><a href="about.html">CV / Bio</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="play.html">Play (personal)</a></li>
+            <li><a href="mailto:mueller@cs.stonybrook.edu">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Affiliations</h4>
+          <ul>
+            <li><a href="http://www.cs.stonybrook.edu/">CS Department, SBU</a></li>
+            <li><a href="http://www3.cs.stonybrook.edu/~vai">VAI Lab</a></li>
+            <li><a href="https://www.bnl.gov/world/">Brookhaven National Lab</a></li>
+            <li><a href="https://scholar.google.com/citations?user=uya_Zb4AAAAJ">Google Scholar</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© <span id="year"></span> Klaus Mueller, Stony Brook University</span>
+        <span>Concept 1 — draft for review</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>

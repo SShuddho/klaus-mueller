@@ -377,6 +377,7 @@ p {
     grid-template-columns: 1fr 1.5fr 2fr;
     gap: clamp(0.5rem, 1.5vw, 1.5rem);
     align-items: stretch;
+    padding-bottom: 2rem;
 }
 
 .hero-portrait {

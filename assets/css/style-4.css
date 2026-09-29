@@ -374,7 +374,7 @@ p {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: minmax(15rem, 22rem) minmax(20rem, 1.25fr) minmax(20rem, 1.35fr);
+    grid-template-columns: 1fr 1.5fr 2fr;
     gap: clamp(0.5rem, 1.5vw, 1.5rem);
     align-items: stretch;
 }
@@ -383,7 +383,6 @@ p {
     position: relative;
     border-radius: var(--radius) 0 0 var(--radius);
     overflow: hidden;
-    min-height: 22rem;
     -webkit-mask-image: linear-gradient(to right, #000 75%, transparent 100%);
     mask-image: linear-gradient(to right, #000 75%, transparent 100%);
 }
@@ -482,8 +481,6 @@ h1 {
 .hero-figure {
     display: flex;
     align-items: stretch;
-    -webkit-mask-image: linear-gradient(to left, #000 92%, transparent 100%);
-    mask-image: linear-gradient(to left, #000 92%, transparent 100%);
 }
 
 .figure-card {

@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Klaus Mueller — Concept 4</title>
+  <meta name="description"
+    content="Klaus Mueller is a Professor of Computer Science at Stony Brook University and Senior Scientist at Brookhaven National Laboratory, working on human-centered, explainable AI and visualization.">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style-4.css">
+</head>
+
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#">Klaus Mueller</a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#">Research</a>
+        <a href="#">Publications</a>
+        <a href="#">People</a>
+        <a href="#">Teaching</a>
+        <a href="#">News</a>
+        <a href="#">About</a>
+      </nav>
+
+      <div class="header-right">
+        <div class="affiliations">
+          <div class="badge">
+            <svg viewBox="0 0 24 28" class="badge-mark" aria-hidden="true">
+              <path d="M12 0 L23 4V13C23 20 18.5 25.5 12 28C5.5 25.5 1 20 1 13V4Z" fill="#B7182E" />
+              <path d="M12 3 L20 6V13C20 18.5 16.8 22.8 12 25C7.2 22.8 4 18.5 4 13V6Z" fill="#fff" opacity=".16" />
+            </svg>
+            <span class="badge-text"><strong>Stony Brook</strong>University</span>
+          </div>
+          <div class="badge">
+            <svg viewBox="0 0 28 24" class="badge-mark" aria-hidden="true">
+              <polygon points="9,1 19,1 24,9.5 19,18 9,18 4,9.5" fill="#1B6DB5" />
+              <polygon points="12,6 18,6 21,10.8 18,15.6 12,15.6 9,10.8" fill="#54B848" />
+            </svg>
+            <span class="badge-text"><strong>Brookhaven</strong>National Laboratory</span>
+          </div>
+        </div>
+        <!--
+          <button class="icon-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        -->
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="wrap hero-wrap">
+        <div class="hero-grid">
+
+          <div class="hero-portrait">
+            <img src="./assets/img/hs1.png" alt="Klaus Mueller, Professor of Computer Science, Stony Brook University">
+          </div>
+
+          <div class="hero-body">
+            <h1>Klaus Mueller</h1>
+            <p class="role-line"><strong>Professor, Computer Science</strong>Stony Brook University</p>
+            <p class="role-line"><strong>Senior Scientist</strong>Brookhaven National Laboratory</p>
+            <p class="intro">My research lives at the intersection of visualization, visual analytics and human-centered
+              AI — building systems that help people reason with complex data and understand what machine-learning
+              models are doing.</p>
+
+            <div class="cta">
+              <a class="btn primary" href="#">Explore my research →</a>
+              <a class="btn secondary" href="#">View CV</a>
+            </div>
+          </div>
+
+          <div class="hero-figure">
+            <figure class="figure-card">
+              <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-interval="5000">
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1">
+                  </button>
+                  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2">
+                  </button>
+                  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3">
+                  </button>
+                  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4">
+                  </button>
+                </div>
+
+                <!-- Slides -->
+                <div class="carousel-inner">
+                  <!-- Slide 1 -->
+                  <div class="carousel-item active">
+                    <img src="assets/img/slide-1.png" class="figure-art" alt="Visual analytics for medical imaging">
+                    <div class="figure-caption">
+                      <h3>Visual Analytics for Medical Imaging</h3>
+                      <p>
+                        Interactive analysis of brain structure and connectivity
+                        for diagnosis, treatment planning, and research.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Slide 2 -->
+                  <div class="carousel-item">
+                    <img src="assets/img/slide-2.png" class="figure-art" alt="Medical image analysis">
+                    <div class="figure-caption">
+                      <h3>Computational Medical Imaging</h3>
+                      <p>
+                        Quantitative methods for extracting meaningful information
+                        from complex medical imaging datasets.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Slide 3 -->
+                  <div class="carousel-item">
+                    <img src="assets/img/slide-3.png" class="figure-art" alt="Scientific visualization">
+                    <div class="figure-caption">
+                      <h3>Scientific Visualization</h3>
+                      <p>
+                        Translating complex biomedical data into clear,
+                        interpretable visual representations.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Slide 4 -->
+                  <div class="carousel-item">
+                    <img src="assets/img/slide-4.png" class="figure-art" alt="Research and computational analysis">
+                    <div class="figure-caption">
+                      <h3>Research & Computational Methods</h3>
+                      <p>
+                        Combining computation, visualization, and quantitative
+                        analysis to support biomedical research.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Previous -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true">
+                  </span>
+                  <span class="visually-hidden">
+                    Previous
+                  </span>
+                </button>
+
+                <!-- Next -->
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true">
+                  </span>
+                  <span class="visually-hidden">
+                    Next
+                  </span>
+                </button>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STAT STRIP ===================== -->
+    <section class="stat-strip" data-reveal>
+      <div class="wrap">
+        <div class="strip-inner">
+          <div class="stat-cell" style="--dot:var(--c1)">
+            <div class="num">300+</div>
+            <div class="lbl">Peer-reviewed publications</div>
+          </div>
+          <div class="stat-cell" style="--dot:var(--c2)">
+            <div class="num">15,000+</div>
+            <div class="lbl">Citations, Google Scholar</div>
+          </div>
+          <div class="stat-cell" style="--dot:var(--c3)">
+            <div class="num">28</div>
+            <div class="lbl">PhD students advised</div>
+          </div>
+          <div class="stat-cell" style="--dot:var(--c4)">
+            <div class="num">63</div>
+            <div class="lbl">h-index</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESEARCH ===================== -->
+    <section class="research" data-reveal>
+      <div class="wrap research-grid">
+        <div class="research-intro">
+          <p class="eyebrow">Research</p>
+          <h2>Human-Centered AI &amp; Visualization</h2>
+          <p>I work at the intersection of visualization, AI, and domain sciences, developing
+            methods and interactive systems that help people reason, decide, and act with
+            data and models.</p>
+          <a class="btn-outline" href="#">Research overview
+            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M2 8h11.5M9 3.5 13.5 8 9 12.5"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="research-cards">
+          <a class="area-card" href="#" style="--c:#2054C7">
+            <span class="area-thumb">
+              <svg viewBox="0 0 200 130" preserveAspectRatio="none">
+                <rect width="200" height="130" fill="#12141c" />
+                <path d="M0 100 C 40 90, 55 40, 90 55 C 120 68, 130 20, 160 25 C 180 28, 190 40, 200 35" fill="none"
+                  stroke="#5cc6ff" stroke-width="4" opacity=".9" />
+                <path d="M0 115 C 45 108, 60 70, 95 80 C 125 88, 140 55, 170 58 C 185 60, 195 68, 200 65" fill="none"
+                  stroke="#ffb347" stroke-width="3" opacity=".8" />
+              </svg>
+            </span>
+            <h3>Visual Analytics</h3>
+            <p>Transforming complex data into interactive visual representations to support
+              reasoning and decision making.</p>
+            <span class="area-link">Projects
+              <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M2 8h11.5M9 3.5 13.5 8 9 12.5"></path>
+              </svg>
+            </span>
+          </a>
+
+          <a class="area-card" href="#" style="--c:#7C3AED">
+            <span class="area-thumb">
+              <svg viewBox="0 0 200 130" preserveAspectRatio="none">
+                <rect width="200" height="130" fill="#14121f" />
+                <g stroke="#8f7bf7" stroke-width="1" opacity=".7">
+                  <line x1="40" y1="40" x2="100" y2="65" />
+                  <line x1="100" y1="65" x2="150" y2="35" />
+                  <line x1="100" y1="65" x2="90" y2="100" />
+                  <line x1="40" y1="40" x2="60" y2="95" />
+                  <line x1="150" y1="35" x2="165" y2="90" />
+                  <line x1="90" y1="100" x2="165" y2="90" />
+                </g>
+                <circle cx="40" cy="40" r="8" fill="#7C3AED" />
+                <circle cx="100" cy="65" r="11" fill="#a78bfa" />
+                <circle cx="150" cy="35" r="7" fill="#7C3AED" />
+                <circle cx="90" cy="100" r="9" fill="#a78bfa" />
+                <circle cx="165" cy="90" r="6" fill="#7C3AED" />
+                <circle cx="60" cy="95" r="6" fill="#a78bfa" />
+              </svg>
+            </span>
+            <h3>Explainable &amp; Responsible AI</h3>
+            <p>Building AI systems that people can understand, trust, and rely on.</p>
+            <span class="area-link">Projects
+              <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M2 8h11.5M9 3.5 13.5 8 9 12.5"></path>
+              </svg>
+            </span>
+          </a>
+
+          <a class="area-card" href="#" style="--c:#0E9C93">
+            <span class="area-thumb">
+              <svg viewBox="0 0 200 130" preserveAspectRatio="none">
+                <rect width="200" height="130" fill="#0c1216" />
+                <circle cx="70" cy="65" r="40" fill="none" stroke="#3a4a4a" stroke-width="1" />
+                <path d="M50 65 a20 20 0 1 0 40 0 a20 20 0 1 0 -40 0" fill="#1c8f86" opacity=".85" />
+                <circle cx="95" cy="45" r="8" fill="#ff8a4c" />
+                <rect x="130" y="20" width="55" height="90" rx="4" fill="#111820" stroke="#2a343d" />
+                <rect x="138" y="30" width="39" height="24" fill="#173a4a" />
+                <rect x="138" y="60" width="39" height="24" fill="#1c8f86" opacity=".5" />
+              </svg>
+            </span>
+            <h3>AI for Science &amp; Medicine</h3>
+            <p>Applying visualization and AI to advance discovery in science, medicine, and
+              engineering.</p>
+            <span class="area-link">Projects
+              <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M2 8h11.5M9 3.5 13.5 8 9 12.5"></path>
+              </svg>
+            </span>
+          </a>
+
+          <a class="area-card" href="#" style="--c:#DD7A2C">
+            <span class="area-thumb">
+              <svg viewBox="0 0 200 130" preserveAspectRatio="none">
+                <rect width="200" height="130" fill="#eef1f4" />
+                <rect y="80" width="200" height="50" fill="#d7dde2" />
+                <rect x="10" y="30" width="30" height="55" fill="#c7cfd6" />
+                <rect x="150" y="20" width="35" height="65" fill="#c7cfd6" />
+                <g fill="#20242b">
+                  <circle cx="70" cy="100" r="7" />
+                  <rect x="63" y="107" width="14" height="16" rx="3" />
+                  <circle cx="105" cy="104" r="7" />
+                  <rect x="98" y="111" width="14" height="16" rx="3" />
+                  <circle cx="140" cy="98" r="7" />
+                  <rect x="133" y="105" width="14" height="16" rx="3" />
+                </g>
+                <rect x="48" y="70" width="34" height="14" rx="7" fill="#fff" stroke="#DD7A2C" />
+              </svg>
+            </span>
+            <h3>Agentic AI</h3>
+            <p>Designing autonomous agents that perceive, reason, and act in the real world.</p>
+            <span class="area-link">Projects
+              <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M2 8h11.5M9 3.5 13.5 8 9 12.5"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== NEWS / TEACHING / ABOUT ===================== -->
+    <section class="lower-grid" data-reveal>
+      <div class="wrap lower-inner">
+
+        <!--
+          <div class="lower-col news-col">
+            <p class="eyebrow">News</p>
+            <ul class="news-list">
+              <li><span class="date">Sep 2026</span><span>CausalXRL accepted at ICML 2026</span></li>
+              <li><span class="date">Aug 2026</span><span>Paper on agentic AI accepted at IEEE VIS 2026 (Short
+                  Paper)</span></li>
+              <li><span class="date">Jul 2026</span><span>New project on accessibility for data visualization</span></li>
+              <li><span class="date">Jun 2026</span><span>Invited talk at AAAI 2026</span></li>
+            </ul>
+            <a class="text-link small" href="#">All news
+              <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M2 8h11.5M9 3.5 13.5 8 9 12.5"></path>
+              </svg>
+            </a>
+          </div>
+        -->
+
+        <div class="lower-col">
+          <p class="eyebrow">Teaching</p>
+          <div class="feature-row">
+            <span class="feature-thumb">
+              <svg viewBox="0 0 160 120" preserveAspectRatio="none">
+                <rect width="160" height="120" fill="#eef1f4" />
+                <rect x="20" y="15" width="90" height="55" rx="3" fill="#1c2430" />
+                <rect x="26" y="21" width="78" height="43" fill="#22344a" />
+                <path d="M30 55 L55 35 L70 48 L90 28 L100 40" fill="none" stroke="#8fe3ff" stroke-width="2" />
+                <circle cx="30" cy="95" r="10" fill="#c7cfd6" />
+                <circle cx="60" cy="98" r="10" fill="#c7cfd6" />
+                <circle cx="90" cy="93" r="10" fill="#c7cfd6" />
+              </svg>
+            </span>
+            <div>
+              <a class="feature-title" href="#">Introduction to Visualization</a>
+              <p class="feature-meta">Fall 2026</p>
+              <p class="feature-desc">Learn how to design, analyze, and build effective
+                visualizations for real-world data.</p>
+              <a class="text-link small" href="#">Teaching
+                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M2 8h11.5M9 3.5 13.5 8 9 12.5"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-thumb">
+              <svg viewBox="0 0 160 120" preserveAspectRatio="none">
+                <rect width="160" height="120" fill="#eef1f4" />
+                <rect x="20" y="15" width="90" height="55" rx="3" fill="#1c2430" />
+                <rect x="26" y="21" width="78" height="43" fill="#22344a" />
+                <path d="M30 55 L55 35 L70 48 L90 28 L100 40" fill="none" stroke="#8fe3ff" stroke-width="2" />
+                <circle cx="30" cy="95" r="10" fill="#c7cfd6" />
+                <circle cx="60" cy="98" r="10" fill="#c7cfd6" />
+                <circle cx="90" cy="93" r="10" fill="#c7cfd6" />
+              </svg>
+            </span>
+            <div>
+              <a class="feature-title" href="#">Introduction to Visualization</a>
+              <p class="feature-meta">Fall 2026</p>
+              <p class="feature-desc">Learn how to design, analyze, and build effective
+                visualizations for real-world data.</p>
+              <a class="text-link small" href="#">Teaching
+                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M2 8h11.5M9 3.5 13.5 8 9 12.5"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lower-col">
+          <p class="eyebrow">About</p>
+          <div class="feature-row">
+            <span class="feature-thumb">
+              <svg viewBox="0 0 160 120" preserveAspectRatio="none">
+                <rect width="160" height="120" fill="#cfe0ea" />
+                <rect y="70" width="160" height="50" fill="#e7ddc8" />
+                <rect x="70" y="15" width="10" height="70" fill="#8b8f94" />
+                <polygon points="70,15 75,4 80,15" fill="#8b8f94" />
+                <rect x="20" y="60" width="14" height="40" fill="#c96b3f" opacity=".7" />
+                <rect x="120" y="55" width="16" height="45" fill="#d98a4f" opacity=".7" />
+              </svg>
+            </span>
+            <div>
+              <p class="feature-desc">Hoc ab homine scriptum est, non ab intellegentia artificiali. Omne verbum, omnis
+                sententia atque elocutio ab homine vero proficiscuntur. Fortasse non est ad unguem expolitum neque sine
+                ullo vitio compositum, sed hoc ipsum ad veram eius naturam pertinet. Cogitationem enim, affectus,
+                experientiam proprietatemque humanam refert, non opus a systemate artificioso effectum.</p>
+              <a class="text-link small" href="#">Full bio
+                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M2 8h11.5M9 3.5 13.5 8 9 12.5"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <section data-reveal>
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">Career</span>
+          <h3>Two decades, at a glance</h3>
+        </div>
+      </div>
+      <div class="tl-strip">
+        <div class="tl-card">
+          <div class="yr">1998</div>
+          <div class="desc">PhD, Ohio State University</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">1999</div>
+          <div class="desc">Joined Stony Brook as Assistant Professor</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">2001</div>
+          <div class="desc">NSF CAREER Award</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">2009</div>
+          <div class="desc">Conference Chair, IEEE Visualization</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">2011</div>
+          <div class="desc">SUNY Chancellor Award</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">2012</div>
+          <div class="desc">Founding Chair, CS, SUNY Korea</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">2018</div>
+          <div class="desc">Nat'l Academy of Inventors</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">'19&ndash;22</div>
+          <div class="desc">Editor-in-Chief, IEEE TVCG</div>
+        </div>
+        <div class="tl-card">
+          <div class="yr">2024</div>
+          <div class="desc">Elevated to IEEE Fellow</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote-block">
+    <div class="wrap">
+      <blockquote>"[A short personal statement in your own words.]"</blockquote>
+      <cite>— Klaus Mueller</cite>
+    </div>
+  </div>
+
+  <section data-reveal>
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">NEWS</span>
+        </div>
+      </div>
+
+      <div class="news-list">
+
+        <a class="news-item" href="https://example.com/news-1" target="_blank" rel="noopener">
+          <span class="date">2025 · IEEE VIS</span>
+          <h4>Five papers accepted at IEEE VIS 2025</h4>
+        </a>
+
+        <a class="news-item" href="https://example.com/news-2" target="_blank" rel="noopener">
+          <span class="date">2025 · TVCG</span>
+          <h4>
+            MisVisFix: an interactive dashboard for detecting, explaining,
+            and correcting misleading visualizations using LLMs
+          </h4>
+        </a>
+
+        <a class="news-item" href="https://example.com/news-3" target="_blank" rel="noopener">
+          <span class="date">2025 · TVCG</span>
+          <h4>
+            What is the Color of Serendipity? Semantically resonant color
+            generation with language models
+          </h4>
+        </a>
+
+        <a class="news-item" href="https://example.com/news-4" target="_blank" rel="noopener">
+          <span class="date">2025 · Teaching</span>
+          <h4>
+            CSE 564 Spring 2025 — student project showcase playlist
+          </h4>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!--
+  <section data-reveal style="border-bottom:none;">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">Explore</span>
+        </div>
+      </div>
+      <div class="explore-grid">
+        <a class="explore-card" href="#">
+          <div class="top"><span>Archive</span><span>→</span></div>
+          <div>
+            <h3>Publications</h3>
+            <p>300+ papers, 1993&ndash;present, plus the full archive on Google Scholar.</p>
+          </div>
+        </a>
+        <a class="explore-card" href="#">
+          <div class="top"><span>Lab</span><span>→</span></div>
+          <div>
+            <h3>People</h3>
+            <p>Current students and 60+ alumni now at Meta, Google, Amazon, and academia.</p>
+          </div>
+        </a>
+        <a class="explore-card" href="#">
+          <div class="top"><span>Courses</span><span>→</span></div>
+          <div>
+            <h3>Teaching</h3>
+            <p>Visualization, medical imaging, HCI, GPU programming, data science.</p>
+          </div>
+        </a>
+        <a class="explore-card" href="#">
+          <div class="top"><span>CV</span><span>→</span></div>
+          <div>
+            <h3>About</h3>
+            <p>Full academic biography, appointments, awards, and service.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+-->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <h4>Klaus Mueller</h4>
+          <p style="color:rgba(238,239,233,.75); font-size:14px; max-width:34ch;">Professor, Department of Computer
+            Science, Stony Brook University.<br>Director, VAI Lab.<br>Senior Scientist, Brookhaven National Laboratory.
+          </p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Publications</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Teaching</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">CV / Bio</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Play</a></li>
+            <li><a href="mailto:mueller@cs.stonybrook.edu">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Affiliations</h4>
+          <ul>
+            <li><a href="#">CS Department, SBU</a></li>
+            <li><a href="#">VAI Lab</a></li>
+            <li><a href="#">Brookhaven National Lab</a></li>
+            <li><a href="#">Google Scholar</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom"><span>© <span id="year"></span> Klaus Mueller, Stony Brook University</span><span>Concept
+          2 — draft for review</span></div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+  </script>
+</body>
+
+</html>

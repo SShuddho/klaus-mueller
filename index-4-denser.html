@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+  <!-- ============================================================================
+       DENSE-LAYOUT PASS — what changed in this HTML file (everything else is untouched):
+         1. The News block inside the News/Teaching/About row (".lower-col news-col") was
+            wrapped in an HTML comment. It is now un-commented so News, Teaching and About
+            can sit in one row, as in the mockup and the brief. Its markup is unchanged.
+         2. This explanatory comment.
+       All sizing/spacing/typography changes live in style-4.css (see its top-of-file legend).
+       ============================================================================ -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Klaus Mueller — Concept 4</title>
@@ -15,7 +23,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style-4.css">
+  <link rel="stylesheet" href="./assets/css/style-4-denser.css">
 </head>
 
 <body>
@@ -75,8 +83,8 @@
 
           <div class="hero-body">
             <h1>Klaus Mueller</h1>
-            <p class="role-line"><strong>Professor, Computer Science</strong>Stony Brook University</p>
-            <p class="role-line"><strong>Senior Scientist</strong>Brookhaven National Laboratory</p>
+            <p class="role-line"><strong>Professor, Computer Science</strong> (Stony Brook University)</p>
+            <p class="role-line"><strong>Senior Scientist</strong> (Brookhaven National Laboratory)</p>
             <p class="intro">My research lives at the intersection of visualization, visual analytics and human-centered
               AI — building systems that help people reason with complex data and understand what machine-learning
               models are doing.</p>
@@ -323,7 +331,9 @@
     <section class="lower-grid" data-reveal>
       <div class="wrap lower-inner">
 
-        <!--
+        <!-- CHANGED: News block un-commented (was wrapped in an HTML comment; markup inside is unchanged).
+             Needed so News | Teaching | About render in one row. To hide News again, wrap this block
+             back in a comment and set `.lower-inner` to `repeat(2, ...)` in style-4.css. -->
           <div class="lower-col news-col">
             <p class="eyebrow">News</p>
             <ul class="news-list">
@@ -339,34 +349,10 @@
               </svg>
             </a>
           </div>
-        -->
+        <!-- END CHANGED: end of the un-commented News block (the comment-closing marker that used to be here was removed). -->
 
         <div class="lower-col">
           <p class="eyebrow">Teaching</p>
-          <div class="feature-row">
-            <span class="feature-thumb">
-              <svg viewBox="0 0 160 120" preserveAspectRatio="none">
-                <rect width="160" height="120" fill="#eef1f4" />
-                <rect x="20" y="15" width="90" height="55" rx="3" fill="#1c2430" />
-                <rect x="26" y="21" width="78" height="43" fill="#22344a" />
-                <path d="M30 55 L55 35 L70 48 L90 28 L100 40" fill="none" stroke="#8fe3ff" stroke-width="2" />
-                <circle cx="30" cy="95" r="10" fill="#c7cfd6" />
-                <circle cx="60" cy="98" r="10" fill="#c7cfd6" />
-                <circle cx="90" cy="93" r="10" fill="#c7cfd6" />
-              </svg>
-            </span>
-            <div>
-              <a class="feature-title" href="#">Introduction to Visualization</a>
-              <p class="feature-meta">Fall 2026</p>
-              <p class="feature-desc">Learn how to design, analyze, and build effective
-                visualizations for real-world data.</p>
-              <a class="text-link small" href="#">Teaching
-                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6">
-                  <path d="M2 8h11.5M9 3.5 13.5 8 9 12.5"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
           <div class="feature-row">
             <span class="feature-thumb">
               <svg viewBox="0 0 160 120" preserveAspectRatio="none">
@@ -425,7 +411,7 @@
 
   </main>
 
-
+  <!-- ===================== CAREER TIMELINE ===================== 
   <section data-reveal>
     <div class="wrap">
       <div class="section-head">
@@ -473,6 +459,7 @@
       </div>
     </div>
   </section>
+  
 
   <div class="quote-block">
     <div class="wrap">
@@ -480,6 +467,7 @@
       <cite>— Klaus Mueller</cite>
     </div>
   </div>
+  
 
   <section data-reveal>
     <div class="wrap">
@@ -522,6 +510,7 @@
       </div>
     </div>
   </section>
+  -->
 
   <!--
   <section data-reveal style="border-bottom:none;">

@@ -1,27 +1,10 @@
 /* =====================================================================
-   DENSE-LAYOUT PASS  (matches webpage_5-27.png mockup)
+   LAYOUT
    ---------------------------------------------------------------------
-   Only dimensions / spacing / sizing / typography / alignment / layout
-   were touched. No colours, content, or markup were changed in this file.
-
-   HOW CHANGES ARE MARKED
-     "CHANGED: <prop> was `<old value>` ..."   = an existing declaration was edited
-     "ADDED: <prop> ..."                        = a new declaration / new rule
-   (each appears in a trailing comment next to the line it describes)
-
    DENSITY UNIT  --u
-     Every dense font-size / padding / margin / gap / icon size is written as
-     calc(var(--u) * k).  At >=1081px wide, --u = min(1vh, 0.65vw) so type,
-     spacing and images shrink/grow together with the viewport (1u ~ 10px on a
-     1536x1024 screen).  Below 1081px --u is a fixed 0.65rem.
-
-   VIEWPORT ALLOCATION (>=1081px only; tablet/mobile keep natural height)
-     header 10vh | hero 30vh | stats 10vh | research 30vh | news+teaching+about 20vh
-     = 100vh.  Career timeline, quote, news list and footer sit below the fold,
-     unchanged.
-     NOTE: the brief said "remaining 30vh" for the last row, but
-     10+30+10+30 leaves 20vh to reach 100vh, so 20vh is used.  To use 30vh
-     instead, change `height: 20vh` in the `.lower-grid` media block.
+     Every font-size / padding / margin / gap / icon size is written as
+     calc(var(--u) * k).  Type, spacing and images shrink/grow together
+     with the viewport.
    ===================================================================== */
 
 :root {
@@ -58,13 +41,13 @@
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', sans-serif;
     --radius: 0.75rem;
-    --u: 0.65rem; /* ADDED: --u — density unit used by every dense size below (fixed on tablet/mobile; viewport-based on desktop, see next block) */
+    --u: 0.65rem;
 }
 
-/* ADDED: desktop density unit + 100vh allocation driver. 1u ~ 10px at 1536x1024. */
+/* Desktop Density Unit*/
 @media (min-width: 1081px) {
     :root {
-        --u: max(min(1vh, 0.65vw), 6px); /* ADDED: --u override for desktop */
+        --u: max(min(1vh, 0.65vw), 6px);
     }
 }
 
@@ -155,27 +138,25 @@ p {
     color: var(--accent);
 }
 
-/* ADDED: dense eyebrow. `.eyebrow` is also used by the below-the-fold Career and News
-   sections, so the original rule is left alone and only the in-viewport sections are scoped. */
 .research .eyebrow,
 .lower-grid .eyebrow {
-    font-size: calc(var(--u) * 1.05); /* CHANGED (scoped): font-size was `1rem` */
-    gap: calc(var(--u) * 0.7); /* CHANGED (scoped): gap was `0.625rem` */
-    margin-bottom: calc(var(--u) * 0.7); /* CHANGED (scoped): margin-bottom was `2rem` */
-    line-height: 1.2; /* ADDED (scoped): line-height (was inherited 1.6) */
+    font-size: calc(var(--u) * 1.05);
+    gap: calc(var(--u) * 0.7);
+    margin-bottom: calc(var(--u) * 0.7);
+    line-height: 1.2;
 }
 
 .research .eyebrow::before,
 .lower-grid .eyebrow::before {
-    width: calc(var(--u) * 1.2); /* CHANGED (scoped): width was `1.25rem` */
+    width: calc(var(--u) * 1.2);
 }
 
 
 .text-link {
     display: inline-flex;
     align-items: center;
-    gap: calc(var(--u) * 0.5); /* CHANGED: gap was `0.4375rem` — denser */
-    font-size: calc(var(--u) * 1.05); /* CHANGED: font-size was `0.75rem` — denser */
+    gap: calc(var(--u) * 0.5);
+    font-size: calc(var(--u) * 1.05);
     font-weight: 600;
     letter-spacing: .04em;
     text-transform: uppercase;
@@ -183,31 +164,30 @@ p {
     color: var(--accent);
     border-bottom: 1px solid transparent;
     transition: border-color .15s ease, gap .15s ease;
-    line-height: 1.3; /* ADDED: line-height — body line-height 1.6 made links tall; tightened */
+    line-height: 1.3;
 }
 
 .text-link:hover {
     border-color: var(--accent);
-    gap: calc(var(--u) * 0.7); /* CHANGED: gap was `0.625rem` — keeps hover nudge proportional */
+    gap: calc(var(--u) * 0.7);
 }
 
 .text-link.small {
-    font-size: calc(var(--u) * 0.95); /* CHANGED: font-size was `0.625rem` — denser */
+    font-size: calc(var(--u) * 0.95);
 }
 
-/* ADDED: arrow icons were fixed 12-13px via HTML width/height attributes; scale them with --u */
 .text-link svg,
 .btn-outline svg,
 .area-link svg {
-    width: calc(var(--u) * 1.1); /* ADDED: svg width (attribute was 12/13) */
-    height: calc(var(--u) * 1.1); /* ADDED: svg height (attribute was 12/13) */
+    width: calc(var(--u) * 1.1);
+    height: calc(var(--u) * 1.1);
 }
 
 .btn-outline {
     display: inline-flex;
     align-items: center;
-    gap: calc(var(--u) * 0.6); /* CHANGED: gap was `0.5rem` — denser */
-    font-size: calc(var(--u) * 1.05); /* CHANGED: font-size was `0.8125rem` — denser */
+    gap: calc(var(--u) * 0.6);
+    font-size: calc(var(--u) * 1.05);
     font-weight: 600;
     letter-spacing: .04em;
     text-transform: uppercase;
@@ -215,9 +195,9 @@ p {
     color: var(--accent);
     border: 1px solid var(--rule-strong);
     border-radius: 0.375rem;
-    padding: calc(var(--u) * 0.65) calc(var(--u) * 1.2); /* CHANGED: padding was `0.6875rem 1.125rem` — denser */
+    padding: calc(var(--u) * 0.65) calc(var(--u) * 1.2);
     transition: border-color .15s ease, background .15s ease;
-    line-height: 1.3; /* ADDED: line-height — tighter button height */
+    line-height: 1.3;
 }
 
 .btn-outline:hover {
@@ -235,10 +215,9 @@ p {
     border-bottom: 1px solid var(--rule);
 }
 
-/* ADDED: header takes exactly 10vh on desktop. */
 @media (min-width: 1081px) {
     .site-header {
-        height: 10vh; /* ADDED: height (allocation: header = 10vh) */
+        height: 10vh;
     }
 }
 
@@ -246,19 +225,18 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: calc(var(--u) * 2.2); /* CHANGED: gap was `1.5rem` — denser */
+    gap: calc(var(--u) * 2.2);
     height: clamp(3.75rem, 7vw, 4.25rem);
 }
 
-/* ADDED: desktop header content fills the 10vh header. */
 @media (min-width: 1081px) {
     .site-header .wrap {
-        height: 100%; /* ADDED (desktop): was clamp(3.75rem, 7vw, 4.25rem) */
+        height: 100%;
     }
 }
 
 .brand {
-    font-size: calc(var(--u) * 1.9); /* CHANGED: font-size was `1rem` — scaled with --u */
+    font-size: calc(var(--u) * 1.9);
     font-weight: 700;
     letter-spacing: .12em;
     text-transform: uppercase;
@@ -269,12 +247,12 @@ p {
 
 .main-nav {
     display: flex;
-    gap: calc(var(--u) * 2.4); /* CHANGED: gap was `clamp(1.25rem, 2.5vw, 2rem)` — denser */
+    gap: calc(var(--u) * 2.4);
     margin: 0 auto;
 }
 
 .main-nav a {
-    font-size: calc(var(--u) * 1.25); /* CHANGED: font-size was `0.78125rem` — denser */
+    font-size: calc(var(--u) * 1.25);
     font-weight: 600;
     letter-spacing: .07em;
     text-transform: uppercase;
@@ -290,23 +268,23 @@ p {
 .header-right {
     display: flex;
     align-items: center;
-    gap: calc(var(--u) * 1.8); /* CHANGED: gap was `clamp(1rem, 2vw, 1.75rem)` — denser */
+    gap: calc(var(--u) * 1.8);
 }
 
 .affiliations {
     display: flex;
     align-items: center;
-    gap: calc(var(--u) * 1.8); /* CHANGED: gap was `1.25rem` — denser */
+    gap: calc(var(--u) * 1.8);
 }
 
 .badge {
     display: flex;
     align-items: center;
-    gap: calc(var(--u) * 0.6); /* CHANGED: gap was `0.5rem` — denser */
+    gap: calc(var(--u) * 0.6);
 }
 
 .badge-mark {
-    height: calc(var(--u) * 3.4); /* CHANGED: height was `1.75rem` — logo height scaled with --u */
+    height: calc(var(--u) * 3.4);
     width: auto;
     flex-shrink: 0;
     display: flex;
@@ -316,7 +294,7 @@ p {
 .badge-mark img {
     height: 100%;
     width: auto;
-    max-width: calc(var(--u) * 9); /* CHANGED: max-width was `6rem` — scaled with --u */
+    max-width: calc(var(--u) * 9);
     /* stop an ultra-wide logo from dominating */
     object-fit: contain;
     display: block;
@@ -326,13 +304,13 @@ p {
     display: flex;
     flex-direction: column;
     line-height: 1.2;
-    font-size: calc(var(--u) * 1.0); /* CHANGED: font-size was `0.75rem` — denser */
+    font-size: calc(var(--u) * 1.0);
     color: var(--ink-soft);
     white-space: nowrap;
 }
 
 .badge-text strong {
-    font-size: calc(var(--u) * 1.15); /* CHANGED: font-size was `0.8125rem` — denser */
+    font-size: calc(var(--u) * 1.15);
     color: var(--ink);
     font-weight: 700;
 }
@@ -341,8 +319,8 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: calc(var(--u) * 3.4); /* CHANGED: width was `2.25rem` — denser */
-    height: calc(var(--u) * 3.4); /* CHANGED: height was `2.25rem` — denser */
+    width: calc(var(--u) * 3.4);
+    height: calc(var(--u) * 3.4);
     border-radius: 50%;
     border: none;
     background: none;
@@ -355,10 +333,9 @@ p {
     background: var(--paper-dim);
 }
 
-/* ADDED: search icon was fixed 18px via the HTML width/height attributes; scale it with --u */
 .icon-btn svg {
-    width: calc(var(--u) * 1.9); /* ADDED: svg width (attribute was 18) */
-    height: calc(var(--u) * 1.9); /* ADDED: svg height (attribute was 18) */
+    width: calc(var(--u) * 1.9);
+    height: calc(var(--u) * 1.9);
 }
 
 .nav-toggle {
@@ -596,18 +573,18 @@ p {
 .hero {
     position: relative;
     overflow: hidden;
-    padding: 0; /* CHANGED: padding was `clamp(2rem, 5vw, 3rem) 0 0` — top padding removed so the hero fits exactly in 30vh */
-    min-height: 0; /* CHANGED: min-height was `70vh` — the 70vh minimum would break the 30vh allocation */
+    padding: 0;
+    min-height: 0;
 }
 
-/* ADDED: hero takes exactly 30vh on desktop; the wrap/grid are stretched to fill it. */
+
 @media (min-width: 1081px) {
     .hero {
-        height: 40vh; /* ADDED (desktop): allocation hero = 30vh */
+        height: 40vh;
     }
 
     .hero-wrap {
-        height: 100%; /* ADDED (desktop): fill the hero */
+        height: 100%;
     }
 }
 
@@ -628,17 +605,16 @@ p {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 0.5fr 1.25fr 1.5fr; /* CHANGED: grid-template-columns was `1fr 1.5fr 2fr` — column ratio taken from the mockup (portrait ~25% / text ~31% / figure ~45%) */
-    gap: calc(var(--u) * 1.2); /* CHANGED: gap was `clamp(0.5rem, 1.5vw, 1.5rem)` — denser */
+    grid-template-columns: 0.5fr 1.25fr 1.5fr;
+    gap: calc(var(--u) * 1.2);
     align-items: stretch;
-    padding-bottom: 0; /* CHANGED: padding-bottom was `2rem` — no space below the grid inside the 30vh hero */
+    padding-bottom: 0;
 }
 
-/* ADDED: desktop-only — grid fills the 30vh hero in one row that cannot grow past it. */
 @media (min-width: 1081px) {
     .hero-grid {
-        height: 100%; /* ADDED (desktop): fill the hero */
-        grid-template-rows: minmax(0, 1fr); /* ADDED (desktop): single row capped to the hero height */
+        height: 100%;
+        grid-template-rows: minmax(0, 1fr);
     }
 }
 
@@ -665,20 +641,18 @@ p {
 }
 
 h1 {
-    font-size: calc(var(--u) * 8.5); /* CHANGED: font-size was `clamp(2.2rem, 10vw, 3.5rem)` — scaled with --u (10vw cap keeps it from overflowing on phones) */
+    font-size: calc(var(--u) * 8.5);
     color: var(--ink);
-    margin-bottom: calc(var(--u) * 0.5); /* CHANGED: margin-bottom was `0.875rem` — denser */
+    margin-bottom: calc(var(--u) * 0.5);
     white-space: nowrap;
-    line-height: 1.2; /* ADDED: line-height — inherited 1.6 made the name block very tall */
+    line-height: 1.2;
 }
 
 .role-line {
-    /*display: flex;
-    flex-direction: column;*/
-    font-size: calc(var(--u) * 2); /* CHANGED: font-size was `0.9375rem` — denser */
+    font-size: calc(var(--u) * 2);
     color: var(--ink-soft);
-    margin: 0 0 calc(var(--u) * 0.5); /* CHANGED: margin was `0 0 0.625rem` — denser */
-    line-height: 1.4; /* CHANGED: line-height was `1.4` — tighter */
+    margin: 0 0 calc(var(--u) * 0.5);
+    line-height: 1.4;
 }
 
 .role-line strong {
@@ -687,32 +661,32 @@ h1 {
 }
 
 .intro {
-    margin-top: calc(var(--u) * 0.7); /* CHANGED: margin-top was `1rem` — denser */
+    margin-top: calc(var(--u) * 0.7);
     max-width: 85%;
     color: var(--ink);
-    font-size: calc(var(--u) * 1.75); /* CHANGED: font-size was `1rem` — denser */
-    line-height: 1.5; /* CHANGED: line-height was `1.65` — tighter */
-    margin-bottom: 0; /* ADDED: margin-bottom — global `p` adds 1em below; not needed in the dense hero */
+    font-size: calc(var(--u) * 1.75);
+    line-height: 1.5;
+    margin-bottom: 0;
 }
 
 .cta {
     display: flex;
-    gap: calc(var(--u) * 1); /* CHANGED: gap was `0.875rem` — denser */
-    margin-top: calc(var(--u) * 1.5); /* CHANGED: margin-top was `clamp(1.5rem, 3vw, 1.875rem)` — denser */
+    gap: calc(var(--u) * 1);
+    margin-top: calc(var(--u) * 1.5);
     flex-wrap: wrap;
 }
 
 .btn {
     font-family: var(--font-mono);
-    font-size: calc(var(--u) * 1.25); /* CHANGED: font-size was `0.75rem` — denser */
+    font-size: calc(var(--u) * 1.25);
     text-transform: uppercase;
     letter-spacing: .085em;
     text-decoration: none;
-    padding: calc(var(--u) * 0.75) calc(var(--u) * 1.5); /* CHANGED: padding was `0.75rem clamp(1.125rem, 2.5vw, 1.375rem)` — denser */
+    padding: calc(var(--u) * 0.75) calc(var(--u) * 1.5);
     border-radius: var(--radius);
     border: 1px solid rgba(238, 239, 233, .45);
     transition: background .15s ease, border-color .15s ease;
-    line-height: 1.3; /* ADDED: line-height — tighter buttons */
+    line-height: 1.3;
 }
 
 .btn:hover {
@@ -755,7 +729,7 @@ h1 {
     margin: 0;
     overflow: hidden;
     background: #12141c;
-    min-height: 0; /* CHANGED: min-height was `22rem` — the 22rem minimum would break the 30vh allocation */
+    min-height: 0;
     box-shadow: 0 1.5rem 3rem -1.5rem rgba(20, 22, 31, .35);
 }
 
@@ -769,7 +743,7 @@ h1 {
 }
 
 #heroCarousel {
-    min-height: 0; /* CHANGED: min-height was `22rem` — was 22rem; must fit inside the 30vh hero */
+    min-height: 0;
 }
 
 #heroCarousel .carousel-item {
@@ -782,10 +756,9 @@ h1 {
     display: block;
     width: 100%;
     height: 100%;
-    min-height: 0; /* CHANGED: min-height was `22rem` — was 22rem; must fit inside the 30vh hero */
+    min-height: 0;
     object-fit: cover;
 }
-
 
 /* Text overlay */
 .figure-caption {
@@ -794,7 +767,7 @@ h1 {
     right: 0;
     bottom: 0;
 
-    padding: calc(var(--u) * 1.6) calc(var(--u) * 1.6) calc(var(--u) * 3.8); /* CHANGED: padding was `clamp(1.5rem, 4vw, 2rem) clamp(1.5rem, 4vw, 2rem) 3.75rem` — denser; bottom space still leaves room for the carousel controls */
+    padding: calc(var(--u) * 1.6) calc(var(--u) * 1.6) calc(var(--u) * 3.8);
 
     margin: 0;
 
@@ -812,16 +785,16 @@ h1 {
 .figure-caption h3 {
     font-family: var(--font-body);
     font-weight: 600;
-    font-size: calc(var(--u) * 1.3); /* CHANGED: font-size was `1.0625rem` — denser */
-    margin: 0 0 calc(var(--u) * 0.3); /* CHANGED: margin was `0 0 .35rem` — denser */
-    line-height: 1.25; /* ADDED: line-height — tighter */
+    font-size: calc(var(--u) * 1.3);
+    margin: 0 0 calc(var(--u) * 0.3);
+    line-height: 1.25;
 }
 
 .figure-caption p {
-    font-size: calc(var(--u) * 1.05); /* CHANGED: font-size was `.8125rem` — denser */
-    line-height: 1.4; /* CHANGED: line-height was `1.5` — tighter */
+    font-size: calc(var(--u) * 1.05);
+    line-height: 1.4;
     color: rgba(255, 255, 255, .78);
-    max-width: 52ch; /* CHANGED: max-width was `30ch` — wider measure so the caption takes 2 lines like the mockup instead of 4 */
+    max-width: 52ch;
     margin: 0;
 }
 
@@ -829,11 +802,11 @@ h1 {
 /* Modern Bootstrap arrows */
 #heroCarousel .carousel-control-prev,
 #heroCarousel .carousel-control-next {
-    width: calc(var(--u) * 2.4); /* CHANGED: width was `3rem` — denser */
-    height: calc(var(--u) * 2.4); /* CHANGED: height was `3rem` — denser */
+    width: calc(var(--u) * 2.4);
+    height: calc(var(--u) * 2.4);
 
     top: auto;
-    bottom: calc(var(--u) * 1.0); /* CHANGED: bottom was `1.25rem` — denser */
+    bottom: calc(var(--u) * 1.0);
 
     opacity: 1;
 
@@ -853,18 +826,17 @@ h1 {
 /* Position arrows */
 #heroCarousel .carousel-control-prev {
     left: auto;
-    right: calc(var(--u) * 4.0); /* CHANGED: right was `4.75rem` — keeps the same gap between the two arrows at the new size */
+    right: calc(var(--u) * 4.0);
 }
 
 #heroCarousel .carousel-control-next {
-    right: calc(var(--u) * 1.0); /* CHANGED: right was `1.25rem` — denser */
+    right: calc(var(--u) * 1.0);
 }
 
-/* ADDED: Bootstrap's 2rem arrow glyph is bigger than the new 2.4u button; scale it. */
 #heroCarousel .carousel-control-prev-icon,
 #heroCarousel .carousel-control-next-icon {
-    width: calc(var(--u) * 1.5); /* ADDED: arrow glyph width (Bootstrap default 2rem) */
-    height: calc(var(--u) * 1.5); /* ADDED: arrow glyph height (Bootstrap default 2rem) */
+    width: calc(var(--u) * 1.5);
+    height: calc(var(--u) * 1.5);
 }
 
 
@@ -878,17 +850,17 @@ h1 {
 
 /* Bootstrap indicators */
 #heroCarousel .carousel-indicators {
-    left: calc(var(--u) * 1.5); /* CHANGED: left was `1.5rem` — denser */
+    left: calc(var(--u) * 1.5);
     right: auto;
-    bottom: calc(var(--u) * 1.65); /* CHANGED: bottom was `1.55rem` — vertically centred on the smaller arrows */
+    bottom: calc(var(--u) * 1.65);
     margin: 0;
     justify-content: flex-start;
-    gap: calc(var(--u) * 1); /* CHANGED: gap was `.4rem` — denser */
+    gap: calc(var(--u) * 1);
 }
 
 #heroCarousel .carousel-indicators button {
-    width: calc(var(--u) * 0.55); /* CHANGED: width was `.4rem` — denser */
-    height: calc(var(--u) * 0.55); /* CHANGED: height was `.4rem` — denser */
+    width: calc(var(--u) * 0.55);
+    height: calc(var(--u) * 0.55);
     margin: 0;
     padding: 0;
     border: 0;
@@ -902,7 +874,7 @@ h1 {
 }
 
 #heroCarousel .carousel-indicators button.active {
-    width: calc(var(--u) * 1.6); /* CHANGED: width was `1.25rem` — denser */
+    width: calc(var(--u) * 1.6);
     border-radius: 999px;
     opacity: 1;
 }
@@ -957,45 +929,44 @@ section+section {
 }
 
 .stat-cell {
-    padding: calc(var(--u) * 1.0) calc(var(--u) * 2.0); /* CHANGED: padding was `clamp(1.5rem, 3vw, 1.875rem) clamp(1rem, 2.5vw, 1.5rem)` — denser */
+    padding: calc(var(--u) * 1.0) calc(var(--u) * 2.0);
     border-left: 1px solid var(--rule);
     border-top: 3px solid var(--dot);
-    display: flex; /* ADDED: display — centre the number + label vertically inside the 10vh strip */
-    flex-direction: column; /* ADDED: flex-direction */
-    justify-content: center; /* ADDED: justify-content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .stat-cell:first-child {
     border-left: none;
 }
 
-/* ADDED: stat strip takes exactly 10vh on desktop; wrap -> grid -> cells stretch to fill it. */
 @media (min-width: 1081px) {
     .stat-strip {
-        height: 10vh; /* ADDED (desktop): allocation stats = 10vh */
+        height: 10vh;
     }
 
     .stat-strip .wrap,
     .strip-inner {
-        height: 100%; /* ADDED (desktop): fill the 10vh strip */
+        height: 100%;
     }
 }
 
 .stat-cell .num {
     font-family: var(--font-display);
-    font-size: calc(var(--u) * 3); /* CHANGED: font-size was `clamp(1.75rem, 3vw, 2.125rem)` — denser */
+    font-size: calc(var(--u) * 3);
     color: var(--ink);
-    line-height: 1.1; /* ADDED: line-height — inherited 1.6 made the number row very tall */
+    line-height: 1.1;
 }
 
 .stat-cell .lbl {
     font-family: var(--font-mono);
-    font-size: calc(var(--u) * 1.0); /* CHANGED: font-size was `0.6875rem` — denser */
+    font-size: calc(var(--u) * 1.0);
     letter-spacing: .04em;
     text-transform: uppercase;
     color: var(--ink-soft);
-    margin-top: calc(var(--u) * 0.3); /* CHANGED: margin-top was `0.375rem` — denser */
-    line-height: 1.3; /* ADDED: line-height — tighter */
+    margin-top: calc(var(--u) * 0.3);
+    line-height: 1.3;
 }
 
 @media (max-width:700px) {
@@ -1020,52 +991,48 @@ section+section {
     display: block;
 }
 
-/* ADDED: dense research section. The global `section` padding (clamp(2.25rem..3.5rem)) is
-   replaced for this section only; it gets exactly 30vh on desktop. */
 .research {
-    padding: calc(var(--u) * 1.4) 0; /* ADDED: padding (global `section` padding was clamp(2.25rem, 5vw, 3.5rem) 0) */
+    padding: calc(var(--u) * 1.4) 0;
 }
 
-/* ADDED: desktop layout from the mockup — intro on the left (~22%), four cards on the right. */
 @media (min-width: 1081px) {
     .research {
-        height: 40vh; /* ADDED (desktop): allocation research = 40vh */
+        height: 40vh;
     }
 
     .research-grid {
-        display: grid; /* CHANGED (desktop): display was `block` (intro stacked above cards) */
-        grid-template-columns: minmax(0, 1fr) minmax(0, 3.4fr); /* ADDED (desktop): intro | cards, ratio from the mockup */
-        column-gap: calc(var(--u) * 3); /* ADDED (desktop) */
-        align-items: center; /* ADDED (desktop): centre both columns vertically */
-        height: 100%; /* ADDED (desktop): fill the 30vh section */
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 3.4fr);
+        column-gap: calc(var(--u) * 3);
+        align-items: center;
+        height: 100%;
     }
 
     .research-intro {
-        margin-bottom: 0; /* ADDED (desktop): no stacking gap needed in the side-by-side layout */
+        margin-bottom: 0;
     }
 }
 
 .research-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: calc(var(--u) * 2.4); /* CHANGED: gap was `clamp(1.25rem, 2.5vw, 1.75rem)` — denser */
+    gap: calc(var(--u) * 2.4);
 }
 
 .research-intro {
-    margin-bottom: calc(var(--u) * 1.2); /* CHANGED: margin-bottom was `1.5rem` — denser (tablet/mobile stacked layout; 0 on desktop, see above) */
+    margin-bottom: calc(var(--u) * 1.2);
 }
 
 .research-intro h2 {
-    font-size: calc(var(--u) * 3.2); /* CHANGED: font-size was `clamp(1.625rem, 2.6vw, 1.9375rem)` — scaled with --u */
+    font-size: calc(var(--u) * 3.2);
     line-height: 1.2;
-    margin-bottom: calc(var(--u) * 0.8); /* CHANGED: margin-bottom was `0.875rem` — denser */
+    margin-bottom: calc(var(--u) * 0.8);
 }
 
-/* ADDED: intro paragraph (inherits global `p`: 1em bottom margin, line-height 1.6) */
 .research-intro p {
-    font-size: calc(var(--u) * 1.2); /* ADDED: font-size (was inherited 1rem) */
-    line-height: 1.5; /* ADDED: line-height (was inherited 1.6) */
-    margin-bottom: calc(var(--u) * 1); /* ADDED: margin-bottom (was global 1em) */
+    font-size: calc(var(--u) * 1.2);
+    line-height: 1.5;
+    margin-bottom: calc(var(--u) * 1);
 }
 
 .area-card {
@@ -1077,10 +1044,10 @@ section+section {
 
 .area-thumb {
     display: block;
-    aspect-ratio: 200/110; /* CHANGED: aspect-ratio was `200/130` — shorter thumbnail (SVGs use preserveAspectRatio="none" so they stretch cleanly) */
-    border-radius: calc(var(--u) * 0.6); /* CHANGED: border-radius was `0.5rem` — scaled with --u */
+    aspect-ratio: 200/110;
+    border-radius: calc(var(--u) * 0.6);
     overflow: hidden;
-    margin-bottom: calc(var(--u) * 0.7); /* CHANGED: margin-bottom was `0.875rem` — denser */
+    margin-bottom: calc(var(--u) * 0.7);
 }
 
 .area-thumb svg {
@@ -1092,35 +1059,35 @@ section+section {
 .area-card h3 {
     font-family: var(--font-body);
     font-weight: 700;
-    font-size: calc(var(--u) * 1.5); /* CHANGED: font-size was `1.0625rem` — denser */
+    font-size: calc(var(--u) * 1.5);
     color: var(--c);
-    margin-bottom: calc(var(--u) * 0.3); /* CHANGED: margin-bottom was `0.4375rem` — denser */
-    line-height: 1.25; /* ADDED: line-height — inherited 1.6 made titles tall */
+    margin-bottom: calc(var(--u) * 0.3);
+    line-height: 1.25;
 }
 
 .area-card p {
-    font-size: calc(var(--u) * 1.1); /* CHANGED: font-size was `0.8125rem` — denser */
-    line-height: 1.4; /* CHANGED: line-height was `1.55` — tighter */
+    font-size: calc(var(--u) * 1.1);
+    line-height: 1.4;
     flex: 1;
-    margin-bottom: calc(var(--u) * 0.4); /* ADDED: margin-bottom — global `p` adds 1em below */
+    margin-bottom: calc(var(--u) * 0.4);
 }
 
 .area-link {
     display: inline-flex;
     align-items: center;
-    gap: calc(var(--u) * 0.4); /* CHANGED: gap was `0.375rem` — denser */
-    font-size: calc(var(--u) * 1.0); /* CHANGED: font-size was `0.75rem` — denser */
+    gap: calc(var(--u) * 0.4);
+    font-size: calc(var(--u) * 1.0);
     font-weight: 700;
     letter-spacing: .04em;
     text-transform: uppercase;
     color: var(--c);
-    margin-top: calc(var(--u) * 0.2); /* CHANGED: margin-top was `0.5rem` — denser */
+    margin-top: calc(var(--u) * 0.2);
     border: 1px solid var(--rule-strong);
-    border-radius: calc(var(--u) * 0.4); /* CHANGED: border-radius was `0.375rem` — scaled with --u */
-    padding: calc(var(--u) * 0.5) calc(var(--u) * 1.0); /* CHANGED: padding was `0.6875rem 1.125rem` — denser */
+    border-radius: calc(var(--u) * 0.4);
+    padding: calc(var(--u) * 0.5) calc(var(--u) * 1.0);
     transition: border-color .15s ease, background .15s ease;
     max-width: 50%;
-    line-height: 1.3; /* ADDED: line-height — tighter */
+    line-height: 1.3;
 }
 
 .area-link:hover {
@@ -1142,33 +1109,29 @@ section+section {
 /* ---- Lower grid: News / Teaching / About ---- */
 .lower-inner {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr)); /* CHANGED: grid-template-columns was `0.5fr 0.5fr` — News | Teaching | About now share one row (was 2 columns because News was commented out in the HTML) */
-    gap: calc(var(--u) * 3); /* CHANGED: gap was `clamp(1.75rem, 3.5vw, 3rem)` — denser */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: calc(var(--u) * 3);
 }
 
-/* ADDED: dense lower row. Global `section` padding is replaced for this section only;
-   it gets the remaining 20vh on desktop (10+30+10+30+20 = 100vh). */
 .lower-grid {
-    margin-top: calc(var(--u) * 1.5); /* ADDED: margin-top (global `section` margin-top was `clamp(2.25rem, 5vw, 3.5rem)`) */
-    padding: calc(var(--u) * 1.75) 0; /* ADDED: padding (global `section` padding was clamp(2.25rem, 5vw, 3.5rem) 0) */
+    margin-top: calc(var(--u) * 1.5);
+    padding: calc(var(--u) * 1.75) 0;
 }
 
-/* ADDED: the lower columns inherited the body's 16px / 1.6 line metrics, so every inline-flex
-   "link" sat in a ~25px-tall line box (a strut) and wasted ~12px per row. Give the columns dense metrics. */
 .lower-col {
     margin: calc(var(--u) * 1.5) 0;
-    font-size: calc(var(--u) * 1.25); /* ADDED: font-size (was inherited 1rem) */
-    line-height: 1.3; /* ADDED: line-height (was inherited 1.6) */
+    font-size: calc(var(--u) * 1.25);
+    line-height: 1.3;
 }
 
 @media (min-width: 1081px) {
     .lower-grid {
-        height: auto; /* ADDED (desktop): allocation lower row = remaining 20vh (brief said 30vh; see top-of-file note) */
+        height: auto;
     }
 
     .lower-inner {
-        height: 100%; /* ADDED (desktop): fill the section */
-        align-content: start; /* ADDED (desktop): columns top-aligned */
+        height: 100%;
+        align-content: start;
     }
 }
 
@@ -1181,11 +1144,11 @@ section+section {
 
 .news-list li {
     display: flex;
-    gap: calc(var(--u) * 1.4); /* CHANGED: gap was `1rem` — denser */
-    padding: calc(var(--u) * 0.45) 0; /* CHANGED: padding was `0.75rem 0` — denser */
+    gap: calc(var(--u) * 1.4);
+    padding: calc(var(--u) * 0.45) 0;
     border-bottom: 1px solid var(--rule);
-    font-size: calc(var(--u) * 1.15); /* CHANGED: font-size was `0.84375rem` — denser */
-    line-height: 1.3; /* ADDED: line-height — tighter rows */
+    font-size: calc(var(--u) * 1.15);
+    line-height: 1.3;
 }
 
 .news-list .date {
@@ -1195,35 +1158,32 @@ section+section {
     font-variant-numeric: tabular-nums;
 }
 
-/* ADDED: `.news-list` / `.news-list .date` are also used by the below-the-fold News section,
-   so their original rules are untouched and only the in-viewport news list is scoped. */
 .lower-grid .news-list {
-    margin-bottom: calc(var(--u) * 0.7); /* CHANGED (scoped): margin-bottom was `1rem` */
+    margin-bottom: calc(var(--u) * 0.7);
 }
 
 .lower-grid .news-list .date {
-    width: calc(var(--u) * 6.2); /* CHANGED (scoped): width was `4.5rem` */
+    width: calc(var(--u) * 6.2);
 }
 
 .feature-row {
     display: flex;
-    gap: calc(var(--u) * 1.6); /* CHANGED: gap was `2rem` — denser */
-    margin-bottom: calc(var(--u) * 0.4); /* CHANGED: margin-bottom was `1.5rem` — denser */
+    gap: calc(var(--u) * 1.6);
+    margin-bottom: calc(var(--u) * 0.4);
     align-items: center;
 }
 
-/* ADDED: no trailing gap under the last row so it fits the fixed-height section. */
 .feature-row:last-child {
-    margin-bottom: 0; /* ADDED: margin-bottom */
+    margin-bottom: 0;
 }
 
 .feature-thumb {
     flex-shrink: 0;
     align-self: center;
-    width: calc(var(--u) * 8.5); /* CHANGED: width was `6.5rem` — smaller thumbnail (4/3 aspect ratio unchanged) */
+    width: calc(var(--u) * 8.5);
     height: auto;
     aspect-ratio: 4/3;
-    border-radius: calc(var(--u) * 0.6); /* CHANGED: border-radius was `0.5rem` — scaled with --u */
+    border-radius: calc(var(--u) * 0.6);
     overflow: hidden;
 }
 
@@ -1239,24 +1199,24 @@ section+section {
     display: block;
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: calc(var(--u) * 1.35); /* CHANGED: font-size was `1.0625rem` — denser */
+    font-size: calc(var(--u) * 1.35);
     color: var(--accent);
     text-decoration: none;
-    margin-bottom: calc(var(--u) * 0.1); /* CHANGED: margin-bottom was `0.1875rem` — denser */
-    line-height: 1.25; /* ADDED: line-height — tighter */
+    margin-bottom: calc(var(--u) * 0.1);
+    line-height: 1.25;
 }
 
 .feature-meta {
-    font-size: calc(var(--u) * 1.0); /* CHANGED: font-size was `0.75rem` — denser */
+    font-size: calc(var(--u) * 1.0);
     color: var(--ink-soft);
-    margin-bottom: calc(var(--u) * 0.25); /* CHANGED: margin-bottom was `0.5rem` — denser */
-    line-height: 1.2; /* ADDED: line-height — tighter */
+    margin-bottom: calc(var(--u) * 0.25);
+    line-height: 1.2;
 }
 
 .feature-desc {
-    font-size: calc(var(--u) * 1.1); /* CHANGED: font-size was `0.84375rem` — denser */
-    line-height: 1.4; /* CHANGED: line-height was `1.55` — tighter */
-    margin-bottom: calc(var(--u) * 0.25); /* CHANGED: margin-bottom was `0.625rem` — denser */
+    font-size: calc(var(--u) * 1.1);
+    line-height: 1.4;
+    margin-bottom: calc(var(--u) * 0.25);
 }
 
 .feature-row>div {

@@ -37,9 +37,9 @@
     --btn-secondary: #ccdcff;
 
     /* ---------- Typography tokens (edit here) ---------- */
-    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
-    --font-display: 'IBM Plex Sans', system-ui, sans-serif;
-    --font-label: 'IBM Plex Mono', ui-monospace, monospace;
+    --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    --font-display: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    --font-label: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 
     --weight-display: 600;
     --weight-heading: 600;

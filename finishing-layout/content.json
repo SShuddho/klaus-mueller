@@ -1,0 +1,399 @@
+{
+  "site": {
+    "title": "Klaus Mueller - Stony Brook University - Brookhaven National Laboratory",
+    "description": "Klaus Mueller is a Professor of Computer Science at Stony Brook University and Senior Scientist at Brookhaven National Laboratory, working on human-centered, explainable AI and visualization.",
+    "name": "Klaus Mueller"
+  },
+  "navigation": [
+    {
+      "label": "Research",
+      "href": "#"
+    },
+    {
+      "label": "Publications",
+      "href": "https://www3.cs.stonybrook.edu/~mueller/research/index.html"
+    },
+    {
+      "label": "Projects",
+      "href": "https://www3.cs.stonybrook.edu/~mueller/#projects"
+    },
+    {
+      "label": "People",
+      "href": "https://www3.cs.stonybrook.edu/~mueller/people/"
+    },
+    {
+      "label": "Teaching",
+      "href": "https://www3.cs.stonybrook.edu/~mueller/teaching/index.html"
+    },
+    {
+      "label": "News",
+      "href": "#"
+    },
+    {
+      "label": "About",
+      "href": "#"
+    }
+  ],
+  "affiliations": [
+    {
+      "logo": "./assets/img/sbu_logo.png",
+      "logoAlt": "Stony Brook University Logo",
+      "name": "Stony Brook",
+      "subtitle": "University"
+    },
+    {
+      "logo": "./assets/img/bnl_logo.png",
+      "logoAlt": "Brookhaven National Laboratory Logo",
+      "name": "Brookhaven",
+      "subtitle": "National Laboratory"
+    }
+  ],
+  "hero": {
+    "name": "Klaus Mueller",
+    "portrait": {
+      "image": "./assets/img/hs1.png",
+      "alt": "Klaus Mueller, Professor of Computer Science, Stony Brook University"
+    },
+    "roles": [
+      {
+        "title": "Professor, Computer Science",
+        "affiliation": "Stony Brook University"
+      },
+      {
+        "title": "Senior Scientist",
+        "affiliation": "Brookhaven National Laboratory"
+      }
+    ],
+    "intro": "My research lives at the intersection of visualization, visual analytics and human-centered AI — building systems that help people reason with complex data and understand what machine-learning models are doing.",
+    "buttons": [
+      {
+        "label": "Explore my research →",
+        "href": "#",
+        "style": "primary"
+      },
+      {
+        "label": "View CV",
+        "href": "#",
+        "style": "secondary"
+      },
+      {
+        "label": "Google Scholar ↗",
+        "href": "https://scholar.google.com/citations?user=uya_Zb4AAAAJ&hl=en&oi=ao",
+        "style": "tertiary",
+        "newTab": true
+      }
+    ],
+    "carousel": {
+      "intervalMs": 5000,
+      "slides": [
+        {
+          "image": "assets/img/slide-1.png",
+          "alt": "Visual analytics for medical imaging",
+          "title": "Visual Analytics for Medical Imaging",
+          "text": "Interactive analysis of brain structure and connectivity for diagnosis, treatment planning, and research."
+        },
+        {
+          "image": "assets/img/slide-2.png",
+          "alt": "Medical image analysis",
+          "title": "Computational Medical Imaging",
+          "text": "Quantitative methods for extracting meaningful information from complex medical imaging datasets."
+        },
+        {
+          "image": "assets/img/slide-3.png",
+          "alt": "Scientific visualization",
+          "title": "Scientific Visualization",
+          "text": "Translating complex biomedical data into clear, interpretable visual representations."
+        },
+        {
+          "image": "assets/img/slide-4.png",
+          "alt": "Research and computational analysis",
+          "title": "Research & Computational Methods",
+          "text": "Combining computation, visualization, and quantitative analysis to support biomedical research."
+        }
+      ]
+    }
+  },
+  "research": {
+    "eyebrow": "Research",
+    "heading": "Human-Centered AI & Visualization",
+    "text": "I work at the intersection of visualization, AI, and domain sciences, developing methods and interactive systems that help people reason, decide, and act with data and models.",
+    "button": {
+      "label": "Research overview",
+      "href": "#"
+    },
+    "areas": [
+      {
+        "title": "Visual Analytics",
+        "description": "Transforming complex data into interactive visual representations to support reasoning and decision making.",
+        "color": "#2054C7",
+        "href": "#",
+        "linkLabel": "Projects",
+        "thumbnailSvg": "<svg viewBox=\"0 0 200 130\" preserveAspectRatio=\"none\">\n                <rect width=\"200\" height=\"130\" fill=\"#12141c\"></rect>\n                <path d=\"M0 100 C 40 90, 55 40, 90 55 C 120 68, 130 20, 160 25 C 180 28, 190 40, 200 35\" fill=\"none\" stroke=\"#5cc6ff\" stroke-width=\"4\" opacity=\".9\"></path>\n                <path d=\"M0 115 C 45 108, 60 70, 95 80 C 125 88, 140 55, 170 58 C 185 60, 195 68, 200 65\" fill=\"none\" stroke=\"#ffb347\" stroke-width=\"3\" opacity=\".8\"></path>\n              </svg>"
+      },
+      {
+        "title": "Explainable & Responsible AI",
+        "description": "Building AI systems that people can understand, trust, and rely on.",
+        "color": "#7C3AED",
+        "href": "#",
+        "linkLabel": "Projects",
+        "thumbnailSvg": "<svg viewBox=\"0 0 200 130\" preserveAspectRatio=\"none\">\n                <rect width=\"200\" height=\"130\" fill=\"#14121f\"></rect>\n                <g stroke=\"#8f7bf7\" stroke-width=\"1\" opacity=\".7\">\n                  <line x1=\"40\" y1=\"40\" x2=\"100\" y2=\"65\"></line>\n                  <line x1=\"100\" y1=\"65\" x2=\"150\" y2=\"35\"></line>\n                  <line x1=\"100\" y1=\"65\" x2=\"90\" y2=\"100\"></line>\n                  <line x1=\"40\" y1=\"40\" x2=\"60\" y2=\"95\"></line>\n                  <line x1=\"150\" y1=\"35\" x2=\"165\" y2=\"90\"></line>\n                  <line x1=\"90\" y1=\"100\" x2=\"165\" y2=\"90\"></line>\n                </g>\n                <circle cx=\"40\" cy=\"40\" r=\"8\" fill=\"#7C3AED\"></circle>\n                <circle cx=\"100\" cy=\"65\" r=\"11\" fill=\"#a78bfa\"></circle>\n                <circle cx=\"150\" cy=\"35\" r=\"7\" fill=\"#7C3AED\"></circle>\n                <circle cx=\"90\" cy=\"100\" r=\"9\" fill=\"#a78bfa\"></circle>\n                <circle cx=\"165\" cy=\"90\" r=\"6\" fill=\"#7C3AED\"></circle>\n                <circle cx=\"60\" cy=\"95\" r=\"6\" fill=\"#a78bfa\"></circle>\n              </svg>"
+      },
+      {
+        "title": "AI for Science & Medicine",
+        "description": "Applying visualization and AI to advance discovery in science, medicine, and engineering.",
+        "color": "#0E9C93",
+        "href": "#",
+        "linkLabel": "Projects",
+        "thumbnailSvg": "<svg viewBox=\"0 0 200 130\" preserveAspectRatio=\"none\">\n                <rect width=\"200\" height=\"130\" fill=\"#0c1216\"></rect>\n                <circle cx=\"70\" cy=\"65\" r=\"40\" fill=\"none\" stroke=\"#3a4a4a\" stroke-width=\"1\"></circle>\n                <path d=\"M50 65 a20 20 0 1 0 40 0 a20 20 0 1 0 -40 0\" fill=\"#1c8f86\" opacity=\".85\"></path>\n                <circle cx=\"95\" cy=\"45\" r=\"8\" fill=\"#ff8a4c\"></circle>\n                <rect x=\"130\" y=\"20\" width=\"55\" height=\"90\" rx=\"4\" fill=\"#111820\" stroke=\"#2a343d\"></rect>\n                <rect x=\"138\" y=\"30\" width=\"39\" height=\"24\" fill=\"#173a4a\"></rect>\n                <rect x=\"138\" y=\"60\" width=\"39\" height=\"24\" fill=\"#1c8f86\" opacity=\".5\"></rect>\n              </svg>"
+      },
+      {
+        "title": "Agentic AI",
+        "description": "Designing autonomous agents that perceive, reason, and act in the real world.",
+        "color": "#DD7A2C",
+        "href": "#",
+        "linkLabel": "Projects",
+        "thumbnailSvg": "<svg viewBox=\"0 0 200 130\" preserveAspectRatio=\"none\">\n                <rect width=\"200\" height=\"130\" fill=\"#eef1f4\"></rect>\n                <rect y=\"80\" width=\"200\" height=\"50\" fill=\"#d7dde2\"></rect>\n                <rect x=\"10\" y=\"30\" width=\"30\" height=\"55\" fill=\"#c7cfd6\"></rect>\n                <rect x=\"150\" y=\"20\" width=\"35\" height=\"65\" fill=\"#c7cfd6\"></rect>\n                <g fill=\"#20242b\">\n                  <circle cx=\"70\" cy=\"100\" r=\"7\"></circle>\n                  <rect x=\"63\" y=\"107\" width=\"14\" height=\"16\" rx=\"3\"></rect>\n                  <circle cx=\"105\" cy=\"104\" r=\"7\"></circle>\n                  <rect x=\"98\" y=\"111\" width=\"14\" height=\"16\" rx=\"3\"></rect>\n                  <circle cx=\"140\" cy=\"98\" r=\"7\"></circle>\n                  <rect x=\"133\" y=\"105\" width=\"14\" height=\"16\" rx=\"3\"></rect>\n                </g>\n                <rect x=\"48\" y=\"70\" width=\"34\" height=\"14\" rx=\"7\" fill=\"#fff\" stroke=\"#DD7A2C\"></rect>\n              </svg>"
+      }
+    ]
+  },
+  "news": {
+    "eyebrow": "News",
+    "items": [
+      {
+        "date": "Sep 2026",
+        "text": "CausalXRL accepted at ICML 2026"
+      },
+      {
+        "date": "Aug 2026",
+        "text": "Paper on agentic AI accepted at IEEE VIS 2026 (Short Paper)"
+      },
+      {
+        "date": "Jul 2026",
+        "text": "New project on accessibility for data visualization"
+      },
+      {
+        "date": "Jun 2026",
+        "text": "Invited talk at AAAI 2026"
+      }
+    ],
+    "link": {
+      "label": "All news",
+      "href": "#"
+    }
+  },
+  "teaching": {
+    "eyebrow": "Teaching",
+    "thumbnailSvg": "<svg viewBox=\"0 0 160 120\" preserveAspectRatio=\"none\">\n                <rect width=\"160\" height=\"120\" fill=\"#eef1f4\"></rect>\n                <rect x=\"20\" y=\"15\" width=\"90\" height=\"55\" rx=\"3\" fill=\"#1c2430\"></rect>\n                <rect x=\"26\" y=\"21\" width=\"78\" height=\"43\" fill=\"#22344a\"></rect>\n                <path d=\"M30 55 L55 35 L70 48 L90 28 L100 40\" fill=\"none\" stroke=\"#8fe3ff\" stroke-width=\"2\"></path>\n                <circle cx=\"30\" cy=\"95\" r=\"10\" fill=\"#c7cfd6\"></circle>\n                <circle cx=\"60\" cy=\"98\" r=\"10\" fill=\"#c7cfd6\"></circle>\n                <circle cx=\"90\" cy=\"93\" r=\"10\" fill=\"#c7cfd6\"></circle>\n              </svg>",
+    "title": "Introduction to Visualization",
+    "titleHref": "#",
+    "meta": "Fall 2026",
+    "description": "Learn how to design, analyze, and build effective visualizations for real-world data.",
+    "link": {
+      "label": "Teaching",
+      "href": "#"
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "thumbnailSvg": "<svg viewBox=\"0 0 160 120\" preserveAspectRatio=\"none\">\n                <rect width=\"160\" height=\"120\" fill=\"#cfe0ea\"></rect>\n                <rect y=\"70\" width=\"160\" height=\"50\" fill=\"#e7ddc8\"></rect>\n                <rect x=\"70\" y=\"15\" width=\"10\" height=\"70\" fill=\"#8b8f94\"></rect>\n                <polygon points=\"70,15 75,4 80,15\" fill=\"#8b8f94\"></polygon>\n                <rect x=\"20\" y=\"60\" width=\"14\" height=\"40\" fill=\"#c96b3f\" opacity=\".7\"></rect>\n                <rect x=\"120\" y=\"55\" width=\"16\" height=\"45\" fill=\"#d98a4f\" opacity=\".7\"></rect>\n              </svg>",
+    "description": "Hoc ab homine scriptum est, non ab intellegentia artificiali. Omne verbum, omnis sententia atque elocutio ab homine vero proficiscuntur. Fortasse non est ad unguem expolitum neque sine ullo vitio compositum, sed hoc ipsum ad veram eius naturam pertinet. Cogitationem enim, affectus, experientiam proprietatemque humanam refert, non opus a systemate artificioso effectum.",
+    "link": {
+      "label": "Full bio",
+      "href": "#"
+    }
+  },
+  "footer": {
+    "name": "Klaus Mueller",
+    "lines": [
+      "Professor, Department of Computer Science, Stony Brook University.",
+      "Director, VAI Lab.",
+      "Senior Scientist, Brookhaven National Laboratory."
+    ],
+    "columns": [
+      {
+        "heading": "Explore",
+        "links": [
+          {
+            "label": "Research",
+            "href": "#"
+          },
+          {
+            "label": "Publications",
+            "href": "#"
+          },
+          {
+            "label": "People",
+            "href": "#"
+          },
+          {
+            "label": "Teaching",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "heading": "About",
+        "links": [
+          {
+            "label": "CV / Bio",
+            "href": "#"
+          },
+          {
+            "label": "News",
+            "href": "#"
+          },
+          {
+            "label": "Play",
+            "href": "#"
+          },
+          {
+            "label": "Contact",
+            "href": "mailto:mueller@cs.stonybrook.edu"
+          }
+        ]
+      },
+      {
+        "heading": "Affiliations",
+        "links": [
+          {
+            "label": "CS Department, SBU",
+            "href": "#"
+          },
+          {
+            "label": "VAI Lab",
+            "href": "#"
+          },
+          {
+            "label": "Brookhaven National Lab",
+            "href": "#"
+          },
+          {
+            "label": "Google Scholar",
+            "href": "https://scholar.google.com/citations?user=uya_Zb4AAAAJ&hl=en&oi=ao",
+            "newTab": true
+          }
+        ]
+      }
+    ],
+    "copyrightHolder": "Klaus Mueller, Stony Brook University",
+    "rightText": "Final Layout"
+  },
+  "search": {
+    "placeholder": "Search publications, research, news…",
+    "emptyPrompt": "Type to search research, publications, news, and teaching.",
+    "index": [
+      {
+        "title": "Visual Analytics",
+        "type": "Research",
+        "url": "#",
+        "keywords": "visual analytics data reasoning decision making interactive",
+        "body": "Transforming complex data into interactive visual representations to support reasoning and decision making."
+      },
+      {
+        "title": "Explainable & Responsible AI",
+        "type": "Research",
+        "url": "#",
+        "keywords": "xai explainable responsible ai trust interpretable",
+        "body": "Building AI systems that people can understand, trust, and rely on."
+      },
+      {
+        "title": "AI for Science & Medicine",
+        "type": "Research",
+        "url": "#",
+        "keywords": "ai science medicine medical imaging discovery",
+        "body": "Applying visualization and AI to advance discovery in science, medicine, and engineering."
+      },
+      {
+        "title": "Agentic AI",
+        "type": "Research",
+        "url": "#",
+        "keywords": "agentic ai agents autonomous perceive reason act",
+        "body": "Designing autonomous agents that perceive, reason, and act in the real world."
+      },
+      {
+        "title": "Five papers accepted at IEEE VIS 2025",
+        "type": "News",
+        "url": "https://example.com/news-1",
+        "keywords": "ieee vis 2025 papers visualization conference",
+        "body": "Five papers accepted at IEEE VIS 2025."
+      },
+      {
+        "title": "MisVisFix: detecting, explaining, and correcting misleading visualizations using LLMs",
+        "type": "News",
+        "url": "https://example.com/news-2",
+        "keywords": "misvisfix misleading visualization llm tvcg dashboard",
+        "body": "An interactive dashboard for detecting, explaining, and correcting misleading visualizations using LLMs."
+      },
+      {
+        "title": "What is the Color of Serendipity? Semantically resonant color generation with language models",
+        "type": "News",
+        "url": "https://example.com/news-3",
+        "keywords": "color serendipity language models tvcg generation",
+        "body": "Semantically resonant color generation with language models."
+      },
+      {
+        "title": "CSE 564 Spring 2025 — student project showcase playlist",
+        "type": "Teaching",
+        "url": "https://example.com/news-4",
+        "keywords": "cse 564 teaching spring 2025 student projects showcase",
+        "body": "Student project showcase playlist for CSE 564 Spring 2025."
+      },
+      {
+        "title": "Introduction to Visualization",
+        "type": "Teaching",
+        "url": "https://www3.cs.stonybrook.edu/~mueller/teaching/index.html",
+        "keywords": "cse visualization course teaching fall 2026",
+        "body": "Learn how to design, analyze, and build effective visualizations for real-world data. Fall 2026."
+      },
+      {
+        "title": "Publications",
+        "type": "Page",
+        "url": "https://www3.cs.stonybrook.edu/~mueller/research/index.html",
+        "keywords": "publications papers research archive scholar",
+        "body": "300+ peer-reviewed publications from 1993 to present."
+      },
+      {
+        "title": "Projects",
+        "type": "Page",
+        "url": "https://www3.cs.stonybrook.edu/~mueller/#projects",
+        "keywords": "projects research grants",
+        "body": "Funded research projects and collaborations."
+      },
+      {
+        "title": "People",
+        "type": "Page",
+        "url": "https://www3.cs.stonybrook.edu/~mueller/people/",
+        "keywords": "people lab students alumni vai",
+        "body": "Current students and alumni of the VAI Lab."
+      },
+      {
+        "title": "About / CV",
+        "type": "Page",
+        "url": "#",
+        "keywords": "about bio cv biography awards appointments",
+        "body": "Full academic biography, appointments, awards, and service."
+      },
+      {
+        "title": "Contact",
+        "type": "Page",
+        "url": "mailto:mueller@cs.stonybrook.edu",
+        "keywords": "contact email mueller stony brook",
+        "body": "mueller@cs.stonybrook.edu"
+      },
+      {
+        "title": "Brookhaven National Laboratory",
+        "type": "Affiliation",
+        "url": "https://www.bnl.gov/",
+        "keywords": "brookhaven national laboratory bnl senior scientist",
+        "body": "Senior Scientist, Brookhaven National Laboratory."
+      },
+      {
+        "title": "Stony Brook University",
+        "type": "Affiliation",
+        "url": "https://www.stonybrook.edu/",
+        "keywords": "stony brook university computer science professor",
+        "body": "Professor, Department of Computer Science, Stony Brook University."
+      }
+    ]
+  }
+}

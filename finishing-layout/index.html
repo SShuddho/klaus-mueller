@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- NOTE: <title> and meta description below are also stored in content.json ("site") and re-applied by the script
+       at load time. Keep these two static copies in sync when they change: they are what search engines and
+       link-preview crawlers that do not run JavaScript will read. -->
+  <title>Klaus Mueller - Stony Brook University - Brookhaven National Laboratory</title>
+  <meta name="description"
+    content="Klaus Mueller is a Professor of Computer Science at Stony Brook University and Senior Scientist at Brookhaven National Laboratory, working on human-centered, explainable AI and visualization.">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style-sans.css">
+</head>
+
+<body>
+  <!-- All page text, links, images and the search index are loaded from ./content.json (see CONTENT_GUIDE.md).
+       Empty containers below are filled by the script at the bottom of this file. -->
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" id="siteBrand" href="#"></a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Primary">
+        <!-- Navigation links (content.json: "navigation") are inserted here, before the mobile search button -->
+        <!-- Mobile search: shown inside the hamburger menu (<= 980px), where .header-right is hidden -->
+        <button class="nav-search" id="navSearchToggle" type="button" aria-label="Open search"
+          aria-controls="searchOverlay">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>Search</span>
+        </button>
+      </nav>
+
+      <div class="header-right">
+        <div class="affiliations" id="siteAffiliations"></div>
+        <button class="icon-btn" id="searchToggle" aria-label="Open search" aria-expanded="false"
+          aria-controls="searchOverlay">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="wrap hero-wrap">
+        <div class="hero-grid">
+          <div class="hero-portrait" id="heroPortrait"></div>
+          <div class="hero-body" id="heroBody"></div>
+          <div class="hero-figure" id="heroFigure"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESEARCH ===================== -->
+    <section class="research" data-reveal>
+      <div class="wrap research-grid" id="researchGrid"></div>
+    </section>
+
+    <!-- ===================== NEWS / TEACHING / ABOUT ===================== -->
+    <section class="lower-grid" data-reveal>
+      <div class="wrap lower-inner" id="lowerInner"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap" id="footerWrap"></div>
+  </footer>
+
+  <div class="search-overlay" id="searchOverlay" hidden>
+    <div class="search-panel" role="dialog" aria-modal="true" aria-label="Site search">
+      <div class="search-bar">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" id="searchInput" placeholder="" autocomplete="off"
+          spellcheck="false" aria-controls="searchResults" />
+        <button class="search-close" id="searchClose" type="button" aria-label="Close search">Esc</button>
+      </div>
+      <div class="search-results" id="searchResults" role="listbox" aria-live="polite"></div>
+      <div class="search-hint" aria-hidden="true">
+        <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+        <span><kbd>↵</kbd> open</span>
+        <span><kbd>Esc</kbd> close</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <script>
+    /* =====================================================================
+       CONTENT LOADER + RENDERER
+       Fetches ./content.json and builds the page markup. The generated markup
+       (classes, structure, attributes) is identical to the original static page,
+       so style.css is unchanged. Editing content never requires editing this file.
+       ===================================================================== */
+    (function () {
+      const CONTENT_URL = './content.json';
+
+      // ---- helpers ----
+      const esc = (s) =>
+        String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
+          ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+      // Refuse javascript: URLs; everything else (https:, mailto:, relative, #) passes through.
+      const url = (u) => (/^\s*javascript:/i.test(u || "") ? "#" : esc(u == null ? "#" : u));
+      const $id = (id) => document.getElementById(id);
+      const arrow = (n) =>
+        `<svg viewBox="0 0 16 16" width="${n}" height="${n}" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M2 8h11.5M9 3.5 13.5 8 9 12.5"></path>
+            </svg>`;
+      const newTabAttrs = (o) => (o && o.newTab ? ' target="_blank" rel="noopener"' : "");
+
+      // ---- section renderers ----
+      function renderHead(site) {
+        if (site.title) document.title = site.title;
+        if (site.description) {
+          const meta = document.querySelector('meta[name="description"]');
+          if (meta) meta.setAttribute("content", site.description);
+        }
+        if (site.name) $id("siteBrand").textContent = site.name;
+      }
+
+      function renderNavigation(items) {
+        const searchBtn = $id("navSearchToggle");
+        searchBtn.insertAdjacentHTML(
+          "beforebegin",
+          items.map((l) => `<a href="${url(l.href)}">${esc(l.label)}</a>`).join("\n        ")
+        );
+      }
+
+      function renderAffiliations(items) {
+        $id("siteAffiliations").innerHTML = items
+          .map((a) => `
+          <div class="badge">
+            <span class="badge-mark"><img src="${esc(a.logo)}" alt="${esc(a.logoAlt)}" /></span>
+            <span class="badge-text"><strong>${esc(a.name)}</strong>${esc(a.subtitle)}</span>
+          </div>`)
+          .join("");
+      }
+
+      function renderHero(h) {
+        $id("heroPortrait").innerHTML =
+          `<img src="${esc(h.portrait.image)}" alt="${esc(h.portrait.alt)}">`;
+
+        $id("heroBody").innerHTML = `
+            <h1>${esc(h.name)}</h1>
+            ${(h.roles || []).map((r) =>
+              `<p class="role-line"><strong>${esc(r.title)}</strong> (${esc(r.affiliation)})</p>`).join("\n            ")}
+            <p class="intro">${esc(h.intro)}</p>
+
+            <div class="cta">
+              ${(h.buttons || []).map((b) =>
+                `<a class="btn ${esc(b.style || "primary")}" href="${url(b.href)}"${newTabAttrs(b)}>${esc(b.label)}</a>`
+              ).join("\n              ")}
+            </div>`;
+
+        const c = h.carousel || { slides: [] };
+        const slides = c.slides || [];
+        $id("heroFigure").innerHTML = `
+            <figure class="figure-card">
+              <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-interval="${esc(c.intervalMs == null ? 5000 : c.intervalMs)}">
+                <div class="carousel-indicators">
+                  ${slides.map((s, i) => `<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="${i}"${i === 0 ? ' class="active" aria-current="true"' : ""} aria-label="Slide ${i + 1}">
+                  </button>`).join("\n                  ")}
+                </div>
+
+                <div class="carousel-inner">
+                  ${slides.map((s, i) => `<div class="carousel-item${i === 0 ? " active" : ""}">
+                    <img src="${esc(s.image)}" class="figure-art" alt="${esc(s.alt)}">
+                    <div class="figure-caption">
+                      <h3>${esc(s.title)}</h3>
+                      <p>${esc(s.text)}</p>
+                    </div>
+                  </div>`).join("\n\n                  ")}
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true">
+                  </span>
+                  <span class="visually-hidden">
+                    Previous
+                  </span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true">
+                  </span>
+                  <span class="visually-hidden">
+                    Next
+                  </span>
+                </button>
+              </div>
+            </figure>`;
+      }
+
+      function renderResearch(r) {
+        $id("researchGrid").innerHTML = `
+        <div class="research-intro">
+          <p class="eyebrow">${esc(r.eyebrow)}</p>
+          <h2>${esc(r.heading)}</h2>
+          <p>${esc(r.text)}</p>
+          <a class="btn-outline" href="${url(r.button.href)}">${esc(r.button.label)}
+            ${arrow(13)}
+          </a>
+        </div>
+        <div class="research-cards">
+          ${(r.areas || []).map((a) => `<a class="area-card" href="${url(a.href)}" style="--c:${esc(a.color)}">
+            <span class="area-thumb">
+              ${a.thumbnailSvg || ""}
+            </span>
+            <h3>${esc(a.title)}</h3>
+            <p>${esc(a.description)}</p>
+            <span class="area-link">${esc(a.linkLabel)}
+              ${arrow(12)}
+            </span>
+          </a>`).join("\n\n          ")}
+        </div>`;
+      }
+
+      function renderLower(c) {
+        const parts = [];
+        // Each column is built independently so one malformed block cannot remove the other two.
+        const column = (key, build) => {
+          if (c[key] == null) return console.warn(`content.json: missing "${key}" section`);
+          try { parts.push(build(c[key])); } catch (err) { console.error(`content.json: could not render "${key}"`, err); }
+        };
+
+        column("news", (n) => `
+          <div class="lower-col news-col">
+            <p class="eyebrow">${esc(n.eyebrow)}</p>
+            <ul class="news-list">
+              ${(n.items || []).map((i) =>
+                `<li><span class="date">${esc(i.date)}</span><span>${esc(i.text)}</span></li>`).join("\n              ")}
+            </ul>
+            <a class="text-link small" href="${url(n.link.href)}">${esc(n.link.label)}
+              ${arrow(12)}
+            </a>
+          </div>`);
+
+        column("teaching", (t) => `
+        <div class="lower-col">
+          <p class="eyebrow">${esc(t.eyebrow)}</p>
+          <div class="feature-row">
+            <span class="feature-thumb">
+              ${t.thumbnailSvg || ""}
+            </span>
+            <div>
+              <a class="feature-title" href="${url(t.titleHref)}">${esc(t.title)}</a>
+              <p class="feature-meta">${esc(t.meta)}</p>
+              <p class="feature-desc">${esc(t.description)}</p>
+              <a class="text-link small" href="${url(t.link.href)}">${esc(t.link.label)}
+                ${arrow(12)}
+              </a>
+            </div>
+          </div>
+        </div>`);
+
+        column("about", (a) => `
+        <div class="lower-col">
+          <p class="eyebrow">${esc(a.eyebrow)}</p>
+          <div class="feature-row">
+            <span class="feature-thumb">
+              ${a.thumbnailSvg || ""}
+            </span>
+            <div>
+              <p class="feature-desc">${esc(a.description)}</p>
+              <a class="text-link small" href="${url(a.link.href)}">${esc(a.link.label)}
+                ${arrow(12)}
+              </a>
+            </div>
+          </div>
+        </div>`);
+
+        $id("lowerInner").innerHTML = parts.join("\n");
+      }
+
+      function renderFooter(f) {
+        $id("footerWrap").innerHTML = `
+      <div class="foot-grid">
+        <div>
+          <h4>${esc(f.name)}</h4>
+          <p style="color:rgba(238,239,233,.75); font-size:14px; max-width:34ch;">${(f.lines || []).map(esc).join("<br>")}</p>
+        </div>
+        ${(f.columns || []).map((col) => `<div>
+          <h4>${esc(col.heading)}</h4>
+          <ul>
+            ${(col.links || []).map((l) =>
+              `<li><a href="${url(l.href)}"${newTabAttrs(l)}>${esc(l.label)}</a></li>`).join("\n            ")}
+          </ul>
+        </div>`).join("\n        ")}
+      </div>
+      <div class="foot-bottom"><span>© <span id="year"></span> ${esc(f.copyrightHolder)}</span><span>${esc(f.rightText)}</span></div>`;
+      }
+
+      function render(content) {
+        const steps = [
+          ["site", (v) => renderHead(v)],
+          ["navigation", (v) => renderNavigation(v)],
+          ["affiliations", (v) => renderAffiliations(v)],
+          ["hero", (v) => renderHero(v)],
+          ["research", (v) => renderResearch(v)],
+          ["footer", (v) => renderFooter(v)],
+        ];
+        // One broken or missing section must not take the rest of the page down.
+        steps.forEach(([key, fn]) => {
+          if (content[key] == null) return console.warn(`content.json: missing "${key}" section`);
+          try { fn(content[key]); } catch (err) { console.error(`content.json: could not render "${key}"`, err); }
+        });
+        try { renderLower(content); } catch (err) { console.error('content.json: could not render "news/teaching/about"', err); }
+      }
+
+      function showLoadError(err) {
+        console.error("Could not load " + CONTENT_URL + ":", err);
+        $id("mainContent").insertAdjacentHTML(
+          "afterbegin",
+          '<div class="wrap"><p role="alert">The page content could not be loaded. Please try again later.</p></div>'
+        );
+      }
+
+      // ===================== SITE SEARCH =====================
+      function initSearch(cfg) {
+        // The index comes from content.json ("search.index").
+        const INDEX = cfg.index || [];
+
+        // ---- DOM ----
+        const toggleBtn = document.getElementById("searchToggle");
+        const navSearchBtn = document.getElementById("navSearchToggle");
+        const overlay = document.getElementById("searchOverlay");
+        const input = document.getElementById("searchInput");
+        const resultsEl = document.getElementById("searchResults");
+        const closeBtn = document.getElementById("searchClose");
+
+        if (cfg.placeholder) input.setAttribute("placeholder", cfg.placeholder);
+
+        let activeIndex = -1;
+        let currentItems = [];
+        let lastFocused = null;
+
+        // ---- Helpers ----
+        const escapeHtml = esc;
+
+        const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+        function highlight(text, terms) {
+          let out = escapeHtml(text);
+          terms.forEach((t) => {
+            if (!t) return;
+            const re = new RegExp("(" + escapeRe(t) + ")", "gi");
+            out = out.replace(re, "<mark>$1</mark>");
+          });
+          return out;
+        }
+
+        function isTypingTarget(el) {
+          return el && (el.tagName === "INPUT" || el.tagName === "TEXTAREA" || el.isContentEditable);
+        }
+
+        // ---- Search ----
+        function runSearch(query) {
+          const q = query.trim().toLowerCase();
+          if (!q) return [];
+
+          const terms = q.split(/\s+/).filter(Boolean);
+          const scored = [];
+
+          for (const item of INDEX) {
+            const title = item.title.toLowerCase();
+            const keywords = (item.keywords || "").toLowerCase();
+            const body = (item.body || "").toLowerCase();
+            const type = item.type.toLowerCase();
+
+            let score = 0;
+            let matchedAll = true;
+
+            for (const t of terms) {
+              const inTitle = title.includes(t);
+              const inKeywords = keywords.includes(t);
+              const inBody = body.includes(t);
+              const inType = type.includes(t);
+
+              if (!inTitle && !inKeywords && !inBody && !inType) {
+                matchedAll = false;
+                break;
+              }
+              if (inTitle) score += 5;
+              if (inKeywords) score += 3;
+              if (inType) score += 2;
+              if (inBody) score += 1;
+            }
+
+            if (matchedAll) scored.push({ item, score });
+          }
+
+          scored.sort((a, b) => b.score - a.score);
+          return scored.slice(0, 8).map((s) => s.item);
+        }
+
+        // ---- Render ----
+        function renderResults(query) {
+          activeIndex = -1;
+          const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+
+          if (!query.trim()) {
+            currentItems = [];
+            resultsEl.innerHTML =
+              `<div class="search-empty">${escapeHtml(cfg.emptyPrompt || "")}</div>`;
+            return;
+          }
+
+          currentItems = runSearch(query);
+
+          if (!currentItems.length) {
+            resultsEl.innerHTML =
+              `<div class="search-empty">No results for &ldquo;${escapeHtml(query)}&rdquo;.</div>`;
+            return;
+          }
+
+          resultsEl.innerHTML = currentItems
+            .map((item, i) => `
+        <a class="search-result" href="${escapeHtml(item.url)}" data-index="${i}">
+          <span class="result-type">${escapeHtml(item.type)}</span>
+          <h5>${highlight(item.title, terms)}</h5>
+          ${item.body ? `<p>${highlight(item.body, terms)}</p>` : ""}
+        </a>`)
+            .join("");
+        }
+
+        // ---- Open / close ----
+        function openSearch() {
+          lastFocused = document.activeElement;
+          overlay.hidden = false;
+          requestAnimationFrame(() => overlay.classList.add("open"));
+          toggleBtn.setAttribute("aria-expanded", "true");
+          document.body.style.overflow = "hidden";
+          input.value = "";
+          renderResults("");
+          input.focus();
+        }
+
+        function closeSearch() {
+          overlay.classList.remove("open");
+          toggleBtn.setAttribute("aria-expanded", "false");
+          document.body.style.overflow = "";
+          window.setTimeout(() => { overlay.hidden = true; }, 180);
+          // If the opener is no longer rendered (e.g. the closed mobile menu), fall back to the hamburger button.
+          const back = lastFocused && lastFocused.getClientRects().length
+            ? lastFocused
+            : document.querySelector(".nav-toggle");
+          if (back && typeof back.focus === "function") back.focus();
+        }
+
+        // ---- Keyboard nav inside results ----
+        function moveActive(dir) {
+          const items = resultsEl.querySelectorAll(".search-result");
+          if (!items.length) return;
+          activeIndex = (activeIndex + dir + items.length) % items.length;
+          items.forEach((el, i) => el.classList.toggle("active", i === activeIndex));
+          items[activeIndex].scrollIntoView({ block: "nearest" });
+        }
+
+        // ---- Wire up ----
+        toggleBtn.addEventListener("click", () => {
+          if (overlay.hidden) openSearch(); else closeSearch();
+        });
+
+        // Search button inside the mobile menu: close the dropdown, then open the same overlay.
+        navSearchBtn.addEventListener("click", () => {
+          const mainNav = document.querySelector(".main-nav");
+          const menuBtn = document.querySelector(".nav-toggle");
+          mainNav.classList.remove("open");
+          menuBtn.setAttribute("aria-expanded", "false");
+          if (overlay.hidden) openSearch();
+        });
+
+        closeBtn.addEventListener("click", closeSearch);
+
+        overlay.addEventListener("click", (e) => {
+          if (e.target === overlay) closeSearch();
+        });
+
+        input.addEventListener("input", (e) => renderResults(e.target.value));
+
+        resultsEl.addEventListener("click", (e) => {
+          if (e.target.closest(".search-result")) closeSearch();
+        });
+
+        // Global shortcuts
+        document.addEventListener("keydown", (e) => {
+          const cmdK = (e.key === "k" || e.key === "K") && (e.metaKey || e.ctrlKey);
+          const slash = e.key === "/" && !isTypingTarget(document.activeElement);
+
+          if (cmdK || slash) {
+            e.preventDefault();
+            if (overlay.hidden) openSearch();
+            else input.focus();
+            return;
+          }
+
+          if (overlay.hidden) return;
+
+          if (e.key === "Escape") {
+            e.preventDefault();
+            closeSearch();
+          } else if (e.key === "ArrowDown") {
+            e.preventDefault();
+            moveActive(1);
+          } else if (e.key === "ArrowUp") {
+            e.preventDefault();
+            moveActive(-1);
+          } else if (e.key === "Enter") {
+            const active = resultsEl.querySelector(".search-result.active");
+            if (active) {
+              e.preventDefault();
+              active.click();
+            }
+          }
+        });
+
+        // Focus trap while overlay is open
+        overlay.addEventListener("keydown", (e) => {
+          if (e.key !== "Tab") return;
+          const focusables = overlay.querySelectorAll(
+            'input, button, a[href], [tabindex]:not([tabindex="-1"])'
+          );
+          if (!focusables.length) return;
+          const first = focusables[0];
+          const last = focusables[focusables.length - 1];
+
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault(); last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault(); first.focus();
+          }
+        });
+      }
+
+      // ===================== PAGE BEHAVIOUR (year, mobile nav, reveal) =====================
+      function initPage() {
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        toggle.addEventListener('click', () => {
+          const open = nav.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open);
+        });
+
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+      }
+
+      // ===================== BOOT =====================
+      async function main() {
+        let content = {};
+        try {
+          // no-cache: always revalidate so edits to content.json show up on the next page load
+          const res = await fetch(CONTENT_URL, { cache: "no-cache" });
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          content = await res.json();
+        } catch (err) {
+          showLoadError(err);
+        }
+        render(content);
+        initSearch(content.search || {});
+        initPage();
+      }
+
+      main();
+    })();
+  </script>
+</body>
+
+</html>

@@ -283,7 +283,7 @@ p {
 }
 
 .brand {
-    font-size: calc(var(--u) * 1.9);
+    font-size: calc(var(--u) * 2);
     font-weight: var(--weight-brand);
     letter-spacing: var(--tracking-brand);
     text-transform: uppercase;
@@ -300,7 +300,7 @@ p {
 
 .main-nav a,
 .nav-search {
-    font-size: calc(var(--u) * 1.25);
+    font-size: calc(var(--u) * 1.85);
     font-weight: var(--weight-label);
     letter-spacing: var(--tracking-nav);
     text-transform: uppercase;

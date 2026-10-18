@@ -294,7 +294,7 @@ p {
 
 .main-nav {
     display: flex;
-    gap: calc(var(--u) * 2.4);
+    gap: calc(var(--u) * 4);
     margin: 0 auto;
 }
 
@@ -1697,5 +1697,588 @@ footer li a:hover {
     .portrait-ring {
         width: clamp(7.5rem, 30vw, 8.75rem);
         height: clamp(7.5rem, 30vw, 8.75rem);
+    }
+}
+
+/* =====================================================================
+   INNER PAGES  (People, Research, Teaching, News, About, CV)
+   Plain rem sizes. Everything lives inside <body class="page">.
+   ===================================================================== */
+.page-wrap {
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.page-hero {
+    position: relative;
+    padding: clamp(1rem, 2vw, 2rem) 0 clamp(1rem, 2vw, 2rem);
+    background:
+        radial-gradient(50rem 22rem at 10% 0%, rgba(92, 198, 255, .16), transparent 60%),
+        radial-gradient(40rem 20rem at 85% 0%, rgba(124, 107, 255, .1), transparent 55%),
+        linear-gradient(180deg, #EEF3FB 0%, var(--paper) 100%);
+    border-bottom: 1px solid var(--rule);
+}
+
+.page-hero .eyebrow {
+    font-size: 0.8125rem;
+    margin-bottom: 0.75rem;
+}
+
+.page-hero h1 {
+    font-size: clamp(1.5rem, 1rem + 1.5vw, 2.25rem);
+    margin-bottom: 0.5rem;
+}
+
+.page-hero .lead {
+    font-size: 1rem;
+    line-height: 1.25;
+    max-width: 75vw;
+    color: var(--ink-soft);
+    margin: 0;
+}
+
+.page main {
+    font-size: 1rem;
+}
+
+.page-section {
+    padding: clamp(0.75rem, 1.5vw, 1.5rem) 0;
+}
+
+.page-section+.page-section {
+    border-top: 1px solid var(--rule);
+}
+
+.page-section h2 {
+    font-size: clamp(1.3rem, 1rem + 0.9vw, 1.65rem);
+    margin-bottom: 1rem;
+}
+
+.page-section h3 {
+    font-size: 1.0625rem;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.page p,
+.page li {
+    font-size: 1rem;
+}
+
+.prose {
+    max-width: none;
+}
+
+.prose>p,
+.prose>ul,
+.prose>.contact-box {
+    max-width: 52rem;
+}
+
+.prose p {
+    color: var(--ink);
+}
+
+.prose a,
+.page-section a:not(.btn):not(.text-link):not(.btn-outline):not(.card) {
+    color: var(--accent);
+    text-decoration-color: rgba(32, 84, 199, .35);
+    text-underline-offset: 2px;
+}
+
+.prose a:hover,
+.page-section a:not(.btn):not(.text-link):not(.btn-outline):not(.card):hover {
+    text-decoration-color: currentColor;
+}
+
+.note {
+    font-size: 0.875rem;
+    color: var(--ink-soft);
+}
+
+/* Placeholder marker: remove the whole element once real content is in */
+.placeholder-flag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: #8A4B00;
+    background: #FFF1D6;
+    border: 1px dashed #E0A94B;
+    border-radius: 0.375rem;
+    padding: 0.15rem 0.5rem;
+    margin-right: 0.5rem;
+}
+
+/* Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    display: block;
+    text-decoration: none;
+    color: var(--ink);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 1.125rem 1.25rem;
+    background: var(--paper);
+    transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+
+a.card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0.75rem 1.5rem -1rem rgba(20, 22, 31, .3);
+    transform: translateY(-2px);
+}
+
+.card h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.0625rem;
+    color: var(--accent);
+}
+
+.card p {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.45;
+}
+
+.card .meta {
+    margin-top: 0.6rem;
+    font-size: 0.8125rem;
+    color: var(--ink-soft);
+}
+
+/* Research-area rows & legacy paper tables (research/<area>.html) */
+.area-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--rule);
+}
+
+.area-list li {
+    border-bottom: 1px solid var(--rule);
+}
+
+.area-list a {
+    display: block;
+    padding: 0.25rem 0;
+    text-decoration: none !important;
+    color: var(--ink) !important;
+}
+
+.area-list a:hover strong {
+    color: var(--accent);
+}
+
+.area-list strong {
+    display: block;
+    font-weight: 600;
+    font-size: 1.0625rem;
+}
+
+.area-list span {
+    display: block;
+    font-size: 0.9375rem;
+    color: var(--ink-soft);
+}
+
+/* Reset and layout for the summary */
+.area-list details summary {
+  cursor: pointer;
+  display: list-item; /* Restores the default native browser arrow inline */
+  padding: 8px 0;
+  transition: color 0.2s ease;
+}
+
+/* Target the strong tag (your area title) so it stays inline with the arrow */
+.area-list details summary > strong {
+  display: inline;
+}
+
+/* Keep your description span on a separate line or inline as you prefer */
+.area-list details summary > span {
+  display: block; 
+  font-size: 0.9em;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+/* Change the color of the text (and arrow in most modern browsers) on hover */
+.area-list details summary:hover {
+  color: var(--accent);
+}
+
+/* Style for the nested papers list */
+.paper-list {
+  margin-top: 8px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.paper-list li {
+  margin-bottom: 5px;
+  font-size: 0.95em;
+}
+
+/* Tables */
+.table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    width: 100%;
+    min-width: 34rem; /* narrow screens scroll sideways instead of squeezing columns */
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+    line-height: 1.45;
+}
+
+.table th,
+.table td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.65rem 0.75rem 0.65rem 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.table th {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--rule-strong);
+    white-space: nowrap;
+}
+
+.table td.num,
+.table th.num {
+    white-space: nowrap;
+}
+
+.table td a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.table td a:hover {
+    text-decoration: underline;
+}
+
+.table .sub {
+    display: block;
+    color: var(--ink-soft);
+    font-size: 0.875rem;
+}
+
+/* Course list */
+.course-code {
+    white-space: nowrap;
+    font-weight: 600;
+    color: var(--ink);
+    width: 6rem;
+}
+
+/* People */
+.person-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
+    gap: 1rem 1.5rem;
+}
+
+.person {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.person .avatar {
+    flex: 0 0 4.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--paper-dim);
+    border: 1px solid var(--rule);
+}
+
+.person .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.person h3 {
+    margin: 0 0 0.15rem;
+    font-size: 1.0625rem;
+}
+
+.person h3 a {
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.person h3 a:hover {
+    color: var(--accent);
+}
+
+.person .from {
+    font-size: 0.875rem;
+    color: var(--ink-soft);
+    margin: 0 0 0.15rem;
+}
+
+.person .topic {
+    font-size: 0.9375rem;
+    margin: 0;
+    color: var(--ink);
+}
+
+.person.faculty .avatar {
+    flex-basis: 6rem;
+    width: 6rem;
+    height: 6rem;
+}
+
+.group-photo {
+    max-width: 44rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--rule);
+    background: var(--paper-dim);
+    min-height: 6rem;
+}
+
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.chip-row a {
+    display: inline-block;
+    font-size: 0.875rem;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--rule-strong);
+    border-radius: 999px;
+    text-decoration: none !important;
+    color: var(--ink) !important;
+}
+
+.chip-row a:hover {
+    border-color: var(--accent);
+    color: var(--accent) !important;
+}
+
+/* News feed */
+.news-feed {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--rule);
+}
+
+.news-feed li {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    gap: 0.5rem 1.25rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.news-feed .date {
+    font-size: 0.875rem;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+    padding-top: 0.1rem;
+}
+
+.news-feed p {
+    margin: 0;
+    color: var(--ink);
+}
+
+.news-feed .sub {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--ink-soft);
+}
+
+@media (max-width: 560px) {
+    .news-feed li {
+        grid-template-columns: 1fr;
+        gap: 0.15rem;
+    }
+}
+
+/* CV */
+.cv-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cv-list li {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: 0.25rem 1.25rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+
+.cv-list .when {
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.875rem;
+}
+
+.cv-plain {
+    margin: 0;
+    padding-left: 1.2rem;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+}
+
+.cv-plain li {
+    margin: 0.35rem 0;
+    font-size: 0.9375rem;
+}
+
+.cv-plain ul {
+    margin-top: 0.25rem;
+}
+
+details.fold {
+    border-top: 1px solid var(--rule);
+    padding: 0.75rem 0;
+}
+
+details.fold summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.0625rem;
+}
+
+details.fold[open] summary {
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 560px) {
+    .cv-list li {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contact box */
+.contact-box {
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    background: var(--paper-dim);
+    font-size: 0.9375rem;
+}
+
+.contact-box p {
+    margin: 0 0 0.25rem;
+    color: var(--ink);
+    font-size: 0.9375rem;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background: var(--dark);
+    color: #EEEFE9;
+    padding: clamp(2.75rem, 6vw, 3.5rem) 0 clamp(1.75rem, 4vw, 2.125rem);
+}
+
+footer a {
+    color: #EEEFE9;
+    text-decoration: none;
+}
+
+footer p {
+    color: rgba(238, 239, 233, .78);
+}
+
+.foot-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding-bottom: clamp(1.75rem, 4vw, 2.25rem);
+    border-bottom: 1px solid var(--dark-rule);
+}
+
+footer h4 {
+    font-family: var(--font-label);
+    font-size: 0.75rem;
+    letter-spacing: var(--tracking-footer);
+    text-transform: uppercase;
+    color: var(--dark-soft);
+    margin: 0 0 0.875rem;
+}
+
+.foot-about {
+    font-size: 0.9375rem;
+    max-width: 34ch;
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5625rem;
+}
+
+footer li a {
+    font-size: 0.9375rem;
+    color: rgba(238, 239, 233, .85);
+}
+
+footer li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.foot-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.25rem;
+    font-family: var(--font-label);
+    font-size: 0.8125rem;
+    color: var(--dark-soft);
+    flex-wrap: wrap;
+    gap: 0.625rem;
+}
+
+@media (max-width: 760px) {
+    .foot-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .foot-grid>div:first-child {
+        grid-column: 1 / -1;
     }
 }

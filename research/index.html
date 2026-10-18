@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en" data-root="../">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research - Klaus Mueller</title>
+  <meta name="description"
+    content="Research areas and publications of Klaus Mueller: visual analytics, responsible AI, computational imaging and more.">
+  <script>document.documentElement.className = "js";</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="page">
+  <!-- ===================== HEADER (identical on every page; copy it whole) ===================== -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Klaus Mueller</a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="../research/index.html" aria-current="page">Research</a>
+        <a href="../people/index.html">People</a>
+        <a href="../teaching/index.html">Teaching</a>
+        <a href="../news.html">News</a>
+        <a href="../about.html">About</a>
+        <button class="nav-search" id="navSearchToggle" type="button" aria-label="Open search"
+          aria-controls="searchOverlay">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>Search</span>
+        </button>
+      </nav>
+
+      <div class="header-right">
+        <div class="affiliations">
+          <div class="badge">
+            <span class="badge-mark"><img src="../assets/img/sbu_logo.png" alt="Stony Brook University logo" /></span>
+            <span class="badge-text"><strong>Stony Brook</strong>University</span>
+          </div>
+          <div class="badge">
+            <span class="badge-mark"><img src="../assets/img/bnl_logo.png"
+                alt="Brookhaven National Laboratory logo" /></span>
+            <span class="badge-text"><strong>Brookhaven</strong>National Laboratory</span>
+          </div>
+        </div>
+        <button class="icon-btn" id="searchToggle" aria-label="Open search" aria-expanded="false"
+          aria-controls="searchOverlay">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- ===================== END HEADER ===================== -->
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-wrap">
+        <h1>Research areas</h1>
+        <p class="lead">Projects and publications, grouped by area. Each area page lists papers with a PDF and a project
+          page where one exists.</p>
+      </div>
+    </section>
+
+    <section class="page-section" id="projects">
+      <div class="page-wrap">
+        <h2>Areas</h2>
+        <!-- AREA LIST: one <li> per research area page. -->
+        <ul class="area-list">
+          <!-- Area 1 -->
+          <li>
+            <details>
+              <summary>
+                <strong>Visual analytics</strong>
+                <span>Visualization, visual data science, visual storytelling, explainable AI, infovis, HCI</span>
+              </summary>
+              <ul class="paper-list">
+                <li><a href="#">Paper Title One</a></li>
+                <li><a href="#">Paper Title Two</a></li>
+                <li><a href="#">Paper Title Three</a></li>
+                <li><a href="#">Paper Title Four</a></li>
+              </ul>
+            </details>
+          </li>
+          <!-- Area 2 -->
+          <li>
+            <details>
+              <summary>
+                <strong>Human-centered responsible AI</strong>
+                <span>Fairness, bias, belief modeling, and personalized communication</span>
+              </summary>
+              <ul class="paper-list">
+                <li><a href="#">Paper Title One</a></li>
+                <li><a href="#">Paper Title Two</a></li>
+                <li><a href="#">Paper Title Three</a>
+                </li>
+                <li><a href="#">Paper Title Four</a></li>
+              </ul>
+            </details>
+          </li>
+          <!-- Area 3 -->
+          <li>
+            <details>
+              <summary>
+                <strong>Computational imaging</strong>
+                <span>Computed tomography, low-dose, GAN-synthesis, GPU-acceleration</span>
+              </summary>
+              <ul class="paper-list">
+                <li><a href="#">Paper Title One</a></li>
+                <li><a href="#">Paper Title Two</a></li>
+                <li><a href="#">Paper Title Three</a>
+                </li>
+                <li><a href="#">Paper Title Four</a></li>
+              </ul>
+            </details>
+          </li>
+          <!-- Area 4 -->
+          <li>
+            <details>
+              <summary>
+                <strong>Volume visualization</strong>
+                <span>Volume rendering, transfer functions, uncertainty visualization</span>
+              </summary>
+              <ul class="paper-list">
+                <li><a href="#">Paper Title One</a></li>
+                <li><a href="#">Paper Title Two</a></li>
+                <li><a href="#">Paper Title Three</a>
+                </li>
+                <li><a href="#">Paper Title Four</a></li>
+              </ul>
+            </details>
+          </li>
+          <!-- Area 5 -->
+          <li>
+            <details>
+              <summary>
+                <strong>Virtual reality</strong>
+                <span>Virtual, augmented, mixed reality, display walls, immersive visualization</span>
+              </summary>
+              <ul class="paper-list">
+                <li><a href="#">Paper Title One</a></li>
+                <li><a href="#">Paper Title Two</a></li>
+                <li><a href="#">Paper Title Three</a>
+                </li>
+                <li><a href="#">Paper Title Four</a></li>
+              </ul>
+            </details>
+          </li>
+          <!-- Area 6 -->
+          <li>
+            <details>
+              <summary>
+                <strong>Cognitive computer graphics</strong>
+                <span>Color, texture, details, points, perception, cognition, semiotics</span>
+              </summary>
+              <ul class="paper-list">
+                <li><a href="#">Paper Title One</a></li>
+                <li><a href="#">Paper Title Two</a></li>
+                <li><a href="#">Paper Title Three</a>
+                </li>
+                <li><a href="#">Paper Title Four</a></li>
+              </ul>
+            </details>
+          </li>
+          <!-- Area 7 -->
+          <li>
+            <details>
+              <summary>
+                <strong>Filters and grids</strong>
+                <span>Sampling, hexagonal and body-centered lattices, extensions to N-D</span>
+              </summary>
+              <ul class="paper-list">
+                <li><a href="#">Paper Title One</a></li>
+                <li><a href="#">Paper Title Two</a></li>
+                <li><a href="#">Paper Title Three</a>
+                </li>
+                <li><a href="#">Paper Title Four</a></li>
+              </ul>
+            </details>
+          </li>
+          <!-- Area 8 -->
+          <li>
+            <details>
+              <summary>
+                <strong>Eyetracking</strong>
+                <span>Visualization for eye tracking data, acquisition, applications</span>
+              </summary>
+              <ul class="paper-list">
+                <li><a href="#">Paper Title One</a></li>
+                <li><a href="#">Paper Title Two</a></li>
+                <li><a href="#">Paper Title Three</a>
+                </li>
+                <li><a href="#">Paper Title Four</a></li>
+              </ul>
+            </details>
+          </li>
+          <!-- Area 9 -->
+          <li>
+            <details>
+              <summary>
+                <strong>Natural phenomena</strong>
+                <span>Simulation, urban security applications, GPU-acceleration</span>
+              </summary>
+              <ul class="paper-list">
+                <li><a href="#">Paper Title One</a></li>
+                <li><a href="#">Paper Title Two</a></li>
+                <li><a href="#">Paper Title Three</a>
+                </li>
+                <li><a href="#">Paper Title Four</a></li>
+              </ul>
+            </details>
+          </li>
+          <!-- Area 10 -->
+          <li>
+            <details>
+              <summary>
+                <strong>Face recognition</strong>
+                <span>No longer an active research topic</span>
+              </summary>
+              <ul class="paper-list">
+                <li><a href="#">Paper Title One</a></li>
+                <li><a href="#">Paper Title Two</a></li>
+                <li><a href="#">Paper Title Three</a>
+                </li>
+                <li><a href="#">Paper Title Four</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="page-section" id="publications">
+      <div class="page-wrap prose">
+        <h2>All publications</h2>
+        <p>The complete, current list of publications and citation counts is on
+          <a href="https://scholar.google.com/citations?user=uya_Zb4AAAAJ&amp;hl=en&amp;oi=ao" target="_blank"
+            rel="noopener">Google Scholar</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+  <!-- ===================== FOOTER (identical on every page; copy it whole) ===================== -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <h4>Klaus Mueller</h4>
+          <p class="foot-about">Professor, Department of Computer Science, Stony Brook University.<br>Director, VAI
+            Lab.<br>Senior Scientist, Brookhaven National Laboratory.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="../research/index.html">Research</a></li>
+            <li><a href="../research/index.html#publications">Publications</a></li>
+            <li><a href="../people/index.html">People</a></li>
+            <li><a href="../teaching/index.html">Teaching</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>About</h4>
+          <ul>
+            <li><a href="../cv.html">CV / Bio</a></li>
+            <li><a href="../news.html">News</a></li>
+            <li><a href="../about.html#personal">Play</a></li>
+            <li><a href="https://www3.cs.stonybrook.edu/cgi-bin/nomail.cgi/mueller/0/2">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Affiliations</h4>
+          <ul>
+            <li><a href="https://www.cs.stonybrook.edu/">CS Department, SBU</a></li>
+            <li><a href="http://www3.cs.stonybrook.edu/~vai">VAI Lab</a></li>
+            <li><a href="https://www.bnl.gov/">Brookhaven National Lab</a></li>
+            <li><a href="https://scholar.google.com/citations?user=uya_Zb4AAAAJ&amp;hl=en&amp;oi=ao" target="_blank"
+                rel="noopener">Google Scholar</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom"><span>&copy; <span id="year">2026</span> Klaus Mueller, Stony Brook University</span>
+      </div>
+    </div>
+  </footer>
+  <!-- ===================== END FOOTER ===================== -->
+
+  <!-- ===================== SEARCH OVERLAY (identical on every page) ===================== -->
+  <div class="search-overlay" id="searchOverlay" hidden>
+    <div class="search-panel" role="dialog" aria-modal="true" aria-label="Site search">
+      <div class="search-bar">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" id="searchInput" placeholder="Search research, people, teaching, pages&hellip;"
+          autocomplete="off" spellcheck="false" aria-controls="searchResults" />
+        <button class="search-close" id="searchClose" type="button" aria-label="Close search">Esc</button>
+      </div>
+      <div class="search-results" id="searchResults" role="listbox" aria-live="polite"></div>
+      <div class="search-hint" aria-hidden="true">
+        <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> navigate</span>
+        <span><kbd>&crarr;</kbd> open</span>
+        <span><kbd>Esc</kbd> close</span>
+      </div>
+    </div>
+  </div>
+  <!-- ===================== END SEARCH OVERLAY ===================== -->
+
+  <script src="../assets/js/search-index.js"></script>
+  <script src="../assets/js/site.js"></script>
+</body>
+
+</html>

@@ -1711,6 +1711,9 @@ footer li a:hover {
     padding: 0 clamp(0.75rem, 1.5vw, 1rem);
 }
 
+.page-wrap h2 {
+    margin-top: clamp(0.75rem, 1.5vw, 1.5rem);
+}
 .page-hero {
     position: relative;
     padding: clamp(1rem, 2vw, 2rem) 0 clamp(1rem, 2vw, 2rem);
@@ -1744,7 +1747,7 @@ footer li a:hover {
 }
 
 .page-section {
-    padding: clamp(0.75rem, 1.5vw, 1.5rem) 0;
+    padding: 0 0;
 }
 
 .page-section+.page-section {
@@ -2009,9 +2012,8 @@ a.card:hover {
 
 .person .avatar {
     flex: 0 0 4.5rem;
-    width: 4.5rem;
-    height: 4.5rem;
-    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
     overflow: hidden;
     background: var(--paper-dim);
     border: 1px solid var(--rule);
@@ -2057,11 +2059,20 @@ a.card:hover {
 }
 
 .group-photo {
-    max-width: 44rem;
+    max-width: 50vw;
     border-radius: var(--radius);
     border: 1px solid var(--rule);
     background: var(--paper-dim);
-    min-height: 6rem;
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.group-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .chip-row {
@@ -2209,6 +2220,7 @@ footer {
     background: var(--dark);
     color: #EEEFE9;
     padding: clamp(2.75rem, 6vw, 3.5rem) 0 clamp(1.75rem, 4vw, 2.125rem);
+    margin-top: clamp(2.75rem, 6vw, 3.5rem);
 }
 
 footer a {

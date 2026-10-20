@@ -1708,15 +1708,15 @@ footer li a:hover {
     max-width: 90vw;
     width: 100%;
     margin: 0 auto;
-    padding: 0 clamp(0.75rem, 1.5vw, 1rem);
+    padding: 0 clamp(0.25rem, 0.5vw, 0.5rem);
 }
 
 .page-wrap h2 {
-    margin-top: clamp(0.75rem, 1.5vw, 1.5rem);
+    margin-top: clamp(0.25rem, 0.5vw, 0.5rem);
 }
 .page-hero {
     position: relative;
-    padding: clamp(1rem, 2vw, 2rem) 0 clamp(1rem, 2vw, 2rem);
+    padding: clamp(0.25rem, 0.5vw, 0.5rem) 0 clamp(0.25rem, 0.5vw, 0.5rem);
     background:
         radial-gradient(50rem 22rem at 10% 0%, rgba(92, 198, 255, .16), transparent 60%),
         radial-gradient(40rem 20rem at 85% 0%, rgba(124, 107, 255, .1), transparent 55%),
@@ -1756,7 +1756,6 @@ footer li a:hover {
 
 .page-section h2 {
     font-size: clamp(1.3rem, 1rem + 0.9vw, 1.65rem);
-    margin-bottom: 1rem;
 }
 
 .page-section h3 {
@@ -2006,14 +2005,14 @@ a.card:hover {
     display: flex;
     gap: 1rem;
     align-items: flex-start;
-    padding: 0.85rem 0;
+    padding: 0.25rem 0;
     border-bottom: 1px solid var(--rule);
 }
 
 .person .avatar {
-    flex: 0 0 4.5rem;
-    width: 5rem;
-    height: 5rem;
+    flex: 0 0 7.5rem;
+    width: 7.5rem;
+    height: 7.5rem;
     overflow: hidden;
     background: var(--paper-dim);
     border: 1px solid var(--rule);
@@ -2023,7 +2022,6 @@ a.card:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .person h3 {
@@ -2047,19 +2045,19 @@ a.card:hover {
 }
 
 .person .topic {
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     margin: 0;
     color: var(--ink);
 }
 
 .person.faculty .avatar {
-    flex-basis: 6rem;
-    width: 6rem;
-    height: 6rem;
+    flex-basis: 7.5rem;
+    width: 7.5rem;
+    height: 7.5rem;
 }
 
 .group-photo {
-    max-width: 50vw;
+    max-width: 100%;
     border-radius: var(--radius);
     border: 1px solid var(--rule);
     background: var(--paper-dim);

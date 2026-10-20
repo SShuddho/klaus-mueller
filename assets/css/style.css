@@ -2121,9 +2121,9 @@ a.card:hover {
     border-top: 1px solid var(--rule);
 }
 
-.news-feed li {
+.news-feed > li {
     display: grid;
-    grid-template-columns: 7rem 1fr;
+    grid-template-columns: 10rem 1fr;
     gap: 0.5rem 1.25rem;
     padding: 0.9rem 0;
     border-bottom: 1px solid var(--rule);
@@ -2148,7 +2148,7 @@ a.card:hover {
 }
 
 @media (max-width: 560px) {
-    .news-feed li {
+    .news-feed > li {
         grid-template-columns: 1fr;
         gap: 0.15rem;
     }

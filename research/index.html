@@ -1,44 +1,32 @@
 <!doctype html>
 <html lang="en" data-root="../">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Research - Klaus Mueller</title>
-  <meta name="description"
-    content="Research areas and publications of Klaus Mueller: visual analytics, responsible AI, computational imaging and more.">
+  <meta name="description" content="Research areas and publications of Klaus Mueller: visual analytics, responsible AI, computational imaging and more.">
   <script>document.documentElement.className = "js";</script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-
 <body class="page">
-  <!-- ===================== HEADER (identical on every page; copy it whole) ===================== -->
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="../index.html">Klaus Mueller</a>
-
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="main-nav" aria-label="Primary">
         <a href="../research/index.html" aria-current="page">Research</a>
         <a href="../people/index.html">People</a>
         <a href="../teaching/index.html">Teaching</a>
         <a href="../news.html">News</a>
         <a href="../about.html">About</a>
-        <button class="nav-search" id="navSearchToggle" type="button" aria-label="Open search"
-          aria-controls="searchOverlay">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
-            aria-hidden="true">
-            <circle cx="11" cy="11" r="7"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
+        <button class="nav-search" id="navSearchToggle" type="button" aria-label="Open search" aria-controls="searchOverlay">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           <span>Search</span>
         </button>
       </nav>
-
       <div class="header-right">
         <div class="affiliations">
           <div class="badge">
@@ -46,218 +34,60 @@
             <span class="badge-text"><strong>Stony Brook</strong>University</span>
           </div>
           <div class="badge">
-            <span class="badge-mark"><img src="../assets/img/bnl_logo.png"
-                alt="Brookhaven National Laboratory logo" /></span>
+            <span class="badge-mark"><img src="../assets/img/bnl_logo.png" alt="Brookhaven National Laboratory logo" /></span>
             <span class="badge-text"><strong>Brookhaven</strong>National Laboratory</span>
           </div>
         </div>
-        <button class="icon-btn" id="searchToggle" aria-label="Open search" aria-expanded="false"
-          aria-controls="searchOverlay">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
-            aria-hidden="true">
-            <circle cx="11" cy="11" r="7"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
+        <button class="icon-btn" id="searchToggle" aria-label="Open search" aria-expanded="false" aria-controls="searchOverlay">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </button>
       </div>
     </div>
   </header>
-  <!-- ===================== END HEADER ===================== -->
 
   <main id="main">
     <section class="page-hero">
       <div class="page-wrap">
         <h1>Research areas</h1>
-        <p class="lead">Projects and publications, grouped by area. Each area page lists papers with a PDF and a project
-          page where one exists.</p>
+        <p class="lead">The complete, current list of publications and citation counts is on <a href="https://scholar.google.com/citations?user=uya_Zb4AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener">Google Scholar</a>.</p>
       </div>
     </section>
 
     <section class="page-section" id="projects">
       <div class="page-wrap">
-        <h2>Areas</h2>
-        <!-- AREA LIST: one <li> per research area page. -->
-        <ul class="area-list">
-          <!-- Area 1 -->
-          <li>
-            <details>
-              <summary>
-                <strong>Visual analytics</strong>
-                <span>Visualization, visual data science, visual storytelling, explainable AI, infovis, HCI</span>
-              </summary>
-              <ul class="paper-list">
-                <li><a href="#">Paper Title One</a></li>
-                <li><a href="#">Paper Title Two</a></li>
-                <li><a href="#">Paper Title Three</a></li>
-                <li><a href="#">Paper Title Four</a></li>
-              </ul>
-            </details>
-          </li>
-          <!-- Area 2 -->
-          <li>
-            <details>
-              <summary>
-                <strong>Human-centered responsible AI</strong>
-                <span>Fairness, bias, belief modeling, and personalized communication</span>
-              </summary>
-              <ul class="paper-list">
-                <li><a href="#">Paper Title One</a></li>
-                <li><a href="#">Paper Title Two</a></li>
-                <li><a href="#">Paper Title Three</a>
-                </li>
-                <li><a href="#">Paper Title Four</a></li>
-              </ul>
-            </details>
-          </li>
-          <!-- Area 3 -->
-          <li>
-            <details>
-              <summary>
-                <strong>Computational imaging</strong>
-                <span>Computed tomography, low-dose, GAN-synthesis, GPU-acceleration</span>
-              </summary>
-              <ul class="paper-list">
-                <li><a href="#">Paper Title One</a></li>
-                <li><a href="#">Paper Title Two</a></li>
-                <li><a href="#">Paper Title Three</a>
-                </li>
-                <li><a href="#">Paper Title Four</a></li>
-              </ul>
-            </details>
-          </li>
-          <!-- Area 4 -->
-          <li>
-            <details>
-              <summary>
-                <strong>Volume visualization</strong>
-                <span>Volume rendering, transfer functions, uncertainty visualization</span>
-              </summary>
-              <ul class="paper-list">
-                <li><a href="#">Paper Title One</a></li>
-                <li><a href="#">Paper Title Two</a></li>
-                <li><a href="#">Paper Title Three</a>
-                </li>
-                <li><a href="#">Paper Title Four</a></li>
-              </ul>
-            </details>
-          </li>
-          <!-- Area 5 -->
-          <li>
-            <details>
-              <summary>
-                <strong>Virtual reality</strong>
-                <span>Virtual, augmented, mixed reality, display walls, immersive visualization</span>
-              </summary>
-              <ul class="paper-list">
-                <li><a href="#">Paper Title One</a></li>
-                <li><a href="#">Paper Title Two</a></li>
-                <li><a href="#">Paper Title Three</a>
-                </li>
-                <li><a href="#">Paper Title Four</a></li>
-              </ul>
-            </details>
-          </li>
-          <!-- Area 6 -->
-          <li>
-            <details>
-              <summary>
-                <strong>Cognitive computer graphics</strong>
-                <span>Color, texture, details, points, perception, cognition, semiotics</span>
-              </summary>
-              <ul class="paper-list">
-                <li><a href="#">Paper Title One</a></li>
-                <li><a href="#">Paper Title Two</a></li>
-                <li><a href="#">Paper Title Three</a>
-                </li>
-                <li><a href="#">Paper Title Four</a></li>
-              </ul>
-            </details>
-          </li>
-          <!-- Area 7 -->
-          <li>
-            <details>
-              <summary>
-                <strong>Filters and grids</strong>
-                <span>Sampling, hexagonal and body-centered lattices, extensions to N-D</span>
-              </summary>
-              <ul class="paper-list">
-                <li><a href="#">Paper Title One</a></li>
-                <li><a href="#">Paper Title Two</a></li>
-                <li><a href="#">Paper Title Three</a>
-                </li>
-                <li><a href="#">Paper Title Four</a></li>
-              </ul>
-            </details>
-          </li>
-          <!-- Area 8 -->
-          <li>
-            <details>
-              <summary>
-                <strong>Eyetracking</strong>
-                <span>Visualization for eye tracking data, acquisition, applications</span>
-              </summary>
-              <ul class="paper-list">
-                <li><a href="#">Paper Title One</a></li>
-                <li><a href="#">Paper Title Two</a></li>
-                <li><a href="#">Paper Title Three</a>
-                </li>
-                <li><a href="#">Paper Title Four</a></li>
-              </ul>
-            </details>
-          </li>
-          <!-- Area 9 -->
-          <li>
-            <details>
-              <summary>
-                <strong>Natural phenomena</strong>
-                <span>Simulation, urban security applications, GPU-acceleration</span>
-              </summary>
-              <ul class="paper-list">
-                <li><a href="#">Paper Title One</a></li>
-                <li><a href="#">Paper Title Two</a></li>
-                <li><a href="#">Paper Title Three</a>
-                </li>
-                <li><a href="#">Paper Title Four</a></li>
-              </ul>
-            </details>
-          </li>
-          <!-- Area 10 -->
-          <li>
-            <details>
-              <summary>
-                <strong>Face recognition</strong>
-                <span>No longer an active research topic</span>
-              </summary>
-              <ul class="paper-list">
-                <li><a href="#">Paper Title One</a></li>
-                <li><a href="#">Paper Title Two</a></li>
-                <li><a href="#">Paper Title Three</a>
-                </li>
-                <li><a href="#">Paper Title Four</a></li>
-              </ul>
-            </details>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="page-section" id="publications">
-      <div class="page-wrap prose">
-        <h2>All publications</h2>
-        <p>The complete, current list of publications and citation counts is on
-          <a href="https://scholar.google.com/citations?user=uya_Zb4AAAAJ&amp;hl=en&amp;oi=ao" target="_blank"
-            rel="noopener">Google Scholar</a>.
-        </p>
+        <div class="research-layout">
+          <aside class="area-menu" aria-label="Research areas">
+            <h2 class="area-menu-heading">Areas</h2>
+            <ul class="area-menu-list" id="areaMenu">
+              <li><button class="area-btn active" data-area="visualAnalytics">Visual analytics, explainable AI, data science, information visualization</button></li>
+              <li><button class="area-btn" data-area="fair">Human-centered responsible AI: fairness, belief modeling, and personalized communication</button></li>
+              <li><button class="area-btn" data-area="ct">Medical imaging</button></li>
+              <li><button class="area-btn" data-area="volvis">Volume visualization</button></li>
+              <li><button class="area-btn" data-area="vr">Virtual and augmented reality</button></li>
+              <li><button class="area-btn" data-area="cg">Computer graphics: color, texture, details, points</button></li>
+              <li><button class="area-btn" data-area="filters">Filters and grids</button></li>
+              <li><button class="area-btn" data-area="eyetrack">Eyetracking and visualization of eyetracking data</button></li>
+              <li><button class="area-btn" data-area="natural">Simulation of natural phenomena and urban security applications</button></li>
+              <li><button class="area-btn" data-area="face">Face recognition</button></li>
+            </ul>
+          </aside>
+
+          <div class="paper-list-panel">
+            <div id="paperList" class="paper-list-container">
+              <p class="paper-list-empty">Select an area to view its papers.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-  <!-- ===================== FOOTER (identical on every page; copy it whole) ===================== -->
+
   <footer>
     <div class="wrap">
       <div class="foot-grid">
         <div>
           <h4>Klaus Mueller</h4>
-          <p class="foot-about">Professor, Department of Computer Science, Stony Brook University.<br>Director, VAI
-            Lab.<br>Senior Scientist, Brookhaven National Laboratory.</p>
+          <p class="foot-about">Professor, Department of Computer Science, Stony Brook University.<br>Director, VAI Lab.<br>Senior Scientist, Brookhaven National Laboratory.</p>
         </div>
         <div>
           <h4>Explore</h4>
@@ -283,28 +113,19 @@
             <li><a href="https://www.cs.stonybrook.edu/">CS Department, SBU</a></li>
             <li><a href="http://www3.cs.stonybrook.edu/~vai">VAI Lab</a></li>
             <li><a href="https://www.bnl.gov/">Brookhaven National Lab</a></li>
-            <li><a href="https://scholar.google.com/citations?user=uya_Zb4AAAAJ&amp;hl=en&amp;oi=ao" target="_blank"
-                rel="noopener">Google Scholar</a></li>
+            <li><a href="https://scholar.google.com/citations?user=uya_Zb4AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener">Google Scholar</a></li>
           </ul>
         </div>
       </div>
-      <div class="foot-bottom"><span>&copy; <span id="year">2026</span> Klaus Mueller, Stony Brook University</span>
-      </div>
+      <div class="foot-bottom"><span>&copy; <span id="year">2026</span> Klaus Mueller, Stony Brook University</span></div>
     </div>
   </footer>
-  <!-- ===================== END FOOTER ===================== -->
 
-  <!-- ===================== SEARCH OVERLAY (identical on every page) ===================== -->
   <div class="search-overlay" id="searchOverlay" hidden>
     <div class="search-panel" role="dialog" aria-modal="true" aria-label="Site search">
       <div class="search-bar">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
-          aria-hidden="true">
-          <circle cx="11" cy="11" r="7"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-        <input type="search" id="searchInput" placeholder="Search research, people, teaching, pages&hellip;"
-          autocomplete="off" spellcheck="false" aria-controls="searchResults" />
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="search" id="searchInput" placeholder="Search research, people, teaching, pages&hellip;" autocomplete="off" spellcheck="false" aria-controls="searchResults" />
         <button class="search-close" id="searchClose" type="button" aria-label="Close search">Esc</button>
       </div>
       <div class="search-results" id="searchResults" role="listbox" aria-live="polite"></div>
@@ -315,10 +136,1727 @@
       </div>
     </div>
   </div>
-  <!-- ===================== END SEARCH OVERLAY ===================== -->
 
   <script src="../assets/js/search-index.js"></script>
   <script src="../assets/js/site.js"></script>
-</body>
 
+  <!-- ============================================================
+       PAPER DATA + RENDERING
+       Every paper below is transcribed verbatim from the original
+       Stony Brook research pages. Thumbnail paths use the local
+       basename (as saved by the download script).
+       ============================================================ -->
+  <script>
+  (function () {
+    "use strict";
+
+    const P = "http://www.cs.stonybrook.edu/~mueller/papers/";
+    const PP = "https://www3.cs.stonybrook.edu/~mueller/papers/";
+    const RP = "http://www.cs.stonybrook.edu/~mueller/research/";
+    const RP3 = "https://www3.cs.stonybrook.edu/~mueller/research/";
+
+    const AREAS = {
+      /* ============================================================
+         1. VISUAL ANALYTICS
+         ============================================================ */
+      visualAnalytics: {
+        title: "Visual analytics, explainable AI, data science, information visualization",
+        papers: [
+          { title: "MisVisFix: An Interactive Dashboard for Detecting, Explaining, and Correcting Misleading Visualizations using Large Language Models",
+            authors: "A. Kumar Das, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 32(1): 134-144, 2026",
+            thumb: "misvisfix.png",
+            links: [{label:"PDF", url:P+"MisVisFix%20TVCG.pdf"}, {label:"Detail", url:RP+"pages/MisVisFix"}] },
+          { title: "What is the Color of Serendipity? Investigating the Use of Language Models for Semantically Resonant Color Generation",
+            authors: "S. Salim, T. Pial, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 32(1): 670-680, 2026",
+            thumb: "word2color.png",
+            links: [{label:"PDF", url:P+"Word2Color%20TVCG.pdf"}, {label:"Detail", url:RP+"pages/Word2Color"}] },
+          { title: "Charts-of-Thought: Enhancing LLM Visualization Literacy Through Structured Data Extraction",
+            authors: "A. Kumar Das, M. Tarun, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 32(1): 1427-1437, 2026",
+            thumb: "chartsofthought.png",
+            links: [{label:"PDF", url:P+"Charts%20of%20Thought%20TVCG.pdf"}] },
+          { title: "CausalChat: Interactive Causal Model Development and Refinement Using Large Language Models",
+            authors: "Y. Zhang, A. Kotha, E. Papenhausen, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 31(12): 10473-10487, 2025",
+            thumb: "causalChat.png",
+            links: [{label:"PDF", url:P+"CausalChat%20TVCG.pdf"}, {label:"Detail", url:RP+"pages/CausalChat"}] },
+          { title: "GroupView: A Visual Framework for Exploring Group Membership Dynamics over Time",
+            authors: "M. Singh, K. Mueller",
+            venue: "Data 10(8): 133-161, 2025",
+            thumb: "groupview.png",
+            links: [{label:"PDF", url:P+"GroupView.pdf"}, {label:"Detail", url:RP+"pages/GroupView"}] },
+          { title: "Semantic Pathway: An Interactive Visualization of Hidden States and Token Influence in LLMs",
+            authors: "M. Singh, K. Mueller",
+            venue: "IEEE Visualization and Visual Analytics (VIS), Vienna, Austria, November 2025",
+            thumb: "semantic pathways.png",
+            links: [{label:"PDF", url:P+"Semantic%20Pathways%20IEEE%20VIS%202025.pdf"}] },
+          { title: "XplainAct: Visualization for Personalized Intervention Insights",
+            authors: "Y. Zhang, K. Hegde, K. Mueller",
+            venue: "IEEE Visualization and Visual Analytics (VIS), Vienna, Austria, November 2025",
+            thumb: "XPlainAct.png",
+            links: [{label:"PDF", url:P+"XplainAct%20IEEE%20VIS%202025.pdf"}, {label:"Detail", url:RP+"pages/XplainAct"}] },
+          { title: "LegiScout: A Visual Tool for Understanding Complex Legislation",
+            authors: "A. Patel, K. Mueller",
+            venue: "arXiv preprint arXiv:2510.01195, August 2025",
+            thumb: "ACAVis.png",
+            links: [{label:"PDF", url:P+"LegiScout%20arvxv.pdf"}, {label:"Detail", url:RP+"pages/LegiScout"}] },
+          { title: "Smart Starts: Accelerating Convergence Through Uncommon Region Exploration",
+            authors: "X. Zhang, M. Antunes, T. Estro, E. Zadok, K. Mueller",
+            venue: "Genetic and Evolutionary Computation Conference (GECCO), Málaga, Spain, July 2025",
+            thumb: "GECCO 2025.png",
+            links: [{label:"PDF", url:P+"GECCO-2025.pdf"}, {label:"Poster", url:P+"GECCO25_Poster.pdf"}] },
+          { title: "Into the Void: Mapping the Unseen Gaps in High Dimensional Data",
+            authors: "X. Zhang, T. Estro, G. Kuenning, E. Zadok, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 31(10): 8578-8591, 2025",
+            thumb: "into the void.png",
+            links: [{label:"PDF", url:P+"Into%20the%20void%20TVCG%202025.pdf"}, {label:"Detail", url:RP+"pages/GapMiner"}] },
+          { title: "TaskFinder: A Semantics-Based Methodology for Visualization Task Recommendation",
+            authors: "D. Coelho, B. Ghai, A. Krishna, M. Velez-Rojas, S. Greenspan, S. Mankovski, K. Mueller",
+            venue: "Analytics 3(3): 255-275, 2024",
+            thumb: "taskfinder1.png",
+            links: [{label:"PDF", url:P+"TaskFinder.pdf"}, {label:"Detail", url:RP+"pages/TaskFinder"}] },
+          { title: "Belief Miner: A Methodology for Discovering Causal Beliefs and Causal Illusions from General Populations",
+            authors: "S. Salim, N. Hoque, K. Mueller",
+            venue: "Proceedings of the ACM on Human-Computer Interaction, 8 (CSCW 1) 1-37, 2024",
+            thumb: "beliefMiner.png",
+            links: [{label:"PDF", url:P+"cscw2024%20BeliefMiner.pdf"}, {label:"Detail", url:RP+"pages/BeliefMiner"}] },
+          { title: "Can LLMs Generate Visualizations with Dataless Prompts?",
+            authors: "D. Coelho, H. Barot, N. Rathod, K. Mueller",
+            venue: "arXiv preprint arXiv:2406.17805, June 2024",
+            thumb: "text2chart1.png",
+            links: [{label:"PDF", url:P+"text%20to%20chart.pdf"}] },
+          { title: "Interactive Subspace Cluster Analysis Guided by Semantic Attribute Associations",
+            authors: "S. Mahmood, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 30(7): 4197-4210, 2024",
+            thumb: "semantic subspaces.png",
+            links: [{label:"PDF", url:P+"Semantic_Subspace_Clustering.pdf"}, {label:"Detail", url:RP+"pages/Semantic%20Subspaces"}] },
+          { title: "RadVolViz: An Information Display-Inspired Transfer Function Editor for Multivariate Volume Visualization",
+            authors: "A. Kumar, X. Zhang, H. Xin, H. Yan, X. Huang, W. Xu, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 30(8): 4464-4479, 2024",
+            thumb: "radVolViz.png",
+            links: [{label:"PDF", url:P+"TVCG%20RadVolViz.pdf"}, {label:"Detail", url:RP+"pages/RadVolViz"}] },
+          { title: "How “Applied” is Fifteen Years of VAST conference?",
+            authors: "L. Shi, L. Xia, Z. Liu, Y. Sun, H. Guo, K. Mueller",
+            venue: "IEEE Visualization and Visual Analytics (VIS), Melbourne, Australia, October 2023",
+            thumb: "applied23.png",
+            links: [{label:"PDF", url:P+"VAST-app-23.pdf"}] },
+          { title: "Reconstructing High-Dimensional Datasets From Their Bivariate Projections",
+            authors: "E. Dugan, K. Mueller",
+            venue: "arXiv preprint arXiv:2312.15306, December 2023",
+            thumb: "Dugan1.png",
+            links: [{label:"PDF", url:P+"Reconstructing_high_dimensional_datasets_from_their_bivariate_projections.pdf"}] },
+          { title: "An Explainable AI Approach to Large Language Model Assisted Causal Model Auditing and Development",
+            authors: "Y. Zhang, B. Fitzgibbon, D. Garofolo, A. Kota, E. Papenhausen, K. Mueller",
+            venue: "NL-VIZ Workshop 2023 (jointly held with IEEE VIS), Melbourne, Australia, October 2023",
+            thumb: "chatGPT-NLVIZ23.png",
+            links: [{label:"PDF", url:P+"ChatGPT_NL_VIZ.pdf"}, {label:"Detail", url:RP+"pages/ChatGPT-Causal"}] },
+          { title: "DOMINO: Visual Causal Reasoning with Time-Dependent Phenomena",
+            authors: "J. Wang, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 29(12): 5342-5356, 2023",
+            thumb: "domino-th.png",
+            links: [{label:"PDF", url:P+"DOMINO-TVCG%202022.pdf"}, {label:"Detail", url:RP+"pages/DOMINO"}] },
+          { title: "NAS-Navigator: Visual Steering for Explainable One-Shot Deep Neural Network Synthesis",
+            authors: "A. Tyagi, C. Xie, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics (Special Issue IEEE VIS 2022) 29(1): 299-309, 2023",
+            thumb: "NAS-Navigator.jpg",
+            links: [{label:"PDF", url:P+"NAS-Navigator.pdf"}, {label:"Detail", url:RP+"pages/NAS-Navigator"}] },
+          { title: "PC-Expo: A Metrics-Based Interactive Axes Reordering Method for Parallel Coordinate Displays",
+            authors: "A. Tyagi, T. Estro, G. Kuenning, E. Zadok, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics (Special Issue IEEE VIS 2022) 29(1): 712-722, 2023",
+            thumb: "PC-expo.jpg",
+            links: [{label:"PDF", url:P+"PC-Expo.pdf"}, {label:"Detail", url:RP+"pages/PC-Expo"}] },
+          { title: "Graphical Enhancements for Effective Exemplar Identification in Contextual Data Visualizations",
+            authors: "X. Zhang, S. Cheng, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 29(9): 3775-3787, 2023",
+            thumb: "exemplar.jpg",
+            links: [{label:"PDF", url:P+"Graphical%20Enhancements%20for%20Effective%20Exemplar%20Identification%20in%20Contextual%20Data%20Visualizations.pdf"}, {label:"Detail", url:RP+"pages/exemplar"}] },
+          { title: "Patterns of Social Vulnerability – An Interactive Dashboard to Explore Risks to Public Health on the US County Level",
+            authors: "D. Coelho, N. Gupta, E. Papenhausen, K. Mueller",
+            venue: "Workshop on Visual Analytics in Healthcare (VAHC), jointly held with AMIA 2022, Washington, DC, November 2022 (won Best Paper Award)",
+            thumb: "COVID-VAHC-22.jpg",
+            links: [{label:"PDF", url:P+"VAHC_2022_COVID_Map.pdf"}, {label:"Detail", url:RP+"pages/COVID-Risk-Explorer-VAHC22"}] },
+          { title: "Using Large Language Models to Generate Engaging Captions for Data Visualizations",
+            authors: "A. Liew, K. Mueller",
+            venue: "NLVIZ: Exploring Research Opportunities for Natural Language, Text, and Data Visualization (NLVIZ, Workshop jointly held with IEEE VIS), Oklahoma City, OK, October 2022",
+            thumb: "GPT-3-22.jpg",
+            links: [{label:"PDF", url:P+"GPT_3_Captions.pdf"}, {label:"Detail", url:RP+"pages/GPT-3-NLVIZ-2022"}] },
+          { title: "Infographics Wizard: Flexible Infographics Authoring and Design Exploration",
+            authors: "A. Tyagi, J. Zhao, P. Patel, S. Khurana, K. Mueller",
+            venue: "Computer Graphics Forum (Special Issue Eurovis 2022) 41(3): 121-132, 2022",
+            thumb: "Infographics Wizard.jpg",
+            links: [{label:"PDF", url:P+"Infographics%20Wizard.pdf"}] },
+          { title: "Patterns of Philanthropy: Using Pattern Mining for Predictive Analysis in Advancement and Fund Raising",
+            authors: "E. Papenhausen, K. Mueller",
+            venue: "Journal of Advancement Analytics 2: 101-113, 2022",
+            thumb: "patterns phil.jpg",
+            links: [{label:"PDF", url:P+"Patterns%20of%20Philanthropy.pdf"}] },
+          { title: "Ambienizer: Turning Digital Photos into Ambient Visualizations",
+            authors: "J. Park, A. Kaufman, K. Mueller",
+            venue: "IEEE Visualization Extended Abstracts, Oklahoma City, OK, October 2022",
+            thumb: "ambienizer.jpg",
+            links: [{label:"PDF", url:P+"Ambienizer.pdf"}] },
+          { title: "Networks never rest: an investigation of network evolution in three species of animals",
+            authors: "I. Chase, D. Coelho, W. Lee, K. Mueller, J. Curley",
+            venue: "Social Networks 68: 356-373, 2022",
+            thumb: "networks never rest.jpg",
+            links: [{label:"PDF", url:P+"Networks%20never%20rest.pdf"}] },
+          { title: "Identifying the skeptics and the undecided through visual cluster analysis of local network geometry",
+            authors: "S. Cheng, J. Giesen, T. Huang, P. Lucas, K. Mueller",
+            venue: "Visual Informatics 6(3): 11-22, 2022",
+            thumb: "skeptics 2.jpg",
+            links: [] },
+          { title: "Fluent: An AI Augmented Writing Tool for People who Stutter",
+            authors: "B. Ghai, K. Mueller",
+            venue: "ACM SIGACCESS Conference on Computers and Accessibility, October 18-22, 2021",
+            thumb: "fluent.jpg",
+            links: [{label:"PDF", url:P+"Fluent.pdf"}, {label:"Code", url:"https://github.com/bhavyaghai/Fluent"}] },
+          { title: "Cluster Appearance Glyphs: A methodology for illustrating high-dimensional data patterns in 2-D data layouts",
+            authors: "J. Lee, D. Coelho, K. Mueller",
+            venue: "Information 13(1), 2021",
+            thumb: "Cluster Appearance Glyph.jpg",
+            links: [{label:"PDF", url:P+"Cluster%20Appearance%20Glyphs.pdf"}] },
+          { title: "Outcome-Explorer: A Causality Guided Interactive Visual Interface for Interpretable Algorithmic Decision Making",
+            authors: "N. Hoque, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 28(12): 4728-4740, 2021",
+            thumb: "outcome-expl.jpg",
+            links: [{label:"PDF", url:P+"Outcome_Explorer_TVCG.pdf"}, {label:"Detail", url:RP+"pages/outcomeExplorer"}] },
+          { title: "Active Learning++: Incorporating Annotator’s Rationale using Local Model Explanations",
+            authors: "B. Ghai, Q. Liao, Y. Zhang, K. Mueller",
+            venue: "ACM KDD Workshop on Data Science with Human in the Loop (DaSH), Virtual, August 23-27, 2020",
+            thumb: "DaSH-KDD 2020.jpg",
+            links: [{label:"PDF", url:P+"DaSH-KDD%202020.pdf"}] },
+          { title: "Collaborative Visual Analytics Using Blockchain",
+            authors: "D. Coelho, R. Trailor, D. Sill, S. Engle, A. Joshi, S. Mankovskii, M. Velez-Rojas, S. Greenspan, K. Mueller",
+            venue: "International Conference on Cooperative Design, Visualization and Engineering (CDVE), Virtual, October 25–28, 2020",
+            thumb: "CDVE 2020.jpg",
+            links: [{label:"PDF", url:P+"CDVE%202020.pdf"}, {label:"Detail", url:RP+"pages/shareVA"}] },
+          { title: "Eating with a Conscience: Toward a Visual and Contextual Nutrition Facts Labels",
+            authors: "D. Coelho, H. He, M. Baduk, K. Mueller",
+            venue: "VisComm: Workshop on Visualization for Communication (jointly held with IEEE VIS), Virtual, October 25–30, 2020",
+            thumb: "VisComm 2020.jpg",
+            links: [{label:"PDF", url:P+"VisComm%202020.pdf"}, {label:"Detail", url:RP+"pages/nutritionLabels"}] },
+          { title: "Demographic Pattern Analysis to Predict COVID-19 Fatalities on the US County Level",
+            authors: "K. Mueller, E. Papenhausen",
+            venue: "ACM Digital Government: Research and Practice 2(1): 1-11, 2020",
+            thumb: "ACM DGRP 2020.jpg",
+            links: [{label:"PDF", url:P+"ACM%20DGRP%202020.pdf"}] },
+          { title: "Explainable Active Learning (XAL): Toward AI Explanations as Interfaces for Machine Teachers",
+            authors: "B. Ghai, Q. V. Liao, Y. Zhang, R. Bellamy, K. Mueller",
+            venue: "ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW), Virtual, October 17-21, 2020",
+            thumb: "CSCW XAI 2020.jpg",
+            links: [{label:"PDF", url:P+"CSCW%20XAL%202020.pdf"}] },
+          { title: "Infomages: Embedding Data into Thematic Images",
+            authors: "D. Coelho, K. Mueller",
+            venue: "Computer Graphics Forum 39(3): 593-606, 2020 (won Best Paper Runner-up Award at EuroVis 2019)",
+            thumb: "infomages.gif",
+            links: [{label:"PDF", url:P+"EuroVis___Infomages.pdf"}, {label:"Detail", url:RP+"pages/Infomages"}] },
+          { title: "PeckVis: A Visual Analytics Tool to Analyze Dominance Hierarchies in Small Groups",
+            authors: "D. Coelho, I. Chase, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 26(4): 1650-1660, 2020 (won Best Paper Award at VDS 2019)",
+            thumb: "peckVis.gif",
+            links: [{label:"PDF", url:P+"PeckVIS.pdf"}, {label:"Detail", url:RP+"pages/PeckVis"}] },
+          { title: "Taxonomizer: Interactive Construction of Fully Labeled Hierarchical Groupings from Attributes of Multivariate Data",
+            authors: "S. Mahmood, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 26(9): 2875-2890, 2020",
+            thumb: "taxonomizer.gif",
+            links: [{label:"PDF", url:P+"Taxonomizer-IEEE-TVCG.pdf"}, {label:"Detail", url:RP+"pages/taxonomizer"}] },
+          { title: "ICE: An Interactive Configuration Explorer for High Dimensional Parameter Spaces",
+            authors: "A. Tyagi, Z. Cao, T. Estro, E. Zadok, K. Mueller",
+            venue: "IEEE Visual Analytics Science and Technology (VAST), Vancouver, Canada, October 2019",
+            thumb: "ICE_2019.gif",
+            links: [{label:"PDF", url:P+"ICE_VAST_2019.pdf"}, {label:"Detail", url:RP+"pages/ICE"}] },
+          { title: "Examining the Visualization Practices of Data Scientists on Kaggle",
+            authors: "M. Hoque, D. Coelho, K. Mueller",
+            venue: "IEEE Visualization Conference, Poster Session, Vancouver, Canada, October 2019",
+            thumb: "kaggleVIS19.gif",
+            links: [{label:"PDF", url:P+"VIS19_Kaggle.pdf"}] },
+          { title: "Exploratory Visual Analysis of Anomalous Runtime Behavior in Streaming High Performance Computing Application",
+            authors: "C. Xie, W. Jeong, G. Matyasfalvi, H. Van Dam, K. Mueller, S. Yoo, W. Xu",
+            venue: "International Conference on Computational Science (ICCS), Faro, Portugal, June 2019, pp. 153-167",
+            thumb: "ICCS19.gif",
+            links: [{label:"PDF", url:P+"ICCS19.pdf"}] },
+          { title: "Graphs Are Not Enough: Using Interactive Visual Analytics in Storage Research",
+            authors: "Z. Cao, G. Kuenning, K. Mueller, A. Tyagi, E. Zadok",
+            venue: "USENIX Workshop on Hot Topics in Storage and File Systems (HotStorage), Renton, WA, July 2019",
+            thumb: "hotStorage19.gif",
+            links: [{label:"PDF", url:P+"hotstorage19-paper.pdf"}] },
+          { title: "Advances in Visualization Recommender Systems",
+            authors: "K. Mueller",
+            venue: "IEEE Computer 52(8): 4-5, 2019",
+            thumb: "IEEEComputer2019.gif",
+            links: [{label:"PDF", url:P+"advancesVisRecommenderSystems.pdf"}] },
+          { title: "Beyond Saliency: Understanding Convolutional Neural Networks from Saliency Prediction on Layer-Wise Relevance Propagation",
+            authors: "H. Li, Y. Tian, K. Mueller, X. Chen",
+            venue: "Image and Vision Computing 83: 70-86, 2019",
+            thumb: "Beyond_saliency.gif",
+            links: [{label:"PDF", url:P+"Beyond_saliency.pdf"}, {label:"Code", url:"https://github.com/vai-sbu/Salient-Relevance-Propagation"}] },
+          { title: "ColorMapND: A Data-Driven Approach and Tool for Mapping Multivariate Data to Color",
+            authors: "S. Cheng, W. Xu, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 25(2): 1361-1377, 2019",
+            thumb: "colormapnd.jpg",
+            links: [{label:"PDF", url:P+"ColorMapTVCG.pdf"}, {label:"Detail", url:RP+"pages/colormapND"}] },
+          { title: "PUMA-V: Optimizing Parallel Code Performance Through Interactive Visualization",
+            authors: "E. Papenhausen, M. H. Langston, B. Meister, R. Lethin, K. Mueller",
+            venue: "IEEE Computer Graphics & Applications 39(1): 84-99, 2019",
+            thumb: "PUMA-V.gif",
+            links: [{label:"PDF", url:P+"PUMA-V.pdf"}, {label:"Detail", url:RP+"pages/PUMA-V"}] },
+          { title: "Analytics of Heterogeneous Data using Hypergraph Learning",
+            authors: "C. Xie, W. Zhong, W. Xu, K. Mueller",
+            venue: "ACM Trans. on Intelligent Systems and Technology 10(1): 1-26, 2019",
+            thumb: "hypergraphlearning.gif",
+            links: [{label:"PDF", url:P+"va-heterogeneous-data.pdf"}, {label:"Detail", url:RP+"pages/hypergraph"}] },
+          { title: "A Visual Analytics Framework for the Detection of Anomalous Call Stack Trees in High Performance Computing Application",
+            authors: "C. Xie, W. Xu, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 25(1): 215-224, 2019",
+            thumb: "anomolous 18.gif",
+            links: [{label:"PDF", url:P+"visual-analytics-anomalous.pdf"}, {label:"Detail", url:RP+"pages/trace-anomaly"}] },
+          { title: "Visualizing the Topology and Data Traffic of Multi-Dimensional Torus Interconnect Networks",
+            authors: "S. Cheng, W. Zhong, K. Isaacs, K. Mueller",
+            venue: "IEEE Access 6: 57191-57204, 2018",
+            thumb: "Multi-Dimensional Torus Interconnect Networks.jpg",
+            links: [{label:"PDF", url:P+"Multi-Dimensional%20Torus%20Interconnect%20Networks.pdf"}] },
+          { title: "PetalVis - Floral Visualization for Communicating Set Operations",
+            authors: "A. Kumar, M. Burch, D. Kurbanismailova, U. Kloos, K. Mueller",
+            venue: "Workshop on Visualization for Communication (co-located with IEEE VIS), Berlin, Germany, October 2018",
+            thumb: "petalvis.gif",
+            links: [{label:"PDF", url:P+"PetalVis%20-%20Floral%20Visualization%20for%20Communicating%20Set%20Operations-Final.pdf"}] },
+          { title: "Subspace Shapes: Enhancing High-Dimensional Subspace Structures via Ambient Occlusion Shading",
+            authors: "B. Wang, K. Mueller",
+            venue: "IEEE Visualization (Extended Abstracts), Berlin, Germany, October 2018",
+            thumb: "subspacespapes.gif",
+            links: [{label:"PDF", url:P+"subspace-shapes-extended.pdf"}, {label:"Detail", url:RP+"pages/subspace-shapes"}] },
+          { title: "A Scale-Space Filtering Approach for the Multi-Resolution Illustrative Visualization of Multivariate Data",
+            authors: "J. Lee, K. Mueller",
+            venue: "IEEE Visualization (Extended Abstracts), Berlin, Germany, October 2018",
+            thumb: "scalespacescatter.gif",
+            links: [{label:"PDF", url:P+"scale-spaces%20poster.pdf"}] },
+          { title: "Graphoto: Aesthetically Pleasing Charts for Casual Information Visualization",
+            authors: "J. Park, A. Kaufman, K. Mueller",
+            venue: "IEEE Computer Graphics & Applications 38(6): 67-82, 2018",
+            thumb: "graphoto.gif",
+            links: [{label:"PDF", url:P+"Graphoto.pdf"}, {label:"Slides", url:P+"graphoto_vis2019.ppt"}] },
+          { title: "Coding Ants -- Optimization of GPU Code Using Ant Colony Optimization",
+            authors: "E. Papenhausen, K. Mueller",
+            venue: "Computer Languages, Systems & Structures 54: 119-138, 2018",
+            thumb: "coding ants.gif",
+            links: [{label:"PDF", url:P+"coding-ants-optimization.pdf"}] },
+          { title: "MultiSciView: Multivariate Scientific X-ray Image Visual Exploration with Cross-Data Space Views",
+            authors: "W. Zhong, W. Xu, K. Yager, G. Doerk, J. Zhao, Y. Tian, S. Ha, C. Xie, Y. Zhong, K. Mueller, K. Kleese Van Dam",
+            venue: "Visual Informatics 2(1): 14-25, 2018",
+            thumb: "TAU.gif",
+            links: [{label:"PDF", url:P+"MultiSciView.pdf"}] },
+          { title: "An Exploded View Paradigm to Disambiguate Scatterplots",
+            authors: "S. Mahmood, K. Mueller",
+            venue: "Computers & Graphics 73: 37-46, 2018",
+            thumb: "exploded_views.gif",
+            links: [{label:"PDF", url:P+"exploded-views.pdf"}, {label:"Detail", url:RP+"pages/exploded-views"}] },
+          { title: "The Subspace Voyager: Exploring High-Dimensional Data along a Continuum of Salient 3D Subspaces",
+            authors: "B. Wang, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 24(2): 1204-1222, 2018",
+            thumb: "subspace voyager.gif",
+            links: [{label:"PDF", url:P+"subspace%20voyager.pdf"}, {label:"Detail", url:RP+"pages/subspaceVoyager"}] },
+          { title: "RadViz Deluxe: An Attribute-Aware Display for Multivariate Data",
+            authors: "S. Cheng, W. Xu, K. Mueller",
+            venue: "Processes 5(4): 75-94, 2017",
+            thumb: "RadViz Deluxe.gif",
+            links: [{label:"PDF", url:P+"processes-05-00075.pdf"}] },
+          { title: "Big Data Management with Incremental K-Means Trees – GPU-Accelerated Construction and Visualization",
+            authors: "J. Wang, A. Zelenyuk, D. Imre, K. Mueller",
+            venue: "Informatics 4(3): 24-38, 2017",
+            thumb: "informatics 17.gif",
+            links: [{label:"PDF", url:P+"informatics-203625.pdf"}] },
+          { title: "Visual Causality Analysis Made Practical",
+            authors: "J. Wang, K. Mueller",
+            venue: "IEEE Visual Analytics Science and Technology (VAST), Phoenix, AZ, October 2017",
+            thumb: "VAST 17.gif",
+            links: [{label:"PDF", url:P+"Visual%20Causality%20Analysis%20Made%20Practical.pdf"}, {label:"Detail", url:RP+"pages/practicalVisualCausality"}] },
+          { title: "Visualization of Multivariate Data with Network Constraints using Multi-Objective Optimization",
+            authors: "B. Ghai, A. Mishra, K. Mueller",
+            venue: "IEEE Visualization (Extended Abstracts), Phoenix, AZ, October 2017",
+            thumb: "Pareto MDS 17.gif",
+            links: [{label:"PDF", url:P+"Visualization%20of%20Multivariate%20Data%20with%20Network%20Constraints.pdf"}, {label:"Poster", url:P+"MDS%20multiple%20poster.pdf"}] },
+          { title: "Applying Multi-Player Rating Schemes to Manage User Studies of Visual Analytics Designs",
+            authors: "S. Mahmood, K. Mueller",
+            venue: "IEEE Visualization (Extended Abstracts), Phoenix, AZ, October 2017",
+            thumb: "ELO 17.gif",
+            links: [{label:"PDF", url:P+"Applying%20Multi-Player%20Rating%20Schemes%20to%20Manage%20User%20Studies.pdf"}, {label:"Poster", url:P+"Elo%20poster.pdf"}] },
+          { title: "Progressive Clustering of Big Data with GPU Acceleration and Visualization",
+            authors: "J. Wang, E. Papenhausen, B. Wang, S. Ha, A. Zelenyuk, K. Mueller",
+            venue: "New York Scientific Data Summit (NYSDS), New York, NY, August 2017",
+            thumb: "NYSDS 17.gif",
+            links: [{label:"PDF", url:P+"NYSDS%202017.pdf"}, {label:"Slides", url:P+"NYSDS%202017%20talk.ppsx"}] },
+          { title: "Evolutionary Visual Analysis of Deep Neural Networks",
+            authors: "W. Zhong, C. Xie, Y. Zhong, Y. Wang, W. Xu, S. Cheng, K. Mueller",
+            venue: "Workshop on Visualization for Deep Learning (co-located with ICML), Sydney, Australia, August 2017",
+            thumb: "ICML 17.gif",
+            links: [{label:"PDF", url:P+"Evolutionary%20Visual%20Analysis%20of%20Deep%20Neural%20Networks.pdf"}, {label:"Slides", url:P+"VDL2017_Slides.ppsx"}] },
+          { title: "A Visual Analytics Approach for Categorical Joint Distribution Reconstruction from Marginal Projections",
+            authors: "C. Xie, W. Zhong, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 23(1): 51-60, 2017 (won Honorary Mention Best Paper Award at IEEE VIS 2016)",
+            thumb: "TVCG Jan 17.gif",
+            links: [{label:"PDF", url:P+"IEEE%20TVCG%20Jan%202017.pdf"}, {label:"Detail", url:RP+"pages/marginal2joint"}] },
+          { title: "Analyzing Hillary Clinton’s Emails",
+            authors: "V. Dehiya, K. Mueller",
+            venue: "IEEE VIS Poster Abstracts, Baltimore, MD, 2016",
+            thumb: "Analyzing Hillary Clinton Emails VIS 2016.jpg",
+            links: [{label:"PDF", url:P+"Analyzing%20Hillary%20Clinton%20Emails%20VIS%202016.pdf"}, {label:"Poster", url:P+"Poster%20hillary.pdf"}] },
+          { title: "Extending Scatterplots to Scalar Fields",
+            authors: "S. Cheng, P. Cui, K. Mueller",
+            venue: "IEEE VIS Poster Abstracts (won an Honorary Mention Award), Baltimore, MD, 2016",
+            thumb: "scatterplots to scalar fields VIS 2016.jpg",
+            links: [{label:"PDF", url:P+"scatterplots%20to%20scalar%20fields%20VIS%202016.pdf"}, {label:"Poster", url:P+"scatterplot++%20poster.pdf"}] },
+          { title: "Google Glass for Personalized Augmentations of Data Visualizations",
+            authors: "D. Zhang, D. Coelho, K. Mueller",
+            venue: "IEEE VIS Poster Abstracts, Baltimore, MD, 2016",
+            thumb: "Google Glass VIS 2016.jpg",
+            links: [{label:"PDF", url:P+"Google%20Glass%20VIS%202016.pdf"}, {label:"Poster", url:P+"google%20glass%20poster.pdf"}] },
+          { title: "A Data-Driven Approach for Mapping Multivariate Data to Color",
+            authors: "S. Cheng, W. Xu, W. Zhong, K. Mueller",
+            venue: "IEEE VIS Poster Abstracts, Baltimore, MD, 2016",
+            thumb: "ColormapND VIS 2016.jpg",
+            links: [{label:"PDF", url:P+"ColormapND%20VIS%202016.pdf"}, {label:"Poster", url:P+"colormap%20poster.pdf"}] },
+          { title: "The Data Context Map: Fusing Data and Attributes into a Unified Display",
+            authors: "S. Cheng, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 22(1): 121-130, 2016",
+            thumb: "dataContectMap.jpg",
+            links: [{label:"PDF", url:P+"dataContectMap.pdf"}, {label:"Detail", url:RP+"pages/dataContextMap"}] },
+          { title: "The Visual Causality Analyst: An Interactive Interface for Causal Reasoning",
+            authors: "J. Wang, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 22(1): 230-239, 2016",
+            thumb: "causalAnalyst.jpg",
+            links: [{label:"PDF", url:P+"causalAnalyst.pdf"}, {label:"Detail", url:RP+"pages/visualCausalityAnalyst"}] },
+          { title: "Exploring the Distribution of Local Neighborhood Structures in Large Networks",
+            authors: "S. Cheng, C. Dahl, J. Giesen, P. Lucas, K. Mueller",
+            venue: "Workshop on Exploring Graphs At Scale (EGAS) (held jointly with VIS 2015), Chicago, IL, October 2015",
+            thumb: "eagas15.jpg",
+            links: [{label:"PDF", url:P+"vis2015egas.pdf"}, {label:"Poster", url:P+"vis2015egas-poster.pdf"}] },
+          { title: "Data Memes for Personal Visualization",
+            authors: "D. Coelho, K. Mueller",
+            venue: "Workshop on Personal Visualization: Exploring Data in Everyday Life (held jointly with VIS 2015), Chicago, IL, October 2015",
+            thumb: "DataMemesForPersonalVisualization.jpg",
+            links: [{label:"PDF", url:P+"DataMemesForPersonalVisualization.pdf"}, {label:"Poster", url:P+"Data%20Memes%20for%20Personal%20Visualization%20Poster.pdf"}] },
+          { title: "StreamVisND: Visualizing Relationships in Streaming Multivariate Data",
+            authors: "S. Cheng, Y. Wang, D. Zhang, Z. Jiang, K. Mueller",
+            venue: "IEEE VIS Poster Abstracts (won Honorary Mention), Chicago, IL, October 2015",
+            thumb: "StreamVisND.jpg",
+            links: [{label:"PDF", url:P+"StreamVisND.pdf"}, {label:"Poster", url:P+"StreamVISFinal.pdf"}] },
+          { title: "Learning Visualizations by Analogy: Promoting Visual Literacy through Visualization Morphing",
+            authors: "P. Ruchikachorn, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 29(9): 1028-1044, 2015",
+            thumb: "selfIllustrativeVis.jpg",
+            links: [{label:"PDF", url:P+"selfIllustrativeVis.pdf"}, {label:"Detail", url:RP+"pages/visAnalogies"}] },
+          { title: "Improving the Fidelity of Contextual Data Layouts Using a Generalized Barycentric Coordinates Framework",
+            authors: "S. Cheng, K. Mueller",
+            venue: "IEEE Pacific Visualization Symposium, Hangzhou, China, April 2015, pp. 295-302",
+            thumb: "pacificVis_2015.jpg",
+            links: [{label:"PDF", url:P+"pacificVis_2015.pdf"}, {label:"Detail", url:RP+"pages/contextualLayouts"}] },
+          { title: "Visual Correlation Analysis of Numerical and Categorical Data on the Correlation Map",
+            authors: "Z. Zhang, K. McDonnell, E. Zadok, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 21(2): 289-303, 2015",
+            thumb: "TVCG_CorrelationMap_2015.jpg",
+            links: [{label:"PDF", url:P+"TVCG_CorrelationMap_2015.pdf"}, {label:"Detail", url:RP+"pages/correlationMap"}] },
+          { title: "Airborne Single Particle Mass Spectrometers (SPLAT II & miniSPLAT) and New Software for Data Visualization and Analysis in a Geo-Spatial Context",
+            authors: "A. Zelenyuk, D. Imre, J. Wilson, Z. Zhang, J. Wang, K. Mueller",
+            venue: "Journal of The American Society for Mass Spectrometry, pp. 1-14, 2015",
+            thumb: "SPLAT 15.png",
+            links: [{label:"PDF", url:P+"Airborne%20Single%20Particle%20Mass%20SpectrometerGeo-Spatial%20Context.pdf"}] },
+          { title: "A Structure-Based Distance Metric for High-Dimensional Space Exploration with Multi-Dimensional Scaling",
+            authors: "J. Lee, K. McDonnell, A. Zelenyuk, D. Imre, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 20(3): 351-364, 2014",
+            thumb: "MDS_TVCG_14.gif",
+            links: [{label:"PDF", url:P+"MDS_TVCG_14.pdf"}, {label:"Detail", url:RP+"pages/distanceMetric/"}] },
+          { title: "TorusVisND: Unraveling High-Dimensional Torus Networks for Network Traffic Visualizations",
+            authors: "S. Cheng, P. De, S. Jiang, K. Mueller",
+            venue: "1st Workshop on Visual Performance Analysis (jointly with Supercomputing 2014), New Orleans, November 2014, pp. 9-16",
+            thumb: "torusVisND.jpg",
+            links: [{label:"PDF", url:P+"torusVisND.pdf"}, {label:"Detail", url:RP+"pages/torusVisND"}] },
+          { title: "Gamification as a Paradigm for the Evaluation of Visual Analytics Systems",
+            authors: "N. Ahmed, K. Mueller",
+            venue: "Beyond Time And Errors: Novel Evaluation Methods For Visualization (BELIV) (with VIS 2014), Paris, France, November 2014",
+            thumb: "BELIV_14.jpg",
+            links: [{label:"PDF", url:P+"BELIV_14.pdf"}, {label:"Slides", url:RP3+"BELIV_14.ppsx"}] },
+          { title: "Does 3D Really Make Sense for Visual Cluster Analysis? Yes!",
+            authors: "B. Wang, K. Mueller",
+            venue: "Intern'l Workshop on 3DVis: Does 3D Really Make Sense for Data Visualization? (with VIS 2014), Paris, France, November 2014",
+            thumb: "Does_3D_Really_Make_Sense_for_Visual_Cluster_Analysis.jpg",
+            links: [{label:"PDF", url:P+"Does_3D_Really_Make_Sense_for_Visual_Cluster_Analysis.pdf"}, {label:"Slides", url:RP3+"2D-3D_VIS_14.pps"}] },
+          { title: "EnergyScout: A Consumer Oriented Dashboard for Smart Meter Data Analytics",
+            authors: "N. Ahmed, K. Mueller",
+            venue: "IEEE Visualization Conference, poster session (with VIS 2014), Paris, France, November 2014",
+            thumb: "energyScout.gif",
+            links: [{label:"PDF", url:P+"EnergyScout_extended.pdf"}] },
+          { title: "GPU-Accelerated Incremental Correlation Clustering of Large Data with Visual Feedback",
+            authors: "E. Papenhausen, B. Wang, S. Ha, A. Zelenyuk, D. Imre, K. Mueller",
+            venue: "The First IEEE Workshop on Big Data Visualization, Santa Clara, CA, October 2013",
+            thumb: "big_data_vis_13.gif",
+            links: [{label:"PDF", url:P+"big_data_visualization_workshop_2013.pdf"}, {label:"Detail", url:RP+"pages/redundancyClustering/"}] },
+          { title: "A Visual Analytics System for Stock Data",
+            authors: "S. Cheng, Z. Jiang, Z. Zhang, K. Mueller",
+            venue: "IEEE Visualization Conference, poster session, Atlanta, GA, October 2013",
+            thumb: "VIS_stock_13.gif",
+            links: [{label:"PDF", url:P+"A_Visual_Analytics_System_for_Stock_Data.pdf"}] },
+          { title: "SketchPadN-D: WYDIWYG Sculpting and Editing in High-Dimensional Space",
+            authors: "B. Wang, P. Ruchikachorn, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 19(12): 2060-2069, 2013",
+            thumb: "sketchpad.gif",
+            links: [{label:"PDF", url:P+"SketchPadN-D.pdf"}, {label:"Detail", url:RP+"pages/SketchPadN-D/"}] },
+          { title: "The Five W’s for Information Visualization with Application to Healthcare Informatics",
+            authors: "Z. Zhang, B. Wang, F. Ahmed, IV Ramakrishnan, A. Viccellio, R. Zhao, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 19(11): 1895-1910, 2013",
+            thumb: "EMR.jpg",
+            links: [{label:"PDF", url:P+"five_W_EMR_preprint.pdf"}, {label:"Detail", url:RP+"pages/EMR"}] },
+          { title: "An Interactive Visual Analytics Framework for Multi-Field Data in a Geo-Spatial Context",
+            authors: "Z. Zhang, X. Tong, K. McDonnell, A. Zelenyuk, D. Imre, K. Mueller",
+            venue: "Tsinghua Science and Technology on Visualization and Computer Graphics 18(2), April 2013",
+            thumb: "tsinghuaST_2013.jpg",
+            links: [{label:"PDF", url:P+"tsinghuaST_2013.pdf"}, {label:"Detail", url:RP+"pages/geospatial/"}] },
+          { title: "TripAdvisorND: A Tourism-Inspired High-Dimensional Space Exploration Framework with Overview and Detail",
+            authors: "J. Nam, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 19(2): 291-305, 2013",
+            thumb: "TripAdviosorND.jpg",
+            links: [{label:"PDF", url:P+"TripAdviosorND.pdf"}, {label:"Detail", url:RP+"pages/TripAdvisorND/"}] },
+          { title: "Human Computation in Visualization: Using Purpose Driven Games for Robust Evaluation of Visualization Algorithms",
+            authors: "N. Ahmed, Z. Zheng, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 18(12): 2104-2113, 2012",
+            thumb: "HPU_vis_2012.gif",
+            links: [{label:"PDF", url:P+"HPU_vis_2012.pdf"}, {label:"Detail", url:RP+"pages/HPU/"}] },
+          { title: "Data-Driven Approach to Hue-Preserving Color-Blending",
+            authors: "L. Kühne, J. Giesen, Z. Zhang, S. Ha, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 18(12): 2122-2129, 2012",
+            thumb: "svm_blending_vis_2012.gif",
+            links: [{label:"PDF", url:P+"svm_blending_vis_2012.pdf"}, {label:"Detail", url:RP+"pages/svm/"}] },
+          { title: "A Network-Based Interface for the Exploration of High-Dimensional Data Spaces",
+            authors: "Z. Zhang, K. McDonnell, K. Mueller",
+            venue: "IEEE PacificVis, Songdo, Korea, March 2012, pp. 17-24",
+            thumb: "pacVis12.gif",
+            links: [{label:"PDF", url:P+"pacVis12.pdf"}, {label:"Detail", url:RP+"pages/pacVis2012/"}] },
+          { title: "AnamneVis: A Framework for the Visualization of Patient History and Medical Diagnostics Chains",
+            authors: "Z. Zhang, F. Ahmed, A. Mittal, IV Ramakrishnan, R. Zhao, A. Viccellio, K. Mueller",
+            venue: "IEEE Workshop on Visual Analytics in Health Care, Providence, RI, October 2011",
+            thumb: "VAHC11.gif",
+            links: [{label:"PDF", url:P+"VAHC11.pdf"}] },
+          { title: "Magic Marker: A Color Analytics Interface for Image Annotation",
+            authors: "S. Garg, K. Padalkar, K. Mueller",
+            venue: "International Symposium on Visual Computing, Las Vegas, NV, September 2011",
+            thumb: "magicMarker.gif",
+            links: [{label:"PDF", url:P+"ISVC2011.pdf"}] },
+          { title: "Iconizer: A Framework to Identify and Create Effective Representations for Visual Information Encoding",
+            authors: "S. Garg, T. Berg, K. Mueller",
+            venue: "International Symposium on Smart Graphics, Bremen, Germany, July 2011",
+            thumb: "iconize.gif",
+            links: [{label:"PDF", url:P+"iconizerSG11.pdf"}, {label:"Slides", url:RP3+"smartGraphics11.pdf"}] },
+          { title: "Can Computers Master the Art of Communication? A Focus on Visual Analytics",
+            authors: "K. Mueller, S. Garg, J. Nam, T. Berg, K. McDonnell",
+            venue: "IEEE Computer Graphics & Applications 31(3): 14-21, 2011",
+            thumb: "CGA_11.gif",
+            links: [{label:"PDF", url:P+"CG&A_2011.pdf"}] },
+          { title: "A Visual Analytics Framework for Emergency Room Clinical Encounters",
+            authors: "Z. Zhang, A. Mittal, S. Garg, A. Dimitriyadi, IV Ramakrishnan, R. Zhao, A. Viccellio, K. Mueller",
+            venue: "IEEE Workshop on Visual Analytics in Health Care, Salt Lake City, October 2010",
+            thumb: "healthVA10.gif",
+            links: [{label:"PDF", url:P+"healthVA_10.pdf"}] },
+          { title: "REANA: An RFID-Enabled Environment-Aware Navigation System for the Visually Impaired",
+            authors: "K. Mueller, S. Das",
+            venue: "IEEE Conference on Emerging Technologies for a Smarter World, Seoul, Korea, September 2010",
+            thumb: "REANA_10.gif",
+            links: [{label:"PDF", url:P+"RFID_CEWIT_10.pdf"}] },
+          { title: "Street Light View: Enriching Navigable Panoramic Street View Maps with Informative Illumination Thumbnails",
+            authors: "C. Rojo, W. Xu, K. Mueller",
+            venue: "IEEE Visualization Conference (poster), Salt Lake City, October 2010",
+            thumb: "streetLightView_10.gif",
+            links: [{label:"PDF", url:P+"streetLightView_vis10.pdf"}] },
+          { title: "KAV-DB: Towards a Framework for the Capture and Retrieval of Visualization Knowledge over the Web",
+            authors: "S. Garg, J. Nam, K. Padalkar, K. Mueller, M. Chan, H. Qu, S. Laue, W. Saleem, J. Giesen",
+            venue: "Proc. Schloss Dagstuhl Scientific Visualization Workshop 33(5): 607-615, 2009",
+            thumb: "KAV_DB_10.gif",
+            links: [{label:"PDF", url:P+"dagshtuhl09_final.pdf"}] },
+          { title: "A Visual Analytics Approach to Model Learning",
+            authors: "S. Garg, IV Ramakrishnan, K. Mueller",
+            venue: "IEEE Conference on Visual Analytics Science and Technology (VAST)",
+            thumb: "VAST10.gif",
+            links: [{label:"PDF", url:P+"VAST10_final2.pdf"}] },
+          { title: "A High-Dimensional Feature Clustering Approach to Support Knowledge-Assisted Visualization (KAV)",
+            authors: "J. Nam, M. Maurer, K. Mueller",
+            venue: "Computers & Graphics 33(5): 607-615, 2009",
+            thumb: "KAV09.jpg",
+            links: [{label:"PDF", url:P+"CompAndGraph09_KAV.pdf"}] },
+          { title: "Iconizer: A Framework to Identify and Create Effective Representations for Visual Information Encodings",
+            authors: "S. Garg, T. Berg, K. Mueller",
+            venue: "IEEE Visualization Conference (poster session), Atlantic City, NJ, October 2009",
+            thumb: "vis09.jpg",
+            links: [{label:"PDF", url:P+"iconizerVis09.pdf"}] },
+          { title: "Model-Driven Visual Analytics",
+            authors: "S. Garg, E. Nam, IV Ramakrishnan, K. Mueller",
+            venue: "IEEE Symposium on Visual Analytics Science and Technology 2008 (VAST '08), Columbus, OH, October 2008, pp. 19-26",
+            thumb: "vast08.jpg",
+            links: [{label:"PDF", url:P+"vast08.pdf"}] },
+          { title: "Illustrative Parallel Coordinates",
+            authors: "K. McDonnell, K. Mueller",
+            venue: "Computer Graphics Forum (Special Issue Eurovis '08) 27(3): 1031-1038, 2008",
+            thumb: "illustrParCoord.jpg",
+            links: [{label:"PDF", url:P+"ktm-eurovis2008.pdf"}] },
+          { title: "ClusterSculptor: A Visual Analytics tool for high-dimensional data",
+            authors: "E. Nam, Y. Han, K. Mueller, A. Zelenyuk, D. Imre",
+            venue: "IEEE Symposium on Visual Analytics Science and Technology 2007 (VAST '07), Sacramento, CA, October 2007, pp. 75-82",
+            thumb: "vast07.jpg",
+            links: [{label:"PDF", url:P+"VAST07Final.pdf"}] },
+          { title: "Toward a Multi-Analyst, Collaborative Framework for Visual Analytics",
+            authors: "S. Brennan, K. Mueller, G. Zelinsky, IV Ramakrishnan, D. Warren, A. Kaufman",
+            venue: "IEEE Symposium on Visual Analytics Science and Technology 2006, Baltimore, MD, October 2006, pp. 129-136",
+            thumb: "vast06_r.gif",
+            links: [{label:"PDF", url:P+"VAST3.pdf"}] },
+          { title: "SpectraMiner, an Interactive Data Mining and Visualization Software for Single Particle Mass Spectroscopy: A Laboratory Test Case",
+            authors: "A. Zelenyuk, D. Imre, Y. Cai, K. Mueller, Y. Han, P. Imrich",
+            venue: "International Journal of Mass Spectrometry 258: 58-73, 2006",
+            thumb: "aerosol.jpg",
+            links: [{label:"PDF", url:P+"specroscopy06.pdf"}] },
+          { title: "Interactive Poster: 3D ThemeRiver",
+            authors: "P. Imrich, K. Mueller, D. Imre, A. Zelenyuk, W. Zhu",
+            venue: "IEEE Information Visualization Symposium '03, Seattle, October 2003",
+            thumb: "vis03_1.gif",
+            links: [{label:"PDF", url:P+"3DThemeriver.pdf"}] },
+          { title: "Interactive Poster: A Hardware-Accelerated Rubbersheet Focus + Context Technique for Radial Dendrograms",
+            authors: "P. Imrich, K. Mueller, D. Imre, A. Zelenyuk, W. Zhu",
+            venue: "IEEE Information Visualization Symposium '03, Seattle, October 2003",
+            thumb: "vis03_2.gif",
+            links: [{label:"PDF", url:P+"Rubbersheet.pdf"}] },
+          { title: "Interactive Poster: Visual datamining with the interactive dendogram",
+            authors: "P. Imrich, K. Mueller, D. Imre, A. Zelenyuk, W. Zhu",
+            venue: "IEEE Information Visualization Symposium '02, Boston, October 2002",
+            thumb: "dendogram.gif",
+            links: [{label:"PDF", url:P+"infovis02_poster.pdf"}] },
+          { title: "Changes in brain-functional homogeneity in subjects with Alzheimer's disease",
+            authors: "N. Volkow, W. Zhu, C. Felder, K. Mueller, T. Welsh, G.-J. Wang, M. de Leon",
+            venue: "Journal of Psychiatry Research: Neuroimaging 114(1): 39-50, 2002",
+            thumb: "variance1.JPG",
+            links: [{label:"PDF", url:P+"alzheimer.pdf"}, {label:"Detail", url:RP+"brainMiner/"}] },
+          { title: "Graphical strategies to convey functional relationships in the human brain: A case study",
+            authors: "T. Welsh, K. Mueller, W. Zhu, N. Volkow, J. Meade",
+            venue: "IEEE Visualization '01, San Diego, October 2001, pp. 481-485",
+            thumb: "isolines1.JPG",
+            links: [{label:"PDF", url:P+"vis01-BrainMiner.pdf"}, {label:"Detail", url:RP+"brainMiner/"}] },
+          { title: "BrainMiner: A visualization tool for ROI-based discovery of functional relationships in the human brain",
+            authors: "K. Mueller, T. Welsh, W. Zhu, J. Meade, N. Volkow",
+            venue: "New Paradigms in Information Visualization and Manipulation (NPIVM) 2000, Washington DC, November 2000",
+            thumb: "brainExplorer1.gif",
+            links: [{label:"PDF", url:P+"npivm.pdf"}, {label:"Detail", url:RP+"brainMiner/"}] },
+          { title: "A medical workstation for the display and analysis of multi-frame digital cineradiographic data",
+            authors: "K. Mueller, E. L. LaPresto, K. A. Powell, J. L. Hirsch, J. F. Cornhill",
+            venue: "Computers in Medicine and Biology 26(5): 385-400, 1996",
+            thumb: "medStatSmall1.JPG",
+            links: [{label:"PDF", url:P+"CBM_gui_single.pdf"}, {label:"Detail", url:RP+"pacs"}] }
+        ]
+      },
+
+      /* ============================================================
+         2. HUMAN-CENTERED RESPONSIBLE AI (FAIR)
+         ============================================================ */
+      fair: {
+        title: "Human-centered responsible AI: fairness, belief modeling, and personalized communication",
+        papers: [
+          { title: "Leveraging Large Language Models for Personalized Public Messaging",
+            authors: "A. Kumar Das, C. Xiong Bearfield, K. Mueller",
+            venue: "ACM CHI Conference on Human Factors in Computing Systems Late Breaking Work, Tokyo, Japan, May 2025",
+            thumb: "CHI LBM 25.png",
+            links: [{label:"PDF", url:P+"CHI%20LLM%20Messaging.pdf"}, {label:"Detail", url:RP+"pages/PersonalizedMessaging"}] },
+          { title: "FairPlay: A Collaborative Approach to Mitigate Bias in Datasets for Improved AI Fairness",
+            authors: "T. Behzad, M. Singh, A. Ripa, K. Mueller",
+            venue: "Proceedings of the ACM on Human-Computer Interaction (CSCW) 9(2): 1-30, 2025",
+            thumb: "FairVis.png",
+            links: [{label:"PDF", url:P+"FairPlay%20CSCW.pdf"}, {label:"Detail", url:RP+"pages/FairPlay"}] },
+          { title: "Belief Miner: A Methodology for Discovering Causal Beliefs and Causal Illusions from General Populations",
+            authors: "S. Salim, N. Hoque, K. Mueller",
+            venue: "Proceedings of the ACM on Human-Computer Interaction 8 (CSCW 1): 1-37, 2024",
+            thumb: "beliefMiner.png",
+            links: [{label:"PDF", url:P+"cscw2024%20BeliefMiner.pdf"}, {label:"Detail", url:RP+"pages/BeliefMiner"}] },
+          { title: "D-BIAS: A Causality-Based Human-in-the-Loop System for Tackling Algorithmic Bias",
+            authors: "B. Ghai, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics (Special Issue IEEE VIS 2022) 29(1): 473-482, 2023",
+            thumb: "D-Bias.jpg",
+            links: [{label:"PDF", url:PP+"D-BIAS.pdf"}, {label:"Detail", url:RP+"pages/D-Bias"}] },
+          { title: "Cascaded Debiasing: Studying the Cumulative Effect of Multiple Fairness-Enhancing Interventions",
+            authors: "B. Ghai, M. Mishra, K. Mueller",
+            venue: "ACM Conference on Information and Knowledge Management (CIKM), Atlanta, GA, October 2022",
+            thumb: "CIKM 22.jpg",
+            links: [{label:"PDF", url:PP+"Cascaded%20Debiasing%20CIKM%2022.pdf"}, {label:"Code", url:"https://github.com/bhavyaghai/Cascaded-Debiasing"}] },
+          { title: "WordBias: An Interactive Visual Tool for Discovering Intersectional Biases Encoded in Word Embeddings",
+            authors: "B. Ghai, Md. N. Hoque, K. Mueller",
+            venue: "ACM CHI Late Breaking Work, Virtual, May 8-13, 2021",
+            thumb: "CHI 2021 WordBias.jpg",
+            links: [{label:"PDF", url:PP+"CHI%202021%20WordBias.pdf"}, {label:"Detail", url:RP+"pages/wordbias"}] },
+          { title: "Measuring Social Biases of Crowd Workers using Counterfactual Queries",
+            authors: "B. Ghai, Q. V. Liao, Y. Zhang, K. Mueller",
+            venue: "Fair & Responsible AI Workshop (co-located with CHI 2020), Virtual, April 2020",
+            thumb: "CHI 2020 social bias.jpg",
+            links: [{label:"PDF", url:PP+"CHI%202020%20social%20bias.pdf"}] },
+          { title: "Toward Interactively Balancing the Screen Time of Actors Based on Observable Phenotypic Traits in Live Telecast",
+            authors: "Md. N. Hoque, S. Billah, N. Saquib, K. Mueller",
+            venue: "ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW), Virtual, October 17-21, 2020",
+            thumb: "CSCW Screen Bias 2020.jpg",
+            links: [{label:"PDF", url:PP+"CSCW%20Screen%20Bias%202020.pdf"}, {label:"Detail", url:RP+"pages/screenBias"}] }
+        ]
+      },
+
+      /* ============================================================
+         3. MEDICAL IMAGING (CT)
+         ============================================================ */
+      ct: {
+        title: "Medical imaging (computed tomography, low-dose, GAN synthesis, GPU acceleration)",
+        papers: [
+          { title: "Deep Virtual CT Workflow for Evaluating AI in Low-Dose CT Lung Cancer Screening: a 2D Demonstration Study",
+            authors: "R. Zeng, A. Badal, A.O. Ezzati, X. Jia, A. Krishna, K. Mueller, K.J. Myers, C. Niu, G. Wang, W. Xia",
+            venue: "SPIE Medical Imaging: Physics of Medical Imaging 13405, 259-266, 2025",
+            thumb: "SPI25workflow.png",
+            links: [{label:"PDF", url:PP+"SPIE%202025%20Workflow.pdf"}] },
+          { title: "Guided Synthesis of Annotated Lung CT Images with Pathologies Using a Multi-Conditioned Denoising Diffusion Probabilistic Model (mDDPM)",
+            authors: "A. Krishna, E. Papenhausen, D. Coelho, K. Mueller",
+            venue: "SPIE Medical Imaging: Physics of Medical Imaging 13405, 533-538, 2025",
+            thumb: "SPI25synth.png",
+            links: [{label:"PDF", url:PP+"SPIE%202025%20Synthesis%20of%20Realistic%20Medical%20Images%20with%20Pathologies.pdf"}] },
+          { title: "Guided Synthesis of Annotated Lung CT Images with Pathologies Using a Multi-Conditioned Denoising Diffusion Probabilistic Model (mDDPM)",
+            authors: "A. Krishna, G. Wang, K. Mueller",
+            venue: "Physics in Medicine & Biology 70 065007, 2025",
+            thumb: "PMB25.jpg",
+            links: [{label:"PDF", url:PP+"Krishna_2025_Phys._Med._Biol._70_065007.pdf"}] },
+          { title: "Multi-Conditioned Denoising Diffusion Probabilistic Model (mDDPM) for Medical Image Synthesis",
+            authors: "A. Krishna, G. Wang, K. Mueller",
+            venue: "International Conference on Image Formation in X-Ray Computed Tomography, Bamberg, Germany, August 2024",
+            thumb: "CTMeeting24.png",
+            links: [{label:"PDF", url:PP+"CT%20Meeting%202024.pdf"}] },
+          { title: "Image Factory: A Method for Synthesizing Novel CT Images with Anatomical Guidance",
+            authors: "A. Krishna, S. Yenneti, G. Wang, K. Mueller",
+            venue: "Medical Physics 51(5): 3464-3479, 2024",
+            thumb: "Imagefactory.png",
+            links: [{label:"PDF", url:PP+"Image%20factory%20Medical%20Physics.pdf"}] },
+          { title: "Novel Lung CT Image Synthesis at Full Hounsfield Range with Expert Guided Visual Turing Test",
+            authors: "A. Krishna, S. Yenneti, G. Wang, K. Mueller",
+            venue: "International Meeting on Fully Three-Dimensional Image Reconstruction, Stony Brook, NY, July 2023",
+            thumb: "synth F3D 23.png",
+            links: [{label:"PDF", url:PP+"synth%20Fully3D%202023.pdf"}] },
+          { title: "Improving CT Image Segmentation Accuracy Using StyleGAN Driven Data Augmentation",
+            authors: "S. Bhosale, A. Krishna, G. Wang, K. Mueller",
+            venue: "International Meeting on Fully Three-Dimensional Image Reconstruction, Stony Brook, NY, July 2023",
+            thumb: "segment F3D 23.png",
+            links: [{label:"PDF", url:PP+"Segment%20Fully3D%202023.pdf"}] },
+          { title: "Development of Metaverse for Intelligent Healthcare",
+            authors: "G. Wang, A. Badal, X. Jia, J. Maltz, K. Mueller, K. Myers, C. Niu, M. Vannier, P. Yan, Z. Yu, R. Zeng",
+            venue: "Nature Machine Intelligence 4: 922-929, 2022",
+            thumb: "meTAI.jpg",
+            links: [{label:"PDF", url:PP+"Nature%20MI%202022.pdf"}] },
+          { title: "Anatomy-guided synthesis of novel CT images at full Hounsfield range",
+            authors: "A. Krishna, G. Wang, K. Mueller",
+            venue: "IEEE Medical Imaging Conference, Milano, Italy, November 5-11, 2022",
+            thumb: "MIC 22.jpg",
+            links: [{label:"PDF", url:PP+"MIC%202022.pdf"}] },
+          { title: "Noise Entangled GAN For Low-Dose CT Simulation",
+            authors: "C. Niu, G. Wang, P. Yan, J. Hahn, Y. Lai, X. Jia, A. Krishna, K. Mueller, A. Badal, K. Myers, R. Zen",
+            venue: "International Meeting on Fully Three-Dimensional Image Reconstruction, Leuven, Belgium, July 2021 (shortlisted for best oral award)",
+            thumb: "NE_f3.jpg",
+            links: [{label:"PDF", url:PP+"NE_GAN.pdf"}] },
+          { title: "Image Synthesis for Data Augmentation in Medical CT using Deep Reinforcement Learning",
+            authors: "A. Krishna, K. Bartake, C. Niu, G. Wang, Y. Lai, X. Jia, K. Mueller",
+            venue: "International Meeting on Fully Three-Dimensional Image Reconstruction, Leuven, Belgium, July 2021 (shortlisted for best oral award)",
+            thumb: "DRL_f3.jpg",
+            links: [{label:"PDF", url:PP+"DRL_PCA_CT.pdf"}] },
+          { title: "Interpreting Galaxy Deblender GAN from the Discriminator’s Perspective",
+            authors: "H. Li, Y. Lin, W. Xu, K. Mueller",
+            venue: "International Symposium on Visual Computing, Virtual, October 5-7, 2020",
+            thumb: "ISVC 2020.jpg",
+            links: [{label:"PDF", url:PP+"ISVC%202020.pdf"}] },
+          { title: "Metal Artifact Reduction in X-ray CT via Ray Profile Correction",
+            authors: "S. Ha, K. Mueller",
+            venue: "Applied Sciences 10, 66, 2020",
+            thumb: "MAR applied science.gif",
+            links: [{label:"PDF", url:PP+"Metal_Artifact_Reduction_in_X_ray_CT_via_Ray_Profile_Correction.pdf"}] },
+          { title: "Medical (CT) Image Generation with Style",
+            authors: "A. Krishna, K. Mueller",
+            venue: "International Meeting on Fully Three-Dimensional Image Reconstruction (Fully3D), Philadelphia, PA, June 2019",
+            thumb: "style19.jpg",
+            links: [{label:"PDF", url:PP+"fullyD%202019.pdf"}] },
+          { title: "A GPU-Accelerated Multi-Voxel Update Scheme for Iterative Coordinate Descent (ICD) Optimization in Statistical Iterative CT Reconstruction (SIR)",
+            authors: "S. Ha, K. Mueller",
+            venue: "IEEE Transactions on Computational Imaging 4(3): 355-365, 2018",
+            thumb: "GPU SIR.gif",
+            links: [{label:"PDF", url:PP+"GPU%20SIR.pdf"}] },
+          { title: "Image Reconstruction Is a New Frontier of Machine Learning",
+            authors: "G. Wang, J. C. Ye, K. Mueller, J. A. Fessler",
+            venue: "IEEE Transactions on Medical Imaging 7(6): 1289-1296, 2018",
+            thumb: "deep learning MI.gif",
+            links: [{label:"PDF", url:PP+"Image%20Reconstruction%20Is%20a%20New%20Frontier%20of%20Machine%20Learning.pdf"}] },
+          { title: "Metal Artifact Reduction in Cone-Beam X-Ray CT via Ray Profile Correction",
+            authors: "S. Ha, K. Mueller",
+            venue: "Extended article to original SPIE Medical Imaging 2016 publication, July 2018",
+            thumb: "MAR cone.gif",
+            links: [{label:"PDF", url:PP+"metal-artifact-reduction%20cone-beam.pdf"}] },
+          { title: "A Look-Up Table-Based Ray Integration Framework for 2D/3D Forward and Back-projection in X-ray CT",
+            authors: "S. Ha, K. Mueller",
+            venue: "IEEE Transactions on Medical Imaging 37(2): 361-371, 2018",
+            thumb: "TMI 17 LUT.gif",
+            links: [{label:"PDF", url:PP+"IEEE%20TMI%202017%20LUT.pdf"}, {label:"Code", url:"https://github.com/bsmind/LTRI"}] },
+          { title: "Low-Dose CT Streak Artifacts Removal using Deep Residual Neural Networks",
+            authors: "H. Li, K. Mueller",
+            venue: "Fully 3D Image Reconstruction in Radiology and Nuclear Medicine, Xi'an, China, June 2017",
+            thumb: "Fully 3D 17.gif",
+            links: [{label:"PDF", url:PP+"Fully%203D%202017.pdf"}, {label:"Slides", url:RP+"Fully%203D_17_presentation.ppsx"}] },
+          { title: "Efficient Area-Based Ray Integration Using Summed Area Tables and Regression Models",
+            authors: "S. Ha, H. Li, K. Mueller",
+            venue: "International Conference on Image Formation in X-Ray Computed Tomography, Bamberg, Germany, July 2016",
+            thumb: "CT Meetimg 2016.jpg",
+            links: [{label:"PDF", url:PP+"CT%20Meeting%202016.pdf"}] },
+          { title: "Metal Artifact Reduction in CT via Ray Profile Correction",
+            authors: "S. Ha, K. Mueller",
+            venue: "SPIE Medical Imaging Conference, San Diego, CA, February 2016",
+            thumb: "MAR SPIE16.jpg",
+            links: [{label:"PDF", url:PP+"SPIE%20Medical%20Imaging%202016%20MAR%20Ray%20Profile.pdf"}] },
+          { title: "MADR: Metal Artifact Detection and Reduction",
+            authors: "S. Jaiswal, S. Ha, K. Mueller",
+            venue: "SPIE Medical Imaging Conference, San Diego, CA, February 2016",
+            thumb: "MADR SPIE16.jpg",
+            links: [{label:"PDF", url:PP+"SPIE%20Medical%20Imaging%202016%20MADR.pdf"}] },
+          { title: "A Study of Sparse Detector Designs with Interpolation for Multi-Slice Spiral CT",
+            authors: "D. Coelho, K. Mueller",
+            venue: "IEEE Medical Imaging Conference (poster), San Diego, CA, November 2015",
+            thumb: "SparseDetectorsMIC15.jpg",
+            links: [{label:"PDF", url:PP+"SparseDetectorsMIC15.pdf"}] },
+          { title: "An Algorithm to Compute Independent Sets of Voxels for Parallelization of ICD-based Statistical Iterative Reconstruction",
+            authors: "S. Ha, K. Mueller",
+            venue: "Fully 3D Image Reconstruction in Radiology and Nuclear Medicine (oral), Newport, RI, June 2015",
+            thumb: "fully3D_15_SIR.jpg",
+            links: [{label:"PDF", url:PP+"fully3D_15_SIR.pdf"}, {label:"Slides", url:RP+"sir_scheduler.ppsx"}] },
+          { title: "A Study of Volume Integration Models for Iterative Cone-Beam Computed Tomography",
+            authors: "S. Ha, A. Kumar, K. Mueller",
+            venue: "Fully 3D Image Reconstruction in Radiology and Nuclear Medicine (poster), Newport, RI, June 2015",
+            thumb: "fully3D_15_Int.jpg",
+            links: [{label:"PDF", url:PP+"fully3D_15_Int.pdf"}] },
+          { title: "Low Dose CT Image Restoration Using a Database of Image Patches",
+            authors: "S. Ha, K. Mueller",
+            venue: "Physics in Medicine and Biology 60(2): 869-880, 2015",
+            thumb: "PMB_2015.jpg",
+            links: [{label:"PDF", url:PP+"PMB_2015.pdf"}] },
+          { title: "DQS Advisor: A Visual Interface and Knowledge-Based System to Balance Dose, Quality, and Reconstruction Speed in Iterative CT Reconstruction with Application to NLM-Regularization",
+            authors: "Z. Zheng, E. Papenhausen, K. Mueller",
+            venue: "Physics in Medicine and Biology 58(21): 7857-73, 2013",
+            thumb: "PMB_13.gif",
+            links: [{label:"PDF", url:P+"PMB_13_author_copy.pdf"}, {label:"Detail", url:RP+"pages/DQS_Advisor"}] },
+          { title: "Rapid Rabbit: Highly Optimized GPU Accelerated Cone-Beam CT Reconstruction",
+            authors: "E. Papenhausen, Z. Zheng, K. Mueller",
+            venue: "IEEE Medical Imaging Conference, Seoul, Korea, November 2013",
+            thumb: "mic_13_rapidRabbit1.gif",
+            links: [{label:"PDF", url:P+"mic_13_RapidRabbit.pdf"}] },
+          { title: "DQS Advisor: a Visual Interface to Balance Dose, Quality and Reconstruction Speed in Iterative CT",
+            authors: "Z. Zheng, E. Papenhausen, K. Mueller",
+            venue: "IEEE Medical Imaging Conference, Seoul, Korea, November 2013",
+            thumb: "MIC_13_DQS.gif",
+            links: [{label:"PDF", url:P+"mic_2013_DQS.pdf"}] },
+          { title: "Low Dose CT Image Restoration Using a Localized Patch Database",
+            authors: "S. Ha, K. Mueller",
+            venue: "IEEE Medical Imaging Conference, Seoul, Korea, November 2013",
+            thumb: "MIC_13_patchDB.gif",
+            links: [{label:"PDF", url:P+"mic_2013_patchDB.pdf"}] },
+          { title: "VACT: Visualization-Aware CT Reconstruction",
+            authors: "Z. Zheng, K. Mueller",
+            venue: "IEEE Medical Imaging Conference, Seoul, Korea, November 2013",
+            thumb: "MIC_13_VACT.gif",
+            links: [{label:"PDF", url:P+"mic_13_VACT.pdf"}] },
+          { title: "Cloud X: A Platform as a Service for CT Reconstruction Research and Development",
+            authors: "E. Papenhausen, Z. Zheng, K. Mueller",
+            venue: "Fully 3D Image Reconstruction in Radiology and Nuclear Medicine (oral), Lake Tahoe, CA, June 2013",
+            thumb: "fully_3D_2013_cloudX.gif",
+            links: [{label:"PDF", url:P+"cloudX.pdf"}] },
+          { title: "A Comparative Study of Neighborhood Filters for Artifact Reduction in Iterative Low-Dose CT",
+            authors: "W. Xu, S. Ha, Z. Zheng, K. Mueller",
+            venue: "Fully 3D Image Reconstruction in Radiology and Nuclear Medicine (poster), Lake Tahoe, CA, June 2013",
+            thumb: "fully_3D_13_filters.gif",
+            links: [{label:"PDF", url:P+"fully3d2013_filters.pdf"}] },
+          { title: "Database-Assisted Low-Dose CT Image Restoration",
+            authors: "W. Xu, S. Ha, K. Mueller",
+            venue: "Medical Physics 3(40): 031109, 2013",
+            thumb: "MP_2.gif",
+            links: [{label:"PDF", url:P+"MPH031109.pdf"}] },
+          { title: "Creating Optimal Code for GPU-Accelerated CT Reconstruction Using Ant Colony Optimization",
+            authors: "E. Papenhausen, Z. Zheng, K. Mueller",
+            venue: "Medical Physics 3(40): 031110, 2013",
+            thumb: "MP_1.gif",
+            links: [{label:"PDF", url:P+"MPH031110.pdf"}] },
+          { title: "Detection of Low-Dose CT Reconstruction Artifacts Using a Bi-Modal Approach",
+            authors: "S. Mahmood, K. Mueller",
+            venue: "SPIE Medical Imaging Conference, Orlando, FL, February 2013",
+            thumb: "SPIE_2013.gif",
+            links: [{label:"PDF", url:P+"SPIE_2013.pdf"}] },
+          { title: "GPU-Accelerated Forward and Back-Projections with Spatially Varying Kernels for 3D DIRECT TOF PET Reconstruction",
+            authors: "S. Ha, S. Matej, M. Ispiryan, K. Mueller",
+            venue: "IEEE Transactions on Nuclear Science 60(1): 166-173, 2013",
+            thumb: "TNS_2013.jpg",
+            links: [{label:"PDF", url:P+"TNS_2013.pdf"}] },
+          { title: "Efficient Low-Dose CT Artifact Mitigation using an Artifact-Matched Prior Scan",
+            authors: "W. Xu, K. Mueller",
+            venue: "Medical Physics 39: 4748-4760, 2012",
+            thumb: "prior_2012.gif",
+            links: [{label:"PDF", url:P+"MPH004748.pdf"}] },
+          { title: "GPU-Accelerated Forward and Backward Projection with Spatially Varying Kernels in 3D DIRECT TOF PET Reconstruction",
+            authors: "S. Ha, S. Matej, M. Ispiryan, K. Mueller",
+            venue: "IEEE Medical Imaging Conference, Anaheim, CA, October 2012",
+            thumb: "direct_MIC_2012.gif",
+            links: [{label:"PDF", url:P+"direct_MIC_2012.pdf"}] },
+          { title: "Coding Ants: Using Ant Colony Optimization to Accelerate CT Reconstruction",
+            authors: "E. Papenhausen, Z. Zheng, K. Mueller",
+            venue: "Proc. 2nd International Conference on Image Formation in X-ray Computed Tomography (Premium Poster), Salt Lake City, UT, July 2012",
+            thumb: "codingAnts_utah_2012.gif",
+            links: [{label:"PDF", url:P+"codingAnts_utah_2012.pdf"}] },
+          { title: "Searching Effective Parameters for Low-Dose CT Reconstruction by Ant Colony Optimization",
+            authors: "Z. Zheng, E. Papenhausen, K. Mueller",
+            venue: "Proc. 2nd International Conference on Image Formation in X-ray Computed Tomography, Salt Lake City, UT, July 2012",
+            thumb: "optimize_utah_2012.gif",
+            links: [{label:"PDF", url:P+"optimize_utah_2012.pdf"}] },
+          { title: "GPU-Accelerated First-Order Scattering Simulation for X-ray CT Image Reconstruction",
+            authors: "S. Ha, J. Pi, K. Mueller",
+            venue: "Proc. 2nd International Conference on Image Formation in X-ray Computed Tomography, Salt Lake City, UT, July 2012",
+            thumb: "scatter_utah_2012.gif",
+            links: [{label:"PDF", url:P+"scatter_utah_2012.pdf"}] },
+          { title: "Database-Assisted Low-Dose CT Image Restoration",
+            authors: "W. Xu, S. Ha, K. Mueller",
+            venue: "Proc. 2nd International Conference on Image Formation in X-ray Computed Tomography (Oral presentation), Salt Lake City, UT, July 2012",
+            thumb: "DB_utah_2012.gif",
+            links: [{label:"PDF", url:P+"DB_utah_2012.pdf"}] },
+          { title: "A Reference Image Database Approach for NLM Filter-Regularized CT Reconstruction",
+            authors: "W. Xu, K. Mueller",
+            venue: "Fully 3D Image Reconstruction in Radiology and Nuclear Medicine, Potsdam, Germany, July 2011",
+            thumb: "refDB.gif",
+            links: [{label:"PDF", url:P+"refDB_fully3D_11.pdf"}] },
+          { title: "GPU-Accelerated Back-Projection Revisited: Squeezing Performance by Careful Tuning",
+            authors: "E. Papenhausen, Z. Zheng, K. Mueller",
+            venue: "Workshop on High Performance Image Reconstruction (HPIR), Potsdam, Germany, July 2011",
+            thumb: "rabbitCT_HPIR11.gif",
+            links: [{label:"PDF", url:P+"performanceTuning_HPIR11.pdf"}] },
+          { title: "Identifying Sets of Favorable Projections for Few-View Low-Dose Cone-Beam CT Scanning",
+            authors: "Z. Zheng, K. Mueller",
+            venue: "Fully 3D Image Reconstruction in Radiology and Nuclear Medicine, Potsdam, Germany, July 2011",
+            thumb: "bestView_fully3D_11.gif",
+            links: [{label:"PDF", url:P+"bestView_fully3D_11.pdf"}] },
+          { title: "Performance Tuning for CUDA-Accelerated Neighborhood Denoising Filters",
+            authors: "Z. Zheng, W. Xu, K. Mueller",
+            venue: "Workshop on High Performance Image Reconstruction (HPIR), Potsdam, Germany, July 2011",
+            thumb: "filters_HPIR11.gif",
+            links: [{label:"PDF", url:P+"filters_HPIR11.pdf"}] },
+          { title: "Efficiently GPU-Accelerating Long Kernel Projections in 3-D DIRECT TOF PET Reconstruction via a Memory Cache Optimization",
+            authors: "S. Ha, S. Matej, K. Mueller",
+            venue: "Workshop on High Performance Image Reconstruction (HPIR), Potsdam, Germany, July 2011",
+            thumb: "DIRECT_HPIR11.gif",
+            links: [{label:"PDF", url:P+"DIRECT_HPIR11.pdf"}] },
+          { title: "Evaluating Popular Non-Linear Image Processing Filters for their Use in Regularized Iterative CT",
+            authors: "W. Xu, K. Mueller",
+            venue: "IEEE Medical Imaging Conference, Knoxville, TN, October 2010",
+            thumb: "MIC3.gif",
+            links: [{label:"PDF", url:P+"MIC_filters_final.pdf"}] },
+          { title: "A Cache-Aware GPU Memory Scheduling Scheme for CT Reconstruction Back-Projection",
+            authors: "Z. Zheng, K. Mueller",
+            venue: "IEEE Medical Imaging Conference, Knoxville, TN, October 2010",
+            thumb: "MIC2.gif",
+            links: [{label:"PDF", url:P+"MIC_cache_final.pdf"}] },
+          { title: "Efficiently GPU-Accelerating Long Kernel Convolutions in 3-D DIRECT TOF PET Reconstruction via a Kernel Decomposition Scheme",
+            authors: "S. Ha, Z. Zhang, S. Matej, K. Mueller",
+            venue: "IEEE Medical Imaging Conference, Knoxville, TN, October 2010",
+            thumb: "MIC1.gif",
+            links: [{label:"PDF", url:P+"GPU-DIRECT-MIC10_final.pdf"}] },
+          { title: "High-Performance Iterative Electron Tomography Reconstruction with Long-Object Compensation using Graphics Processing Units (GPUs)",
+            authors: "W. Xu, F. Xu, M. Jones, B. Keszthelyi, J. Sedat, D. Agard, K. Mueller",
+            venue: "Journal of Structural Biology 171(2): 142-153, 2010",
+            thumb: "structBio10.gif",
+            links: [{label:"PDF", url:P+"struct_biology_final.pdf"}] },
+          { title: "Refraction Corrected Transmission Ultrasound Computed Tomography for Application in Breast Imaging",
+            authors: "S. Li, M. Jackowski, T. Varslot, D. Dione, L. Staib, K. Mueller",
+            venue: "Medical Physics 37(5): 2233-2246, 2010",
+            thumb: "medphys10.gif",
+            links: [{label:"PDF", url:P+"li-mueller-med-phys-2010.pdf"}] },
+          { title: "On the Efficiency of Iterative Ordered Subset Reconstruction Algorithms for Acceleration on GPUs",
+            authors: "F. Xu, W. Xu, M. Jones, B. Keszthelyi, J. Sedat, D. Agard, K. Mueller",
+            venue: "Computer Methods and Programs in Biomedicine 98(3): 261-270, 2010",
+            thumb: "bio09.gif",
+            links: [{label:"PDF", url:P+"computermethods09%20updated.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "GPU-Based Ultrafast IMRT Plan Optimization",
+            authors: "C. Men, X. Gu, D. Choi, A. Majumdar, Z. Zheng, K. Mueller, S. Jiang",
+            venue: "Physics in Medicine and Biology 54: 6565-6573, 2009",
+            thumb: "pbm09.jpg",
+            links: [{label:"PDF", url:P+"radioTherapy_pmb_09.pdf"}] },
+          { title: "Optimal Sampling Lattices for High-Fidelity CT Reconstruction",
+            authors: "F. Xu, K. Mueller",
+            venue: "IEEE Medical Imaging Conference, Orlando, FL, October 2009",
+            thumb: "mic09.gif",
+            links: [{label:"PDF", url:P+"MIC_09.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "Learning Effective Parameter Settings for Iterative CT Reconstruction Algorithms",
+            authors: "W. Xu, K. Mueller",
+            venue: "Fully 3D Image Reconstruction in Radiology and Nuclear Medicine, Beijing, China, September 2009",
+            thumb: "fully3D09.gif",
+            links: [{label:"PDF", url:P+"Fully3D_09.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "A Performance-Driven Study of Regularization Methods for GPU-Accelerated Iterative CT",
+            authors: "W. Xu, K. Mueller",
+            venue: "Workshop on High Performance Image Reconstruction (HPIR), Beijing, China, September 2009",
+            thumb: "HPIR09.gif",
+            links: [{label:"PDF", url:P+"HPIR_09.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "Accelerating Regularized Iterative CT Reconstruction on Commodity Graphics Hardware (GPU)",
+            authors: "W. Xu, K. Mueller",
+            venue: "IEEE International Symposium on Biomedical Imaging (ISBI), Boston, MA, July 2009",
+            thumb: "ISBI09.gif",
+            links: [{label:"PDF", url:P+"ISBI_09.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "On the Efficiency of Iterative Ordered Subset Reconstruction Algorithms for Acceleration on GPUs",
+            authors: "F. Xu, K. Mueller, M. Jones, B. Keszthelyi, J. Sedat, D. Agard",
+            venue: "MICCAI '08 (Workshop on High-Performance Medical Image Computing & Computer Aided Intervention), New York, NY, September 2008",
+            thumb: "xu_mueller_final.jpg",
+            links: [{label:"PDF", url:P+"xu-mueller-final.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "Physical-Space Refraction-Corrected Transmission Ultrasound Computed Tomography Made Computationally Practical",
+            authors: "S. Li, K. Mueller, M. Jackowski, D. Dione, L. Staib",
+            venue: "MICCAI '08, New York, NY, September 2008. Springer Lecture Notes In Computer Science, vol. 5242, pp. 280-288",
+            thumb: "US_CT_miccai08.jpg",
+            links: [{label:"PDF", url:P+"MICCAI08_final_submit.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "GPU-Acceleration of Attenuation and Scattering Compensation in Emission Computed Tomography",
+            authors: "F. Xu, K. Mueller",
+            venue: "9th Fully Three-Dimensional Image Reconstruction in Radiology and Nuclear Medicine '07, High Performance Image Reconstruction Workshop, Lindau, Germany, July 2007",
+            thumb: "fully3D07.gif",
+            links: [{label:"PDF", url:P+"xu-mueller.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "Real-Time 3D Computed Tomographic Reconstruction Using Commodity Graphics Hardware",
+            authors: "F. Xu, K. Mueller",
+            venue: "Physics in Medicine and Biology 52: 3405-3419, 2007",
+            thumb: "pmb07.gif",
+            links: [{label:"PDF", url:P+"pmb7_12_006.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "Hardware acceleration vs. algorithmic acceleration: Can GPU-based processing beat complexity optimization for CT?",
+            authors: "N. Neophytou, F. Xu, K. Mueller",
+            venue: "SPIE Medical Imaging '07, San Diego, February 2007",
+            thumb: "sl.gif",
+            links: [{label:"PDF", url:P+"SPIE-MedImg07.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "Why do GPUs work so well for acceleration of CT?",
+            authors: "K. Mueller, F. Xu, N. Neophytou",
+            venue: "SPIE Electronic Imaging '07 (Keynote, Computational Imaging V), San Jose, January 2007",
+            thumb: "sl.gif",
+            links: [{label:"PDF", url:P+"SPIEkeynote2007.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "Fast Marching Method to correct for refraction in ultrasound computed tomography",
+            authors: "S. Li, K. Mueller, M. Jackowski, D. Dione, L. Staib",
+            venue: "IEEE 2006 International Symposium on Biomedical Imaging (ISBI '06), Arlington, VA, April 2006, pp. 896-899",
+            thumb: "ISBI06_3.gif",
+            links: [{label:"PDF", url:P+"ISBI06_UCT.pdf"}] },
+          { title: "Practical considerations for GPU-accelerated CT",
+            authors: "K. Mueller, F. Xu",
+            venue: "IEEE 2006 International Symposium on Biomedical Imaging (ISBI '06), Arlington, VA, April 2006, pp. 1184-1187",
+            thumb: "ISBI06_2.gif",
+            links: [{label:"PDF", url:P+"ISBI_06_fdk.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "A comparative study of popular interpolation and integration methods for use in computed tomography",
+            authors: "F. Xu, K. Mueller",
+            venue: "IEEE 2006 International Symposium on Biomedical Imaging (ISBI '06), Arlington, VA, April 2006, pp. 1252-1255",
+            thumb: "ISBI06_1.jpg",
+            links: [{label:"PDF", url:P+"ISBI_06_quality_2.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "Accelerating Popular Tomographic Reconstruction Algorithms On Commodity PC Graphics Hardware",
+            authors: "F. Xu, K. Mueller",
+            venue: "IEEE Transactions on Nuclear Science 52(3): 654-663, 2005",
+            thumb: "phant1.gif",
+            links: [{label:"PDF", url:P+"TNS-00416-2003.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "Ultra-Fast 3D Filtered Backprojection on Commodity Graphics Hardware",
+            authors: "F. Xu, K. Mueller",
+            venue: "IEEE International Symposium on Biomedical Imaging (ISBI '04), Arlington, VA, April 2004",
+            thumb: "ISBI_SLP.gif",
+            links: [{label:"PDF", url:P+"ISBIpaper04.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "Towards a Unified Framework for Rapid Computed Tomography on Commodity GPUs",
+            authors: "F. Xu, K. Mueller",
+            venue: "IEEE Medical Imaging Conference (MIC) 2003, Portland, OR, October 2003",
+            thumb: "MIC03_1.gif",
+            links: [{label:"PDF", url:P+"PID27937.pdf"}, {label:"Detail", url:RP+"rapidCT/"}] },
+          { title: "Conceptual design of a proton computed tomography system for applications in proton radiation therapy",
+            authors: "R. Schulte, V. Bashkirov, T. Li, Z. Liang, K. Mueller, et al.",
+            venue: "IEEE Transactions on Nuclear Science 51(3): 866-872, 2004",
+            thumb: "protonCT04.gif",
+            links: [{label:"PDF", url:P+"protonCT04.pdf"}] },
+          { title: "Reconstruction for Proton Computed Tomography: A Practical Approach",
+            authors: "K. Mueller, Z. Liang, T. Li, F. Xu, et al.",
+            venue: "IEEE Medical Imaging Conference (MIC) 2003, Portland, OR, October 2003",
+            thumb: "MIC03_3.gif",
+            links: [{label:"PDF", url:P+"PID27910.pdf"}] },
+          { title: "Design of a Proton Computed Tomography System for Applications in Proton Radiation Therapy",
+            authors: "R. Schulte, V. Bashkirov, T. Li, J. Liang, K. Mueller, et al.",
+            venue: "IEEE Medical Imaging Conference (MIC) 2003, Portland, OR, October 2003",
+            thumb: "MIC03_2.gif",
+            links: [{label:"PDF", url:P+"PID27894.pdf"}] },
+          { title: "Reconstruction for Proton Computed Tomography: A Monte Carlo Study",
+            authors: "T. Li, Z. Liang, K. Mueller, et al.",
+            venue: "IEEE Medical Imaging Conference (MIC) 2003, Portland, OR, October 2003",
+            thumb: "MIC03_4.gif",
+            links: [{label:"PDF", url:P+"MIC_Conf_Record03_pCT_tfli.pdf"}] },
+          { title: "Rapid 3D cone-beam reconstruction with the Simultaneous Algebraic Reconstruction Technique (SART) using 2D texture mapping hardware",
+            authors: "K. Mueller, R. Yagel",
+            venue: "IEEE Transactions on Medical Imaging 19(12): 1227-1237, 2000",
+            thumb: "angioSplat1.GIF",
+            links: [{label:"PDF", url:P+"ieeeTexMapCT.pdf"}, {label:"Detail", url:RP+"art"}] },
+          { title: "Anti-aliased 3D cone-beam reconstruction of low-contrast objects with algebraic methods",
+            authors: "K. Mueller, R. Yagel, J.J. Wheller",
+            venue: "IEEE Transactions on Medical Imaging 18(6): 519-537, 1999",
+            thumb: "brainDiff1.jpg",
+            links: [{label:"PDF", url:P+"ieeeCone.pdf"}, {label:"Detail", url:RP+"art"}] },
+          { title: "Fast implementations of algebraic methods for the 3D reconstruction from cone-beam data",
+            authors: "K. Mueller, R. Yagel, J.J. Wheller",
+            venue: "IEEE Transactions on Medical Imaging 18(6): 538-547, 1999",
+            thumb: "TMA-ART_prec4_1.GIF",
+            links: [{label:"PDF", url:P+"ieeeImpl.pdf"}, {label:"Detail", url:RP+"art"}] },
+          { title: "On the use of graphics hardware to accelerate algebraic reconstruction methods",
+            authors: "K. Mueller, R. Yagel",
+            venue: "1999 SPIE Medical Imaging Conference, No. 3659-62, San Diego, February 1999",
+            thumb: "TMA-ART_prec4_1.GIF",
+            links: [{label:"PDF", url:P+"spie99.pdf"}, {label:"Detail", url:RP+"art"}] },
+          { title: "Fast and accurate three-dimensional reconstruction from cone-beam projection data using algebraic methods",
+            authors: "K. Mueller",
+            venue: "PhD dissertation, The Ohio State University, June 1998",
+            thumb: "osuFlag1.gif",
+            links: [{label:"PDF", url:P+"dissi.pdf"}, {label:"Detail", url:RP+"art"}] },
+          { title: "A fast and accurate projection algorithm for the Algebraic Reconstruction Technique (ART)",
+            authors: "K. Mueller, R. Yagel, J.J. Wheller",
+            venue: "1998 SPIE Medical Imaging Conference, Vol. SPIE 3336, San Diego, February 1998, pp. 24-732 (won Honorary Mention Award)",
+            thumb: "",
+            links: [{label:"PDF", url:P+"spie98.ps"}] },
+          { title: "The weighted distance scheme: a globally optimizing projection ordering method for the Algebraic Reconstruction Technique (ART)",
+            authors: "K. Mueller, R. Yagel, J.F. Cornhill",
+            venue: "IEEE Transactions on Medical Imaging 16(2): 223-230, 1997",
+            thumb: "",
+            links: [{label:"PDF", url:P+"projOrder.pdf"}] },
+          { title: "Accelerating the anti-aliased Algebraic Reconstruction Technique (ART) by table-based voxel backward projection",
+            authors: "K. Mueller, R. Yagel, J.F. Cornhill",
+            venue: "EMBS'95 (Conference of the IEEE Engineering in Medicine and Biology Society), Montreal, June 1995, pp. 579-580",
+            thumb: "",
+            links: [{label:"PDF", url:P+"embsWWW.ps"}] }
+        ]
+      },
+
+      /* ============================================================
+         4. VOLUME VISUALIZATION
+         ============================================================ */
+      volvis: {
+        title: "Volume visualization",
+        papers: [
+          { title: "Multivariate Volume Data: Advances in Visualization and Analysis Techniques",
+            authors: "P. Avery, S. Jhaveri, C. Tsolakis, S. Jourdain, A. Deb, A. Kumar, X. Zhang, H. Yan, X. Huang, K. Mueller",
+            venue: "Conference on Microscopy and Microanalysis, Salt Lake City, UT, July 2025",
+            thumb: "M&M25.png",
+            links: [{label:"PDF", url:P+"Multivariate%20Volume%20Data%20Advances%20in%20Visualization%20and%20Analysis%20Techniques%20M&M%202025.pdf"}] },
+          { title: "Multivariate Volume Data: Achieving Deeper Insight through Multivariate Volume Rendering and Machine-Guided Explorations",
+            authors: "P. Avery, S. Jhaveri, A. Kumar, X. Zhang, H. Xin, H. Yan, X. Huang, W. Xu, K. Mueller",
+            venue: "Conference on Microscopy and Microanalysis, Cleveland, OH, August 2024",
+            thumb: "MM24.png",
+            links: [{label:"PDF", url:P+"CMM24%20Multivariate%20Volume%20Data.pdf"}] },
+          { title: "RadVolViz: An Information Display-Inspired Transfer Function Editor for Multivariate Volume Visualization",
+            authors: "A. Kumar, X. Zhang, H. Xin, H. Yan, X. Huang, W. Xu, K. Mueller",
+            venue: "IEEE Transactions on Visualization and Computer Graphics 30(8): 4464-4479, 2024",
+            thumb: "radVolViz.png",
+            links: [{label:"PDF", url:P+"TVCG%20RadVolViz.pdf"}, {label:"Detail", url:RP3+"pages/RadVolViz"}] },
+          { title: "Conformal Magnifier: A Focus+Context Technique with Local Shape Preservation",
+            authors: "X. Zhao, W. Zeng, X. Gu, A. Kaufman, W. Xu, K. Mueller",
+            venue: "IEEE Transactions on Visualization and Computer Graphics 18(11): 1928-1941, 2012",
+            thumb: "conformalLens.gif",
+            links: [{label:"PDF", url:P+"conformalLens.pdf"}, {label:"Detail", url:RP3+"pages/conformalLens/"}] },
+          { title: "iView: Feature Clustering Framework for Suggesting Informative Views in Volume Visualization",
+            authors: "Z. Zheng, N. Ahmed, K. Mueller",
+            venue: "IEEE Transactions on Visualization and Computer Graphics (Special issue IEEE Visualization Conference 2011) 17(12): 1959-68, 2011",
+            thumb: "iview1.gif",
+            links: [{label:"PDF", url:P+"iview.pdf"}, {label:"Detail", url:RP3+"pages/iView/"}] },
+          { title: "VDVR: Verifiable Volume Visualization of Projection-Based Data",
+            authors: "Z. Zheng, W. Xu, K. Mueller",
+            venue: "IEEE Transactions on Visualization and Computer Graphics (Special issue IEEE Visualization Conference 2010) 16(6): 1515-1524, 2010",
+            thumb: "VDVR.gif",
+            links: [{label:"PDF", url:P+"VDVR_10.pdf"}] },
+          { title: "Continuous Frequency Volume Rendering of irregularly sampled data using Gaussian RBF",
+            authors: "Q. Dinh, N. Neophytou, K. Mueller",
+            venue: "IEEE Visualization Conference (Poster Session), Atlantic City, October 2009",
+            thumb: "fvr09.jpg",
+            links: [{label:"PDF", url:P+"vis09_FVR.pdf"}] },
+          { title: "Color design for illustrative visualization",
+            authors: "L. Wang, J. Giesen, K. McDonnell, P. Zolliker, K. Mueller",
+            venue: "IEEE Transactions on Visualization and Computer Graphics (Special issue IEEE Visualization Conference 2008) 14(6): 1739-1754, 2008",
+            thumb: "color_vis08.jpg",
+            links: [{label:"PDF", url:P+"color_final_8.pdf"}] },
+          { title: "Harmonic Colormaps for Volume Visualization",
+            authors: "L. Wang, K. Mueller",
+            venue: "IEEE/EG Symposium on Volume Graphics, Los Angeles, August 2008, pp. 33-40",
+            thumb: "vg08.jpg",
+            links: [{label:"PDF", url:P+"vg08_final.pdf"}] },
+          { title: "Lattice-based volumetric global illumination",
+            authors: "F. Qiu, F. Xu, Z. Fan, N. Neophytou, A. Kaufman, K. Mueller",
+            venue: "IEEE Transactions on Visualization and Computer Graphics (Special issue IEEE Visualization Conference 2007) 13(6): 1576-1583, 2007",
+            thumb: "latticeVis07.jpg",
+            links: [{label:"PDF", url:P+"latticeVis07_final.pdf"}] },
+          { title: "Conjoint analysis to measure the perceived quality in volume rendering",
+            authors: "J. Giesen, K. Mueller, E. Schuberth, L. Wang, P. Zolliker",
+            venue: "IEEE Transactions on Visualization and Computer Graphics (Special issue IEEE Visualization Conference 2007) 13(6): 1664-1671, 2007",
+            thumb: "conjoint07.jpg",
+            links: [{label:"PDF", url:P+"conjoint_final.pdf"}] },
+          { title: "Subdivision volume splatting",
+            authors: "K. T. McDonnell, N. Neophytou, K. Mueller, H. Qin",
+            venue: "Joint Eurographics - IEEE TVGC Symposium on Visualization 2007 (EuroVis'07), Norrköping, Sweden, May 2007, pp. 139-147",
+            thumb: "eurovis07.gif",
+            links: [{label:"PDF", url:P+"ktm-eurovis2007-final.pdf"}] },
+          { title: "A perceptual framework for comparisons of direct volume rendered images",
+            authors: "H. Wong, H. Qu, U. Wong, Z. Tang, K. Mueller",
+            venue: "IEEE Pacific-Rim Symposium on Image and Video Technology (PSIVT'06), Hsinchu, Taiwan, December 2006, pp. 1314-1323. Also in Springer LNCS vol 4319",
+            thumb: "skullSpringer.gif",
+            links: [{label:"PDF", url:P+"pacificRim06.pdf"}] },
+          { title: "An image-based modelling approach to GPU-based rendering of unstructured grids",
+            authors: "N. Shareef, T.-Y. Lee, H.-W. Shen, K. Mueller",
+            venue: "Volume Graphics 2006, Boston, MA, July 2006, pp. 31-38",
+            thumb: "vg06_ibr.jpg",
+            links: [{label:"PDF", url:P+"vg06_ibr.pdf"}] },
+          { title: "SIMD-aware raycasting",
+            authors: "W. Leung, N. Neophytou, K. Mueller",
+            venue: "Volume Graphics 2006, Boston, MA, July 2006, pp. 59-62",
+            thumb: "vg06_teddy.jpg",
+            links: [{label:"PDF", url:P+"vg06_GPU.pdf"}] },
+          { title: "GPU-accelerated D2VR",
+            authors: "F. Xu, K. Mueller",
+            venue: "Volume Graphics 2006, Boston, MA, July 2006, pp. 23-30",
+            thumb: "vg06_foot.jpg",
+            links: [{label:"PDF", url:P+"vg06_d2vr.pdf"}, {label:"Detail", url:"http://www.cs.stonybrook.edu/%7Efxu/research/d2vr/"}] },
+          { title: "GPU-accelerated volume splatting with elliptical RBFs",
+            authors: "N. Neophytou, K. Mueller, K. McDonnell, W. Hong, X. Guan, H. Qin, A. Kaufman",
+            venue: "Joint Eurographics - IEEE TCVG Symposium on Visualization 2006 (EuroVis'06), Lisbon, Portugal, May 2006, pp. 13-20",
+            thumb: "train06.gif",
+            links: [{label:"PDF", url:P+"EuroVis06_reformat4.pdf"}, {label:"Detail", url:"http://fytos.com/index.php?pagename=Irregular%20Splatting"}] },
+          { title: "On the simplification of Radial Basis Function fields for volume rendering: some practical insights",
+            authors: "N. Neophytou, K. McDonnell, K. Mueller",
+            venue: "Technical Report, Stony Brook University, June 2006",
+            thumb: "agglu.jpg",
+            links: [{label:"PDF", url:P+"agglutinateSplats_TR.pdf"}] },
+          { title: "MediCAD: An Integrated Visualization System for DTI and fMRI Fusion with Anatomical MRI for Presurgical Planning",
+            authors: "X. Guan, S. Lai, J. Lackey, J. Shi, U. Techavipoo, K. Mueller, A. Flanders, D. Andrews",
+            venue: "14th Scientific Meeting of the International Society for Magnetic Resonance in Medicine (ISMRM '06), Seattle, WA, May 2006",
+            thumb: "dti_06_red.jpg",
+            links: [{label:"PDF", url:P+"Xin_ISMRM.pdf"}, {label:"Detail", url:RP+"ISMRM_2006_Poster.html"}] },
+          { title: "Constructing 3D elliptical Gaussians for irregular data",
+            authors: "W. Hong, N. Neophytou, K. Mueller, A. Kaufman",
+            venue: "In: Mathematical Foundations of Scientific Visualization, Computer Graphics, and Massive Data Exploration, Springer Verlag, 2006",
+            thumb: "BIRS05.gif",
+            links: [{label:"PDF", url:P+"kernel.pdf"}] },
+          { title: "The Magic Volume Lens: An Interactive Focus+Context Technique for Volume Rendering",
+            authors: "L. Wang, Y. Zhao, K. Mueller, A. Kaufman",
+            venue: "IEEE Visualization 2005, Minneapolis, October 2005, pp. 367-374",
+            thumb: "frogLens.gif",
+            links: [{label:"PDF", url:P+"lens_highres.pdf"}, {label:"Detail", url:"http://www.cs.stonybrook.edu/%7Elujin/paper/vis05/"}] },
+          { title: "Accelerated, high-quality refraction computations for volume graphics",
+            authors: "S. Li, K. Mueller",
+            venue: "Volume Graphics 2005, Stony Brook, June 2005, pp. 73-81",
+            thumb: "refract_vg05.jpg",
+            links: [{label:"PDF", url:P+"vg05_Li.pdf"}, {label:"Detail", url:"http://www.cs.stonybrook.edu/%7Elshengyi/papers/refractAcc/accelerate.htm"}] },
+          { title: "GPU accelerated image aligned splatting",
+            authors: "N. Neophytou, K. Mueller",
+            venue: "Volume Graphics 2005, Stony Brook, June 2005, pp. 197-205",
+            thumb: "bonsaiVG05.jpg",
+            links: [{label:"PDF", url:P+"vg05_NM.pdf"}, {label:"Detail", url:"http://fytos.com/GPU%20Splatting"}] },
+          { title: "Overview of Volume Rendering",
+            authors: "A. Kaufman, K. Mueller",
+            venue: "The Visualization Handbook, Academic Press, 2005",
+            thumb: "multiModal2.jpg",
+            links: [{label:"PDF", url:PP+"volvisOverview.pdf"}] },
+          { title: "Volume exploration made easy using feature maps",
+            authors: "K. Mueller, S. Lakare, A. Kaufman",
+            venue: "In: Scientific Visualization: Extracting Information and Knowledge from Scientific Data Sets, Springer-Verlag, Heidelberg, Germany, 2005",
+            thumb: "lobsterLeg.gif",
+            links: [{label:"PDF", url:P+"exploration-dag04.pdf"}] },
+          { title: "Engine Room: A comparitive environment for volume rendering engines",
+            authors: "M. Steinberg, K. Mueller, R. Kelly",
+            venue: "Computer Graphics International 2005, Stony Brook, June 2005, Poster Proceedings",
+            thumb: "engineRoom.gif",
+            links: [{label:"PDF", url:P+"ER_CGI05.pdf"}] },
+          { title: "Generating sub-resolution detail in images and volumes using constrained texture synthesis",
+            authors: "L. Wang, K. Mueller",
+            venue: "IEEE Visualization 2004, Austin, Texas, October 2004, pp. 75-82",
+            thumb: "liver.jpg",
+            links: [{label:"PDF", url:P+"vis04_synthesis.pdf"}, {label:"Detail", url:"http://www.ic.stonybrook.edu/Stu/luwang/paper/1/vis04.htm"}] },
+          { title: "Methods for efficient, high quality volume resampling in the frequency domain",
+            authors: "A. Li, K. Mueller",
+            venue: "IEEE Visualization 2004, Austin, Texas, October 2004, pp. 3-10",
+            thumb: "engine_freq.jpg",
+            links: [{label:"PDF", url:P+"vis04_391.pdf"}, {label:"Detail", url:"http://www.cs.stonybrook.edu/%7Eaili/paper/vis04.htm"}] },
+          { title: "SQUEEZE: Numerical-precision-optimized volume rendering",
+            authors: "I. Bitter, N. Neophytos, K. Mueller, A. Kaufman",
+            venue: "Siggraph/Eurographics Workshop on Graphics Hardware 2004, Grenoble, August 2004, pp. 25-34",
+            thumb: "squeeze.gif",
+            links: [{label:"PDF", url:P+"squeeze-final-printed.pdf"}] },
+          { title: "Empty-space skipping and occlusion clipping for texture-based volume rendering",
+            authors: "W. Li, K. Mueller, A. Kaufman",
+            venue: "IEEE Visualization 2003, Seattle, October 2003, pp. 317-325",
+            thumb: "occlusionClip.jpg",
+            links: [{label:"PDF", url:P+"OcclusionClipping.pdf"}] },
+          { title: "A frequency-sensitive point hierarchy for images and volumes",
+            authors: "T. Welsh, K. Mueller",
+            venue: "IEEE Visualization 2003, Seattle, October 2003, pp. 425-432",
+            thumb: "lena-ellipse.jpg",
+            links: [{label:"PDF", url:P+"welsh-vis03.pdf"}, {label:"Detail", url:RP+"Points"}] },
+          { title: "Hardware Assisted Multichannel Volume Rendering",
+            authors: "A. Gosh, P. Prabhu, A. Kaufman, K. Mueller",
+            venue: "Computer Graphics International 2003, Tokyo, Japan, July 2003, pp. 2-7",
+            thumb: "visHuman.gif",
+            links: [{label:"PDF", url:P+"CGI03_Gosh.pdf"}] },
+          { title: "Interactive transfer function modification for volume rendering using compressed sample runs",
+            authors: "V. Srivastava, U. Chebrolu, K. Mueller",
+            venue: "Computer Graphics International 2003, Tokyo, Japan, July 2003, pp. 8-13",
+            thumb: "trees.gif",
+            links: [{label:"PDF", url:P+"cgi2003.pdf"}] },
+          { title: "Volume ablation rendering",
+            authors: "H. Varadhan, K. Mueller",
+            venue: "Volume Graphics Workshop 2003, Tokyo, Japan, July 2003, pp. 53-60",
+            thumb: "ablation_head_v.jpg",
+            links: [{label:"PDF", url:P+"varadhan_vg03.pdf"}] },
+          { title: "Post-convolved splatting",
+            authors: "N. Neophytou, K. Mueller",
+            venue: "Joint Eurographics - IEEE TCVG Symposium on Visualization 2003, Grenoble, France, May 2003, pp. 223-230",
+            thumb: "visSym03_head.jpg",
+            links: [{label:"PDF", url:P+"postconvolve_vissym03.pdf"}, {label:"Detail", url:"http://fytos.com/Post%20Convolved%20Splatting"}] },
+          { title: "Interactive transfer function modification for volume rendering using pre-shaded sample runs",
+            authors: "V. Srivastava, U. Chebrolu, K. Mueller",
+            venue: "Pacific Graphics'02, Beijing, China, October 2002, pp. 489-490",
+            thumb: "neg-4_2.gif",
+            links: [{label:"PDF", url:P+"pg-157_srivastava_v.pdf"}] },
+          { title: "Space-time points: Splatting in 4D",
+            authors: "N. Neophytou, K. Mueller",
+            venue: "Symposium on Volume Visualization and Graphics 2002, Boston, October 2002, pp. 97-106",
+            thumb: "paper_Time_Vortex_Cartesian1.GIF",
+            links: [{label:"PDF", url:P+"4Dsplats.pdf"}, {label:"Detail", url:"http://fytos.com/4D%20Splatting%20"}] },
+          { title: "Shear-Warp Deluxe: The shear-warp algorithm revisited",
+            authors: "J. Sweeney, K. Mueller",
+            venue: "Joint Eurographics - IEEE TCVG Symposium on Visualization 2002, Barcelona, Spain, May 2002, pp. 95-104",
+            thumb: "engineTranspNIMP.GIF",
+            links: [{label:"PDF", url:P+"vissymFinal.pdf"}] },
+          { title: "Splatting with shadows",
+            authors: "M. Nulkar, K. Mueller",
+            venue: "International Workshop on Volume Graphics 2001, Stony Brook, June 2001, pp. 35-50",
+            thumb: "lobster2.GIF",
+            links: [{label:"PDF", url:P+"vg01.pdf"}] },
+          { title: "A parallel splatting algorithm with occlusion culling",
+            authors: "J. Huang, N. Shareef, R. Crawfis, P. Sadayappan, K. Mueller",
+            venue: "3rd Eurographics Workshop on Parallel Graphics and Visualization, Girona, Spain, September 2000",
+            thumb: "paper_Fuel_for_Front_specular2.GIF",
+            links: [] },
+          { title: "A practical comparison of popular volume rendering algorithms",
+            authors: "M. Meissner, J. Huang, D. Bartz, K. Mueller, R. Crawfis",
+            venue: "Symposium on Volume Visualization and Graphics 2000, Salt Lake City, October 2000, pp. 81-90",
+            thumb: "protRay2.GIF",
+            links: [{label:"PDF", url:P+"fab4.pdf"}, {label:"Detail", url:"http://www.volvis.org/"}] },
+          { title: "Volumetric backprojection",
+            authors: "F. Dachille, K. Mueller, A. Kaufman",
+            venue: "2000 Symposium on Volume Rendering, Salt Lake City, October 2000, pp. 109-117",
+            thumb: "backproj1.JPG",
+            links: [{label:"PDF", url:P+"volBackProj.pdf"}] },
+          { title: "FastSplats: Optimized splatting on rectilinear grids",
+            authors: "J. Huang, K. Mueller, N. Shareef, R. Crawfis",
+            venue: "IEEE Visualization'00, Salt Lake City, October 2000, pp. 219-227",
+            thumb: "scull.GIF",
+            links: [{label:"PDF", url:P+"fastSplats.pdf"}] },
+          { title: "IBR-assisted volume rendering",
+            authors: "K. Mueller, N. Shareef, J. Huang, R. Crawfis",
+            venue: "Late Breaking Hot Topics, IEEE Visualization'99, San Francisco, October 1999 (won Best Hot Topic award)",
+            thumb: "tomato2.JPG",
+            links: [{label:"PDF", url:P+"IBR.pdf"}, {label:"Detail", url:RP+"IBR"}] },
+          { title: "Splatting without the blur",
+            authors: "K. Mueller, T. Möller, R. Crawfis",
+            venue: "IEEE Visualization'99, San Francisco, October 1999, pp. 363-371",
+            thumb: "eyesDiffSmall1.JPG",
+            links: [{label:"PDF", url:P+"blur.pdf"}, {label:"Detail", url:RP+"blur"}] },
+          { title: "High-quality splatting on rectilinear grids with efficient culling of occluded voxels",
+            authors: "K. Mueller, N. Shareef, J. Huang, R. Crawfis",
+            venue: "IEEE Transactions on Visualization and Computer Graphics 5(2): 116-134, 1999",
+            thumb: "transpheadGlass1Small1.GIF",
+            links: [{label:"PDF", url:P+"visSplat.pdf"}, {label:"Detail", url:RP+"pop"}] },
+          { title: "Eliminating popping artifacts in sheet buffer-based splatting",
+            authors: "K. Mueller, R. Crawfis",
+            venue: "IEEE Visualization '98, Chapel Hill, October 1998, pp. 239-245",
+            thumb: "imgNerveFrontSmall1.GIF",
+            links: [{label:"PDF", url:P+"pop.pdf"}, {label:"Detail", url:RP+"pop"}] },
+          { title: "Splatting errors and antialiasing",
+            authors: "K. Mueller, T. Möller, J. E. Swan, R. Crawfis, N. Shareef, R. Yagel",
+            venue: "IEEE Transactions on Visualization and Computer Graphics 4(2): 178-191, 1998 (won Naval Notable Achievement Award)",
+            thumb: "antiAliasSmall1.GIF",
+            links: [{label:"PDF", url:P+"j_tvcg98.pdf"}, {label:"Detail", url:RP+"antiAlias"}] },
+          { title: "An anti-aliasing technique for splatting",
+            authors: "J. E. Swan, K. Mueller, T. Möller, N. Shareef, R. Crawfis, R. Yagel",
+            venue: "IEEE Visualization'97, Phoenix, October 1997, pp. 197-204 (won Best Paper Award)",
+            thumb: "tunnel1.GIF",
+            links: [{label:"PDF", url:P+"vis97_Aliasing.pdf"}, {label:"Detail", url:RP+"antiAlias"}] },
+          { title: "Fast perspective volume rendering with splatting by using a ray-driven approach",
+            authors: "K. Mueller, R. Yagel",
+            venue: "IEEE Visualization'96, San Francisco, October 1996, pp. 65-72",
+            thumb: "brain60_2.GIF",
+            links: [{label:"PDF", url:P+"raySplat.pdf"}, {label:"Detail", url:RP+"raySplat"}] }
+        ]
+      },
+
+      /* ============================================================
+         5. VIRTUAL AND AUGMENTED REALITY
+         ============================================================ */
+      vr: {
+        title: "Virtual and augmented reality",
+        papers: [
+          { title: "Explainable XR: Understanding User Behaviors of XR Environments Using LLM-Assisted Analytics Framework",
+            authors: "Y. Kim, Z. Aamir, M. Singh, S. Boorboor, K. Mueller, A. Kaufman",
+            venue: "IEEE Transactions on Visualization and Computer Graphics 31(5): 2756-2766, 2025",
+            thumb: "explainableXR.png",
+            links: [{label:"PDF", url:PP+"Explainable%20XR.pdf"}] },
+          { title: "DRCmpVis: Visual Comparison of Physical Targets in Mobile Diminished and Mixed Reality",
+            authors: "R. Liu, S. Ye, Z. Ding, G. Yang, S. Cheng, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics 30(12): 7672-7686, 2024",
+            thumb: "DRCmpVis.png",
+            links: [{label:"PDF", url:P+"DRCmpVis.pdf"}] },
+          { title: "Development of Metaverse for Intelligent Healthcare",
+            authors: "G. Wang, A. Badal, X. Jia, J. Maltz, K. Mueller, K. Myers, C. Niu, M. Vannier, P. Yan, Z. Yu, R. Zeng",
+            venue: "Nature Machine Intelligence 4: 922-929, 2022",
+            thumb: "meTAI.jpg",
+            links: [{label:"PDF", url:PP+"Nature%20MI%202022.pdf"}] },
+          { title: "A Virtual Reality Grocery Shopping Game to Improve Awareness for Healthy Foods in Young Adults",
+            authors: "K. Jayachandran, S. Chilakamarri, D. Coelho, K. Mueller",
+            venue: "CEWIT: Emerging Technology for a Smarter World, Stony Brook, NY, November 2017",
+            thumb: "obesity_gane.gif",
+            links: [{label:"PDF", url:P+"healtier%20eating%20game.pdf"}, {label:"Slides", url:RP3+"cewit%202017.ppsx"}] },
+          { title: "Google Glass for Personalized Augmentations of Data Visualizations",
+            authors: "D. Zhang, D. Coelho, K. Mueller",
+            venue: "IEEE VIS Poster Abstracts, Baltimore, MD, 2016",
+            thumb: "Google Glass VIS 2016.jpg",
+            links: [{label:"PDF", url:P+"Google%20Glass%20VIS%202016.pdf"}] },
+          { title: "The Reality Deck - Immersive Gigapixel Display",
+            authors: "C. Papadopoulos, K. Petkov, A. Kaufman, K. Mueller",
+            venue: "IEEE Computer Graphics & Applications 35(1): 33-45, 2015",
+            thumb: "realityDeck.jpg",
+            links: [{label:"PDF", url:P+"CGA-RealityDeck.pdf"}, {label:"Detail", url:"http://labs.cs.stonybrook.edu/labs/vislab/reality-deck-home/"}] },
+          { title: "The Immersive Cabin",
+            authors: "F. Qiu, B. Zhang, K. Petkov, L. Chong, A. Kaufman, K. Mueller, X. Gu",
+            venue: "International Symposium on Visual Computing (ISVC), Springer Lecture Notes In CS, Las Vegas, NV, December 2008, pp. 891-900",
+            thumb: "immersiveCabin.jpg",
+            links: [{label:"PDF", url:P+"immersiveCabin.pdf"}, {label:"Detail", url:RP+"pages/immersiveCabin/"}] }
+        ]
+      },
+
+      /* ============================================================
+         6. COMPUTER GRAPHICS
+         ============================================================ */
+      cg: {
+        title: "Computer graphics: color, texture, details, points",
+        papers: [
+          { title: "What is the Color of Serendipity? Investigating the Use of Language Models for Semantically Resonant Color Generation",
+            authors: "S. Salim, T. Pial, K. Mueller",
+            venue: "IEEE Trans. on Visualization and Computer Graphics (to appear), 2026",
+            thumb: "word2color.png",
+            links: [{label:"PDF", url:P+"Word2Color%20TVCG.pdf"}, {label:"Detail", url:RP+"pages/Word2Color"}] },
+          { title: "Transforming the latent space of stylegan for real face editing",
+            authors: "H. Li, J. Liu, X. Zhang, Y. Bai, H. Wang, K. Mueller",
+            venue: "The Visual Computer 40(5): 3553-3568, 2024",
+            thumb: "styleGAN.png",
+            links: [{label:"PDF", url:P+"StyleGAN-24.pdf"}] },
+          { title: "Adaptive Multispectral Demosaicking Based on Frequency Domain Analysis of Spectral Correlations",
+            authors: "S. Jaiswal, L. Fung, V. Jakhetiya, J. Pang, K. Mueller, O. Au",
+            venue: "IEEE Transactions on Image Processing 26(2): 953-968, 2017",
+            thumb: "demosaic.gif",
+            links: [{label:"PDF", url:P+"Adaptive%20Multispectral%20Demosaicking.pdf"}] },
+          { title: "Human Computation in Visualization: Using Purpose Driven Games for Robust Evaluation of Visualization Algorithms",
+            authors: "N. Ahmed, Z. Zheng, K. Mueller",
+            venue: "IEEE Transactions on Visualization and Computer Graphics 18(12): 2104-2113, 2012",
+            thumb: "HPU_vis_2012.gif",
+            links: [{label:"PDF", url:P+"HPU_vis_2012.pdf"}] },
+          { title: "Data-Driven Approach to Hue-Preserving Color-Blending",
+            authors: "L. Kühne, J. Giesen, Z. Zhang, S. Ha, K. Mueller",
+            venue: "IEEE Transactions on Visualization and Computer Graphics 18(12): 2122-2129, 2012",
+            thumb: "svm_blending_vis_2012.gif",
+            links: [{label:"PDF", url:P+"svm_blending_vis_2012.pdf"}] },
+          { title: "Color Design for Illustrative Visualization",
+            authors: "L. Wang, J. Giesen, K. McDonnell, P. Zolliker, K. Mueller",
+            venue: "IEEE Transactions on Visualization and Computer Graphics (Special issue IEEE Visualization Conference 2008) 14(6): 1739-1754, 2008",
+            thumb: "color_vis08.jpg",
+            links: [{label:"PDF", url:P+"color_final_8.pdf"}] },
+          { title: "Harmonic Colormaps for Volume Visualization",
+            authors: "L. Wang, K. Mueller",
+            venue: "IEEE/EG Symposium on Volume Graphics, Los Angeles, August 2008, pp. 33-40",
+            thumb: "vg08.jpg",
+            links: [{label:"PDF", url:P+"vg08_final.pdf"}] },
+          { title: "Color-Space CAD: Direct Gamut Editing in 3D",
+            authors: "N. Neophytou, K. Mueller",
+            venue: "IEEE Computer Graphics & Applications 28(3), 2008, pp. 88-98",
+            thumb: "colorspaceCAD_CGA.jpg",
+            links: [{label:"PDF", url:P+"colorSpaceCAD_CGA.pdf"}, {label:"Detail", url:"http://fytos.com/index.php?pagename=color"}] },
+          { title: "Geometry Field for Accurate Real-time Reflection",
+            authors: "S. Li, Z. Fan, X. Yin, K. Mueller, A. Kaufman, X. Gu",
+            venue: "Eurographics 2006 (Short Papers), Vienna, Austria, October 2006, pp. 29-32",
+            thumb: "geomfield.jpg",
+            links: [{label:"PDF", url:P+"EG06_geomfield.pdf"}] },
+          { title: "Color space CAD",
+            authors: "N. Neophytou, K. Mueller",
+            venue: "ACM SIGGRAPH 2006 (Sketches), Boston, MA, August 2006",
+            thumb: "colorspaceCAD.jpg",
+            links: [{label:"PDF", url:P+"siggraph06_colorspaceCAD.pdf"}, {label:"Detail", url:"http://fytos.com/index.php?pagename=color"}] },
+          { title: "Uniform texture synthesis and texture mapping using global parameterization",
+            authors: "L. Wang, X. Gu, K. Mueller, S.-T. Yau",
+            venue: "Pacific Graphics 2005 (also appeared in a special issue of The Visual Computer), Macao, China, October 2005, pp. 801-810",
+            thumb: "bunny1_uniform_small1.jpg",
+            links: [{label:"PDF", url:P+"pg05_WGMY.pdf"}, {label:"Detail", url:"http://www.cs.stonybrook.edu/~lujin/paper/pg05/"}] },
+          { title: "Generating sub-resolution detail in images and volumes using constrained texture synthesis",
+            authors: "L. Wang, K. Mueller",
+            venue: "IEEE Visualization 2004, Austin, Texas, October 2004, pp. 75-82",
+            thumb: "liver.jpg",
+            links: [{label:"PDF", url:P+"vis04_synthesis.pdf"}, {label:"Detail", url:"http://www.ic.stonybrook.edu/Stu/luwang/paper/1/vis04.htm"}] },
+          { title: "Feature-preserving distance fields",
+            authors: "H. Qu, N. Zhang, R. Shao, A. Kaufman, K. Mueller",
+            venue: "IEEE/ACM Symposium on Volume Visualization and Graphics, Austin, Texas, October 2004, pp. 39-46",
+            thumb: "qu_distFlds.gif",
+            links: [{label:"PDF", url:PP+"qu_volvis04.pdf"}] },
+          { title: "Point-based surface rendering with motion blur",
+            authors: "X. Guan, K. Mueller",
+            venue: "Symposium on Point-Based Graphics, Zurich, Switzerland, June 2004, pp. 33-40",
+            thumb: "motionEngine2.gif",
+            links: [{label:"PDF", url:P+"motionBlurPts.pdf"}] },
+          { title: "Transferring color to greyscale images",
+            authors: "T. Welsh, M. Ashikhmin, K. Mueller",
+            venue: "ACM Transactions on Graphics (Proc. of SIGGRAPH'02) 21(3): 277-280, 2002",
+            thumb: "imageColorizeMix3.JPG",
+            links: [{label:"PDF", url:P+"colorize-final.pdf"}, {label:"Detail", url:RP+"colorize/"}] }
+        ]
+      },
+
+      /* ============================================================
+         7. FILTERS AND GRIDS
+         ============================================================ */
+      filters: {
+        title: "Filters and grids (sampling, lattices, N-D extensions)",
+        papers: [
+          { title: "VDVR: Verifiable Volume Visualization of Projection-Based Data",
+            authors: "Z. Zheng, W. Xu, K. Mueller",
+            venue: "IEEE Transactions on Visualization and Computer Graphics 16(6): 1515-1524, 2010",
+            thumb: "VDVR.gif",
+            links: [{label:"PDF", url:P+"VDVR_10.pdf"}] },
+          { title: "Applications of optimal sampling lattices for volume acquisition via 3D computed tomography",
+            authors: "F. Xu, K. Mueller",
+            venue: "Volume Graphics Symposium, Prague, Czech Republic, September 2007, pp. 57-63",
+            thumb: "vg07.jpg",
+            links: [{label:"PDF", url:P+"vg07_3.pdf"}] },
+          { title: "Spline-based gradient filters for high-quality refraction computations in discrete datasets",
+            authors: "S. Li, K. Mueller",
+            venue: "Eurographics / IEEE VGTC Symposium on Visualization, Leeds, England, June 2005, pp. 217-222",
+            thumb: "refract_eg05.jpg",
+            links: [{label:"PDF", url:P+"Li_euro05.pdf"}, {label:"Detail", url:"http://www.cs.stonybrook.edu/~lshengyi/papers/filter/filter.htm"}] },
+          { title: "Methods for efficient, high quality volume resampling in the frequency domain",
+            authors: "A. Li, K. Mueller",
+            venue: "IEEE Visualization 2004, Austin, Texas, October 2004, pp. 3-10",
+            thumb: "engine_freq.jpg",
+            links: [{label:"PDF", url:P+"vis04_391.pdf"}, {label:"Detail", url:"http://www.cs.stonybrook.edu/~aili/paper/vis04.htm"}] },
+          { title: "A frequency-sensitive point hierarchy for images and volumes",
+            authors: "T. Welsh, K. Mueller",
+            venue: "IEEE Visualization 2003, Seattle, October 2003, pp. 425-432",
+            thumb: "lena-ellipse.jpg",
+            links: [{label:"PDF", url:PP+"welsh-vis03.pdf"}, {label:"Detail", url:RP+"Points"}] },
+          { title: "Space-time points: Splatting in 4D",
+            authors: "N. Neophytou, K. Mueller",
+            venue: "Symposium on Volume Visualization and Graphics 2002, Boston, October 2002, pp. 97-106",
+            thumb: "paper_Time_Vortex_Cartesian1.GIF",
+            links: [{label:"PDF", url:P+"4Dsplats.pdf"}, {label:"Detail", url:"http://fytos.com/4D%20Splatting%20"}] },
+          { title: "Design of accurate and smooth filters for function and derivative reconstruction",
+            authors: "T. Möller, K. Mueller, Y. Kurzion, R. Machiraju, R. Yagel",
+            venue: "1998 Symposium on Volume Visualization, Chapel Hill, October 1998, pp. 143-151",
+            thumb: "yair_c2_2ef1.GIF",
+            links: [{label:"PDF", url:P+"volvis98_Design.pdf"}, {label:"Detail", url:RP+"normals"}] },
+          { title: "A comparison of normal estimation schemes",
+            authors: "T. Möller, R. Machiraju, K. Mueller, R. Yagel",
+            venue: "IEEE Visualization'97, Phoenix, October 1997, pp. 19-26",
+            thumb: "brain_zm1_c0_3efSmall1.GIF",
+            links: [{label:"PDF", url:P+"vis97_NormalSchemes.pdf"}, {label:"Detail", url:RP+"normals"}] },
+          { title: "Evaluation and design of filters using a Taylor series expansion",
+            authors: "T. Möller, R. Machiraju, K. Mueller, R. Yagel",
+            venue: "IEEE Transactions on Visualization and Computer Graphics 3(2): 184-199, 1997",
+            thumb: "ml40angle_d1_cn_1ef1.GIF",
+            links: [{label:"PDF", url:P+"tvcg97_Taylor.pdf"}, {label:"Detail", url:RP+"normals"}] },
+          { title: "Classification and local error estimation of interpolation and derivative filters for volume rendering",
+            authors: "T. Möller, R. Machiraju, K. Mueller, R. Yagel",
+            venue: "1996 Symposium on Volume Visualization, San Francisco, October 1996, pp. 71-78",
+            thumb: "paper_MarschLobb_56_Cartesian2.GIF",
+            links: [{label:"PDF", url:P+"volvis96_Taylor.pdf"}, {label:"Detail", url:RP+"normals"}] }
+        ]
+      },
+
+      /* ============================================================
+         8. EYETRACKING
+         ============================================================ */
+      eyetrack: {
+        title: "Eyetracking and visualization of eyetracking data",
+        papers: [
+          { title: "EyeFIX: An Interactive Visual Analytics Interface for Eye Movement Analysis",
+            authors: "A. Kumar, B. Goel, K. Premkumar, M. Burch, K. Mueller",
+            venue: "Symposium on Visual Information Communication and Interaction (VINCI), Virtual, August 2021",
+            thumb: "eyefix.jpg",
+            links: [{label:"PDF", url:PP+"EyeFIX.pdf"}] },
+          { title: "Demo of the EyeSAC System for Visual Synchronization, Cleaning, and Annotation of Eye Movement Data",
+            authors: "A. Kumar, D. Mohanty, K. Kurzhals, F. Beck, D. Weiskopf, K. Mueller",
+            venue: "ACM Symposium on Eye Tracking Research and Applications (ETRA), Virtual, June 2020",
+            thumb: "ETRA 2020.jpg",
+            links: [{label:"PDF", url:P+"ETRA%202020.pdf"}] },
+          { title: "Challenges in Interpretability of Neural Networks for Eye Movement Data",
+            authors: "A. Kumar, P. Howlader, R. Garcia, D. Weiskopf, K. Mueller",
+            venue: "ACM Symposium on Eye Tracking Research and Applications (ETRA), Virtual, June 2020",
+            thumb: "ETRA 2020 neural.jpg",
+            links: [{label:"PDF", url:P+"ETRA%202020%20neural.pdf"}] },
+          { title: "Task Classification Model for Visual Fixation, Exploration, and Search",
+            authors: "A. Kumar, A. Tyagi, M. Burch, D. Weiskopf, K. Mueller",
+            venue: "Proc. ACM Symposium on Eye Tracking Research (ETRA), Denver, CO, June 2019",
+            thumb: "Task Classification Model for Visual Fixation.jpg",
+            links: [{label:"PDF", url:P+"Task%20Classification%20Model%20for%20Visual%20Fixation.pdf"}] },
+          { title: "Visually Comparing Eye Movements over Space and Time",
+            authors: "A. Kumar, M. Burch, K. Mueller",
+            venue: "Proc. ACM Symposium on Eye Tracking Research (ETRA), Denver, CO, June 2019",
+            thumb: "Visually comparing eye movements.jpg",
+            links: [{label:"PDF", url:P+"Visually%20comparing%20eye%20movements.pdf"}] },
+          { title: "Clustered Eye Movement Similarity Matrices",
+            authors: "A. Kumar, N. Timmermans, M. Burch, K. Mueller",
+            venue: "Proc. ACM Symposium on Eye Tracking Research (ETRA), Denver, CO, June 2019",
+            thumb: "Clustered eye movement.jpg",
+            links: [{label:"PDF", url:P+"Clustered%20eye%20movement.pdf"}] },
+          { title: "Finding the Outliers in Scanpath Data",
+            authors: "M. Burch, A. Kumar, K. Mueller, T. Kervezee, W. Nuijten, R. Oostenbach, L. Peeters, G. Smit",
+            venue: "Proc. ACM Symposium on Eye Tracking Research (ETRA), Denver, CO, June 2019",
+            thumb: "Finding the Outliers in Scanpath Data.jpg",
+            links: [{label:"PDF", url:P+"Finding%20the%20Outliers%20in%20Scanpath%20Data.pdf"}] },
+          { title: "Eye Tracking for Exploring Visual Communication Differences",
+            authors: "A. Kumar, M. Burch, I. van den Brand, L. Castelijns, F. Ritchi, F. Rooks, H. de Smeth, N. Timmermans, K. Mueller",
+            venue: "Workshop on Visualization for Communication (co-located with VIS), Berlin, Germany, October 2018",
+            thumb: "communic.gif",
+            links: [{label:"PDF", url:P+"Eye%20Tracking%20for%20Exploring%20Visual%20Communication%20Differences-Final.pdf"}] },
+          { title: "Visual Analysis of Eye Gazes to Assist Strategic Planning in Computer Games",
+            authors: "A. Kumar, M. Burch, K. Mueller",
+            venue: "Workshop on Eye Tracking and Visualization, Warsaw, Poland, June 14-17, 2018",
+            thumb: "eye game.gif",
+            links: [{label:"PDF", url:P+"Visual%20Analysis%20of%20Eye%20Gazes%20to%20Assist%20Strategic%20Planning%20in%20Computer%20Games.pdf"}] },
+          { title: "The Hierarchical Flow of Eye Movements",
+            authors: "M. Burch, A. Kumar, K. Mueller",
+            venue: "Workshop on Eye Tracking and Visualization, Warsaw, Poland, June 14-17, 2018",
+            thumb: "flow eye move.gif",
+            links: [{label:"PDF", url:P+"The%20Hierarchical%20Flow%20of%20Eye%20Movements.pdf"}] },
+          { title: "Visual Multi-Metric Grouping of Eye-Tracking Data",
+            authors: "A. Kumar, R. Netzel, M. Burch, D. Weiskopf, K. Mueller",
+            venue: "Journal of Eye Movement Research 10(5): 11-27, 2018",
+            thumb: "eyetrack18.gif",
+            links: [{label:"PDF", url:P+"Visual%20Multi-Metric%20Grouping%20of%20Eye-Tracking%20Data.pdf"}] },
+          { title: "Color Bands: Visualizing Dynamic Eye Movement Patterns",
+            authors: "M. Burch, A. Kumar, K. Mueller, D. Weiskopf",
+            venue: "Workshop on Eye Tracking and Visualization (ETVIS) (held in conjunction with IEEE VIS), Baltimore, MD, 2016",
+            thumb: "colorbands.jpg",
+            links: [{label:"PDF", url:P+"Color%20Bands%20Visualizing%20Dynamic%20Eye%20Movement%20Patterns.pdf"}] },
+          { title: "Multi-Similarity Matrices of Eye Movement Data",
+            authors: "A. Kumar, R. Netzel, M. Burch, D. Weiskopf, K. Mueller",
+            venue: "Workshop on Eye Tracking and Visualization (ETVIS) (held in conjunction with IEEE VIS), Baltimore, MD, 2016",
+            thumb: "multisim.jpg",
+            links: [{label:"PDF", url:P+"Clustered%20Eye%20Movement%20Feature%20Matrices.pdf"}] }
+        ]
+      },
+
+      /* ============================================================
+         9. NATURAL PHENOMENA
+         ============================================================ */
+      natural: {
+        title: "Simulation of natural phenomena and urban security applications",
+        papers: [
+          { title: "Efficient LBM Visual Simulation on Face-Centered Cubic Lattices",
+            authors: "K. Petkov, F. Qiu, Z. Fan, A. Kaufman, K. Mueller",
+            venue: "IEEE Transactions on Visualization and Computer Graphics 15(5): 802-814, 2009",
+            thumb: "LBM09.jpg",
+            links: [{label:"PDF", url:P+"LBM09.pdf"}] },
+          { title: "Lattice-based volumetric global illumination",
+            authors: "F. Qiu, F. Xu, Z. Fan, N. Neophytou, A. Kaufman, K. Mueller",
+            venue: "IEEE Transactions on Visualization and Computer Graphics 13(6): 1576-1583, 2007",
+            thumb: "LBM07_1.jpg",
+            links: [{label:"PDF", url:P+"latticeVis07_final.pdf"}] },
+          { title: "Visual simulation of heat shimmering and mirage",
+            authors: "Y. Zhao, Y. Han, Z. Fan, F. Qiu, Y.-C. Kuo, A. Kaufman, K. Mueller",
+            venue: "IEEE Transactions on Visualization and Computer Graphics 13(1): 179-189, 2007",
+            thumb: "shimmer_tvcg.jpg",
+            links: [{label:"PDF", url:P+"TVCGShimmering.pdf"}, {label:"Detail", url:"http://www.cs.stonybrook.edu/~vislab/projects/amorphous/ShimmeringMirage/"}] },
+          { title: "Melting and Flowing in Multiphase Environments",
+            authors: "Y. Zhao, L. Wang, F. Qiu, A. Kaufman, K. Mueller",
+            venue: "Computers & Graphics 30(4): 519-528, 2006",
+            thumb: "footMelted.jpg",
+            links: [{label:"PDF", url:P+"melting.pdf"}, {label:"Detail", url:"http://www.cs.stonybrook.edu/~vislab/projects/amorphous/melting"}] },
+          { title: "Accelerated Dispersion Simulation For Urban Security",
+            authors: "F. Qiu, Y. Zhao, Z. Fan, X. Wei, H. Lorenz, J. Wang, S. Yaokum-Stover, A. Kaufman, K. Mueller",
+            venue: "IEEE Visualization '04, Austin, Texas, October 2004, pp. 553-560",
+            thumb: "smokeBldgs.gif",
+            links: [{label:"PDF", url:P+"urban.pdf"}, {label:"Detail", url:"http://www.cs.stonybrook.edu/~vislab/projects/urbansecurity/"}] },
+          { title: "The Lattice-Boltzmann Method for gaseous phenomena",
+            authors: "X. Wei, W. Li, K. Mueller, A. Kaufman",
+            venue: "IEEE Transactions on Visualization and Computer Graphics 10(2): 164-176, 2004",
+            thumb: "urbanSmoke.gif",
+            links: [{label:"PDF", url:P+"smokeTVCG04.pdf"}, {label:"Detail", url:"http://www.cs.stonybrook.edu/~vislab/projects/amorphous/AmorphousGroup.htm"}] },
+          { title: "Simulating fire with texture splats",
+            authors: "X. Wei, W. Li, K. Mueller, A. Kaufman",
+            venue: "IEEE Visualization'02, Boston, October 2002, pp. 227-234",
+            thumb: "fire4.JPG",
+            links: [{label:"PDF", url:P+"Fire.pdf"}, {label:"Detail", url:"http://www.cs.stonybrook.edu/~vislab/projects/amorphous/AmorphousGroup.htm"}] }
+        ]
+      },
+
+      /* ============================================================
+         10. FACE RECOGNITION
+         ============================================================ */
+      face: {
+        title: "Face recognition (no longer an active research topic)",
+        papers: [
+          { title: "Dynamic Approach for Face Recognition using Digital Image Skin Correlation",
+            authors: "S. Pamudurthy, E. Guan, K. Mueller, M. Rafailovich",
+            venue: "Audio- and Video-based Biometric Person Authentication (AVBPA) 2005, New York, July 2005",
+            thumb: "vectorMap.gif",
+            links: [{label:"PDF", url:P+"AVBPA05.pdf"}, {label:"Detail", url:"http://www.cs.stonybrook.edu/%7Evislab/projects/biometrics/"}] }
+        ]
+      }
+    };
+
+    /* ------------------------------------------------------------------
+       2. RENDER
+       ------------------------------------------------------------------ */
+    const menu = document.getElementById("areaMenu");
+    const panel = document.getElementById("paperList");
+
+    function renderArea(areaKey) {
+      const area = AREAS[areaKey];
+      if (!area) return;
+
+      menu.querySelectorAll(".area-btn").forEach(function (btn) {
+        btn.classList.toggle("active", btn.dataset.area === areaKey);
+      });
+
+      let html = '<h2 class="paper-area-title">' + area.title + '</h2>';
+
+      if (!area.papers.length) {
+        html += '<p class="paper-list-empty">No papers listed for this area.</p>';
+        panel.innerHTML = html;
+        return;
+      }
+
+      html += '<ul class="paper-list">';
+      area.papers.forEach(function (p) {
+        html += '<li class="paper-item">';
+        if (p.thumb) {
+          html += '<div class="paper-thumb"><img src="' + p.thumb + '" alt="" loading="lazy"></div>';
+        } else {
+          html += '<div class="paper-thumb paper-thumb-placeholder"></div>';
+        }
+        html += '<div class="paper-citation">';
+        html += '<p class="paper-title">' + p.title + '</p>';
+        html += '<p class="paper-authors">' + p.authors + '</p>';
+        html += '<p class="paper-venue">' + p.venue + '</p>';
+        if (p.links && p.links.length) {
+          html += '<p class="paper-links">';
+          p.links.forEach(function (l, i) {
+            html += '<a href="' + l.url + '" target="_blank" rel="noopener">' + l.label + '</a>';
+            if (i < p.links.length - 1) html += ' · ';
+          });
+          html += '</p>';
+        }
+        html += '</div></li>';
+      });
+      html += '</ul>';
+      panel.innerHTML = html;
+    }
+
+    renderArea("visualAnalytics");
+
+    menu.addEventListener("click", function (e) {
+      const btn = e.target.closest(".area-btn");
+      if (btn) renderArea(btn.dataset.area);
+    });
+  })();
+  </script>
+</body>
 </html>

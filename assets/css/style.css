@@ -300,7 +300,7 @@ p {
 
 .main-nav a,
 .nav-search {
-    font-size: calc(var(--u) * 1.85);
+    font-size: calc(var(--u) * 2);
     font-weight: var(--weight-label);
     letter-spacing: var(--tracking-nav);
     text-transform: uppercase;
@@ -427,7 +427,7 @@ p {
     background: var(--ink);
 }
 
-@media (max-width:1080px) {
+@media (max-width:1081px) {
     .affiliations {
         display: none;
     }
@@ -462,6 +462,7 @@ p {
 
     .main-nav a,
     .nav-search {
+        font-size: calc(var(--u) * 1.5);
         padding: 0.75rem 0;
         border-bottom: 1px solid var(--rule);
     }
@@ -1952,11 +1953,15 @@ a.card:hover {
 .table td {
     text-align: left;
     vertical-align: top;
-    padding: 0.65rem 0.75rem 0.65rem 0;
     border-bottom: 1px solid var(--rule);
 }
 
+.table td {
+    padding: 0.25rem 0.25rem;
+}
+
 .table th {
+    padding: 0.75rem 0;
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: .08em;
@@ -1982,11 +1987,18 @@ a.card:hover {
 }
 
 .table .sub {
-    display: block;
+    margin-left: 1rem;
     color: var(--ink-soft);
     font-size: 0.875rem;
 }
 
+.table .sub::before {
+    content: "[";
+}
+
+.table .sub::after {
+    content: "]";
+}
 /* Course list */
 .course-code {
     white-space: nowrap;

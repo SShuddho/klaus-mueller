@@ -10,13 +10,22 @@
 :root {
     --paper: #FFFFFF;
     --paper-dim: #F6F6F3;
-    --ink: #14161F;
-    --ink-soft: #5B5F6B;
-    --rule: #E8E8E4;
-    --rule-strong: #D4D4CE;
+    --ink: #0c0d13;
+    --ink-soft: #50535c;
+    --rule: #ececec;
+    --rule-strong: #cacaca;
 
+    /*
     --accent: #2054C7;
     --accent-dark: #173F9E;
+    
+    --accent: #990000;
+    --accent-dark: darkred;
+    */
+
+    --accent: darkred;
+    --accent-dark: darkred;
+    --accent-link: #2054C7;
 
     --c-analytics: #2054C7;
     --c-xai: #7C3AED;
@@ -54,7 +63,7 @@
     --tracking-heading: -0.015em;
     --tracking-eyebrow: 0.12em;
     --tracking-link: 0.04em;
-    --tracking-nav: 0.07em;
+    --tracking-nav: 0.1em;
     --tracking-brand: 0.12em;
     --tracking-search: 0.06em;
     --tracking-button: 0.06em;
@@ -208,14 +217,14 @@ p {
     letter-spacing: var(--tracking-link);
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--accent);
+    color: var(--accent-link);
     border-bottom: 1px solid transparent;
     transition: border-color .15s ease, gap .15s ease;
     line-height: var(--leading-link);
 }
 
 .text-link:hover {
-    border-color: var(--accent);
+    color: var(--accent-dark);
     gap: calc(var(--u) * 0.7);
 }
 
@@ -301,7 +310,7 @@ p {
 .main-nav a,
 .nav-search {
     font-size: calc(var(--u) * 2);
-    font-weight: var(--weight-label);
+    font-weight: var(--weight-heading);
     letter-spacing: var(--tracking-nav);
     text-transform: uppercase;
     text-decoration: none;
@@ -1231,10 +1240,11 @@ section+section {
     margin-bottom: 0;
 }
 
+
 .feature-thumb {
     flex-shrink: 0;
     align-self: center;
-    width: calc(var(--u) * 8.5);
+    width: calc(var(--u) * 12);
     height: auto;
     aspect-ratio: 4/3;
     border-radius: calc(var(--u) * 0.6);
@@ -1249,15 +1259,27 @@ section+section {
     object-fit: contain;
 }
 
+.feature-thumb img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
 .feature-title {
     display: block;
     font-family: var(--font-display);
     font-weight: var(--weight-heading);
     font-size: calc(var(--u) * 1.35);
-    color: var(--accent);
+    color: var(--accent-link);
     text-decoration: none;
     margin-bottom: calc(var(--u) * 0.1);
     line-height: var(--leading-card-heading);
+}
+
+.feature-title:hover {
+    text-decoration: underline;
+    color: var(--accent-dark);
 }
 
 .feature-meta {
@@ -1343,180 +1365,6 @@ footer {
     opacity: .8;
 }
 
-/* milestone */
-.tl-card {
-    --accent-color: var(--accent);
-
-    position: relative;
-    padding: .75rem .75rem 1rem;
-    border: 1px solid transparent;
-    border-radius: var(--radius);
-    background: transparent;
-    color: var(--ink);
-
-    transition:
-        background .2s ease,
-        border-color .2s ease,
-        color .2s ease,
-        transform .2s ease;
-}
-
-/* dot */
-.tl-card::before {
-    content: "";
-    position: absolute;
-    top: 1.02rem;
-    left: .75rem;
-    width: .55rem;
-    height: .55rem;
-    border-radius: 50%;
-    background: var(--accent-color);
-    box-shadow: 0 0 0 4px var(--paper);
-    z-index: 2;
-
-    transition:
-        background .2s ease,
-        box-shadow .2s ease,
-        transform .2s ease;
-}
-
-.tl-card .yr {
-    position: relative;
-    margin: 0 0 .7rem;
-    padding-left: 1.1rem;
-    color: var(--accent-color);
-    font-family: var(--font-label);
-    font-size: .78rem;
-    font-weight: var(--weight-medium);
-    letter-spacing: var(--tracking-timeline);
-    line-height: var(--leading-timeline);
-    transition: color .2s ease;
-}
-
-/* description */
-.tl-card .desc {
-    color: var(--ink);
-    font-size: .8rem;
-    line-height: var(--leading-intro);
-    max-width: 16ch;
-    transition: color .2s ease;
-}
-
-.tl-card:hover {
-    background: var(--paper-dim);
-    border-color: var(--dark-rule);
-    color: var(--dark);
-    transform: translateY(-2px);
-}
-
-.tl-card:hover::before {
-    box-shadow: 0 0 0 4px var(--dark);
-    transform: scale(1.08);
-}
-
-.tl-card:hover .yr {
-    color: var(--dark);
-}
-
-.tl-card:hover .desc {
-    color: var(--dark);
-}
-
-/* existing palette */
-.tl-card:nth-child(1) {
-    --accent-color: var(--c1);
-}
-
-.tl-card:nth-child(2) {
-    --accent-color: var(--c2);
-}
-
-.tl-card:nth-child(3) {
-    --accent-color: var(--c3);
-}
-
-.tl-card:nth-child(4) {
-    --accent-color: var(--c4);
-}
-
-.tl-card:nth-child(5) {
-    --accent-color: var(--c5);
-}
-
-.tl-card:nth-child(6) {
-    --accent-color: var(--c6);
-}
-
-.tl-card:nth-child(7) {
-    --accent-color: var(--c1);
-}
-
-.tl-card:nth-child(8) {
-    --accent-color: var(--c2);
-}
-
-.tl-card:nth-child(9) {
-    --accent-color: var(--c3);
-}
-
-/* responsive */
-@media (max-width: 700px) {
-    .tl-strip {
-        grid-auto-columns: minmax(10rem, 70vw);
-        gap: .75rem;
-        padding-top: 1.5rem;
-        padding-bottom: .5rem;
-    }
-
-    .tl-strip::before {
-        left: .25rem;
-        right: .25rem;
-    }
-
-    .tl-card {
-        padding: .7rem .7rem .9rem;
-    }
-
-    .tl-card::before {
-        left: .7rem;
-    }
-
-    .tl-card .yr {
-        padding-left: 1rem;
-        font-size: .75rem;
-    }
-
-    .tl-card .desc {
-        max-width: 24ch;
-        font-size: .78rem;
-    }
-}
-
-/* ---- Quote placeholder ---- */
-.quote-block {
-    background: var(--paper-dim);
-    padding: clamp(2.75rem, 6vw, 4.75rem) 0;
-    text-align: right;
-}
-
-.quote-block blockquote {
-    margin: 0;
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: clamp(1.25rem, 2.8vw, 1.6875rem);
-    line-height: var(--leading-intro);
-    color: var(--ink);
-}
-
-.quote-block cite {
-    display: block;
-    margin-top: 1.125rem;
-    font-style: normal;
-    font-family: var(--font-label);
-    font-size: 0.75rem;
-    color: var(--ink-soft);
-    text-align: right;
-}
 
 /* ---- News list ---- */
 
@@ -1724,9 +1572,8 @@ footer li a:hover {
     position: relative;
     padding: clamp(0.25rem, 0.5vw, 0.5rem) 0 clamp(0.25rem, 0.5vw, 0.5rem);
     background:
-        radial-gradient(50rem 22rem at 10% 0%, rgba(92, 198, 255, .16), transparent 60%),
-        radial-gradient(40rem 20rem at 85% 0%, rgba(124, 107, 255, .1), transparent 55%),
-        linear-gradient(180deg, #EEF3FB 0%, var(--paper) 100%);
+        radial-gradient(50rem 22rem at 25% 0%, rgba(175, 0, 0, 0.16), transparent 75%),
+        radial-gradient(40rem 20rem at 85% 0%, rgba(75, 0, 0, 0.1), transparent 50%);
     border-bottom: 1px solid var(--rule);
 }
 
@@ -1768,36 +1615,6 @@ footer li a:hover {
     margin: 1.5rem 0 0.5rem;
 }
 
-.page p,
-.page li {
-    font-size: 1rem;
-}
-
-.prose {
-    max-width: none;
-}
-
-.prose>p,
-.prose>ul,
-.prose>.contact-box {
-    max-width: 52rem;
-}
-
-.prose p {
-    color: var(--ink);
-}
-
-.prose a,
-.page-section a:not(.btn):not(.text-link):not(.btn-outline):not(.card) {
-    color: var(--accent);
-    text-decoration-color: rgba(32, 84, 199, .35);
-    text-underline-offset: 2px;
-}
-
-.prose a:hover,
-.page-section a:not(.btn):not(.text-link):not(.btn-outline):not(.card):hover {
-    text-decoration-color: currentColor;
-}
 
 .note {
     font-size: 0.875rem;
@@ -1898,41 +1715,42 @@ a.card:hover {
 
 /* Reset and layout for the summary */
 .area-list details summary {
-  cursor: pointer;
-  display: list-item; /* Restores the default native browser arrow inline */
-  padding: 8px 0;
-  transition: color 0.2s ease;
+    cursor: pointer;
+    display: list-item;
+    /* Restores the default native browser arrow inline */
+    padding: 8px 0;
+    transition: color 0.2s ease;
 }
 
 /* Target the strong tag (your area title) so it stays inline with the arrow */
-.area-list details summary > strong {
-  display: inline;
+.area-list details summary>strong {
+    display: inline;
 }
 
 /* Keep your description span on a separate line or inline as you prefer */
-.area-list details summary > span {
-  display: block; 
-  font-size: 0.9em;
-  opacity: 0.8;
-  margin-top: 2px;
+.area-list details summary>span {
+    display: block;
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-top: 2px;
 }
 
 /* Change the color of the text (and arrow in most modern browsers) on hover */
 .area-list details summary:hover {
-  color: var(--accent);
+    color: var(--accent);
 }
 
 /* Style for the nested papers list */
 .paper-list {
-  margin-top: 8px;
-  margin-bottom: 15px;
-  padding-left: 20px;
-  list-style-type: disc;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    list-style-type: disc;
 }
 
 .paper-list li {
-  margin-bottom: 5px;
-  font-size: 0.95em;
+    margin-bottom: 5px;
+    font-size: 0.95em;
 }
 
 /* Tables */
@@ -1943,7 +1761,8 @@ a.card:hover {
 
 .table {
     width: 100%;
-    min-width: 34rem; /* narrow screens scroll sideways instead of squeezing columns */
+    min-width: 34rem;
+    /* narrow screens scroll sideways instead of squeezing columns */
     border-collapse: collapse;
     font-size: 0.9375rem;
     line-height: 1.45;
@@ -1999,6 +1818,7 @@ a.card:hover {
 .table .sub::after {
     content: "]";
 }
+
 /* Course list */
 .course-code {
     white-space: nowrap;
@@ -2046,7 +1866,7 @@ a.card:hover {
 }
 
 .person h3 a {
-    color: var(--ink);
+    color: var(--accent-link);
     text-decoration: none;
 }
 
@@ -2121,7 +1941,17 @@ a.card:hover {
     border-top: 1px solid var(--rule);
 }
 
-.news-feed > li {
+.news-feed a {
+    text-decoration: none;
+    color: var(--accent-link);
+}
+
+.news-feed a:hover {
+    text-decoration: underline;
+    color: var(--accent);
+}
+
+.news-feed>li {
     display: grid;
     grid-template-columns: 10rem 1fr;
     gap: 0.5rem 1.25rem;
@@ -2148,7 +1978,7 @@ a.card:hover {
 }
 
 @media (max-width: 560px) {
-    .news-feed > li {
+    .news-feed>li {
         grid-template-columns: 1fr;
         gap: 0.15rem;
     }
@@ -2236,225 +2066,243 @@ details.fold[open] summary {
 
 /* Layout container */
 .research-layout {
-  display: grid;
-  grid-template-columns: minmax(14rem, 18rem) 1fr;
-  gap: 2rem;
-  align-items: start;
-  margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: minmax(14rem, 18rem) 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin-top: 1.5rem;
 }
 
 /* ---------- LEFT: Area menu ---------- */
 .area-menu {
-  position: sticky;
-  top: 5rem;                     /* below the sticky header */
-  border-right: 1px solid var(--rule);
-  padding-right: 1rem;
+    position: sticky;
+    top: 5rem;
+    /* below the sticky header */
+    border-right: 1px solid var(--rule);
+    padding-right: 1rem;
 }
 
 .area-menu-heading {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent-dark);
-  margin: 0 0 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    margin: 0 0 0.75rem;
 }
 
 .area-menu-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
 }
 
 .area-btn {
-  display: block;
-  width: 100%;
-  text-align: left;
-  background: none;
-  border: none;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  line-height: 1.35;
-  color: var(--ink);
-  padding: 0.55rem 0.75rem;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.35;
+    color: var(--ink);
+    padding: 0.55rem 0.75rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
 }
 
 .area-btn:hover {
-  background: var(--paper-dim);
+    background: var(--paper-dim);
 }
 
 .area-btn.active {
-  background: var(--accent);
-  color: #fff;
-  font-weight: 600;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
 }
 
 /* ---------- RIGHT: Paper list ---------- */
 .paper-list-panel {
-  min-width: 0;
+    min-width: 0;
 }
 
 .paper-area-title {
-  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
-  margin: 0 0 0.75rem;
-  line-height: 1.25;
+    font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
+    margin: 0 0 0.75rem;
+    line-height: 1.25;
 }
 
 /* Optional area‑level thumbnail */
 .area-thumb-wrap {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
+
 .area-thumb-img {
-  max-width: 160px;
-  height: auto;
-  border-radius: 0.4rem;
-  border: 1px solid var(--rule);
+    max-width: 160px;
+    height: auto;
+    border-radius: 0.4rem;
+    border: 1px solid var(--rule);
 }
 
 /* Paper list */
 .paper-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border-top: 1px solid var(--rule);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--rule);
 }
 
 .paper-item {
-  display: flex;
-  gap: 1rem;
-  padding: 0.9rem 0;
-  border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--rule);
 }
 
 /* Thumbnail column */
 .paper-thumb {
-  flex: 0 0 100px;               /* fixed width for alignment */
-  width: 100px;
-  height: 80px;
-  overflow: hidden;
-  border-radius: 0.35rem;
-  background: var(--paper-dim);
+    flex: 0 0 100px;
+    /* fixed width for alignment */
+    width: 100px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 0.35rem;
+    background: var(--paper-dim);
 }
 
 .paper-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .paper-thumb-placeholder {
-  background: var(--paper-dim);
+    background: var(--paper-dim);
 }
 
 /* Citation column */
 .paper-citation {
-  flex: 1;
-  min-width: 0;
+    flex: 1;
+    min-width: 0;
 }
 
 .paper-title {
-  font-weight: 600;
-  font-size: 0.95rem;
-  line-height: 1.35;
-  margin: 0 0 0.2rem;
-  color: var(--ink);
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.35;
+    margin: 0 0 0.2rem;
+    color: var(--ink);
 }
 
 .paper-authors {
-  font-size: 0.85rem;
-  line-height: 1.4;
-  margin: 0 0 0.15rem;
-  color: var(--ink-soft);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0 0 0.15rem;
+    color: var(--ink-soft);
 }
 
 .paper-venue {
-  font-size: 0.85rem;
-  line-height: 1.4;
-  margin: 0 0 0.35rem;
-  color: var(--ink-soft);
-  font-style: italic;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0 0 0.35rem;
+    color: var(--ink-soft);
+    font-style: italic;
 }
 
 /* Links below the citation */
 .paper-links {
-  font-size: 0.8rem;
-  margin: 0;
+    font-size: 0.8rem;
+    margin: 0;
 }
+
 .paper-links a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
+    color: var(--accent-link);
+    text-decoration: none;
+    font-weight: 500;
 }
+
 .paper-links a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
+    color: var(--accent-dark);
 }
 
 .paper-list-empty {
-  font-size: 0.9rem;
-  color: var(--ink-soft);
-  padding: 1.5rem 0;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    padding: 1.5rem 0;
 }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 780px) {
-  .research-layout {
-    grid-template-columns: 1fr;   /* stack menu above list */
-    gap: 1rem;
-  }
-  .area-menu {
-    position: static;
-    border-right: none;
-    border-bottom: 1px solid var(--rule);
-    padding-right: 0;
-    padding-bottom: 0.75rem;
-  }
-  .area-menu-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-  .area-btn {
-    width: auto;
-    padding: 0.35rem 0.7rem;
-    font-size: 0.82rem;
-    border: 1px solid var(--rule-strong);
-    border-radius: 999px;
-  }
-  .area-btn.active {
-    border-color: var(--accent);
-  }
+    .research-layout {
+        grid-template-columns: 1fr;
+        /* stack menu above list */
+        gap: 1rem;
+    }
+
+    .area-menu {
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid var(--rule);
+        padding-right: 0;
+        padding-bottom: 0.75rem;
+    }
+
+    .area-menu-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
+    .area-btn {
+        width: auto;
+        padding: 0.35rem 0.7rem;
+        font-size: 0.82rem;
+        border: 1px solid var(--rule-strong);
+        border-radius: 999px;
+    }
+
+    .area-btn.active {
+        border-color: var(--accent);
+    }
 }
 
 /* ---------- Footer ---------- */
 footer {
-    background: var(--dark);
-    color: #EEEFE9;
-    padding: clamp(2.75rem, 6vw, 3.5rem) 0 clamp(1.75rem, 4vw, 2.125rem);
-    margin-top: clamp(2.75rem, 6vw, 3.5rem);
+    background: #B0B0B0;
+    color: var(--ink);
+    padding: clamp(1rem, 2.5vw, 2rem) 0;
+    margin-top: clamp(2rem, 3vw, 4rem);
 }
 
 footer a {
-    color: #EEEFE9;
-    text-decoration: none;
+    font-size: 0.825rem;
+    color: var(--ink);
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--accent);
 }
 
 footer p {
-    color: rgba(238, 239, 233, .78);
+    color: var(--ink);
+    font-size: 0.825rem;
+    margin: 0;
 }
 
 .foot-grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 2rem;
-    padding-bottom: clamp(1.75rem, 4vw, 2.25rem);
-    border-bottom: 1px solid var(--dark-rule);
+    padding-bottom: clamp(1rem, 2vw, 2rem);
+    border-bottom: 1px solid var(--ink);
 }
 
 footer h4 {
@@ -2462,14 +2310,8 @@ footer h4 {
     font-size: 0.75rem;
     letter-spacing: var(--tracking-footer);
     text-transform: uppercase;
-    color: var(--dark-soft);
+    color: var(--ink);
     margin: 0 0 0.875rem;
-}
-
-.foot-about {
-    font-size: 0.9375rem;
-    max-width: 34ch;
-    margin: 0;
 }
 
 footer ul {
@@ -2478,17 +2320,24 @@ footer ul {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.5625rem;
+    gap: 0rem;
+}
+
+footer li {
+    margin: 0;
+    padding: 0;
 }
 
 footer li a {
-    font-size: 0.9375rem;
-    color: rgba(238, 239, 233, .85);
+    font-size: 0.825rem;
+    color: var(--ink);
+    margin: 0;
+    padding: 0;
 }
 
 footer li a:hover {
-    color: #fff;
     text-decoration: underline;
+    color: var(--accent);
 }
 
 .foot-bottom {
@@ -2496,8 +2345,8 @@ footer li a:hover {
     justify-content: space-between;
     padding-top: 1.25rem;
     font-family: var(--font-label);
-    font-size: 0.8125rem;
-    color: var(--dark-soft);
+    font-size: 0.825rem;
+    color: var(--ink);
     flex-wrap: wrap;
     gap: 0.625rem;
 }

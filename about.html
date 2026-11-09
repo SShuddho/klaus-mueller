@@ -49,9 +49,9 @@
                             <span class="badge-text"><strong>Stony Brook</strong>University</span></a>
                     </div>
                     <div class="badge"><a href="https://www.bnl.gov/" target="_blank" rel="noopener">
-                        <span class="badge-mark"><img src="./assets/img/bnl_logo.png"
-                                alt="Brookhaven National Laboratory Logo" /></span>
-                        <span class="badge-text"><strong>Brookhaven</strong>National Laboratory</span></a>
+                            <span class="badge-mark"><img src="./assets/img/bnl_logo.png"
+                                    alt="Brookhaven National Laboratory Logo" /></span>
+                            <span class="badge-text"><strong>Brookhaven</strong>National Laboratory</span></a>
                     </div>
                 </div>
                 <button class="icon-btn" id="searchToggle" aria-label="Open search" aria-expanded="false"
@@ -98,8 +98,17 @@
                     <!-- Biography -->
                     <section class="about-section" id="biography">
                         <h2>Biography</h2>
-                        <p class="about-text">Klaus Mueller is Professor of Computer Science at Stony Brook University and Senior Scientist at Brookhaven National Laboratory. He directs the Visual Analytics and Imaging (VAI) Lab. His work lies at the intersection of visualization, visual analytics, explainable and human-centered AI, and medical imaging, with applications in public health, science, and healthcare.</p>
-                        <p class="about-text">He received his Ph.D. in Computer and Information Science from The Ohio State University in 1998 and joined Stony Brook in 1999. He is an IEEE Fellow (class of 2024), a member of the National Academy of Inventors, and a recipient of the NSF CAREER award. He served as Editor-in-Chief of <em>IEEE Transactions on Visualization and Computer Graphics</em> (2019&ndash;2022) and was the founding chair of the Computer Science Department at SUNY Korea.
+                        <p class="about-text">Klaus Mueller is Professor of Computer Science at Stony Brook University
+                            and Senior Scientist at Brookhaven National Laboratory. He directs the Visual Analytics and
+                            Imaging (VAI) Lab. His work lies at the intersection of visualization, visual analytics,
+                            explainable and human-centered AI, and medical imaging, with applications in public health,
+                            science, and healthcare.</p>
+                        <p class="about-text">He received his Ph.D. in Computer and Information Science from The Ohio
+                            State University in 1998 and joined Stony Brook in 1999. He is an IEEE Fellow (class of
+                            2024), a member of the National Academy of Inventors, and a recipient of the NSF CAREER
+                            award. He served as Editor-in-Chief of <em>IEEE Transactions on Visualization and Computer
+                                Graphics</em> (2019&ndash;2022) and was the founding chair of the Computer Science
+                            Department at SUNY Korea.
                         </p>
 
                         <div class="about-facts">
@@ -107,7 +116,8 @@
                                     class="about-fact-label">h-index</span>
                             </div>
                             <div class="about-fact"><span class="about-fact-num">3</span>
-                                <span class="about-fact-label">Erd&odblac;s number (P. Erd&odblac;s -> F. Chung -> S.-T. Yau -> K. Mueller)</span>
+                                <span class="about-fact-label">Erd&odblac;s number (P. Erd&odblac;s -> F. Chung -> S.-T.
+                                    Yau -> K. Mueller)</span>
                             </div>
                         </div>
 
@@ -420,12 +430,13 @@
                             IEEE
                             Visualization; Symposium on Volume Visualization; ACM SIGGRAPH; EuroVis; Volume Graphics
                             Workshop; and
-                            others.</p>
+                            others.
+                        </p>
                     </section>
 
                     <!-- Invited Talks -->
                     <section class="about-section" id="talks">
-                        <h2>Invited Talks
+                        <h2>Invited Talks</h2>
 
                         <details class="fold" open>
                             <summary>2025</summary>
@@ -780,7 +791,8 @@
                         <ul class="cv-plain">
                             <li>Undergraduate, graduate, and advanced courses in <strong>Visualization</strong> and
                                 <strong>Visual
-                                    Analytics</strong>, Stony Brook University and SUNY Korea (2000&ndash;)</li>
+                                    Analytics</strong>, Stony Brook University and SUNY Korea (2000&ndash;)
+                            </li>
                             <li>Undergraduate and graduate courses in <strong>Medical Imaging</strong>, Stony Brook
                                 University and
                                 SUNY Korea (2005&ndash;)</li>
@@ -932,7 +944,7 @@
             </div>
         </div>
     </div>
-    
+
     <script src="./assets/js/footer.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/research.js" defer></script>
@@ -946,29 +958,124 @@
             toggle.setAttribute('aria-expanded', open);
         });
 
-        /* Sidebar scroll-spy: highlight the section currently in view */
+        /* Sidebar scroll-spy */
         (function () {
-            const links = Array.from(document.querySelectorAll('.about-nav-list a'));
-            const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-            if (!sections.length || !('IntersectionObserver' in window)) return;
+            const links = Array.from(
+                document.querySelectorAll('.about-nav-list a')
+            );
+            const sections = links
+                .map(a => document.querySelector(a.getAttribute('href')))
+                .filter(Boolean);
+            const nav = document.querySelector('.about-nav');
+            const header = document.querySelector('.site-header');
 
+            if (!sections.length) return;
+            const isMobile = () =>
+                window.matchMedia('(max-width: 780px)').matches;
+
+            /* Highlight the selected navigation button */
             const setActive = (id) => {
-                links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
-                const act = document.querySelector('.about-nav-list a.active');
-                // keep the active pill visible in the horizontally scrolling mobile menu
-                if (act && window.matchMedia('(max-width: 780px)').matches) {
-                    act.scrollIntoView({ block: 'nearest', inline: 'center' });
-                }
+                links.forEach(a => {
+                    a.classList.toggle(
+                        'active',
+                        a.getAttribute('href') === '#' + id
+                    );
+                });
             };
 
-            const visible = new Map();
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(e => visible.set(e.target.id, e.isIntersecting ? e.boundingClientRect.top : null));
-                const inView = sections.filter(s => visible.get(s.id) !== null && visible.get(s.id) !== undefined);
-                if (inView.length) setActive(inView[0].id);
-            }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+            /* Calculate the space occupied by the sticky elements */
+            const updateScrollOffset = () => {
+                const headerHeight =
+                    header?.getBoundingClientRect().height ?? 0;
+                const navHeight =
+                    isMobile() && nav
+                        ? nav.getBoundingClientRect().height
+                        : 0;
+                const offset = Math.ceil(
+                    headerHeight + navHeight + 12
+                );
+                document.documentElement.style.setProperty(
+                    '--about-scroll-offset',
+                    `${offset}px`
+                );
+            };
 
-            sections.forEach(s => io.observe(s));
+            /* Determine which section has reached the visible content area */
+            const updateActive = () => {
+                const headerHeight =
+                    header?.getBoundingClientRect().height ?? 0;
+                const navHeight =
+                    isMobile() && nav
+                        ? nav.getBoundingClientRect().height
+                        : 0;
+                const activationLine =
+                    headerHeight + navHeight + 16;
+
+                let currentSection = sections[0];
+                for (const section of sections) {
+                    if (
+                        section.getBoundingClientRect().top
+                        <= activationLine
+                    ) {
+                        currentSection = section;
+                    } else {
+                        break;
+                    }
+                }
+
+                /* Ensure the final section becomes active at the bottom */
+                const atPageBottom =
+                    window.innerHeight + window.scrollY >=
+                    document.documentElement.scrollHeight - 2;
+                if (atPageBottom) {
+                    currentSection = sections[sections.length - 1];
+                }
+                setActive(currentSection.id);
+            };
+
+            /* Avoid unnecessary calculations during rapid scrolling */
+            let ticking = false;
+            const onScroll = () => {
+                if (ticking) return;
+                ticking = true;
+                window.requestAnimationFrame(() => {
+                    updateActive();
+                    ticking = false;
+                });
+            };
+
+
+            /* Immediately highlight the clicked section */
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    const id = link.getAttribute('href').slice(1);
+                    if (sections.some(section => section.id === id)) {
+                        setActive(id);
+                    }
+                });
+            });
+
+            /* Update on scrolling and viewport resizing */
+            window.addEventListener('scroll', onScroll, {
+                passive: true
+            });
+
+            window.addEventListener('resize', () => {
+                updateScrollOffset();
+                updateActive();
+            });
+
+            /* Initial setup */
+            updateScrollOffset();
+            updateActive();
+
+            /* Recalculate if the web font changes the navigation height */
+            if (document.fonts?.ready) {
+                document.fonts.ready.then(() => {
+                    updateScrollOffset();
+                    updateActive();
+                });
+            }
         })();
     </script>
 

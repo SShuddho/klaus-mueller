@@ -20,7 +20,7 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="main-nav" aria-label="Primary">
-        <a href="../research/index.html" aria-current="page">Research</a>
+        <a href="../research/index.html" class="active" aria-current="page">Research</a>
         <a href="../people/index.html">People</a>
         <a href="../teaching/index.html">Teaching</a>
         <a href="../news.html">News</a>
@@ -37,14 +37,14 @@
       </nav>
       <div class="header-right">
         <div class="affiliations">
-          <div class="badge">
-            <span class="badge-mark"><img src="../assets/img/sbu_logo.png" alt="Stony Brook University logo" /></span>
-            <span class="badge-text"><strong>Stony Brook</strong>University</span>
+          <div class="badge"><a href="https://www.cs.stonybrook.edu/" target="_blank" rel="noopener">
+              <span class="badge-mark"><img src="../assets/img/sbu_logo.png" alt="Stony Brook University Logo" /></span>
+              <span class="badge-text"><strong>Stony Brook</strong>University</span></a>
           </div>
-          <div class="badge">
-            <span class="badge-mark"><img src="../assets/img/bnl_logo.png"
-                alt="Brookhaven National Laboratory logo" /></span>
-            <span class="badge-text"><strong>Brookhaven</strong>National Laboratory</span>
+          <div class="badge"><a href="https://www.bnl.gov/" target="_blank" rel="noopener">
+              <span class="badge-mark"><img src="../assets/img/bnl_logo.png"
+                  alt="Brookhaven National Laboratory Logo" /></span>
+              <span class="badge-text"><strong>Brookhaven</strong>National Laboratory</span></a>
           </div>
         </div>
         <button class="icon-btn" id="searchToggle" aria-label="Open search" aria-expanded="false"
@@ -62,7 +62,7 @@
   <main id="main">
     <section class="page-hero">
       <div class="page-wrap">
-        <h1>Research areas</h1>
+        <h1>Research Areas</h1>
         <p class="lead">The complete, current list of publications and citation counts is on <a
             href="https://scholar.google.com/citations?user=uya_Zb4AAAAJ&amp;hl=en&amp;oi=ao" target="_blank"
             rel="noopener">Google Scholar</a>.</p>
@@ -75,15 +75,18 @@
           <aside class="area-menu" aria-label="Research areas">
             <h2 class="area-menu-heading">Areas</h2>
             <ul class="area-menu-list" id="areaMenu">
-              <li id="visualAnalytics"><button class="area-btn active" data-area="visualAnalytics">Visual Analytics</button></li>
+              <li id="visualAnalytics"><button class="area-btn active" data-area="visualAnalytics">Visual
+                  Analytics</button></li>
               <li id="FAIR"><button class="area-btn" data-area="FAIR">Human-Centered Responsible AI</button></li>
               <li id="ct"><button class="area-btn" data-area="ct">Medical Imaging</button></li>
               <li id="volvis"><button class="area-btn" data-area="volvis">Volume Visualization</button></li>
-              <li id="vr"><button class="area-btn" data-area="vr">Virtual and Augmented reality</button></li>
-              <li id="computerGraphics"><button class="area-btn" data-area="computerGraphics">Cognitive Computer Graphics</button></li>
+              <li id="vr"><button class="area-btn" data-area="vr">Virtual and Augmented Reality</button></li>
+              <li id="computerGraphics"><button class="area-btn" data-area="computerGraphics">Cognitive Computer
+                  Graphics</button></li>
               <li id="filters"><button class="area-btn" data-area="filters">Filters and Grids</button></li>
               <li id="eyetrack"><button class="area-btn" data-area="eyetrack">Eyetracking</button></li>
-              <li id="naturalPhenomena"><button class="area-btn" data-area="naturalPhenomena">Natural Phenomena</button></li>
+              <li id="naturalPhenomena"><button class="area-btn" data-area="naturalPhenomena">Natural Phenomena</button>
+              </li>
               <li id="faceReco"><button class="area-btn" data-area="faceReco">Face Recognition</button></li>
             </ul>
           </aside>

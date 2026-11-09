@@ -15,14 +15,6 @@
     --rule: #ececec;
     --rule-strong: #cacaca;
 
-    /*
-    --accent: #2054C7;
-    --accent-dark: #173F9E;
-    
-    --accent: #990000;
-    --accent-dark: darkred;
-    */
-
     --accent: darkred;
     --accent-dark: darkred;
     --accent-link: #2054C7;
@@ -2123,7 +2115,7 @@ details.fold[open] summary {
 
 /* Links below the citation */
 .paper-links {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin: 0;
 }
 

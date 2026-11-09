@@ -201,23 +201,22 @@ p {
 
 
 .text-link {
-    display: inline-flex;
+    display: inline;
     align-items: center;
-    gap: calc(var(--u) * 0.5);
+    /*gap: calc(var(--u) * 0.5);
     font-size: calc(var(--u) * 1.05);
     font-weight: var(--weight-label);
     letter-spacing: var(--tracking-link);
-    text-transform: uppercase;
+    text-transform: uppercase;*/
     text-decoration: none;
     color: var(--accent-link);
     border-bottom: 1px solid transparent;
-    transition: border-color .15s ease, gap .15s ease;
     line-height: var(--leading-link);
+    white-space: normal;
 }
 
 .text-link:hover {
-    color: var(--accent-dark);
-    gap: calc(var(--u) * 0.7);
+    color: var(--accent);
 }
 
 .text-link.small {
@@ -312,6 +311,10 @@ p {
 
 .main-nav a:hover,
 .nav-search:hover {
+    color: var(--accent);
+}
+
+.main-nav a.active {
     color: var(--accent);
 }
 
@@ -2261,31 +2264,15 @@ footer li a:hover {
    ABOUT PAGE
    ===================================================================== */
 
-/* Active link in the main nav (also usable on other inner pages) */
-.main-nav a.active {
-    color: var(--accent);
-}
-
-/* ---------- Hero: rounded card like the other inner-page headers ---------- */
-.about-page .page-hero {
-    margin-top: 0.5rem;
-    padding: 1rem 1.25rem;
-    border: 1px solid var(--rule);
-    border-radius: var(--radius);
-}
-
-.about-page .page-hero .lead {
-    color: var(--ink-soft);
-    max-width: 100%;
-}
-
 /* ---------- Two-column layout: sidebar + content ---------- */
 .about-layout {
+    max-width: 95vw;
     display: grid;
     grid-template-columns: minmax(10rem, 12.5rem) minmax(0, 1fr);
     gap: 2rem;
     align-items: start;
-    margin-top: 1.25rem;
+    margin: 0 auto;
+    padding: 1rem 2rem 0;
 }
 
 /* ---------- Sidebar ---------- */
@@ -2339,7 +2326,7 @@ footer li a:hover {
 }
 
 .about-section {
-    padding: 0 0 1.5rem;
+    padding: 0 0 0.25rem;
     scroll-margin-top: 5rem;
 }
 
@@ -2351,16 +2338,16 @@ footer li a:hover {
 
 .about-section+.about-section {
     border-top: 1px solid var(--rule);
-    padding-top: 1.25rem;
+    padding-top: 1rem;
 }
 
 .about-section h2 {
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.25rem;
 }
 
 .about-section h3 {
     font-size: 1rem;
-    margin: 1.25rem 0 0.4rem;
+    margin: 0.25rem 0 0.4rem;
     color: var(--ink);
 }
 
@@ -2368,7 +2355,6 @@ footer li a:hover {
     margin: 0 0 0.75rem;
     color: var(--ink);
     line-height: 1.6;
-    max-width: 75ch;      /* was 75vw */
 }
 
 .about-note {
@@ -2379,8 +2365,9 @@ footer li a:hover {
 
 /* Quick-facts strip in the biography */
 .about-facts {
+    max-width: 75%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    grid-template-columns: 1fr 2fr;
     gap: 0.75rem;
     margin: 1rem 0;
 }

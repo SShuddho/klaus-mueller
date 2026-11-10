@@ -30,38 +30,7 @@
                 <a href="./teaching/index.html">Teaching</a>
                 <a href="./news.html">News</a>
                 <a href="./about.html" class="active" aria-current="page">About</a>
-                <button class="nav-search" id="navSearchToggle" type="button" aria-label="Open search"
-                    aria-controls="searchOverlay">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
-                        aria-hidden="true">
-                        <circle cx="11" cy="11" r="7"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                    <span>Search</span>
-                </button>
             </nav>
-
-            <div class="header-right">
-                <div class="affiliations">
-                    <div class="badge"><a href="https://www.cs.stonybrook.edu/" target="_blank" rel="noopener">
-                            <span class="badge-mark"><img src="./assets/img/sbu_logo.png"
-                                    alt="Stony Brook University Logo" /></span>
-                            <span class="badge-text"><strong>Stony Brook</strong>University</span></a>
-                    </div>
-                    <div class="badge"><a href="https://www.bnl.gov/" target="_blank" rel="noopener">
-                            <span class="badge-mark"><img src="./assets/img/bnl_logo.png"
-                                    alt="Brookhaven National Laboratory Logo" /></span>
-                            <span class="badge-text"><strong>Brookhaven</strong>National Laboratory</span></a>
-                    </div>
-                </div>
-                <button class="icon-btn" id="searchToggle" aria-label="Open search" aria-expanded="false"
-                    aria-controls="searchOverlay">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="7"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                </button>
-            </div>
         </div>
     </header>
 
@@ -903,38 +872,6 @@
                                     Representation in Visualization</span></li>
                         </ul>
                     </details>
-
-                    <h3>Ph.D. Students Graduated</h3>
-                    <ul class="cv-list">
-                        <li><span class="when">2025</span><span>Arjun Krishna (now at Johns Hopkins University);
-                                Xinyu Zhang (now
-                                at Meta)</span></li>
-                        <li><span class="when">2022</span><span>Anjul Tyagi (Meta); Bhavya Ghai (Amazon)</span></li>
-                        <li><span class="when">2021</span><span>Hyunjung Jenny Lee (Tableau); Heyi Li (China Academy
-                                of Space
-                                Technology); Darius Coelho (Akai Kaeru LLC)</span></li>
-                        <li><span class="when">2020</span><span>Ayush Kumar (AT&amp;T)</span></li>
-                        <li><span class="when">2018</span><span>Cong Xie (Facebook); Jun Wang (Google); Shenghui
-                                Cheng (Westlake
-                                University, China); Salman Mahmood (Google)</span></li>
-                        <li><span class="when">2017</span><span>Sungsoo Ha (Meta); Eric Papenhausen (Meta)</span>
-                        </li>
-                        <li><span class="when">2016</span><span>Puripant Ruchikachorn (Chulalongkorn University,
-                                Thailand); Bing
-                                Wang (Google)</span></li>
-                        <li><span class="when">2013</span><span>Zhiyuan Zhang (Meta)</span></li>
-                        <li><span class="when">2012</span><span>Ziyi Zheng (Google); Wei Xu (Brookhaven National
-                                Lab)</span></li>
-                        <li><span class="when">2011</span><span>Julia EunJu Nam (Microsoft)</span></li>
-                        <li><span class="when">2010</span><span>Supriya Garg (Google)</span></li>
-                        <li><span class="when">2008</span><span>Shengying Li (Barclays Bank)</span></li>
-                        <li><span class="when">2007</span><span>Lujin Wang (NVIDIA); Fang Xu (Google)</span></li>
-                        <li><span class="when">2006</span><span>Neophytos Neophytou (Bloomberg)</span></li>
-                        <li><span class="when">2004</span><span>Sarang Lakare (Siemens Corporate Research); Wei Li
-                                (Siemens
-                                Corporate Research)</span></li>
-                        <li><span class="when">2001</span><span>Ingmar Bitter (Claron Technology)</span></li>
-                    </ul>
                 </section>
 
             </div><!-- /.about-content -->
@@ -943,28 +880,6 @@
     </main>
 
     <div id="site-footer"></div>
-
-    <!-- ===================== SEARCH OVERLAY (same as index.html) ===================== -->
-    <div class="search-overlay" id="searchOverlay" hidden>
-        <div class="search-panel" role="dialog" aria-modal="true" aria-label="Site search">
-            <div class="search-bar">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <circle cx="11" cy="11" r="7"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-                <input type="search" id="searchInput" placeholder="Search publications, research, news…"
-                    autocomplete="off" spellcheck="false" aria-controls="searchResults" />
-                <button class="search-close" id="searchClose" type="button" aria-label="Close search">Esc</button>
-            </div>
-            <div class="search-results" id="searchResults" role="listbox" aria-live="polite"></div>
-            <div class="search-hint" aria-hidden="true">
-                <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
-                <span><kbd>↵</kbd> open</span>
-                <span><kbd>Esc</kbd> close</span>
-            </div>
-        </div>
-    </div>
 
     <script src="./assets/js/footer.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
@@ -1099,8 +1014,6 @@
             }
         })();
     </script>
-
-    <script src="./assets/js/search.js" defer></script>
 </body>
 
 </html>

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!teachingList) return;
 
     // Number of courses to display on the homepage.
-    const MAX_COURSES = 3;
+    const MAX_COURSES = 4;
 
     try {
 
@@ -67,14 +67,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             // Create a course container.
             const courseItem = document.createElement("div");
-
             courseItem.className = "teaching-preview-item";
 
-            // Course title.
-            const titleElement = document.createElement("a");
+            // Combine course code and course title for the link
+            const fullTitleText = courseCode ? `${courseCode}: ${courseTitle}` : courseTitle;
 
+            // Course title link.
+            const titleElement = document.createElement("a");
             titleElement.className = "feature-title";
-            titleElement.textContent = courseTitle;
+            titleElement.textContent = fullTitleText;
 
             // Resolve the link relative to teaching/index.html.
             if (sourceLink?.getAttribute("href")) {
@@ -84,24 +85,15 @@ document.addEventListener("DOMContentLoaded", async () => {
                 ).href;
             }
 
-            // Course code.
-            const codeElement = document.createElement("p");
+            // Add the title link to the item container
+            courseItem.appendChild(titleElement);
 
-            codeElement.className = "feature-meta";
-            codeElement.textContent = courseCode;
-
-            // Add the extracted information.
-            courseItem.append(titleElement, codeElement);
-
-            // Optional course description.
+            // Optional subtitle inline with parentheses (outside the link)
             if (subtitle) {
-
-                const descriptionElement = document.createElement("p");
-
-                descriptionElement.className = "feature-desc";
-                descriptionElement.textContent = subtitle;
-
-                courseItem.appendChild(descriptionElement);
+                const subtitleSpan = document.createElement("span");
+                subtitleSpan.className = "feature-desc";
+                subtitleSpan.textContent = ` (${subtitle})`;
+                courseItem.appendChild(subtitleSpan);
             }
 
             teachingList.appendChild(courseItem);

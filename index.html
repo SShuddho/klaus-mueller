@@ -32,38 +32,7 @@
         <a href="./teaching/index.html">Teaching</a>
         <a href="./news.html">News</a>
         <a href="./about.html">About</a>
-        <!-- Mobile search: shown inside the hamburger menu (<= 980px), where .header-right is hidden -->
-        <button class="nav-search" id="navSearchToggle" type="button" aria-label="Open search"
-          aria-controls="searchOverlay">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
-            aria-hidden="true">
-            <circle cx="11" cy="11" r="7"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-          <span>Search</span>
-        </button>
       </nav>
-
-      <div class="header-right">
-        <div class="affiliations">
-          <div class="badge"><a href="https://www.cs.stonybrook.edu/" target="_blank" rel="noopener">
-              <span class="badge-mark"><img src="./assets/img/sbu_logo.png" alt="Stony Brook University Logo" /></span>
-              <span class="badge-text"><strong>Stony Brook</strong>University</span></a>
-          </div>
-          <div class="badge"><a href="https://www.bnl.gov/" target="_blank" rel="noopener">
-              <span class="badge-mark"><img src="./assets/img/bnl_logo.png"
-                  alt="Brookhaven National Laboratory Logo" /></span>
-              <span class="badge-text"><strong>Brookhaven</strong>National Laboratory</span></a>
-          </div>
-        </div>
-        <button class="icon-btn" id="searchToggle" aria-label="Open search" aria-expanded="false"
-          aria-controls="searchOverlay">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="7"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-        </button>
-      </div>
     </div>
   </header>
 
@@ -81,10 +50,16 @@
 
           <div class="hero-body">
             <h1>Klaus Mueller</h1>
-            <p class="role-line"><strong>Professor, Computer Science</strong> (Stony Brook University)</p>
-            <p class="role-line"><strong>Senior Scientist</strong> (Brookhaven National Laboratory)</p>
-            <p class="role-line"><strong>Director</strong> (Visual Analytics and Imaging (VAI) Lab)</p>
-
+            <p class="role-line"><strong>Professor, Computer Science</strong>
+              (<a href="https://www.cs.stonybrook.edu/" target="_blank" rel="noopener">Stony Brook University</a>)
+            </p>
+            <p class="role-line"><strong>Senior Scientist</strong>
+              (<a href="https://www.bnl.gov/" target="_blank" rel="noopener">Brookhaven National Laboratory</a>)
+            </p>
+            <p class="role-line"><strong>Director</strong>
+              (<a href="http://www3.cs.stonybrook.edu/~vai">Visual Analytics and Imaging (VAI) Lab</a>)
+            </p>
+            
             <p class="intro">My research lives at the intersection of visualization, visual analytics and human-centered
               AI — building systems that help people reason with complex data and understand what machine-learning
               models are doing.</p>
@@ -117,7 +92,7 @@
                 <div class="carousel-inner">
                   <!-- Slide 1 -->
                   <div class="carousel-item active">
-                    <img src="assets/img/slide-1.png" class="figure-art" alt="Visual analytics for medical imaging">
+                    <img src="assets/img/SPI25synth.png" class="figure-art" alt="Visual analytics for medical imaging">
                     <div class="figure-caption">
                       <h3>Visual Analytics for Medical Imaging</h3>
                       <p>
@@ -129,7 +104,7 @@
 
                   <!-- Slide 2 -->
                   <div class="carousel-item">
-                    <img src="assets/img/slide-2.png" class="figure-art" alt="Medical image analysis">
+                    <img src="assets/img/misvisfix.png" class="figure-art" alt="Medical image analysis">
                     <div class="figure-caption">
                       <h3>Computational Medical Imaging</h3>
                       <p>
@@ -141,7 +116,7 @@
 
                   <!-- Slide 3 -->
                   <div class="carousel-item">
-                    <img src="assets/img/slide-3.png" class="figure-art" alt="Scientific visualization">
+                    <img src="assets/img/SPI25workflow.png" class="figure-art" alt="Scientific visualization">
                     <div class="figure-caption">
                       <h3>Scientific Visualization</h3>
                       <p>
@@ -153,7 +128,7 @@
 
                   <!-- Slide 4 -->
                   <div class="carousel-item">
-                    <img src="assets/img/slide-4.png" class="figure-art" alt="Research and computational analysis">
+                    <img src="assets/img/teaser.png" class="figure-art" alt="Research and computational analysis">
                     <div class="figure-caption">
                       <h3>Research & Computational Methods</h3>
                       <p>
@@ -189,12 +164,6 @@
     </section>
 
     <!-- ===================== RESEARCH ===================== -->
-    <!-- AREA-CARDS
-      <a class="area-card" href="./research/index.html#visualAnalytics" style="--c:#2054C7">
-      <a class="area-card" href="./research/index.html#FAIR" style="--c:#7C3AED">
-      <a class="area-card" href="./research/index.html#ct" style="--c:#0E9C93">
-      <a class="area-card" href="./research/index.html#AgenticAI" style="--c:#DD7A2C">
-    -->
 
     <section class="research" data-reveal>
       <div class="wrap research-grid">
@@ -319,7 +288,7 @@
         <div class="lower-col news-col">
           <p class="eyebrow">News</p>
 
-          <ul class="news-list" id="recent-news-list" aria-live="polite">
+          <ul class="news-list lower-col-contents" id="recent-news-list" aria-live="polite">
             <li>Loading news...</li>
           </ul>
 
@@ -330,27 +299,16 @@
             </svg>
           </a>
         </div>
-        <!-- END CHANGED: end of the un-commented News block (the comment-closing marker that used to be here was removed). -->
+  
 
         <div class="lower-col">
           <p class="eyebrow">Teaching</p>
-          <div class="feature-row">
+          <div class="feature-row teaching-row">
             <span class="feature-thumb">
-              <!--
-              <svg viewBox="0 0 160 120" preserveAspectRatio="none">
-                <rect width="160" height="120" fill="#eef1f4" />
-                <rect x="20" y="15" width="90" height="55" rx="3" fill="#1c2430" />
-                <rect x="26" y="21" width="78" height="43" fill="#22344a" />
-                <path d="M30 55 L55 35 L70 48 L90 28 L100 40" fill="none" stroke="#8fe3ff" stroke-width="2" />
-                <circle cx="30" cy="95" r="10" fill="#c7cfd6" />
-                <circle cx="60" cy="98" r="10" fill="#c7cfd6" />
-                <circle cx="90" cy="93" r="10" fill="#c7cfd6" />
-              </svg>
-              -->
               <img src="./assets/img/thumbnail-teaching.jpg" alt="Teaching" />
             </span>
 
-            <div id="teaching-preview-list">
+            <div class="teaching-list lower-col-contents" id="teaching-preview-list">
               <p>Loading courses...</p>
             </div>
           </div>
@@ -364,7 +322,7 @@
           </div>
         </div>
 
-
+        <!-- ===================== ABOUT ===================== 
         <div class="lower-col">
           <p class="eyebrow">About</p>
           <div class="feature-row">
@@ -391,7 +349,7 @@
               </a>
             </div>
           </div>
-        </div>
+        </div>-->
 
       </div>
     </section>
@@ -400,32 +358,10 @@
 
   <div id="site-footer"></div>
 
-  <div class="search-overlay" id="searchOverlay" hidden>
-    <div class="search-panel" role="dialog" aria-modal="true" aria-label="Site search">
-      <div class="search-bar">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
-          aria-hidden="true">
-          <circle cx="11" cy="11" r="7"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-        <input type="search" id="searchInput" placeholder="Search publications, research, news…" autocomplete="off"
-          spellcheck="false" aria-controls="searchResults" />
-        <button class="search-close" id="searchClose" type="button" aria-label="Close search">Esc</button>
-      </div>
-      <div class="search-results" id="searchResults" role="listbox" aria-live="polite"></div>
-      <div class="search-hint" aria-hidden="true">
-        <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
-        <span><kbd>↵</kbd> open</span>
-        <span><kbd>Esc</kbd> close</span>
-      </div>
-    </div>
-  </div>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
   </script>
 
   <script src="./assets/js/research.js" defer></script>
-  <script src="./assets/js/search.js" defer></script>
 
   <script>
     const toggle = document.querySelector('.nav-toggle');

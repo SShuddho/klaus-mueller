@@ -399,16 +399,6 @@ p {
     z-index: 1;
 }
 
-/*
-.hero-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 1.7fr);
-    gap: calc(var(--u) * 1.2);
-    align-items: stretch;
-    padding-bottom: 0;
-}
-*/
-
 .hero-grid {
     display: grid;
     grid-template-columns:
@@ -565,8 +555,6 @@ h1 {
     border-color: var(--accent);
 }
 
-/* Short biography box */
-
 .hero-about {
     min-width: 0;
     background:
@@ -581,7 +569,6 @@ h1 {
     color: var(--ink);
 }
 
-/* Desktop: match the height of the other two hero columns */
 @media (min-width: 1081px) {
     .hero-about {
         display: flex;
@@ -591,62 +578,6 @@ h1 {
     }
 }
 
-/*
-@media (max-width:1080px) {
-    .hero-grid {
-        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-    }
-
-    .hero-portrait {
-        border-radius: var(--radius);
-        -webkit-mask-image: none;
-        mask-image: none;
-    }
-
-    .hero-portrait img {
-        height: auto;
-        max-height: clamp(16rem, 48vw, 26rem);
-    }
-
-    .hero-about {
-        grid-column: 1 / -1;
-        margin: calc(var(--u) * 1.5) 0;
-        padding: calc(var(--u) * 2) 0;
-        border-top: 1px solid var(--rule);
-        font-size: calc(var(--u) * 1);
-    }
-}
-
-@media (max-width:680px) {
-    .hero-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .hero-portrait {
-        min-height: 20rem;
-    }
-
-    .hero-body {
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero-body .intro {
-        max-width: 100%;
-    }
-
-    .hero-body .cta {
-        justify-content: center;
-    }
-
-    .hero-about {
-        padding: calc(var(--u) * 1.5) 0;
-        font-size: max(calc(var(--u) * 1.25), 0.85rem);
-    }
-}
-*/
-
-/* Tablet: portrait + introduction, biography below */
 @media (max-width: 1200px) and (min-width: 681px) {
     .hero-grid {
         grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
@@ -654,9 +585,6 @@ h1 {
 
     .hero-portrait {
         border-radius: var(--radius);
-        overflow: hidden;
-        -webkit-mask-image: linear-gradient(to right, #000 75%, transparent 100%);
-        mask-image: linear-gradient(to right, #000 75%, transparent 100%);
     }
 
     .hero-portrait img {
@@ -669,7 +597,6 @@ h1 {
     }
 }
 
-/* Mobile: everything stacked */
 @media (max-width: 680px) {
     .hero-grid {
         grid-template-columns: minmax(0, 1fr);

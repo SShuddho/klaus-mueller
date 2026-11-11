@@ -429,14 +429,14 @@ p {
 
 @media (min-width: 1201px) {
     .hero-grid {
-        min-height: min(40vh, calc(var(--u) * 40));
+        min-height: min(30vh, calc(var(--u) * 40));
     }
 }
 
 @media (min-width: 1081px) {
     .hero-grid {
         height: auto;
-        min-height: 40vh;
+        min-height: 30vh;
         grid-template-rows: auto;
     }
 }
@@ -509,7 +509,7 @@ h1 {
 .cta {
     display: flex;
     gap: calc(var(--u) * 1);
-    margin-top: calc(var(--u) * 1.5);
+    margin-top: calc(var(--u) * 3);
     flex-wrap: wrap;
 }
 

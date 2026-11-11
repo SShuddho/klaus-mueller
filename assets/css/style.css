@@ -1917,7 +1917,7 @@ footer li a:hover {
 /* ---------- Two-column layout: sidebar + content ---------- */
 .about-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(10rem, 12.5rem);
+    grid-template-columns: minmax(10rem, 12.5rem) minmax(0, 1fr);
     gap: 2rem;
     align-items: start;
     margin: 0 auto;
@@ -1949,11 +1949,10 @@ footer li a:hover {
 
 .about-nav-list a {
     display: block;
-    text-align: right;
-    padding: 0.45rem 0.75rem;
-    padding-left: 0;
+    text-align: left;
+    padding: 0.3rem 1rem;
+    padding-right: 0;
     border-left: 2px solid transparent;
-    border-right: 2px solid transparent;
     font-size: 0.9rem;
     line-height: 1.35;
     color: var(--ink-soft);
@@ -1969,7 +1968,7 @@ footer li a:hover {
 .about-nav-list a.active {
     color: var(--ink);
     font-weight: 600;
-    border-right-color: var(--accent);
+    border-left-color: var(--accent);
 }
 
 /* ---------- Content sections ---------- */

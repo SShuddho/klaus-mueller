@@ -487,15 +487,6 @@ h1 {
     text-decoration: underline;
 }
 
-.intro {
-    margin-top: calc(var(--u) * 0.7);
-    max-width: 85%;
-    color: var(--ink);
-    font-size: calc(var(--u) * 2);
-    line-height: var(--leading-intro);
-    margin-bottom: 0;
-}
-
 .cta {
     display: flex;
     gap: calc(var(--u) * 1);
@@ -622,12 +613,16 @@ h1 {
         text-align: center;
     }
 
-    .hero-body .intro {
-        max-width: 100%;
-    }
-
     .hero-body .cta {
         justify-content: center;
+    }
+
+    .hero-about .short-bio {
+        font-size: calc(var(--u) * 1.8);
+        line-height: 1.5;
+        margin-bottom: 1em;
+        text-align: justify;
+        color: var(--ink);
     }
 
     .hero-about {

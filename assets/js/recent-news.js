@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         );
 
         // 4. Select the three most recent entries
-        const recentEntries = Array.from(newsEntries).slice(0, 4);
+        const recentEntries = Array.from(newsEntries).slice(0, 3);
 
         // Clear the loading message
         recentNewsList.replaceChildren();

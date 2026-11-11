@@ -399,6 +399,7 @@ p {
     z-index: 1;
 }
 
+/*
 .hero-grid {
     display: grid;
     grid-template-columns: minmax(0, 0.6fr) minmax(0, 1fr) minmax(0, 1.7fr);
@@ -406,11 +407,36 @@ p {
     align-items: stretch;
     padding-bottom: 0;
 }
+*/
+
+.hero-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(190px, 0.70fr)
+        minmax(310px, 1.20fr)
+        minmax(310px, 1.35fr);
+    gap: clamp(1rem, 1.5vw, 1.5rem);
+    align-items: stretch;
+    padding-bottom: 0;
+}
+
+@media (min-width: 681px) {
+    .hero {
+        --u: clamp(8px, 0.65vw, 11px);
+        --size-h1: clamp(2rem, 3.2vw, 3.25rem);
+    }
+}
+
+@media (min-width: 1201px) {
+    .hero-grid {
+        min-height: min(40vh, calc(var(--u) * 40));
+    }
+}
 
 @media (min-width: 1081px) {
     .hero-grid {
         height: auto;
-        min-height: min(40vh, calc(var(--u) * 40));
+        min-height: 40vh;
         grid-template-rows: auto;
     }
 }
@@ -440,8 +466,6 @@ p {
 
 h1 {
     font-size: var(--size-h1);
-    /* never wider than its column: scales with the column when the window shrinks (cqi = container width) */
-    font-size: min(var(--size-h1), 12cqi);
     font-weight: var(--weight-display);
     letter-spacing: var(--tracking-display);
     color: var(--ink);
@@ -450,7 +474,7 @@ h1 {
 }
 
 .role-line {
-    font-size: max(calc(var(--u) * 1.6), 0.9rem);
+    font-size: calc(var(--u) * 2);
     color: var(--ink-soft);
     margin: 0 0 calc(var(--u) * 0.5);
     line-height: var(--leading-role);
@@ -461,11 +485,23 @@ h1 {
     font-weight: var(--weight-strong);
 }
 
+.role-line a {
+    font-size: calc(var(--u) * 1.85);
+    color: var(--accent);
+    text-decoration: none;
+    transition: font-size .15s ease, text-decoration .15s ease;
+}
+
+.role-line a:hover {
+    font-size: calc(var(--u) * 1.86);
+    text-decoration: underline;
+}
+
 .intro {
     margin-top: calc(var(--u) * 0.7);
     max-width: 85%;
     color: var(--ink);
-    font-size: max(calc(var(--u) * 1.45), 0.85rem);
+    font-size: calc(var(--u) * 2);
     line-height: var(--leading-intro);
     margin-bottom: 0;
 }
@@ -479,7 +515,7 @@ h1 {
 
 .btn {
     font-family: var(--font-label);
-    font-size: calc(var(--u) * 1.25);
+    font-size: calc(var(--u) * 1.5);
     text-transform: uppercase;
     letter-spacing: var(--tracking-button);
     text-decoration: none;
@@ -518,7 +554,6 @@ h1 {
     border-color: var(--accent);
 }
 
-/* Quiet third action (Google Scholar): outlined, neutral until hovered */
 .btn.tertiary {
     background: transparent;
     color: var(--ink-soft);
@@ -539,15 +574,11 @@ h1 {
 }
 
 .hero-about .short-bio {
-    font-size: calc(var(--u) * 1.9);
+    font-size: calc(var(--u) * 2);
     line-height: 1.5;
-    margin-bottom: 0.75em;
+    margin-bottom: 1em;
     text-align: justify;
     color: var(--ink);
-}
-
-.hero-about .short-bio:last-child {
-    margin-bottom: 0;
 }
 
 /* Desktop: match the height of the other two hero columns */
@@ -560,7 +591,7 @@ h1 {
     }
 }
 
-
+/*
 @media (max-width:1080px) {
     .hero-grid {
         grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
@@ -592,7 +623,7 @@ h1 {
     }
 
     .hero-portrait {
-        min-height: 16rem;
+        min-height: 20rem;
     }
 
     .hero-body {
@@ -613,7 +644,71 @@ h1 {
         font-size: max(calc(var(--u) * 1.25), 0.85rem);
     }
 }
+*/
 
+/* Tablet: portrait + introduction, biography below */
+@media (max-width: 1200px) and (min-width: 681px) {
+    .hero-grid {
+        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    }
+
+    .hero-portrait {
+        border-radius: var(--radius);
+        overflow: hidden;
+        -webkit-mask-image: linear-gradient(to right, #000 75%, transparent 100%);
+        mask-image: linear-gradient(to right, #000 75%, transparent 100%);
+    }
+
+    .hero-portrait img {
+        height: auto;
+        max-height: clamp(16rem, 38vw, 24rem);
+    }
+
+    .hero-about {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile: everything stacked */
+@media (max-width: 680px) {
+    .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-portrait {
+        min-height: 20rem;
+        border-radius: var(--radius);
+        overflow: hidden;
+        -webkit-mask-image: linear-gradient(to right, #000 75%, transparent 100%);
+        mask-image: linear-gradient(to right, #000 75%, transparent 100%);
+    }
+
+    .hero-portrait img {
+        width: 100%;
+        height: auto;
+        max-height: clamp(16rem, 75vw, 26rem);
+        object-fit: contain;
+    }
+
+    .hero-body {
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-body .intro {
+        max-width: 100%;
+    }
+
+    .hero-body .cta {
+        justify-content: center;
+    }
+
+    .hero-about {
+        grid-column: auto;
+        padding: calc(var(--u) * 1.5) 0;
+        font-size: max(calc(var(--u) * 1.25), 0.85rem);
+    }
+}
 
 /* ---- Sections ---- */
 section {
@@ -798,7 +893,7 @@ section+section {
 
 .news-list .date {
     flex-shrink: 0;
-    width: 6rem;
+    width: 10rem;
     color: var(--ink-soft);
     font-variant-numeric: tabular-nums;
 }
@@ -882,13 +977,16 @@ section+section {
     min-width: 0;
 }
 
-@media (max-width:1024px) {
+@media (max-width:1080px) {
     .lower-inner {
         grid-template-columns: 1fr;
     }
 
     .feature-thumb {
         width: 8rem;
+    }
+    .lower-col-contents {
+        min-height: 0;
     }
 }
 
@@ -1793,11 +1891,11 @@ footer {
     background: #3C4142;
     color: rgb(236, 236, 236);
     padding: clamp(1rem, 2.5vw, 2rem) 0;
-    margin-top: clamp(2rem, 3vw, 4rem);
+    margin-top: clamp(0.25rem, 1vw, 1rem);
 }
 
 footer a {
-    font-size: 0.825rem;
+    font-size: 0.9rem;
     color: rgb(236, 236, 236);
     text-decoration: none;
 }
@@ -1808,7 +1906,7 @@ footer a:hover {
 
 footer p {
     color: rgb(236, 236, 236);
-    font-size: 0.825rem;
+    font-size: 0.9rem;
     margin: 0;
 }
 
@@ -1822,7 +1920,7 @@ footer p {
 
 footer h4 {
     font-family: var(--font-label);
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     letter-spacing: var(--tracking-footer);
     text-transform: uppercase;
     color: rgb(236, 236, 236);
@@ -1844,7 +1942,7 @@ footer li {
 }
 
 footer li a {
-    font-size: 0.825rem;
+    font-size: 0.9rem;
     color: rgb(236, 236, 236);
     margin: 0;
     padding: 0;
@@ -1859,7 +1957,7 @@ footer li a:hover {
     justify-content: space-between;
     padding-top: 1.25rem;
     font-family: var(--font-label);
-    font-size: 0.825rem;
+    font-size: 0.9rem;
     color: rgb(236, 236, 236);
     flex-wrap: wrap;
     gap: 0.625rem;

@@ -74,15 +74,18 @@
     /* ---------- Panel theme (card look) ----------
        --tint is an "R G B" triple so one value drives the wash,
        the top bar, header rules, table headers and hovers.          */
-    --tint: 175 0 0;                 /* default tint = brand red            */
-    --panel-tint-a: .04;             /* wash strength (hero header uses .16) */
-    --panel-accent-a: .55;           /* top accent bar opacity               */
+    --tint: 175 0 0;
+    /* default tint = brand red            */
+    --panel-tint-a: .04;
+    /* wash strength (hero header uses .16) */
+    --panel-accent-a: .55;
+    /* top accent bar opacity               */
     --panel-radius: 0.75rem;
     --panel-border: #E3E7EC;
     --panel-gap: clamp(0.5rem, 1.2vw, 1rem);
     --panel-pad: clamp(1rem, 1.8vw, 1.75rem);
     --panel-shadow: 0 1px 2px rgba(20, 24, 31, .04),
-                    0 10px 24px -18px rgba(20, 24, 31, .25);
+        0 10px 24px -18px rgba(20, 24, 31, .25);
     --eyebrow-size: clamp(1.2rem, 0.9rem + 0.5vw, 1.5rem);
 
     --page-gutter: 2.5vw;
@@ -149,6 +152,12 @@
     }
 }
 
+@media (min-width: 1081px) {
+    html:has(body.page) {
+        font-size: clamp(1rem, 0.5vw + 0.5625rem, 1.375rem);
+    }
+}
+
 
 /* =====================================================================
    2. BASE / RESET / TYPOGRAPHY
@@ -212,7 +221,7 @@ section {
     padding: clamp(2.25rem, 5vw, 3.5rem) 0;
 }
 
-section + section {
+section+section {
     border-top: 1px solid var(--rule);
 }
 
@@ -243,14 +252,24 @@ section + section {
    3. SHARED COMPONENTS
    ===================================================================== */
 
-/* ---------- Eyebrow (section label) ----------
-   No ::before dash any more; bigger; takes the colour of its panel.  */
+/* ---------- Eyebrow (section label) ---------- */
 .eyebrow {
     font-family: var(--font-label);
     font-size: var(--eyebrow-size);
     font-weight: 700;
     color: rgb(var(--tint));
     letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.eyebrow-small {
+    font-family: var(--font-label);
+    font-size: calc(var(--eyebrow-size)*0.75);
+    font-weight: 600;
+    color: rgb(var(--tint));
+    letter-spacing: 0.01em;
     text-transform: uppercase;
     margin: 0;
     line-height: 1.2;
@@ -362,7 +381,7 @@ section + section {
    Per-card differences are only the --tint colour (modifiers below)
    and layout classes defined in the sections that use them.          */
 .panel,
-.news-feed > li {
+.news-feed>li {
     position: relative;
     min-width: 0;
     background:
@@ -411,7 +430,7 @@ section + section {
 }
 
 /* Inner-page headings: first <h2> of a panel looks like an eyebrow */
-.panel > h2:first-child {
+.panel>h2:first-child {
     font-family: var(--font-label);
     font-size: var(--eyebrow-size);
     font-weight: 700;
@@ -574,9 +593,7 @@ section + section {
 .hero-grid {
     display: grid;
     grid-template-columns:
-        minmax(190px, 0.70fr)
-        minmax(310px, 1.20fr)
-        minmax(310px, 1.35fr);
+        minmax(190px, 0.70fr) minmax(310px, 1.20fr) minmax(310px, 1.35fr);
     gap: clamp(1rem, 1.5vw, 1.5rem);
     align-items: stretch;
     padding-bottom: 0;
@@ -778,7 +795,7 @@ section + section {
     gap: var(--panel-gap);
 }
 
-.panel-row > .panel {
+.panel-row>.panel {
     display: flex;
     flex-direction: column;
 }
@@ -964,7 +981,7 @@ section + section {
     padding: 0;
 }
 
-.feature-row > div {
+.feature-row>div {
     flex: 1;
     min-width: 0;
 }
@@ -1095,11 +1112,11 @@ section + section {
 }
 
 /* Optional hue cycle down a page (delete this block for all-red panels) */
-.page-section > .panel:nth-child(3n+2) {
+.page-section>.panel:nth-child(3n+2) {
     --tint: 32 84 199;
 }
 
-.page-section > .panel:nth-child(3n) {
+.page-section>.panel:nth-child(3n) {
     --tint: 14 156 147;
 }
 
@@ -1158,7 +1175,8 @@ a.card:hover {
 
 .table {
     width: 100%;
-    min-width: 34rem;      /* narrow screens scroll sideways instead of squeezing */
+    min-width: 34rem;
+    /* narrow screens scroll sideways instead of squeezing */
     border-collapse: collapse;
     font-size: 0.9375rem;
     line-height: 1.45;
@@ -1393,8 +1411,13 @@ a.card:hover {
     color: var(--ink-soft);
 }
 
-.course-name .sub::before { content: "("; }
-.course-name .sub::after  { content: ")"; }
+.course-name .sub::before {
+    content: "(";
+}
+
+.course-name .sub::after {
+    content: ")";
+}
 
 .course-time,
 .course-venue {
@@ -1418,11 +1441,26 @@ a.card:hover {
         row-gap: 0.35rem;
     }
 
-    .course-thumb { grid-area: thumb; align-self: start; }
-    .course-code  { grid-area: code; }
-    .course-name  { grid-area: name; }
-    .course-time  { grid-area: time; }
-    .course-venue { grid-area: venue; }
+    .course-thumb {
+        grid-area: thumb;
+        align-self: start;
+    }
+
+    .course-code {
+        grid-area: code;
+    }
+
+    .course-name {
+        grid-area: name;
+    }
+
+    .course-time {
+        grid-area: time;
+    }
+
+    .course-venue {
+        grid-area: venue;
+    }
 
     .course-time::before,
     .course-venue::before {
@@ -1468,17 +1506,17 @@ a.card:hover {
     gap: var(--panel-gap);
 }
 
-.news-feed > li {
+.news-feed>li {
     display: grid;
     grid-template-columns: 10rem 1fr;
     gap: 0.5rem 1.25rem;
 }
 
-.news-feed > li:nth-child(3n+2) {
+.news-feed>li:nth-child(3n+2) {
     --tint: 32 84 199;
 }
 
-.news-feed > li:nth-child(3n) {
+.news-feed>li:nth-child(3n) {
     --tint: 14 156 147;
 }
 
@@ -1510,7 +1548,7 @@ a.card:hover {
 }
 
 @media (max-width: 560px) {
-    .news-feed > li {
+    .news-feed>li {
         grid-template-columns: 1fr;
         gap: 0.15rem;
     }
@@ -1607,12 +1645,14 @@ details.fold[open] summary {
 /* ---------- LEFT: area menu ---------- */
 .area-menu {
     position: sticky;
-    top: 5rem;             /* below the sticky header */
+    top: 5rem;
+    /* below the sticky header */
 }
 
 @media (min-width: 1081px) {
     .area-menu {
-        top: calc(10vh + 1rem);   /* desktop header is 10vh tall */
+        top: calc(10vh + 1rem);
+        /* desktop header is 10vh tall */
     }
 }
 
@@ -1799,7 +1839,7 @@ details.fold[open] summary {
    10. ABOUT PAGE
    ===================================================================== */
 
-/* ---------- Two-column layout: sidebar + content ---------- */
+/* ---------- Two-column layout: sidebar + content ---------- 
 .about-layout {
     display: grid;
     grid-template-columns: minmax(10rem, 12.5rem) minmax(0, 1fr);
@@ -1808,17 +1848,38 @@ details.fold[open] summary {
     margin: 0 auto;
     padding: 1rem 2rem 0;
     border-top: 0;
+}*/
+
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(10rem, 12.5rem) minmax(0, 1fr);
+    width: calc(100% - 2 * var(--page-gutter));
+    max-width: none;
+    margin: 0 auto;
+    padding: 1rem 0 0;
+    /* was 1rem 2rem 0 */
+    gap: var(--panel-gap);
+    /* optional: matches the Research page spacing */
+    align-items: start;
+}
+
+.about-content.page-wrap {
+    width: auto;
+    max-width: none;
+    margin: 0;
 }
 
 /* ---------- Sidebar ---------- */
 .about-nav {
     position: sticky;
-    top: 5rem;             /* below the sticky header (mobile / tablet) */
+    top: 5rem;
+    /* below the sticky header (mobile / tablet) */
 }
 
 @media (min-width: 1081px) {
     .about-nav {
-        top: calc(10vh + 1rem);   /* desktop header is 10vh tall */
+        top: calc(10vh + 1rem);
+        /* desktop header is 10vh tall */
     }
 }
 
@@ -1860,27 +1921,17 @@ details.fold[open] summary {
     min-width: 0;
 }
 
-.about-content > .about-section {
+.about-content>.about-section {
     margin-bottom: var(--panel-gap);
 }
 
-.about-content > .about-section:nth-child(3n+2) {
+.about-content>.about-section:nth-child(3n+2) {
     --tint: 32 84 199;
 }
 
-.about-content > .about-section:nth-child(3n) {
+.about-content>.about-section:nth-child(3n) {
     --tint: 14 156 147;
 }
-
-/*.about-section {
-    scroll-margin-top: 5rem;
-}
-
-@media (min-width: 1081px) {
-    .about-section {
-        scroll-margin-top: calc(10vh + 1rem);
-    }
-}*/
 
 .about-section {
     scroll-margin-top: var(--about-scroll-offset, 5rem);
@@ -1954,7 +2005,7 @@ details.fold[open] summary {
     padding-left: 0.25rem;
 }
 
-.about-page .cv-list li > span:last-child {
+.about-page .cv-list li>span:last-child {
     min-width: 0;
     overflow-wrap: anywhere;
 }
@@ -1998,7 +2049,7 @@ details.fold[open] summary {
     color: var(--accent);
 }
 
-.about-page details.fold > .cv-list {
+.about-page details.fold>.cv-list {
     margin-top: 0.25rem;
 }
 
@@ -2024,11 +2075,7 @@ details.fold[open] summary {
         z-index: 30;
         width: auto;
         max-width: 100%;
-        margin: 0 0 0.75rem;
-        padding: 0.5rem 0;
-        background: rgba(255, 255, 255, .97);
-        backdrop-filter: blur(8px);
-        border-bottom: 1px solid var(--rule);
+        
     }
 
     .about-nav-list {
@@ -2053,7 +2100,7 @@ details.fold[open] summary {
     .about-nav-list a {
         display: block;
         max-width: 100%;
-        padding: 0.35rem 0.75rem;
+        padding: 0.35rem 0.7rem;
         font-size: 0.82rem;
         white-space: normal;
         overflow-wrap: anywhere;
@@ -2168,7 +2215,7 @@ footer li a:hover {
         grid-template-columns: 1fr 1fr;
     }
 
-    .foot-grid > div:first-child {
+    .foot-grid>div:first-child {
         grid-column: 1 / -1;
     }
 }
@@ -2241,11 +2288,11 @@ footer li a:hover {
     transition: color 0.2s ease;
 }
 
-.area-list details summary > strong {
+.area-list details summary>strong {
     display: inline;
 }
 
-.area-list details summary > span {
+.area-list details summary>span {
     display: block;
     font-size: 0.9em;
     opacity: 0.8;

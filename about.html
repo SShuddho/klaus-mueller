@@ -58,7 +58,7 @@
                         <div class="about-content page-wrap">
 
                                 <!-- Biography -->
-                                <section class="about-section" id="biography">
+                                <section class="about-section panel" id="biography">
                                         <h2>Biography</h2>
                                         <p class="about-text">
                                                 I received a PhD in computer science from The Ohio State University in
@@ -150,7 +150,7 @@
                                 </section>
 
                                 <!-- Education -->
-                                <section class="about-section" id="education">
+                                <section class="about-section panel" id="education">
                                         <h2>Education</h2>
                                         <ul class="cv-list">
                                                 <li><span class="when">1998</span><span><strong>Ph.D.</strong>, Computer
@@ -178,7 +178,7 @@
                                 </section>
 
                                 <!-- Appointments -->
-                                <section class="about-section" id="appointments">
+                                <section class="about-section panel" id="appointments">
                                         <h2>Professional Appointments</h2>
 
                                         <h3>Current</h3>
@@ -283,7 +283,7 @@
                                 </section>
 
                                 <!-- Research Interests -->
-                                <section class="about-section" id="interests">
+                                <section class="about-section panel" id="interests">
                                         <h2>Research Interests</h2>
                                         <div class="card-grid">
                                                 <div class="card">
@@ -339,7 +339,7 @@
                                 </section>
 
                                 <!-- Awards -->
-                                <section class="about-section" id="awards">
+                                <section class="about-section panel" id="awards">
                                         <h2>Awards &amp; Honors</h2>
 
                                         <h3>Fellowships &amp; Memberships</h3>
@@ -448,7 +448,7 @@
                                 </section>
 
                                 <!-- Academic Service -->
-                                <section class="about-section" id="service">
+                                <section class="about-section panel" id="service">
                                         <h2>Academic Service</h2>
 
                                         <h3>Editorial &amp; Society Leadership</h3>
@@ -546,7 +546,7 @@
                                 </section>
 
                                 <!-- Invited Talks -->
-                                <section class="about-section" id="talks">
+                                <section class="about-section panel" id="talks">
                                         <h2>Invited Talks</h2>
 
                                         <details class="fold" open>
@@ -1043,7 +1043,7 @@
                                 </section>
 
                                 <!-- Professional Activities -->
-                                <section class="about-section" id="activities">
+                                <section class="about-section panel" id="activities">
                                         <h2>Professional Activities</h2>
 
                                         <h3>Teaching</h3>
@@ -1190,10 +1190,9 @@
 
         <script src="./assets/js/footer.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="./assets/js/research.js" defer></script>
 
         <script>
-                /* Mobile nav toggle (same as index.html) */
+                /* Mobile nav toggle */
                 const toggle = document.querySelector('.nav-toggle');
                 const nav = document.querySelector('.main-nav');
                 toggle.addEventListener('click', () => {
@@ -1203,9 +1202,7 @@
 
                 /* Sidebar scroll-spy */
                 (function () {
-                        const links = Array.from(
-                                document.querySelectorAll('.about-nav-list a')
-                        );
+                        const links = Array.from(document.querySelectorAll('.about-nav-list a'));
                         const sections = links
                                 .map(a => document.querySelector(a.getAttribute('href')))
                                 .filter(Boolean);
@@ -1213,73 +1210,50 @@
                         const header = document.querySelector('.site-header');
 
                         if (!sections.length) return;
-                        const isMobile = () =>
-                                window.matchMedia('(max-width: 780px)').matches;
 
-                        /* Highlight the selected navigation button */
+                        const isMobile = () => window.matchMedia('(max-width: 780px)').matches;
+
+                        const stickyHeight = () =>
+                                (header?.getBoundingClientRect().height ?? 0) +
+                                (isMobile() && nav ? nav.getBoundingClientRect().height : 0);
+
+                        const landingOffset = () => Math.ceil(stickyHeight() + 12);
+
+                        const TOLERANCE = 24;
+                        let lockedId = null;
+
                         const setActive = (id) => {
                                 links.forEach(a => {
-                                        a.classList.toggle(
-                                                'active',
-                                                a.getAttribute('href') === '#' + id
-                                        );
+                                        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
                                 });
                         };
 
-                        /* Calculate the space occupied by the sticky elements */
                         const updateScrollOffset = () => {
-                                const headerHeight =
-                                        header?.getBoundingClientRect().height ?? 0;
-                                const navHeight =
-                                        isMobile() && nav
-                                                ? nav.getBoundingClientRect().height
-                                                : 0;
-                                const offset = Math.ceil(
-                                        headerHeight + navHeight + 12
-                                );
                                 document.documentElement.style.setProperty(
-                                        '--about-scroll-offset',
-                                        `${offset}px`
+                                        '--about-scroll-offset', `${landingOffset()}px`
                                 );
                         };
 
-                        /* Determine which section has reached the visible content area */
                         const updateActive = () => {
-                                const headerHeight =
-                                        header?.getBoundingClientRect().height ?? 0;
-                                const navHeight =
-                                        isMobile() && nav
-                                                ? nav.getBoundingClientRect().height
-                                                : 0;
-                                const activationLine =
-                                        headerHeight + navHeight + 16;
-
+                                const line = landingOffset() + TOLERANCE;
                                 let currentSection = sections[0];
                                 for (const section of sections) {
-                                        if (
-                                                section.getBoundingClientRect().top
-                                                <= activationLine
-                                        ) {
+                                        if (section.getBoundingClientRect().top <= line) {
                                                 currentSection = section;
                                         } else {
                                                 break;
                                         }
                                 }
-
-                                /* Ensure the final section becomes active at the bottom */
                                 const atPageBottom =
                                         window.innerHeight + window.scrollY >=
                                         document.documentElement.scrollHeight - 2;
-                                if (atPageBottom) {
-                                        currentSection = sections[sections.length - 1];
-                                }
+                                if (atPageBottom) currentSection = sections[sections.length - 1];
                                 setActive(currentSection.id);
                         };
 
-                        /* Avoid unnecessary calculations during rapid scrolling */
                         let ticking = false;
                         const onScroll = () => {
-                                if (ticking) return;
+                                if (lockedId || ticking) return;
                                 ticking = true;
                                 window.requestAnimationFrame(() => {
                                         updateActive();
@@ -1287,36 +1261,38 @@
                                 });
                         };
 
-
-                        /* Immediately highlight the clicked section */
                         links.forEach(link => {
                                 link.addEventListener('click', () => {
                                         const id = link.getAttribute('href').slice(1);
-                                        if (sections.some(section => section.id === id)) {
+                                        if (sections.some(s => s.id === id)) {
+                                                lockedId = id;
                                                 setActive(id);
                                         }
                                 });
                         });
 
-                        /* Update on scrolling and viewport resizing */
-                        window.addEventListener('scroll', onScroll, {
-                                passive: true
-                        });
+                        const release = (e) => {
+                                if (!lockedId) return;
+                                if (e.target?.closest?.('.about-nav-list a')) return;
+                                lockedId = null;
+                        };
+                        ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach(type =>
+                                window.addEventListener(type, release, { passive: true })
+                        );
 
+                        window.addEventListener('scroll', onScroll, { passive: true });
                         window.addEventListener('resize', () => {
                                 updateScrollOffset();
-                                updateActive();
+                                if (!lockedId) updateActive();
                         });
 
-                        /* Initial setup */
                         updateScrollOffset();
                         updateActive();
 
-                        /* Recalculate if the web font changes the navigation height */
                         if (document.fonts?.ready) {
                                 document.fonts.ready.then(() => {
                                         updateScrollOffset();
-                                        updateActive();
+                                        if (!lockedId) updateActive();
                                 });
                         }
                 })();

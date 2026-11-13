@@ -31,16 +31,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         const parser = new DOMParser();
         const teachingDocument = parser.parseFromString(html, "text/html");
 
-        // 3. Find all course rows.
-        const courseRows = teachingDocument.querySelectorAll(
-            ".table-wrap table tbody tr"
-        );
+        // 3. Find all course cards.
+        const courseRows = teachingDocument.querySelectorAll(".course-list > .course-card");
 
         // 4. Select the first three courses.
-        const selectedCourses = Array.from(courseRows).slice(
-            0,
-            MAX_COURSES
-        );
+        const selectedCourses = Array.from(courseRows).slice(0, MAX_COURSES);
 
         // Clear the loading message.
         teachingList.replaceChildren();
@@ -48,22 +43,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         // 5. Generate the homepage presentation.
         selectedCourses.forEach(row => {
 
-            const cells = row.querySelectorAll("td");
-
             // Extract course code.
-            const courseCode = cells[0]?.textContent.trim() || "";
+            const courseCode = row.querySelector(".course-code")?.textContent.trim() || "";
 
             // Extract course title and link.
-            const sourceLink = cells[1]?.querySelector("a");
+            const nameBox = row.querySelector(".course-name");
+            const sourceLink = nameBox?.querySelector("a");
 
             const courseTitle = sourceLink
                 ? sourceLink.textContent.trim()
-                : cells[1]?.textContent.trim() || "Untitled";
+                : nameBox?.textContent.trim() || "Untitled";
 
             // Extract optional subtitle.
-            const subtitle = cells[1]
-                ?.querySelector(".sub")
-                ?.textContent.trim() || "";
+            const subtitle = nameBox?.querySelector(".sub")?.textContent.trim() || "";
 
             // Create a course container.
             const courseItem = document.createElement("div");

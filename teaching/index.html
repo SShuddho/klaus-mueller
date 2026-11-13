@@ -42,95 +42,198 @@
     </section>
 
     <section class="page-section">
-      <div class="page-wrap">
-        <div class="table-wrap">
-          <table class="table teaching-table">
-            <thead>
-              <tr>
-                <th>Course</th>
-                <th>Title</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="course-code">CSE 323</td>
-                <td><a href="./cse323/">Human Computer Interaction</a><span class="sub">co-taught with graduate level</span></td>
-              </tr>
-              <tr>
-                <td class="course-code">CSE 332</td>
-                <td><a href="./cse332/">Introduction to Visualization</a><span class="sub">undergraduate level</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="course-code">CSE 377</td>
-                <td><a href="./cse377/">Introduction to Medical Imaging</a><span class="sub">undergraduate level</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="course-code">CSE 528</td>
-                <td><a href="./cse528/">Computer Graphics</a></td>
-              </tr>
-              <tr>
-                <td class="course-code">CSE 564</td>
-                <td><a href="./cse564/">Visualization</a></td>
-              </tr>
-              <tr>
-                <td class="course-code">CSE 612</td>
-                <td><a href="./cse612/">Advanced Visualization</a></td>
-              </tr>
-              <tr>
-                <td class="course-code">CSE 590</td>
-                <td><a href="./cse590_dataScience/">Data Science Fundamentals</a></td>
-              </tr>
-              <tr>
-                <td class="course-code">CSE 591</td>
-                <td><a href="./cse591_GPU/">GPU Programming</a><span class="sub">Special Topics course</span></td>
-              </tr>
-              <tr>
-                <td class="course-code">CSE 591</td>
-                <td><a href="./cse591_visAnalytics/">Visual Analytics</a><span class="sub">Special Topics course</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="course-code">CSE 577</td>
-                <td><a href="./cse577/">Medical Imaging</a><span class="sub">graduate level</span></td>
-              </tr>
-              <tr>
-                <td class="course-code">CSE 690</td>
-                <td><a href="./cse690/">GPGPU: General Purpose Computing on Programmable Graphics Hardware</a></td>
-              </tr>
-              <tr>
-                <td class="course-code">CSE 523</td>
-                <td><a href="./cse523.html">Master&#x27;s Projects</a><span class="sub">continued as CSE 524</span></td>
-              </tr>
-              <tr>
-                <td class="course-code">CSE 302</td>
-                <td><a href="./cse302/">Ethics in Computer Science</a></td>
-              </tr>
-              <tr>
-                <td class="course-code">ITS 102</td>
-                <td><a href="./its102/">Topics in Information Technology Studies</a></td>
-              </tr>
-              <tr>
-                <td class="course-code">CSE 648</td>
-                <td><a href="http://www.vai.cs.sunykorea.ac.kr/cse654/">Visual Analytics and Imaging Seminar</a><span
-                    class="sub">every semester</span></td>
-              </tr>
-              <tr>
-                <td class="course-code">CSE 516</td>
-                <td><a href="./cse516/">Science for Society I</a><span class="sub">at SUNY Korea</span></td>
-              </tr>
-              <tr>
-                <td class="course-code">CSE 517</td>
-                <td><a href="./cse517/">Science for Society II</a><span class="sub">at SUNY Korea</span></td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="page-wrap panel">
+        <h2>Courses</h2>
+
+        <!-- column labels (desktop only; hidden on phones) -->
+        <div class="course-head" aria-hidden="true">
+          <span></span><span>Code</span><span>Course</span><span>Time</span><span>Venue</span>
         </div>
+
+        <ul class="course-list">
+          <li class="course-card">
+            <span class="course-thumb"><img src="./HCI_wordcloud.jpg" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 323</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/cse323/" target="_blank">Human Computer Interaction</a>
+              <span class="sub">Co-taught with Graduate Level</span>
+            </div>
+            <span class="course-time" data-label="Time">Tue & Thu, 3:30&ndash;4:50 pm</span>
+            <span class="course-venue" data-label="Venue">Class room 227, SUNY Korea</span>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./vis logo.jpg" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 332</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/cse332/" target="_blank">Introduction to Visualization</a>
+              <span class="sub">Undergraduate Level</span>
+            </div>
+            <span class="course-time" data-label="Time">Tue & Thu, 6:30&ndash;7:50 pm</span>
+            <span class="course-venue" data-label="Venue">Frey Hall 301</span>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./Xhand.jpg" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 377</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/cse377/" target="_blank">Introduction to Medical Imaging</a>
+              <span class="sub">Undergraduate Level</span>
+            </div>
+            <span class="course-time" data-label="Time">Tue & Thu, 6:50&ndash;8:10 pm</span>
+            <span class="course-venue" data-label="Venue">Physics P118</span>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./bunny1.jpg" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 528</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/cse528/" target="_blank">Computer Graphics</a>
+            </div>
+            <span class="course-time" data-label="Time">Tue & Thu, 3:30&ndash;4:50 pm</span>
+            <span class="course-venue" data-label="Venue">Class Room 227, SUNY Korea</span>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./vis logo (1).jpg" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 564</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/cse564/" target="_blank">Visualization</a>
+            </div>
+            <span class="course-time" data-label="Time">Tue &Thu, 8:00&ndash;9:20 pm</span>
+            <span class="course-venue" data-label="Venue">Engineering 143</span>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./paper_Time_Vortex_BCC.gif" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 612</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/cse616/" target="_blank">Advanced Visualization</a>
+            </div>
+            <span class="course-time" data-label="Time">Tue & Thu, 5:20&ndash;6:40 pm</span>
+            <span class="course-venue" data-label="Venue">CS 2311 (New Auditorium)</span>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./ds header.jpg" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 590</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/cse590_dataScience/" target="_blank">Data Science Fundamentals</a>
+            </div>
+            <span class="course-time" data-label="Time">Tue & Thu, 3:30&ndash;4:50 pm</span>
+            <span class="course-venue" data-label="Venue">SUNY Korea, TBD</span>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./nanoporeRed.jpg" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 591</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/cse591_GPU/" target="_blank">GPU Programming</a>
+              <span class="sub">Special Topics course</span>
+            </div>
+            <span class="course-time" data-label="Time">Mon & Wed, 10:00&ndash;11:20 pm</span>
+            <span class="course-venue" data-label="Venue">SUNY Korea, B-204</span>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./treeMap_web.jpg" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 591</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/cse591_visAnalytics/" target="_blank">Visual Analytics</a>
+              <span class="sub">Special Topics course</span>
+            </div>
+            <span class="course-time" data-label="Time">Tue & Thu, 6:50&ndash;8:10 pm</span>
+            <span class="course-venue" data-label="Venue">Soc Behav Sci, N436</span>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./Xhand.jpg" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 577</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/cse577/" target="_blank">Medical Imaging</a>
+              <span class="sub">Graduate Level</span>
+            </div>
+            <span class="course-time" data-label="Time">Tue & Thu, 4:00&ndash;5:20 pm</span>
+            <span class="course-venue" data-label="Venue">Class Room 227, SUNY Korea</span>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./img690.jpg" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 690</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/cse690/" target="_blank">GPGPU: General Purpose Computing on Programmable Graphics Hardware</a>
+            </div>
+            <span class="course-time" data-label="Time">Tue & Thu, 5:20&ndash;6:40 pm</span>
+            <span class="course-venue" data-label="Venue">CS 2311 (New Auditorium)</span>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./HCI_wordcloud.jpg" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 523</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/cse523.html" target="_blank">Master's Projects</a>
+              <span class="sub">Continued as CSE 524</span>
+            </div>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./ethics1.jpg" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 302</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/cse302/" target="_blank">Ethics in Computer Science</a>
+            </div>
+            <span class="course-time" data-label="Time">Tue, 8:20&ndash;9:40 pm</span>
+            <span class="course-venue" data-label="Venue">Computer Science 2129A</span>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./its102.png" alt="" loading="lazy"></span>
+            <span class="course-code">ITS 102</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/its102/" target="_blank">Topics in Information Technology Studies</a>
+            </div>
+            <span class="course-time" data-label="Time">Wed, 3:50&ndash;4:45 pm</span>
+            <span class="course-venue" data-label="Venue">Irving/O'Neil 170</span>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./no_image.jpg" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 648</span>
+            <div class="course-name">
+              <a href="http://www.vai.cs.sunykorea.ac.kr/cse654/" target="_blank">Visual Analytics and Imaging Seminar</a>
+              <span class="sub">Every Semester</span>
+            </div>
+            <span class="course-time" data-label="Time"></span>
+            <span class="course-venue" data-label="Venue"></span>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./science_4_society_logo.png" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 516</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/cse516/" target="_blank">Science for Society I</a>
+              <span class="sub">at SUNY Korea</span>
+            </div>
+            <span class="course-time" data-label="Time">Fri, 4:00&ndash;5:00 pm</span>
+            <span class="course-venue" data-label="Venue">SUNY Korea C107</span>
+          </li>
+
+          <li class="course-card">
+            <span class="course-thumb"><img src="./science_4_society_logo.png" alt="" loading="lazy"></span>
+            <span class="course-code">CSE 517</span>
+            <div class="course-name">
+              <a href="https://www3.cs.stonybrook.edu/~mueller/teaching/cse517/" target="_blank">Science for Society II</a>
+              <span class="sub">at SUNY Korea</span>
+            </div>
+            <span class="course-time" data-label="Time">Fri, 4:00&ndash;5:00 pm</span>
+            <span class="course-venue" data-label="Venue">SUNY Korea C107</span>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
 
+          
   <div id="site-footer"></div>
 
   <script src="../assets/js/site.js"></script>

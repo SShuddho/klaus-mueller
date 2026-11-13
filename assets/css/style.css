@@ -85,6 +85,8 @@
                     0 10px 24px -18px rgba(20, 24, 31, .25);
     --eyebrow-size: clamp(1.2rem, 0.9rem + 0.5vw, 1.5rem);
 
+    --page-gutter: 2.5vw;
+
     /* ---------- Typography tokens ---------- */
     --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
     --font-display: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
@@ -174,7 +176,8 @@ body {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 clamp(0.75rem, 2vw, 1.5rem);
+    /*padding: 0 clamp(0.75rem, 2vw, 1.5rem);*/
+    padding: 0 var(--page-gutter);
 }
 
 a {
@@ -200,7 +203,7 @@ h1 {
 }
 
 p {
-    margin: 0 0 1em;
+    margin: 0 0;
     color: var(--ink-soft);
 }
 
@@ -389,6 +392,12 @@ section + section {
 }
 
 /* Per-card colour modifiers (homepage) — all three can be set equal */
+
+.panel--bio {
+    --tint: 175 0 0;
+    padding: calc(var(--panel-gap) * 1.5);
+}
+
 .panel--research {
     --tint: 175 0 0;
 }
@@ -440,6 +449,7 @@ section + section {
     justify-content: space-between;
     gap: calc(var(--u) * 2.2);
     height: clamp(3.75rem, 7vw, 4.25rem);
+    padding: 0 var(--page-gutter);
 }
 
 @media (min-width: 1081px) {
@@ -664,7 +674,6 @@ section + section {
 .hero-about .short-bio {
     font-size: calc(var(--u) * 2);
     line-height: 1.5;
-    margin-bottom: 1em;
     text-align: justify;
     color: var(--ink);
 }
@@ -1033,10 +1042,9 @@ section + section {
 }
 
 .page-wrap {
-    max-width: 95vw;
-    width: 100%;
+    width: calc(100% - 2 * var(--page-gutter));
+    max-width: none;
     margin: 0 auto;
-    padding: 0 clamp(0.25rem, 0.5vw, 0.5rem);
 }
 
 .page-wrap h2 {

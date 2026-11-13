@@ -42,6 +42,7 @@
     /* ---------- Text ---------- */
     --ink: #20242B;
     --ink-soft: #626B76;
+    --ink-nav: #494949;
 
     /* ---------- Borders ---------- */
     --rule: #DCE2E8;
@@ -408,7 +409,7 @@ section {
 /* Per-card colour modifiers (homepage) — all three can be set equal */
 
 .panel--bio {
-    --tint: 175 0 0;
+    --tint: 14 156 147;
     padding: calc(var(--panel-gap) * 1.5);
 }
 
@@ -496,12 +497,12 @@ section {
 }
 
 .main-nav a {
-    font-size: calc(var(--u) * 1.8);
+    font-size: calc(var(--u) * 2);
     font-weight: var(--weight-heading);
     letter-spacing: var(--tracking-nav);
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--ink-soft);
+    color: var(--ink-nav);
     transition: color .15s ease;
 }
 
@@ -571,7 +572,9 @@ section {
     position: relative;
     overflow: hidden;
     padding: 0;
+    padding-bottom: calc(var(--u) * 1.5);
     min-height: 0;
+    border-bottom: 1px solid var(--rule);
 }
 
 .hero-backdrop {
@@ -594,6 +597,7 @@ section {
         minmax(190px, 0.70fr) minmax(310px, 1.20fr) minmax(310px, 1.35fr);
     gap: clamp(1rem, 1.5vw, 1.5rem);
     align-items: stretch;
+    padding-top: 1rem;
     padding-bottom: 0;
 }
 
@@ -639,6 +643,7 @@ section {
     height: 100%;
     object-fit: contain;
     display: block;
+    border-radius: var(--radius) 0 0 var(--radius);
 }
 
 .hero-body {
@@ -761,12 +766,11 @@ section {
     }
 }
 
-
 /* =====================================================================
    6. HOMEPAGE PANELS  (Research full width; News + Teaching share a row)
    ===================================================================== */
 .home-panels {
-    padding: calc(var(--u) * 2.5) 0 calc(var(--u) * 3);
+    padding: calc(var(--u) * 1.5) 0 calc(var(--u) * 3);
     border-top: 0;
 }
 

@@ -756,7 +756,7 @@ section {
     }
 
     .role-line, .role-line a {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .hero-about {
@@ -765,7 +765,7 @@ section {
     }
 
     .hero-about .short-bio {
-        font-size: calc(var(--u) * 1.6);
+        font-size: calc(var(--u) * 1.5);
     }
 }
 

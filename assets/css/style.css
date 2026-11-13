@@ -1958,7 +1958,7 @@ details.fold[open] summary {
 
 /* Quick-facts strip in the biography */
 .about-facts {
-    max-width: 75%;
+    max-width: 50%;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 0.75rem;

@@ -755,14 +755,17 @@ section {
         justify-content: center;
     }
 
+    .role-line, .role-line a {
+        font-size: 1.1rem;
+    }
+
     .hero-about {
         grid-column: auto;
         padding: calc(var(--u) * 1.5) 0;
-        font-size: max(calc(var(--u) * 1.25), 0.85rem);
     }
 
     .hero-about .short-bio {
-        font-size: calc(var(--u) * 1.8);
+        font-size: calc(var(--u) * 1.6);
     }
 }
 
@@ -1847,17 +1850,6 @@ details.fold[open] summary {
    10. ABOUT PAGE
    ===================================================================== */
 
-/* ---------- Two-column layout: sidebar + content ---------- 
-.about-layout {
-    display: grid;
-    grid-template-columns: minmax(10rem, 12.5rem) minmax(0, 1fr);
-    gap: 2rem;
-    align-items: start;
-    margin: 0 auto;
-    padding: 1rem 2rem 0;
-    border-top: 0;
-}*/
-
 .about-layout {
     display: grid;
     grid-template-columns: minmax(10rem, 12.5rem) minmax(0, 1fr);
@@ -2122,9 +2114,9 @@ details.fold[open] summary {
         border-color: var(--accent);
     }
 
-    /*.about-section {
-        scroll-margin-top: var(--about-scroll-offset, 8.5rem);
-    }*/
+    .about-facts {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 560px) {

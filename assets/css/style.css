@@ -1243,6 +1243,21 @@ a.card:hover {
     padding-right: 0.75rem;
 }
 
+.people-table .sub {
+    font-size: 0.875rem;
+    color: var(--ink-soft);
+    margin: 0 0 0.15rem;
+}
+
+.people-table .sub::before {
+    content: "\A(";
+    white-space: pre;
+}
+
+.people-table .sub::after {
+    content: ")"
+}
+
 /* ---------- People ---------- */
 .person-list {
     list-style: none;

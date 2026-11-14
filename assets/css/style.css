@@ -72,6 +72,11 @@
 
     --btn-secondary: #ccdcff;
 
+    --hero-wash:
+        radial-gradient(50rem 22rem at 25% 0%, rgb(var(--tint) / .16), transparent 75%),
+        radial-gradient(40rem 20rem at 85% 0%, rgb(var(--tint) / .10), transparent 50%);
+
+
     /* ---------- Panel theme (card look) ----------
        --tint is an "R G B" triple so one value drives the wash,
        the top bar, header rules, table headers and hovers.          */
@@ -581,9 +586,10 @@ section {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background:
+    /*background:
         radial-gradient(50rem 22rem at 25% 0%, rgba(175, 0, 0, 0.16), transparent 75%),
-        radial-gradient(40rem 20rem at 85% 0%, rgba(75, 0, 0, 0.1), transparent 50%);
+        radial-gradient(40rem 20rem at 85% 0%, rgba(75, 0, 0, 0.1), transparent 50%);*/
+    background: var(--hero-wash);
 }
 
 .hero-wrap {
@@ -1096,6 +1102,8 @@ section {
     /*background:
         radial-gradient(50rem 22rem at 25% 0%, rgba(255, 73, 73, 0.16), transparent 75%),
         radial-gradient(40rem 20rem at 85% 0%, rgba(255, 162, 162, 0.16), transparent 75%);*/
+    background: var(--hero-wash);
+    padding: clamp(0.75rem, 1.5vw, 1.5rem) 0;
     border-bottom: 1px solid var(--rule);
 }
 

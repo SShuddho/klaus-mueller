@@ -76,6 +76,14 @@
         radial-gradient(50rem 22rem at 25% 0%, rgb(var(--tint) / .16), transparent 75%),
         radial-gradient(40rem 20rem at 85% 0%, rgb(var(--tint) / .10), transparent 50%);
 
+    /* ---------- Look & feel settings (safe to edit; see guide §19) ---------- */
+    --hero-text-scale: 0.975;
+    /* homepage top row: name, roles, bio, buttons (0.85 = 15% smaller) */
+    --hover-bg: var(--accent-light);
+    /* fill when the mouse is over a box */
+    --hover-ring: inset 0 0 0 1px var(--accent);
+    /* thin outline on papers and About-page rows */
+
 
     /* ---------- Panel theme (card look) ----------
        --tint is an "R G B" triple so one value drives the wash,
@@ -328,14 +336,13 @@ section {
 
 .btn {
     font-family: var(--font-label);
-    font-size: calc(var(--u) * 1.5);
+    font-size: calc(var(--u) * 1.5 * var(--hero-text-scale));
     text-transform: uppercase;
     letter-spacing: var(--tracking-button);
     text-decoration: none;
     padding: calc(var(--u) * 0.75) calc(var(--u) * 1.5);
     border-radius: var(--radius);
     border: 1px solid rgba(238, 239, 233, .45);
-    transition: background .15s ease, border-color .15s ease;
     line-height: var(--leading-link);
 }
 
@@ -352,7 +359,7 @@ section {
 .btn.primary:hover {
     background: var(--accent-light);
     color: var(--accent-dark);
-    border-color: var(--accent-light);
+    border-color: var(--accent-dark);
 }
 
 .btn.secondary {
@@ -638,10 +645,8 @@ section {
 
 .hero-portrait {
     position: relative;
-    border-radius: var(--radius) 0 0 var(--radius);
+    border-radius: var(--radius);
     overflow: hidden;
-    -webkit-mask-image: linear-gradient(to right, #000 75%, transparent 100%);
-    mask-image: linear-gradient(to right, #000 75%, transparent 100%);
 }
 
 .hero-portrait img {
@@ -649,7 +654,7 @@ section {
     height: 100%;
     object-fit: contain;
     display: block;
-    border-radius: var(--radius) 0 0 var(--radius);
+    border-radius: var(--radius);
 }
 
 .hero-body {
@@ -660,8 +665,12 @@ section {
     container-type: inline-size;
 }
 
+.hero h1 {
+    font-size: calc(var(--size-h1) * var(--hero-text-scale));
+}
+
 .role-line {
-    font-size: calc(var(--u) * 2);
+    font-size: calc(var(--u) * 2 * var(--hero-text-scale));
     color: var(--ink-soft);
     margin: 0 0 calc(var(--u) * 0.5);
     line-height: var(--leading-role);
@@ -673,14 +682,13 @@ section {
 }
 
 .role-line a {
-    font-size: calc(var(--u) * 1.85);
+    font-size: calc(var(--u) * 1.85 * var(--hero-text-scale));
     color: var(--accent);
     text-decoration: none;
-    transition: font-size .15s ease, text-decoration .15s ease;
+    /*transition: font-size .15s ease, text-decoration .15s ease;*/
 }
 
 .role-line a:hover {
-    font-size: calc(var(--u) * 1.86);
     text-decoration: underline;
 }
 
@@ -698,11 +706,12 @@ section {
 }
 
 .hero-about .short-bio {
-    font-size: calc(var(--u) * 1.85);
+    font-size: calc(var(--u) * 1.75 * var(--hero-text-scale));
     line-height: 1.5;
     text-align: justify;
     color: var(--ink);
 }
+
 
 @media (min-width: 1081px) {
     .hero-about {
@@ -719,11 +728,17 @@ section {
     }
 
     .hero-portrait {
+        position: relative;
         border-radius: var(--radius);
+        overflow: hidden;
     }
 
     .hero-portrait img {
+        width: auto;
         height: auto;
+        object-fit: contain;
+        display: block;
+        border-radius: var(--radius);
         max-height: clamp(16rem, 38vw, 24rem);
     }
 
@@ -737,19 +752,24 @@ section {
         grid-template-columns: minmax(0, 1fr);
     }
 
+    .hero h1 {
+        font-size: calc(var(--size-h1) * 0.85 * var(--hero-text-scale));
+    }
+
     .hero-portrait {
-        min-height: 20rem;
-        border-radius: var(--radius);
+        min-height: 16rem;
+        position: relative;
         overflow: hidden;
-        -webkit-mask-image: linear-gradient(to right, #000 75%, transparent 100%);
-        mask-image: linear-gradient(to right, #000 75%, transparent 100%);
+        justify-self: center;
     }
 
     .hero-portrait img {
-        width: 100%;
+        width: auto;
         height: auto;
-        max-height: clamp(16rem, 75vw, 26rem);
         object-fit: contain;
+        display: block;
+        border-radius: inherit;
+        max-height: clamp(16rem, 75vw, 20rem);
     }
 
     .hero-body {
@@ -761,7 +781,8 @@ section {
         justify-content: center;
     }
 
-    .role-line, .role-line a {
+    .role-line,
+    .role-line a {
         font-size: 1rem;
     }
 
@@ -887,13 +908,6 @@ section {
     border: 1px solid var(--rule);
     border-radius: calc(var(--u) * 0.9);
     padding: calc(var(--u) * 0.8);
-    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-}
-
-.area-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--c);
-    box-shadow: 0 10px 20px -14px rgba(20, 24, 31, .35);
 }
 
 .area-thumb {
@@ -1043,11 +1057,6 @@ section {
     line-height: var(--leading-card-heading);
 }
 
-.feature-title:hover {
-    text-decoration: underline;
-    color: var(--accent-dark);
-}
-
 .feature-meta {
     font-size: calc(var(--u) * 1.0);
     color: var(--ink-soft);
@@ -1159,13 +1168,6 @@ section {
     border-radius: var(--radius);
     padding: 1.125rem 1.25rem;
     background: var(--paper);
-    transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease;
-}
-
-a.card:hover {
-    border-color: var(--accent);
-    box-shadow: 0 0.75rem 1.5rem -1rem rgba(20, 22, 31, .3);
-    transform: translateY(-2px);
 }
 
 .card h3 {
@@ -1237,10 +1239,6 @@ a.card:hover {
 
 .table td a:hover {
     color: var(--accent);
-}
-
-.table tbody tr:hover {
-    background: rgb(var(--tint) / .025);
 }
 
 .people-table th.num,
@@ -1393,13 +1391,6 @@ a.card:hover {
     background: var(--paper);
     border: 1px solid var(--rule);
     border-radius: calc(var(--panel-radius) * 0.7);
-    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-}
-
-.course-card:hover {
-    transform: translateY(-1px);
-    border-color: rgb(var(--tint) / .5);
-    box-shadow: 0 10px 20px -14px rgba(20, 24, 31, .35);
 }
 
 .course-thumb {
@@ -1712,11 +1703,6 @@ details.fold[open] summary {
     padding: 0.55rem 0.75rem;
     border-radius: 0.4rem;
     cursor: pointer;
-    transition: background 0.15s, color 0.15s;
-}
-
-.area-btn:hover {
-    background: rgb(var(--tint) / .08);
 }
 
 .area-btn.active {
@@ -1761,11 +1747,6 @@ details.fold[open] summary {
     padding: 0.9rem 0.5rem;
     border-bottom: 1px solid rgb(var(--tint) / .15);
     border-radius: 0.4rem;
-    transition: background .15s ease;
-}
-
-.paper-item:hover {
-    background: rgb(var(--tint) / .05);
 }
 
 .paper-thumb {
@@ -2020,12 +2001,10 @@ details.fold[open] summary {
     grid-template-columns: 9.5rem 1fr;
 }
 
-.about-page .cv-list li:hover {
-    background: rgb(var(--tint) / .06);
-}
-
-.about-page .cv-list .when {
-    padding-left: 0.25rem;
+.about-page .cv-list li {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: .4rem;
 }
 
 .about-page .cv-list li>span:last-child {
@@ -2098,7 +2077,7 @@ details.fold[open] summary {
         z-index: 30;
         width: auto;
         max-width: 100%;
-        
+
     }
 
     .about-nav-list {
@@ -2368,4 +2347,58 @@ footer li a:hover {
     font-size: 0.9375rem;
     margin: 0.625rem 0 0;
     line-height: var(--leading-card-copy);
+}
+
+
+/* =====================================================================
+   13. INTERACTION STATES  (one look for links, one for boxes)
+   To give a new kind of link/box the same look, add its selector to a list.
+   ===================================================================== */
+
+/* ---- 13a. LINKS: --accent-link normally, --accent on hover, no underline ---- */
+:is(.text-link, .table td a, .person h3 a, .course-name a, .paper-links a,
+    .news-feed a, .news-list a, .page-hero .lead a, .feature-title) {
+    color: var(--accent-link);
+    text-decoration: none;
+    transition: color .15s ease;
+}
+
+:is(.text-link, .table td a, .person h3 a, .course-name a, .paper-links a,
+    .news-feed a, .news-list a, .page-hero .lead a, .feature-title):hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* ---- 13b. BOXES / CARDS: accent border + pale-red fill, no movement ---- */
+.course-card,
+.person,
+.area-card,
+.news-feed>li,
+.paper-item,
+.area-btn {
+    transition: border-color .15s ease, background-color .15s ease, box-shadow .15s ease;
+}
+
+.course-card:hover,
+.person:hover,
+.area-card:hover,
+.news-feed>li:hover,
+a.card:hover {
+    border-color: var(--accent);
+    background-color: var(--hover-bg);
+    box-shadow: none;
+    transform: none;
+}
+
+/* line items without a full border: fill + inset ring */
+.paper-item:hover,
+.about-page .cv-list li:hover,
+.area-btn:not(.active):hover {
+    background-color: var(--hover-bg);
+    box-shadow: var(--hover-ring);
+}
+
+/* table rows: fill only */
+.table tbody tr:hover td {
+    background-color: var(--hover-bg);
 }

@@ -9,7 +9,7 @@
     content="Klaus Mueller is a Professor of Computer Science at Stony Brook University and Senior Scientist at Brookhaven National Laboratory, working on human-centered, explainable AI and visualization.">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <link rel="preload" as="image" href="./assets/img/halfM.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -45,7 +45,13 @@
         <div class="hero-grid">
 
           <div class="hero-portrait">
-            <img src="./assets/img/hs1.png" alt="Klaus Mueller, Professor of Computer Science, Stony Brook University">
+            <!--<img src="./assets/img/hs1.png" alt="Klaus Mueller, Professor of Computer Science, Stony Brook University">-->
+            <img
+              src="./assets/img/hs1.png"
+              alt="Headshot of Klaus Mueller, Professor of Computer Science, Stony Brook University"
+              onmouseover="this.src='./assets/img/halfM.png';"
+              onmouseout="this.src='./assets/img/hs1.png';"
+            >
           </div>
 
           <div class="hero-body">

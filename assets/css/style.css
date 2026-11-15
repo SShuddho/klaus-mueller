@@ -2370,20 +2370,11 @@ footer li a:hover {
 }
 
 /* ---- 13b. BOXES / CARDS: accent border + pale-red fill, no movement ---- */
-.course-card,
-.person,
-.area-card,
-.news-feed>li,
-.paper-item,
-.area-btn {
+.course-card, .card, .person, .news-feed > li, .paper-item, .area-btn {
     transition: border-color .15s ease, background-color .15s ease, box-shadow .15s ease;
 }
-
-.course-card:hover,
-.person:hover,
-.area-card:hover,
-.news-feed>li:hover,
-a.card:hover {
+.course-card:hover, .person:hover,
+.news-feed > li:hover, .card:hover {
     border-color: var(--accent);
     background-color: var(--hover-bg);
     box-shadow: none;
@@ -2401,4 +2392,27 @@ a.card:hover {
 /* table rows: fill only */
 .table tbody tr:hover td {
     background-color: var(--hover-bg);
+}
+
+/* ---- 13c. WHOLE-CARD CLICK: the title link covers its entire card ---- */
+.course-card, .person {
+    position: relative;
+}
+
+.course-name a::after,
+.person h3 a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+/* ---- 13d. HOMEPAGE RESEARCH CARDS: hover uses each card's own colour (--c) ---- */
+.area-card {
+    transition: border-color .15s ease, background-color .15s ease;
+}
+.area-card:hover {
+    border-color: var(--c);
+    background-color: color-mix(in srgb, var(--c) 10%, white);   /* 10% = how tinted the fill is */
+    box-shadow: none;
+    transform: none;
 }

@@ -2,7 +2,7 @@
 
 Personal academic website for **Prof. Dr. Klaus Mueller**, Professor of Computer Science at Stony Brook University and Senior Scientist at Brookhaven National Laboratory.
 
-> **Status:** Work in progress. This repository is shared with Prof. Mueller for review via GitHub Pages.
+> **Status:** Work Completed, this is the final view of the website, developed and submitted. Differences with Prof. Mueller's [current website](https://www3.cs.stonybrook.edu/~mueller/) would mean later changes.
 
 **Live preview:** `https://sshuddho.github.io/klaus-mueller/`
 
